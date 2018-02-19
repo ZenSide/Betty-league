@@ -1,0 +1,47 @@
+<ion-content delegate-handle="btContentHandle" class="bt-content signin">
+    <bt-title-part content="'TITLES.SIGNIN'"></bt-title-part>
+
+    <form novalidate name="signInForm" id="signFormId" ng-submit="submitForm(signInForm)">
+        <!--//USERNAME-->
+        <bt-input-text bt-select-order="1"
+                       bt-focus
+                       bt-ng-model="newUser.pseudo"
+                       bt-type="text" bt-name="btUsername"
+                       bt-placeholder="'LOGIN.PLACEHOLDERS.USERNAME'"
+                       bt-required="true"
+                       class="bt-input-text-component {{activeinputs}}"
+        ></bt-input-text>
+
+        <!--EMAIL-->
+        <bt-input-text bt-select-order="2"
+                       bt-focus
+                       bt-ng-model="newUser.email"
+                       bt-type="email" bt-name="btEmail"
+                       bt-placeholder="'LOGIN.PLACEHOLDERS.EMAIL'"
+                       bt-required="true"
+                       class="bt-input-text-component {{activeinputs}}"
+        ></bt-input-text>
+
+        <!--MDP-->
+        <bt-input-text bt-select-order="3"
+                       bt-focus
+                       bt-ng-model="newUser.plainPassword"
+                       bt-type="password" bt-name="btPlainPassword"
+                       bt-placeholder="'LOGIN.PLACEHOLDERS.PSW'"
+                       bt-required="true"
+                       class="bt-input-text-component {{activeinputs}}"
+        ></bt-input-text>
+
+        <!--CONFIRM-->
+        <bt-input-text bt-select-order="4"
+                       bt-focus
+                       bt-ng-model="newUser.confirmPassword"
+                       bt-type="password" bt-name="btConfirmPassword"
+                       bt-placeholder="'LOGIN.PLACEHOLDERS.CONFIRMPSW'"
+                       bt-required="true"
+                       class="bt-input-text-component {{activeinputs}}"
+        ></bt-input-text>
+
+        <!--TODO conditions generales-->
+    </form>
+</ion-content>

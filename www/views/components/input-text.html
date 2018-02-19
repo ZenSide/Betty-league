@@ -1,0 +1,12 @@
+<div class="bt-input-text-container">
+    <input id="inputOrder{{$ctrl.btSelectOrder}}" ng-required="{{$ctrl.btRequired}}"
+           autocorrect="off" autocapitalize="none"
+           type="{{$ctrl.btType}}"
+           class="bt-input-text"
+           type="{{$ctrl.btType}}"
+           ng-model="$ctrl.btNgModel"
+           name="{{$ctrl.btName}}"
+           translate-attr="{ placeholder: $ctrl.btPlaceholder }">
+    <div ng-transclude class="bt-input-text-transclude"></div>
+
+</div>

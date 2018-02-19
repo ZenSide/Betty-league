@@ -1,0 +1,84 @@
+<!—Displays error or success messages-->
+<style>
+    html{
+        overflow: scroll!important;
+    }
+</style>
+
+<span>{{message}}</span><br><br>
+
+<!—Login/logout form-->
+<form ng-show="!isAuthenticated" ng-submit="submit()">
+    <label>Login Form:</label><br>
+    <input ng-model="user.username" type="text" name="user" placeholder="Username" />
+    <input ng-model="user.password" type="password" name="pass" placeholder="Password" />
+    <input type="submit" value="Login" />
+</form>
+<div ng-show="isAuthenticated">
+    <a ng-click="logout()" href="">Logout</a>
+</div>
+<div ui-view ng-show="isAuthenticated"></div>
+<br><br>
+
+<!—Displays contacts list-->
+<h1 ng-show="isAuthenticated">Liste des Contacts</h1>
+<article ng-repeat="contact in contacts" ng-show="isAuthenticated" id="{{ contact['@id'] }}" class="row marketing">
+    <h2>{{ contact.name }}</h2>
+    <!—Displays contact phones list-->
+    <h3 ng-repeat="moyenComm in contact.telephones">Tél : {{ moyenComm.numero }}</h3>
+</article><hr>
+
+<!—Phone form-->
+<form name="filterContactForm" ng-submit="" ng-show="isAuthenticated" class="row marketing">
+    <h2>Filtre contact</h2>
+    <div class="form-group">
+        <input ng-keyup="filtreContact(filterContact)" ng-model="filterContact" placeholder="Numéro" class="form-control">
+        <span>{{filterContact}}</span>
+    </div>
+</form>
+
+
+<!—Create contact form-->
+<form name="createContactForm" ng-submit="createContact(createContactForm)" ng-show="isAuthenticated" class="row marketing">
+    <h2>Création d'un nouveau contact</h2>
+    <!—Displays error / success message on creating contact-->
+    <div ng-show="contactSuccess" class="alert alert-success" role="alert">Contact publié.</div>
+    <div ng-show="contactErrorTitle" class="alert alert-danger" role="alert">
+        <b>{{ contactErrorTitle }}</b><br>
+        {{ contactErrorDescription }}
+    </div>
+    <div class="form-group">
+        <input ng-model="newContact.name" placeholder="Nom" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<!—Phone form-->
+<form name="createPhoneForm" ng-submit="createPhone(createPhoneForm)" ng-show="isAuthenticated" class="row marketing">
+    <h2>Création d'un nouveau téléphone</h2>
+    <div ng-show="phoneSuccess" class="alert alert-success" role="alert">Téléphone publié.</div>
+    <div ng-show="phoneErrorTitle" class="alert alert-danger" role="alert">
+        <b>{{ phoneErrorTitle }}</b><br>
+        {{ phoneErrorDescription }}
+    </div>
+    <div class="form-group">
+        <input ng-model="newPhone.numero" placeholder="Numéro" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="contact">Contact</label>
+        <!—SelectBox de liste de contacts-->
+        <select ng-model="newPhone.contact" ng-options="contact['@id'] as contact.name for contact in contacts" id="contact"></select>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<!—special form-->
+<form name="spetialForm" ng-submit="specialContact(contact,contactModif)" ng-show="isAuthenticated" class="row marketing">
+    <div class="form-group">
+        <label for="contact">Contact</label>
+        <!—SelectBox de liste de contacts-->
+        <input type="text" ng-model="contactModif.name">
+        <select ng-model="contact" ng-options="contact as contact.name for contact in contacts"></select>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

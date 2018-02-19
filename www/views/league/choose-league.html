@@ -1,0 +1,33 @@
+
+<ion-content class="bt-content">
+    <!--TITLE-->
+    <bt-title-part content="'TITLES.CHOOSELEAGUE'"></bt-title-part>
+
+    <!--//BUTTONS-->
+    <bt-footer-btn ng-repeat="btn in buttonsPublics track by $index"
+                   bt-show="btn.active"
+                   ico="btn.ico"
+                   bt-position="btn.position"
+                   bt-size="btn.size"
+                   bt-context="btn.context"
+                   bt-action="btn.action()",
+                   bt-active="btn.focus",
+                   bt-disabled="btn.disabled",
+                   bt-label="btn.label"
+    >
+    </bt-footer-btn>
+
+    <!--//PRIVATE-->
+    <bt-footer-btn ico="buttonPrivate.ico"
+                   bt-show="buttonPrivate.active"
+                   bt-position="buttonPrivate.position"
+                   bt-size="buttonPrivate.size"
+                   bt-context="buttonPrivate.context"
+                   bt-action="buttonPrivate.action()",
+                   bt-active="buttonPrivate.focus",
+                   bt-disabled="buttonPrivate.disabled",
+                   bt-label="buttonPrivate.label"
+    >
+    </bt-footer-btn>
+
+</ion-content>
