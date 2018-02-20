@@ -17,6 +17,7 @@ betty2App.controller('SigninCtrl', function (BtMessages,BtUser,BtNavigate,$timeo
 
     $scope.submitForm = function(form){
             if(form.$valid){
+                //form message handling
                 if($scope.newUser.plainPassword != $scope.newUser.confirmPassword){
                     BtMessages.showFormMessages(form,['btPlainPassword','btConfirmPassword'],null,null,true);
                     BtMessages.show([{content:"SIGNIN.MESSAGES.PASSWORDDIFF",context:"alert"}])
@@ -28,8 +29,6 @@ betty2App.controller('SigninCtrl', function (BtMessages,BtUser,BtNavigate,$timeo
             else{
                 BtMessages.showFormMessages(form,$scope.fieldsNames);
             }
-
-
     };
 
     $scope.signInForm = {};

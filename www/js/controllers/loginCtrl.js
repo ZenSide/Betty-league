@@ -1,20 +1,18 @@
 betty2App.controller('LoginCtrl', function (BtUser,BtMessages,BtNavigate,$scope,$translate) {
     $scope.fieldsNames = [
-        'btUsername',
+        'btEmail',
         'btPassword'
     ]
 
     // fosuser
     $scope.user = {
-        username:'',
+        email:'',
         password:'',
     };
 
     $scope.submitForm = function(form){
         if(form.$valid){
-            BtUser.login($scope.user,function(){
-                BtMessages.showFormMessages(form,['btUsername','btPassword'],null,null,true);
-            });
+            BtUser.login($scope.user);
         }
         else{
             BtMessages.showFormMessages(form,$scope.fieldsNames);

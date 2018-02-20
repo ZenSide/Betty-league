@@ -136,6 +136,4 @@ betty2App.controller('MainCtrl', function ($timeout,$scope, $http, $window, Rest
         };
 
         // This factory intercepts every request and put token on headers
-    }).config(function ($httpProvider) {
-    $httpProvider.interceptors.push('authInterceptor');
-});
+    });

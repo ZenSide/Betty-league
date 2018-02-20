@@ -3,9 +3,18 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-var betty2App = angular.module('betty2', ['ionic','restangular','pascalprecht.translate','ngCordova']);
+var betty2App = angular.module(
+  'betty2',
+  [
+    'ionic',
+    'restangular',
+    'pascalprecht.translate',
+    'ngCordova',
+    'LocalForageModule'
+  ]
+);
 
-betty2App.run(function(Storage,$http,$ionicPlatform,$rootScope,$timeout,$state,$translate,Auth,BtNavigate) {
+betty2App.run(function($localForage, Storage,$http,$ionicPlatform,$rootScope,$timeout,$state,$translate,Auth,BtNavigate) {
 
   $ionicPlatform.ready(function() {
     if(window.cordova && window.cordova.plugins.Keyboard) {
@@ -39,21 +48,21 @@ betty2App.run(function(Storage,$http,$ionicPlatform,$rootScope,$timeout,$state,$
   }
 
   //AUTH
-  if(Storage.getToken()){
-    Auth.connect();
-  }
-
-  $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams, options) {
-    var n = toState.name;
-    if (!Auth.isLoggedIn()) {
-      if(n != "login" && n != "signin"){
-        event.preventDefault();
-        BtNavigate.stateChange("goBottom","login")
-      }
-    }
-    else {
-      console.log('ALLOW');
-    }
-  });
+  //if(Storage.getToken()){
+  //  Auth.connect();
+  //}
+  //
+  //$rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams, options) {
+  //  var n = toState.name;
+  //  if (!Auth.isLoggedIn()) {
+  //    if(n != "login" && n != "signin"){
+  //      event.preventDefault();
+  //      BtNavigate.stateChange("goBottom","login")
+  //    }
+  //  }
+  //  else {
+  //    console.log('ALLOW');
+  //  }
+  //});
 });
 
