@@ -28,8 +28,71 @@
 
 <!--//HEADER BAR-->
 <body ng-app="betty2" ng-controller="ParentCtrl" >
+<div class="bar bt-header ng-cloak" >
+    <img src="img/logo.png" class="bt-logo">
+    <div class="bt-header-ball"></div>
+    <bt-footer-btn ng-repeat="btn in headerNavStatus track by $index"
+                   bt-show="btn.active"
+                   ico="btn.ico"
+                   bt-position="btn.position"
+                   bt-size="btn.size"
+                   bt-label="btn.label"
+                   bt-context="btn.context"
+                   bt-action="btn.action()",
+                   bt-active="btn.focus",
+                   bt-disabled="btn.disabled"
+    >
+    </bt-footer-btn>
+</div>
 
-<h1>HELLOOO</h1>
+<!--///CONTENT-->
+<div class="ng-cloak">
+    <ui-view autoscroll="true" class="animated {{viewAnimClass}}"></ui-view>
+</div>
+
+<div class="bt-loading-container ng-cloak" ng-if="btLoading">
+    <div class="bt-loading-back"></div>
+    <div class="bt-loading" >
+        <ion-spinner icon="lines"></ion-spinner>
+    </div>
+</div>
+<div class="bt-loading-container nocon ng-cloak" ng-if="btLoadingNoCon">
+    <div class="bt-loading-back"></div>
+    <div class="bt-loading">
+        <div>
+            <i class="ico ion-close-circled"></i><br>
+            <span class="txt">{{ "MESSAGES.NOCON" | translate }}</span>
+        </div>
+    </div>
+</div>
+
+
+<!--//FOOTER BAR-->
+<div class="bar bt-footer ng-cloak">
+
+    <div class="bt-footer-container">
+        <bt-footer-btn ng-repeat="btn in footerStatus track by $index"
+                       bt-show="btn.active"
+                       ico="btn.ico"
+                       bt-position="btn.position"
+                       bt-size="btn.size"
+                       bt-label="btn.label"
+                       bt-context="btn.context"
+                       bt-action="btn.action()",
+                       bt-active="btn.focus",
+                       bt-disabled="btn.disabled",
+                       bt-submit-form="btn.submitform"
+        >
+        </bt-footer-btn>
+    </div>
+
+    <div class="bt-alert-messages animated" ng-class="{expanded:showMessages == true}">
+        <div ng-repeat="message in messages track by $index"
+             ng-class="message.context"
+             class="bt-message">
+            <div>{{message.content | translate}} </div>
+        </div>
+    </div>
 
 </div>
 
@@ -71,6 +134,7 @@
 <script src="js/controllers/chooseLeagueCtrl.js"></script>
 <script src="js/controllers/signinCtrl.js"></script>
 
-</body>
 
+
+</body>
 </html>

@@ -1,4 +1,4 @@
-betty2App.controller('LoginCtrl', function (BtUser,BtMessages,BtNavigate,$scope,$translate) {
+betty2App.controller('LoginCtrl', function (UserApi,BtMessages,BtNavigate,$scope,$translate) {
     $scope.fieldsNames = [
         'btEmail',
         'btPassword'
@@ -12,13 +12,11 @@ betty2App.controller('LoginCtrl', function (BtUser,BtMessages,BtNavigate,$scope,
 
     $scope.submitForm = function(form){
         if(form.$valid){
-            BtUser.login($scope.user);
+            UserApi.login($scope.user);
         }
         else{
             BtMessages.showFormMessages(form,$scope.fieldsNames);
         }
-
-
     };
 
     $scope.signInForm = {};
@@ -78,11 +76,5 @@ betty2App.controller('LoginCtrl', function (BtUser,BtMessages,BtNavigate,$scope,
                 }
             }
         }
-
-    });//TRANSLATIONS
-
-
-
-
-
-})
+    });
+});

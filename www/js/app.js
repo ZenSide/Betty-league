@@ -14,7 +14,7 @@ var betty2App = angular.module(
   ]
 );
 
-betty2App.run(function($localForage, Storage,$http,$ionicPlatform,$rootScope,$timeout,$state,$translate,Auth,BtNavigate) {
+betty2App.run(function($localForage, $http, $ionicPlatform, $rootScope, $timeout, $state, $translate, BtNavigate) {
 
   $ionicPlatform.ready(function() {
     if(window.cordova && window.cordova.plugins.Keyboard) {
@@ -46,23 +46,5 @@ betty2App.run(function($localForage, Storage,$http,$ionicPlatform,$rootScope,$ti
       });
     }, null);
   }
-
-  //AUTH
-  //if(Storage.getToken()){
-  //  Auth.connect();
-  //}
-  //
-  //$rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams, options) {
-  //  var n = toState.name;
-  //  if (!Auth.isLoggedIn()) {
-  //    if(n != "login" && n != "signin"){
-  //      event.preventDefault();
-  //      BtNavigate.stateChange("goBottom","login")
-  //    }
-  //  }
-  //  else {
-  //    console.log('ALLOW');
-  //  }
-  //});
 });
 

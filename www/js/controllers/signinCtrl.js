@@ -1,4 +1,4 @@
-betty2App.controller('SigninCtrl', function (BtMessages,BtUser,BtNavigate,$timeout,Restangular,$scope,$translate,$rootScope) {
+betty2App.controller('SigninCtrl', function (BtMessages,UserApi,BtNavigate,$timeout,Restangular,$scope,$translate,$rootScope) {
 
     // fosuser
     $scope.newUser = {
@@ -23,7 +23,7 @@ betty2App.controller('SigninCtrl', function (BtMessages,BtUser,BtNavigate,$timeo
                     BtMessages.show([{content:"SIGNIN.MESSAGES.PASSWORDDIFF",context:"alert"}])
                 }
                 else{
-                    BtUser.sign($scope.newUser);
+                    UserApi.sign($scope.newUser);
                 }
             }
             else{
