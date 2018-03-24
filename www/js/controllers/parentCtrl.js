@@ -7,10 +7,10 @@ betty2App.controller('ParentCtrl', function ($scope,$rootScope,$timeout,$state,$
             // listen for Online event
             $rootScope.$on('$cordovaNetwork:online', function(event, networkState){
                var onlineState = networkState;
-                //BtMessages.show([{
-                //    context:"success",
-                //    content:"ONLINE : "+onlineState
-                //}]);
+                BtMessages.show([{
+                    context:"success",
+                    content:"ONLINE : "+onlineState
+                }]);
                 BtLoading.endLoad(true);
             })
 
@@ -18,10 +18,10 @@ betty2App.controller('ParentCtrl', function ($scope,$rootScope,$timeout,$state,$
             $rootScope.$on('$cordovaNetwork:offline', function(event, networkState){
                 var offlineState = networkState;
 
-                //BtMessages.show([{
-                //    context:"alert",
-                //    content:"OFFLINE : "+offlineState
-                //}]);
+                BtMessages.show([{
+                    context:"alert",
+                    content:"OFFLINE : "+offlineState
+                }]);
                 BtLoading.startLoad(true);
             })
 
