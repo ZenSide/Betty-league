@@ -1,17 +1,16 @@
+@import "../less/constant";
+
 //RESET
 html{
-  font-size: 15px;
+  font-size: 10px;
   line-height: 1.4;
 }
 
-//GRID
-@margin-micro:5px;
-@margin-mini:10px;
-@margin-medium:15px;
-@margin-big:18px;
+body {
+  background-color: @light-green;
+}
 
-@padding-big:35px;
-@padding-medium:20px;
+
 
 //ERASE IONICONS
 .ion-person:before{
@@ -116,60 +115,7 @@ html{
 
 
 
-//TITLES
-@title-part-color:@black-ink;
-@title-part-weight:600;
 
-//COLORS
-@white-paper:#F4F4EF;
-@black-ink:#20232a;
-@grey-alu:#ACBEBE;
-@yellow-sun:#FFBB00;
-@green-grass:#258039;
-@red-sunset:#FB6542;
-@blue-sky:#375E97;
-
-//COMPOSANTS
-//BOUTONS
-@button-back-color : @green-grass;
-@button-color : @white-paper;
-@button-border-color : @white-paper;
-@button-border-width:2px;
-@big-button-scale:1.4;
-@huge-button-scale:2;
-@indecent-button-scale:3;
-@little-button-width:45px;
-@little-button-font-width:18px;
-
-//INPUT TEXT
-@input-height:45px;
-@input-back-color:@green-grass;
-@input-color:@white-paper;
-
-@input-active-back-color:@yellow-sun;
-@input-active-color:@black-ink;
-
-@input-error-back-color:@red-sunset;
-@input-error-color:@black-ink;
-
-//HEADER
-@header-height:55px;
-@header-color:@white-paper;
-@buttons-header-offset:20%;
-
-//CONTENT
-@content-color:@grey-alu;
-
-
-//FOOTER
-@footer-height:55px;
-@footer-color:@white-paper;
-@buttons-footer-offset:20%;
-
-//ANIMATIONS
-@bouncing-time:1200ms;
-@swipe-time:800ms;
-@fast-fade-time:150ms;
 
 .shadow-z-3 {
   box-shadow: 0 1px 8px 0 rgba(0,0,0,.2), 0 3px 4px 0 rgba(0,0,0,.14), 0 3px 3px -2px rgba(0,0,0,.12);
@@ -618,8 +564,6 @@ html{
 //CONtENT
 
 ui-view{
-  position: fixed;
-  background-color: @content-color;
   top: @header-height;
   bottom: @footer-height;
   width: 100%;

@@ -1,7 +1,7 @@
 <!--//FOOTER/HEADER-->
 <div ng-if="$ctrl.btShow && $ctrl.btPosition != 'content'" class="animated bt-btn-col bt-btn-action bt-btn-{{$ctrl.btSize}} bt-btn-{{$ctrl.btContext}} bt-btn-{{$ctrl.btPosition}} {{$ctrl.btActiveClasse}} {{$ctrl.btDisabledClasse}}">
     <button ng-href="" ng-click="$ctrl.btAction()"
-            class="bt-btn" form="{{$ctrl.btSubmitForm}}" type="submit"
+            class="bt-btn" ng-form="$ctrl.btSubmitForm" type="submit"
             ng-disabled="$ctrl.btDisabled"
     >
         <span class="btn-back-masque"></span>
