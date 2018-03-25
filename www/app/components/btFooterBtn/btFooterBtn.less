@@ -59,16 +59,14 @@
   height: 4rem;
   line-height: @little-button-width;
   position: relative;
-  transition: transform @bouncing-time;
+  transition: transform @swipe-time;
   will-change: transform;
 
   &:active, &.bt-action__btn--active{
-    transition: transform @bouncing-time;
     background-color: @medium-blue;
 
     .bt-action__ico {
       color: @white;
-      transition: color @fast-fade-time;
     }
 
     &:before {
@@ -80,7 +78,7 @@
   }
 
   &:before {
-    transition: color @fast-fade-time;
+    transition: bottom @btn-press-time;
     z-index: 14;
     content: ' ';
     width: 100%;
@@ -126,7 +124,7 @@
   opacity: 1;
   top: 0;
   text-align: center;
-  transition: transform 300ms;
+  transition: all @btn-press-time;
   will-change: transform;
   &.bt-ico-hide {
     transform: rotateY(90deg);
