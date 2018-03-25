@@ -16,6 +16,10 @@ var betty2App = angular.module(
 
 betty2App.run(function($localForage, $http, $ionicPlatform, $rootScope, $timeout, $state, $translate, BtNavigate) {
 
+  Pro.init('f6f5a1c7', {
+    appVersion: '1.0.2'
+  });
+
   $ionicPlatform.ready(function() {
     if(window.cordova && window.cordova.plugins.Keyboard) {
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard

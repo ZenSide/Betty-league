@@ -3,6 +3,8 @@
   "version": "1.1.1",
   "description": "ionicBetty: An Ionic project",
   "dependencies": {
+    "@ionic/app-scripts": "^3.1.8",
+    "@ionic/pro": "^1.0.20",
     "grunt-include-source": "^1.1.0",
     "gulp": "^3.5.6",
     "gulp-concat": "^2.2.0",
