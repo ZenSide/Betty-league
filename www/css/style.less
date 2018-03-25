@@ -525,7 +525,6 @@ body {
   background-color: @header-color;
   border: none;
   top: 0;
-  .shadow-z-3;
   &:after{
     content: "";
     position: absolute;
@@ -541,23 +540,18 @@ body {
 .bt-logo{
   position: absolute;
   left: 50%;
-  margin-left: -22.5px;
-  top: @margin-micro;
-  width: 45px;
+  margin-left: -3.6rem;
+  bottom: 0;
+  margin-bottom: -4rem;
+  width: 7.2rem;
   z-index: 10;
-}
 
-.bt-header-ball{
-  height: @header-height+30px;
-  width: @header-height+30px;
-  position: absolute;
-  top: -13px;
-  left: 50%;
-  z-index: 9;
-  border-radius: 50%;
-  margin-left: -(@header-height+30px)/2;
-  background-color: @white-paper;
-  .shadow-z-3;
+  &.ng-enter{
+    animation: fadeIn @bouncing-time;
+  }
+  &.ng-leave{
+    animation: fadeOut @bouncing-time;
+  }
 }
 
 
@@ -609,8 +603,9 @@ ui-view{
 }
 
 .bt-content{
-  padding-top: @margin-medium+16px;
+  padding-top: @margin-medium;
   &.signin,&.login{
+    padding-top: @margin-medium+4rem;
     padding-left: @padding-big;
     padding-right: @padding-big;
   }

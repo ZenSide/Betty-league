@@ -37,6 +37,8 @@ betty2App.controller('SigninCtrl', function (BtMessages,UserApi,BtNavigate,$time
             'LOGIN.FOOTER.LOG'
         ]
     ).then(function (translations) {
+        $scope.$parent.withHeadLogo = false;
+
         $scope.$parent.headerNavStatus = {
             leftBt : {
                 active : false,

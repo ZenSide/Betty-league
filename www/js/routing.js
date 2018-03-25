@@ -3,7 +3,7 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
         //USER
         .state('login', {
             url: '/login',
-            templateUrl: 'views/userLogin/login.html',
+            templateUrl: 'pages/login/login.html',
             controller: 'LoginCtrl'
         })
 
@@ -12,7 +12,6 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
             templateUrl: 'views/userLogin/signin.html',
             controller: 'SigninCtrl'
         })
-
 
         .state('leagues', {
             url: '/leagues',

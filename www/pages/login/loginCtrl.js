@@ -7,7 +7,7 @@ betty2App.controller('LoginCtrl', function (UserApi,BtMessages,BtNavigate,$scope
     // fosuser
     $scope.user = {
         email:'',
-        password:'',
+        password:''
     };
 
     $scope.submitForm = function(form){
@@ -18,15 +18,16 @@ betty2App.controller('LoginCtrl', function (UserApi,BtMessages,BtNavigate,$scope
             BtMessages.showFormMessages(form,$scope.fieldsNames);
         }
     };
+    $scope.$parent.withHeadLogo = true;
 
     $scope.signInForm = {};
-
 
     $translate([
         'LOGIN.FOOTER.MDP',
         'LOGIN.FOOTER.SIGN'
         ]
     ).then(function (translations) {
+
         $scope.$parent.headerNavStatus = {
             leftBt : {
                 active : false,
@@ -34,7 +35,7 @@ betty2App.controller('LoginCtrl', function (UserApi,BtMessages,BtNavigate,$scope
             rightBt : {
                 active : false,
             }
-        }
+        };
         $scope.$parent.footerStatus = {
             leftBt : {
                 active : true,

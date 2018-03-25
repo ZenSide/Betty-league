@@ -1,6 +1,14 @@
 {
   "name": "ionicBetty",
   "app_id": "f6f5a1c7",
-  "integrations": {},
-  "type": "ionic1"
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic1",
+  "watchPatterns": [
+    "scss/**/*",
+    "www/**/*",
+    "!www/lib/**/*",
+    "!www/**/*.map"
+  ]
 }

@@ -14,6 +14,7 @@
     <!-- grunt included -->
     <!-- include: "type": "css", "files": "css/**/*.css" -->
     <!-- include: "type": "css", "files": "fonts/**/*.css" -->
+    <!-- include: "type": "css", "files": "pages/**/*.css" -->
 
 
 </head>
@@ -21,8 +22,7 @@
 <!--//HEADER BAR-->
 <body ng-app="betty2" ng-controller="ParentCtrl" >
 <div class="bar bt-header ng-cloak" >
-    <img src="img/logo.png" class="bt-logo">
-    <div class="bt-header-ball"></div>
+    <img class="bt-logo" ng-if="withHeadLogo" src="img/logo_216x240.png">
     <bt-footer-btn ng-repeat="btn in headerNavStatus track by $index"
                    bt-show="btn.active"
                    ico="btn.ico"
@@ -104,5 +104,6 @@
 <!-- grunt included -->
 <!-- include: "type": "js", "files": "js/**/*.js" -->
 <!-- include: "type": "js", "files": "components/**/*.js" -->
+<!-- include: "type": "js", "files": "pages/**/*.js" -->
 </body>
 </html>
