@@ -1,0 +1,94 @@
+.bt-action {
+  width: 33%;
+  top: -2rem;
+  position: absolute;
+  text-align: center;
+}
+.bt-action.ng-leave {
+  animation: bounceOutDown 1200ms;
+}
+.bt-action.ng-enter {
+  animation: bounceInUp 1200ms;
+}
+.bt-action--huge {
+  top: -3rem;
+}
+.bt-action--huge .bt-action__btn {
+  width: 6rem;
+  height: 6rem;
+}
+.bt-action--left {
+  left: 0;
+}
+.bt-action--middle {
+  left: 33%;
+}
+.bt-action--right {
+  left: 66%;
+}
+.bt-action__btn {
+  z-index: 15;
+  color: #123a5c;
+  border: none;
+  background-color: #1c5b8f;
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 50%;
+  font-size: 18px;
+  width: 4rem;
+  height: 4rem;
+  line-height: 4rem;
+  position: relative;
+  transition: transform 1200ms;
+  will-change: transform;
+}
+.bt-action__btn:active,
+.bt-action__btn.bt-action__btn--active {
+  transition: transform 1200ms;
+  background-color: #1c5b8f;
+}
+.bt-action__btn:active .bt-action__ico,
+.bt-action__btn.bt-action__btn--active .bt-action__ico {
+  color: #e6e6e6;
+  transition: color 150ms;
+}
+.bt-action__btn:active:before,
+.bt-action__btn.bt-action__btn--active:before {
+  bottom: 0;
+}
+.bt-action__btn:before {
+  transition: color 150ms;
+  z-index: 14;
+  content: ' ';
+  width: 100%;
+  height: 100%;
+  right: 0rem;
+  bottom: 0.4rem;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #0583d0;
+}
+.bt-action__label {
+  position: relative;
+  display: inline-block;
+  color: #20232a;
+  width: 100%;
+  vertical-align: top;
+  transition: transform 1200ms;
+  will-change: transform;
+}
+.bt-action__ico {
+  position: absolute;
+  z-index: 50;
+  width: 100%;
+  left: 0;
+  height: 100%;
+  opacity: 1;
+  top: 0;
+  text-align: center;
+  transition: transform 300ms;
+  will-change: transform;
+}
+.bt-action__ico.bt-ico-hide {
+  transform: rotateY(90deg);
+}

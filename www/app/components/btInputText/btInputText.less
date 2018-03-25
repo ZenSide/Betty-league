@@ -1,0 +1,45 @@
+@import "../../../less/constant";
+
+.bt-input-text-component{
+  &.btUsername input[name=btUsername]{background-color: @red-sunset;}
+  &.btEmail input[name=btEmail]{background-color: @red-sunset;}
+  &.btPlainPassword input[name=btPlainPassword]{background-color: @red-sunset;}
+  &.btConfirmPassword input[name=btConfirmPassword]{background-color: @red-sunset;}
+  &.btPassword input[name=btPassword]{background-color: @red-sunset;}
+}
+
+.bt-input-text-container{
+  position: relative;
+  margin-bottom: @margin-medium;
+  .bt-input-text{
+    width: 100%;
+    padding-left: @padding-medium;
+    height: @input-height;
+    background-color: @input-back-color;
+    transition: background-color @fast-fade-time ease-in-out;
+    color:@input-color;
+    &:focus,&:active{
+      background-color: @input-active-back-color;
+      color: @input-color;
+      color: @input-active-color;
+    }
+
+  }
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color:    @white-paper!important;
+  opacity:  0.8;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color:    @white-paper!important;
+  opacity:  0.8;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color:    @white-paper!important;
+  opacity:  0.8;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color:    @white-paper!important;
+  opacity:  0.8;
+}

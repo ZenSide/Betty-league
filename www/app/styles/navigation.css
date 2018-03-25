@@ -1,0 +1,30 @@
+ui-view {
+  top: 70px;
+  bottom: 50px;
+  width: 100%;
+  position: absolute;
+}
+ui-view.goLeft.ng-enter {
+  animation: slideInLeft 800ms;
+}
+ui-view.goLeft.ng-leave {
+  animation: slideOutRight 800ms;
+}
+ui-view.goRight.ng-enter {
+  animation: slideInRight 800ms;
+}
+ui-view.goRight.ng-leave {
+  animation: slideOutLeft 800ms;
+}
+ui-view.goTop.ng-enter {
+  animation: slideInDown 800ms;
+}
+ui-view.goTop.ng-leave {
+  animation: slideOutDown 800ms;
+}
+ui-view.goBottom.ng-enter {
+  animation: slideInUp 800ms;
+}
+ui-view.goBottom.ng-leave {
+  animation: slideOutUp 800ms;
+}

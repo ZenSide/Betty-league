@@ -1,0 +1,29 @@
+html,
+body {
+  font-size: 10px;
+  line-height: 1.4;
+}
+body {
+  background-color: #2BB289;
+}
+.scroll-bar-indicator {
+  background-color: #F4F4EF;
+}
+.bt-content {
+  padding-top: 1.5rem;
+}
+.bt-content.signin,
+.bt-content.login {
+  padding-top: 5.5rem;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+.bt-content.flexinoscroll {
+  padding-top: 0;
+}
+.bt-content.flexinoscroll .scroll {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

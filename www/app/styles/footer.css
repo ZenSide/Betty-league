@@ -1,0 +1,11 @@
+.bt-footer {
+  position: fixed;
+  bottom: 0;
+  height: auto;
+  padding: 0;
+  background-color: #289172;
+  display: block;
+}
+.bt-footer-container {
+  height: 50px;
+}

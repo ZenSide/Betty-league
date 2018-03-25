@@ -1,0 +1,38 @@
+@import "../../less/constant";
+
+//RESET
+html, body{
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+body {
+  background-color: @light-green;
+}
+
+
+//SCROLL INDICATOR
+.scroll-bar-indicator{
+  background-color: @white-paper;
+}
+
+//CONTENT
+.bt-content{
+  padding-top: @margin-medium;
+  &.signin,&.login{
+    padding-top: @margin-medium+4rem;
+    padding-left: @padding-big;
+    padding-right: @padding-big;
+  }
+  &.flexinoscroll{
+    padding-top: 0;
+    .scroll{
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+

@@ -1,0 +1,44 @@
+@import "../../less/constant";
+
+ui-view{
+  top: @header-height;
+  bottom: @footer-height;
+  width: 100%;
+  position: absolute;
+
+  &.goLeft{
+    &.ng-enter{
+      animation: slideInLeft @swipe-time;
+    }
+    &.ng-leave{
+      animation: slideOutRight @swipe-time;
+    }
+  }
+
+  &.goRight{
+    &.ng-enter{
+      animation: slideInRight @swipe-time;
+    }
+    &.ng-leave{
+      animation: slideOutLeft @swipe-time;
+    }
+  }
+
+  &.goTop{
+    &.ng-enter{
+      animation: slideInDown @swipe-time;
+    }
+    &.ng-leave{
+      animation: slideOutDown @swipe-time;
+    }
+  }
+
+  &.goBottom{
+    &.ng-enter{
+      animation: slideInUp @swipe-time;
+    }
+    &.ng-leave{
+      animation: slideOutUp @swipe-time;
+    }
+  }
+}

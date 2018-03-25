@@ -1,0 +1,136 @@
+@import "../../../less/constant";
+@medium-size:4rem;
+@huge-size:6rem;
+
+@medium-font-size:5rem;
+@big-font-size:5rem;
+
+.bt-action {
+  width: 33%;
+  top: -@medium-size/2;
+  position: absolute;
+  text-align: center;
+  //ANIMATIONS
+  &.ng-leave{
+    animation: bounceOutDown @bouncing-time;
+  }
+  &.ng-enter{
+    animation: bounceInUp @bouncing-time;
+  }
+}
+
+//Size
+.bt-action--medium {
+
+}
+&.bt-action--huge {
+  top: -@huge-size/2;
+
+  .bt-action__btn {
+    width: @huge-size;
+    height: @huge-size;
+  }
+}
+
+//Position
+.bt-action--left {
+  left: 0;
+}
+
+.bt-action--middle {
+  left: 33%;
+}
+
+.bt-action--right {
+  left: 66%;
+}
+
+//Button
+.bt-action__btn {
+  z-index: 15;
+  color: @hard-blue;
+  border: none;
+  background-color: @medium-blue;
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 50%;
+  font-size: @little-button-font-width;
+  width: 4rem;
+  height: 4rem;
+  line-height: @little-button-width;
+  position: relative;
+  transition: transform @bouncing-time;
+  will-change: transform;
+
+  &:active, &.bt-action__btn--active{
+    transition: transform @bouncing-time;
+    background-color: @medium-blue;
+
+    .bt-action__ico {
+      color: @white;
+      transition: color @fast-fade-time;
+    }
+
+    &:before {
+      bottom: 0;
+    }
+  }
+
+  &:disabled{
+  }
+
+  &:before {
+    transition: color @fast-fade-time;
+    z-index: 14;
+    content: ' ';
+    width: 100%;
+    height: 100%;
+    right: 0rem;
+    bottom: 0.4rem;
+    border-radius: 50%;
+    position: absolute;
+    background-color: @light-blue;
+  }
+
+}
+
+//Context (colors)
+.bt-action__btn--normal {
+
+}
+.bt-action__btn--other {
+
+}
+.bt-action__btn--alert {
+
+}
+
+//label
+.bt-action__label{
+  position: relative;
+  display: inline-block;
+  color: @black-ink;
+  width: 100%;
+  vertical-align: top;
+  transition: transform @bouncing-time;
+  will-change: transform;
+}
+
+//ico
+.bt-action__ico {
+  position: absolute;
+  z-index: 50;
+  width: 100%;
+  left: 0;
+  height: 100%;
+  opacity: 1;
+  top: 0;
+  text-align: center;
+  transition: transform 300ms;
+  will-change: transform;
+  &.bt-ico-hide {
+    transform: rotateY(90deg);
+  }
+}
+
+

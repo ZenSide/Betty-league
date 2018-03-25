@@ -1,0 +1,32 @@
+.bt-header {
+  position: fixed;
+  height: 70px;
+  background-color: #289172;
+  border: none;
+  top: 0;
+}
+.bt-header:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #289172;
+  z-index: 9;
+}
+.bt-logo {
+  position: absolute;
+  left: 50%;
+  margin-left: -3.6rem;
+  bottom: 0;
+  margin-bottom: -4rem;
+  width: 7.2rem;
+  z-index: 10;
+}
+.bt-logo.ng-enter {
+  animation: fadeIn 1200ms;
+}
+.bt-logo.ng-leave {
+  animation: fadeOut 1200ms;
+}

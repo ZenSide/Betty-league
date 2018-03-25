@@ -1,0 +1,22 @@
+<!--//FOOTER/HEADER-->
+<div ng-if="$ctrl.btShow"
+     class="animated
+         bt-action
+         bt-action--{{$ctrl.btPosition}}
+         bt-action--{{$ctrl.btSize}}"
+>
+    <button ng-href="" ng-click="$ctrl.btAction()"
+            class="
+                bt-action__btn
+                bt-action__btn--{{$ctrl.btContext}}
+                bt-action__btn--{{$ctrl.btActiveClasse}}
+                bt-action__btn--{{$ctrl.btDisabledClasse}}"
+            ng-form="$ctrl.btSubmitForm" type="submit"
+            ng-disabled="$ctrl.btDisabled">
+        <i class="bt-action__ico {{$ctrl.icoResult}}" ></i>
+    </button>
+
+    <div class="bt-action__label bt-text-tiny" ng-show="$ctrl.btLabel">
+        {{$ctrl.btLabel}}
+    </div>
+</div>

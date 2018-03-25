@@ -5,7 +5,8 @@
   "dependencies": {
     "@ionic/app-scripts": "^3.1.8",
     "@ionic/pro": "^1.0.20",
-    "cordova-plugin-ionic": "^3.1.2",
+    "cordova-plugin-ionic": "^3.1.3",
+    "cordova-plugin-splashscreen": "^5.0.2",
     "cordova-sqlite-storage": "^2.2.0",
     "grunt-include-source": "^1.1.0",
     "gulp": "^3.5.6",
@@ -30,7 +31,15 @@
   "cordovaPlatforms": [],
   "cordova": {
     "plugins": {
-      "cordova-sqlite-storage": {}
+      "cordova-sqlite-storage": {},
+      "cordova-plugin-ionic": {
+        "APP_ID": "f6f5a1c7",
+        "CHANNEL_NAME": "Production",
+        "UPDATE_METHOD": "background|auto|none",
+        "WARN_DEBUG": "true",
+        "UPDATE_API": "https://api.ionicjs.com",
+        "MAX_STORE": "2"
+      }
     }
   }
 }

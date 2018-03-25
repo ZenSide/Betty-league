@@ -1,0 +1,53 @@
+.bt-input-text-component.btUsername input[name=btUsername] {
+  background-color: #FB6542;
+}
+.bt-input-text-component.btEmail input[name=btEmail] {
+  background-color: #FB6542;
+}
+.bt-input-text-component.btPlainPassword input[name=btPlainPassword] {
+  background-color: #FB6542;
+}
+.bt-input-text-component.btConfirmPassword input[name=btConfirmPassword] {
+  background-color: #FB6542;
+}
+.bt-input-text-component.btPassword input[name=btPassword] {
+  background-color: #FB6542;
+}
+.bt-input-text-container {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+.bt-input-text-container .bt-input-text {
+  width: 100%;
+  padding-left: 20px;
+  height: 45px;
+  background-color: #258039;
+  transition: background-color 150ms ease-in-out;
+  color: #F4F4EF;
+}
+.bt-input-text-container .bt-input-text:focus,
+.bt-input-text-container .bt-input-text:active {
+  background-color: #FFBB00;
+  color: #F4F4EF;
+  color: #20232a;
+}
+::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #F4F4EF !important;
+  opacity: 0.8;
+}
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #F4F4EF !important;
+  opacity: 0.8;
+}
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #F4F4EF !important;
+  opacity: 0.8;
+}
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #F4F4EF !important;
+  opacity: 0.8;
+}
