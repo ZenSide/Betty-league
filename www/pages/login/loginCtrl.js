@@ -35,7 +35,7 @@ betty2App.controller('LoginCtrl', function (UserApi,BtMessages,BtNavigate,$scope
             rightBt : {
                 active : false,
             }
-        };
+        }
         $scope.$parent.footerStatus = {
             leftBt : {
                 active : true,
