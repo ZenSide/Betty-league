@@ -1,7 +1,7 @@
 <ion-content delegate-handle="btContentHandle" class="bt-content login">
     <h1 class="txt-part-title u-gutter-bottom-regular" translate="TITLES.LOGIN"></h1>
 
-    <form novalidate name="loginForm" id="loginformId" ng-submit="submitForm(loginForm)">
+    <form autocomplete="off" novalidate name="loginForm" id="loginformId" ng-submit="submitForm(loginForm)">
         <!--//USERNAME-->
         <bt-input-text bt-select-order="1"
                        bt-focus
@@ -22,6 +22,16 @@
                        class="bt-input-text-component {{activeinputs}}"
         ></bt-input-text>
 
+        <!--SUBMIT-->
+        <bt-footer-btn ico="fa fa-check"
+                       bt-label="btn.label"
+                       bt-context="btn.context"
+                       bt-action="btn.action()"
+                       bt-active="btn.focus"
+                       bt-disabled="btn.disabled"
+                       bt-submit-form="btn.submitform"
+        >
+        </bt-footer-btn>
 
         <!--TODO conditions generales-->
     </form>

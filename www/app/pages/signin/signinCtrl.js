@@ -53,7 +53,7 @@ betty2App.controller('SigninCtrl', function (BtMessages,UserApi,BtNavigate,$time
                 ico : "ion-arrow-left-c",
                 position: "left",
                 size: "tiny",
-                context:"other",
+                context:"red",
                 focus : false,
                 disabled: false,
                 action:function(){
@@ -69,7 +69,7 @@ betty2App.controller('SigninCtrl', function (BtMessages,UserApi,BtNavigate,$time
                 position: "right",
                 size: "huge",
                 label:"",
-                context:"normal",
+                context:"red",
                 focus : false,
                 disabled: false,
                 submitform: 'signFormId',

@@ -27,23 +27,13 @@ betty2App.controller('LoginCtrl', function (UserApi,BtMessages,BtNavigate,$scope
         'LOGIN.FOOTER.SIGN'
         ]
     ).then(function (translations) {
-
-        $scope.$parent.headerNavStatus = {
-            leftBt : {
-                active : false,
-            },
-            rightBt : {
-                active : false,
-            }
-        }
         $scope.$parent.footerStatus = {
             leftBt : {
                 active : true,
-                ico : "ion-lock-combination",
+                ico : "fas fa-unlock",
                 position: "left",
-                size: "tiny",
+                size: "medium",
                 label:translations['LOGIN.FOOTER.MDP'],
-                context:"other",
                 focus : false,
                 disabled: false,
                 action:function(){
@@ -52,11 +42,10 @@ betty2App.controller('LoginCtrl', function (UserApi,BtMessages,BtNavigate,$scope
             },
             middleBt : {
                 active : true,
-                ico : "ion-person-add",
+                ico : "icon-bty-ico-join",
                 position: "middle",
-                size: "tiny",
+                size: "big",
                 label:translations['LOGIN.FOOTER.SIGN'],
-                context:"other",
                 focus : false,
                 disabled: false,
                 action:function(){
@@ -64,17 +53,7 @@ betty2App.controller('LoginCtrl', function (UserApi,BtMessages,BtNavigate,$scope
                 }
             },
             rightBt : {
-                active : true,
-                ico : "ion-checkmark-round",
-                position: "right",
-                size: "huge",
-                label:"",
-                context:"normal",
-                focus : false,
-                disabled: false,
-                submitform: 'loginformId',
-                action:function(){
-                }
+                active : false
             }
         }
     });

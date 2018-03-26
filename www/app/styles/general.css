@@ -15,8 +15,8 @@ body {
 .bt-content.signin,
 .bt-content.login {
   padding-top: 5.5rem;
-  padding-left: 35px;
-  padding-right: 35px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 .bt-content.flexinoscroll {
   padding-top: 0;
