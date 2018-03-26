@@ -33,7 +33,7 @@ var translations = {
                 MDP : 'MDP perdu',
                 SIGN : 'Inscription',
                 LOG : 'Connection'
-            },
+            }
         },
         SIGNIN : {
             MESSAGES : {

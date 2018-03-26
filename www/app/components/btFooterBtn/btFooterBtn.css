@@ -43,7 +43,7 @@
   width: 4rem;
   height: 4rem;
   position: relative;
-  transition: all 300ms;
+  transition: all 200ms;
   will-change: transform;
   padding: 0!important;
   min-width: 0!important;
@@ -51,7 +51,7 @@
   font-weight: normal;
 }
 .bt-action__btn:before {
-  transition: all 300ms;
+  transition: all 200ms;
   z-index: 14;
   content: ' ';
   width: 100%;
@@ -67,9 +67,26 @@
   color: #e6e6e6;
   top: 0;
 }
+.bt-action__btn:active .bt-action__content,
+.bt-action__btn.bt-action__btn--active .bt-action__content {
+  top: 0;
+  color: #e6e6e6;
+}
 .bt-action__btn:active:before,
 .bt-action__btn.bt-action__btn--active:before {
   bottom: 0;
+}
+.bt-action__btn--gold {
+  background-color: #b6850f;
+}
+.bt-action__btn--gold:before {
+  background-color: #fdcf21;
+}
+.bt-action__btn--gold .bt-action__ico {
+  color: #83600b;
+}
+.bt-action__btn--gold .bt-action__content {
+  color: #83600b;
 }
 .bt-action__btn--red {
   background-color: #bc2e33;
@@ -80,22 +97,8 @@
 .bt-action__btn--red .bt-action__ico {
   color: #892225;
 }
-.bt-action__ico {
-  position: absolute;
-  line-height: 4rem !important;
-  z-index: 50;
-  width: 100%;
-  border-radius: 50%;
-  left: 0;
-  height: 100%;
-  opacity: 1;
-  top: -0.4rem;
-  text-align: center;
-  transition: all 300ms;
-  will-change: transform;
-}
-.bt-action__ico.bt-ico-hide {
-  transform: rotateY(90deg);
+.bt-action__btn--red .bt-action__content {
+  color: #892225;
 }
 .bt-action__label {
   position: relative;
@@ -105,4 +108,56 @@
   vertical-align: top;
   transition: transform 1200ms;
   will-change: transform;
+}
+.bt-action__ico {
+  position: absolute;
+  line-height: 4rem !important;
+  z-index: 14;
+  width: 100%;
+  border-radius: 50%;
+  left: 0;
+  height: 100%;
+  opacity: 1;
+  top: -0.4rem;
+  text-align: center;
+  transition: all 200ms;
+  will-change: transform;
+}
+.bt-action__ico.bt-ico-hide {
+  transform: rotateY(90deg);
+}
+.bt-action__btn--body {
+  width: 100%;
+  border-radius: 0.5rem;
+  margin: 0;
+  max-width: 30rem;
+  padding-left: 1.5rem !important;
+  text-align: left;
+  font-size: 1.2rem!important;
+  height: auto;
+  padding-top: 1.6rem!important;
+  padding-right: 4.5rem !important;
+  padding-bottom: 1.6rem!important;
+  font-family: "quicksandbold", sans-serif;
+}
+.bt-action__btn--body:before {
+  border-radius: 0.5rem;
+}
+.bt-action__btn--body .bt-action__ico {
+  position: absolute;
+  line-height: 5rem!important;
+  z-index: 14;
+  width: auto;
+  right: 1.5rem;
+  left: auto;
+  height: 100%;
+  font-size: 1.6rem!important;
+}
+.bt-action__content {
+  top: -0.4rem;
+  color: #123a5c;
+  position: relative;
+  z-index: 14;
+  line-height: 1.1rem!important;
+  transition: top 200ms;
 }

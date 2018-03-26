@@ -4,7 +4,19 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
         .state('login', {
             url: '/login',
             templateUrl: 'app/pages/login/login.html',
-            controller: 'LoginCtrl'
+            controller: 'LoginCtrl',
+            resolve: {
+                translations: function ($translate) {
+                  return $translate([
+                      'LOGIN.FOOTER.MDP',
+                      'LOGIN.FOOTER.SIGN',
+                      'LOGIN.FOOTER.LOG'
+                    ]
+                  ).then(function (translations) {
+                    return translations
+                  });
+                }
+          }
         })
 
         .state('signin', {

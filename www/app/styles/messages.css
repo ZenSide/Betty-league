@@ -1,8 +1,13 @@
 .bt-alert-messages {
-  border-top: 1px solid #ACBEBE;
+  border-top: 1px solid #289172;
   text-align: center;
+  background-color: #e6e6e6;
   max-height: 0px;
   transition: max-height 800ms ease-in-out;
+  font-size: 1rem;
+  font-family: "quicksandbold", sans-serif;
+  text-transform: uppercase;
+  line-height: 1.2!important;
 }
 .bt-alert-messages.expanded-add {
   max-height: 0px;
@@ -11,13 +16,13 @@
   max-height: 500px;
 }
 .bt-alert-messages .bt-message {
-  color: #20232a;
+  color: #222222;
 }
 .bt-alert-messages .bt-message.alert {
-  color: #FB6542;
+  color: #892225;
 }
 .bt-alert-messages .bt-message.success {
-  color: #258039;
+  color: #289172;
 }
 .bt-ng-message-list {
   position: absolute;
@@ -26,8 +31,8 @@
   height: 100%;
 }
 .bt-ng-message {
-  background-color: #FB6542;
-  color: #F4F4EF;
+  background-color: #892225;
+  color: #e6e6e6;
   height: 100%;
   line-height: 45px;
   text-align: center;

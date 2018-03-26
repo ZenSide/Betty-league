@@ -1,10 +1,15 @@
 @import "../../less/constant";
 
 .bt-alert-messages{
-  border-top: 1px solid @grey-alu;
+  border-top: 1px solid @medium-green;
   text-align: center;
+  background-color: @white;
   max-height: 0px;
   transition: max-height @swipe-time ease-in-out;
+  font-size: 1rem;
+  font-family: @normal-font;
+  text-transform: uppercase;
+  line-height: 1.2!important;
   &.expanded-add{
     max-height: 0px;
   }
@@ -12,12 +17,12 @@
     max-height: 500px;
   }
   .bt-message{
-    color: @black-ink;
+    color: @black;
     &.alert{
-      color: @red-sunset;
+      color: @hard-red;
     }
     &.success{
-      color: @green-grass;
+      color: @hard-green;
     }
   }//BE MESSAGE
 }//BT MESSAGES
@@ -29,8 +34,8 @@
   height: 100%;
 }
 .bt-ng-message{
-  background-color: @red-sunset;
-  color: @white-paper;
+  background-color: @hard-red;
+  color: @white;
   height: 100%;
   line-height: 45px;
   text-align: center;

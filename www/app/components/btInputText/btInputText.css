@@ -1,17 +1,9 @@
-.bt-input-text-component.btUsername input[name=btUsername] {
-  background-color: #FB6542;
-}
-.bt-input-text-component.btEmail input[name=btEmail] {
-  background-color: #FB6542;
-}
-.bt-input-text-component.btPlainPassword input[name=btPlainPassword] {
-  background-color: #FB6542;
-}
-.bt-input-text-component.btConfirmPassword input[name=btConfirmPassword] {
-  background-color: #FB6542;
-}
+.bt-input-text-component.btUsername input[name=btUsername],
+.bt-input-text-component.btEmail input[name=btEmail],
+.bt-input-text-component.btPlainPassword input[name=btPlainPassword],
+.bt-input-text-component.btConfirmPassword input[name=btConfirmPassword],
 .bt-input-text-component.btPassword input[name=btPassword] {
-  background-color: #FB6542;
+  border: 0.1rem solid #fa393c;
 }
 .bt-input-text-container {
   position: relative;
@@ -27,13 +19,12 @@
   height: 5rem;
   font-family: "quicksandbold", sans-serif;
   background-color: #e6e6e6;
-  transition: background-color 150ms ease-in-out;
+  transition: border-color 150ms ease-in-out;
   color: #222222;
   border: none;
 }
 .bt-input-text-container .bt-input-text:focus,
 .bt-input-text-container .bt-input-text:active {
-  color: #222222;
   border: 1px solid #222222;
 }
 ::-webkit-input-placeholder {

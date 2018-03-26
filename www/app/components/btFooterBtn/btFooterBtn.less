@@ -93,6 +93,11 @@
       top: 0;
     }
 
+    .bt-action__content {
+      top: 0;
+      color: @white;
+    }
+
     &:before {
       bottom: 0;
     }
@@ -109,7 +114,20 @@
 }
 
 //Context (colors)
-.bt-action__btn--blue {
+.bt-action__btn--gold {
+  background-color: @medium-gold;
+
+  &:before {
+    background-color: @light-gold;
+  }
+
+  .bt-action__ico {
+    color: @hard-gold;
+  }
+
+  .bt-action__content {
+    color: @hard-gold;
+  }
 }
 .bt-action__btn--red {
   background-color: @medium-red;
@@ -118,17 +136,31 @@
     background-color: @light-red;
   }
 
-  .bt-action__ico {
+  .bt-action__ico{
+    color: @hard-red;
+  }
+
+  .bt-action__content {
     color: @hard-red;
   }
 }
 
+//label
+.bt-action__label{
+  position: relative;
+  display: inline-block;
+  color: @black;
+  width: 100%;
+  vertical-align: top;
+  transition: transform @bouncing-time;
+  will-change: transform;
+}
 
 //ico
 .bt-action__ico {
   position: absolute;
   line-height: @medium-size!important;
-  z-index: 50;
+  z-index: 14;
   width: 100%;
   border-radius: 50%;
   left: 0;
@@ -143,15 +175,43 @@
   }
 }
 
-
-//label
-.bt-action__label{
-  position: relative;
-  display: inline-block;
-  color: @black;
+//content
+.bt-action__btn--body {
   width: 100%;
-  vertical-align: top;
-  transition: transform @bouncing-time;
-  will-change: transform;
+  border-radius: 0.5rem;
+  margin: 0;
+  max-width:30rem;
+  padding-left: @margin-medium!important;
+  text-align: left;
+  font-size: 1.2rem!important;
+  height: auto;
+  padding-top: 1.6rem!important;
+  padding-right: 3*@margin-medium!important;
+  padding-bottom: 1.6rem!important;
+  font-family: @normal-font;
+
+  &:before {
+    border-radius: 0.5rem;
+  }
+
+  .bt-action__ico {
+    position: absolute;
+    line-height: 5rem!important;
+    z-index: 14;
+    width: auto;
+    right: @margin-medium;
+    left: auto;
+    height: 100%;
+    font-size: 1.6rem!important;
+  }
+
 }
 
+.bt-action__content {
+  top: -@press-distance;
+  color: @hard-blue;
+  position: relative;
+  z-index: 14;
+  line-height: 1.1rem!important;
+  transition: top @btn-press-time;
+}
