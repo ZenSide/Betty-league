@@ -1,5 +1,5 @@
 'use strict';
-betty2App.factory('UserApi', function($rootScope, BtMessages, BtNavigate, BtLoading, ResourcesFactory) {
+betty2App.factory('UserApi', function($rootScope, BtMessages, BtNavigate, BtLoading, ResourcesFactory, BtLocalStorage) {
   var UserApi = {
     sign : function(newUser){
       BtLoading.startLoad();
@@ -24,8 +24,11 @@ betty2App.factory('UserApi', function($rootScope, BtMessages, BtNavigate, BtLoad
       BtLoading.startLoad();
       user.logfromfb = false;
       ResourcesFactory.post('/login_api', user, true).then(function (data) {
-        //UserLocal.setToken(data.token);
-        //UserLocal.setInfos(data);
+
+        BtLocalStorage.setObject('User', data);
+
+        console.log(BtLocalStorage.getObject('User'));
+
         var messages = [
           {
             context:'success',
