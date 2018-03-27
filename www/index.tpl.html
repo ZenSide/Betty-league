@@ -19,15 +19,14 @@
 
 <!--//HEADER BAR-->
 <body ng-app="betty2" ng-controller="ParentCtrl" >
-    <div class="bar bt-header" >
+    <div class="bar bt-header">
         <img class="bt-logo" ng-if="withHeadLogo" src="img/logo_216x240.png">
     </div>
 
     <!--///CONTENT-->
-    <div>
-        <ui-view autoscroll="true" class="animated {{viewAnimClass}}"></ui-view>
-    </div>
+    <ui-view autoscroll="true" class="animated {{viewAnimClass}}"></ui-view>
 
+    <!---->
     <div class="bt-loading-container ng-cloak" ng-if="btLoading">
         <div class="bt-loading-back"></div>
         <div class="bt-loading" >
