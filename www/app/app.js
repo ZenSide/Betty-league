@@ -9,12 +9,11 @@ var betty2App = angular.module(
     'ionic',
     'restangular',
     'pascalprecht.translate',
-    'ngCordova',
-    'LocalForageModule'
+    'ngCordova'
   ]
 );
 
-betty2App.run(function($localForage, $http, $ionicPlatform, $rootScope, $timeout, $state, $translate, BtNavigate) {
+betty2App.run(function($http, $ionicPlatform, $rootScope, $timeout, $state, $translate, BtNavigate) {
 
   $ionicPlatform.ready(function() {
     if(window.cordova && window.cordova.plugins.Keyboard) {

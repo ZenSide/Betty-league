@@ -1,4 +1,4 @@
-betty2App.factory('ResourcesFactory', function($q, $http, $rootScope, UserLocal, API_BASE_URL) {
+betty2App.factory('ResourcesFactory', function($q, $http, $rootScope, API_BASE_URL) {
 
     var ResourcesFactory = {
         errorHandling: function (data, status) {
@@ -38,14 +38,14 @@ betty2App.factory('ResourcesFactory', function($q, $http, $rootScope, UserLocal,
             return $q(function (resolve, reject) {
                 var config = {};
                 if (!anonimous) {
-                    UserLocal.getToken().then(function (token) {
-                        config.headers = {
-                            Authorization: 'Bearer ' + token
-                        };
-                        ResourcesFactory.basePost(url, data, config, resolve, reject);
-                    }, function (error) {
-                        reject(error);
-                    });
+                    //UserLocal.getToken().then(function (token) {
+                    //    config.headers = {
+                    //        Authorization: 'Bearer ' + token
+                    //    };
+                    //    ResourcesFactory.basePost(url, data, config, resolve, reject);
+                    //}, function (error) {
+                    //    reject(error);
+                    //});
                 }
                 else {
                     ResourcesFactory.basePost(url, data, config, resolve, reject);
@@ -68,14 +68,14 @@ betty2App.factory('ResourcesFactory', function($q, $http, $rootScope, UserLocal,
                     'params' : params
                 };
                 if (!anonimous) {
-                    UserLocal.getToken().then(function (token) {
-                        config.headers = {
-                            Authorization: 'Bearer ' + token
-                        };
-                        ResourcesFactory.baseGet(url, config, resolve, reject);
-                    }, function (error) {
-                        reject(error);
-                    });
+                    //UserLocal.getToken().then(function (token) {
+                    //    config.headers = {
+                    //        Authorization: 'Bearer ' + token
+                    //    };
+                    //    ResourcesFactory.baseGet(url, config, resolve, reject);
+                    //}, function (error) {
+                    //    reject(error);
+                    //});
                 }
                 else {
                     ResourcesFactory.baseGet(url, config, resolve, reject);

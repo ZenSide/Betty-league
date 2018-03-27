@@ -1,35 +1,5 @@
 'use strict';
-betty2App.run(function ($localForage) {
-  $localForage.createInstance({
-    name: 'User'
-  });
-}).factory('UserLocal', function ($localForage) {
-  var userStore = $localForage.instance('User');
-  var UserLocal = {
-    setInfos: function (loginResponse) {
-      var infos = {
-        'email': loginResponse.email,
-        'pseudo': loginResponse.pseudo,
-        'image64': loginResponse.image64
-      };
-      return userStore.setItem('infos', infos);
-    },
-    getInfos: function () {
-      return userStore.getItem('infos');
-    },
-    setToken: function (token) {
-      return userStore.setItem('token', token);
-    },
-    getToken: function () {
-      return userStore.getItem('token');
-    },
-    clear: function () {
-      return userStore.clear();
-    }
-  };
-  return UserLocal ;
-})
-.factory('UserApi', function(UserLocal, $rootScope, BtMessages, BtNavigate, BtLoading, ResourcesFactory) {
+betty2App.factory('UserApi', function($rootScope, BtMessages, BtNavigate, BtLoading, ResourcesFactory) {
   var UserApi = {
     sign : function(newUser){
       BtLoading.startLoad();
@@ -54,8 +24,8 @@ betty2App.run(function ($localForage) {
       BtLoading.startLoad();
       user.logfromfb = false;
       ResourcesFactory.post('/login_api', user, true).then(function (data) {
-        UserLocal.setToken(data.token);
-        UserLocal.setInfos(data);
+        //UserLocal.setToken(data.token);
+        //UserLocal.setInfos(data);
         var messages = [
           {
             context:'success',
