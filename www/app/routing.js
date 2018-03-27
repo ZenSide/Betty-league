@@ -10,7 +10,8 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
                   return $translate([
                       'LOGIN.FOOTER.MDP',
                       'LOGIN.FOOTER.SIGN',
-                      'LOGIN.FOOTER.LOG'
+                      'LOGIN.FOOTER.LOG',
+                      'LOGIN.FOOTER.FB'
                     ]
                   ).then(function (translations) {
                     return translations

@@ -32,7 +32,8 @@ var translations = {
             FOOTER : {
                 MDP : 'MDP perdu',
                 SIGN : 'Inscription',
-                LOG : 'Connection'
+                LOG : 'Connection',
+                FB : 'Connection Facebook'
             }
         },
         SIGNIN : {
@@ -42,6 +43,7 @@ var translations = {
                     btUsername : "nom d'utilisateur requis",
                     btEmail : "email requis",
                     btPlainPassword : "mot de passe requis",
+                    btPassword : "mot de passe requis",
                     btConfirmPassword : "confirmation du mot de passe requise"
                 },
                 email : {

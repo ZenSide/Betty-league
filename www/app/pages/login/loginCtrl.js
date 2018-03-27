@@ -1,16 +1,20 @@
 betty2App.controller('LoginCtrl', function (UserApi,BtMessages,BtNavigate,$scope,translations) {
 
-    console.log(translations);
+    $scope.$parent.withHeadLogo = true;
+
+    // Connection
+    $scope.user = {
+        email:'',
+        password:''
+    };
 
     $scope.fieldsNames = [
         'btEmail',
         'btPassword'
-    ]
+    ];
 
-    // fosuser
-    $scope.user = {
-        email:'',
-        password:''
+    $scope.loginBtn = {
+        content:translations['LOGIN.FOOTER.LOG']
     };
 
     $scope.submitForm = function(form){
@@ -21,16 +25,17 @@ betty2App.controller('LoginCtrl', function (UserApi,BtMessages,BtNavigate,$scope
             BtMessages.showFormMessages(form,$scope.fieldsNames);
         }
     };
-    $scope.$parent.withHeadLogo = true;
 
-    $scope.signInForm = {};
-
-    $scope.loginBtn = {
-        content:translations['LOGIN.FOOTER.LOG'],
-        context: 'gold',
-        submitform: 'loginformId'
+    //FB Connect
+    $scope.fbBtn = {
+        content:translations['LOGIN.FOOTER.FB']
     };
 
+    $scope.fbConnect = function () {
+        console.log('facebook');
+    };
+
+    //footer actions
     $scope.$parent.footerStatus = {
         leftBt : {
             active : true,

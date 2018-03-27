@@ -133,12 +133,12 @@
   max-width: 30rem;
   padding-left: 1.5rem !important;
   text-align: left;
-  font-size: 1.2rem!important;
+  font-size: 1.3rem!important;
   height: auto;
   padding-top: 1.6rem!important;
   padding-right: 4.5rem !important;
   padding-bottom: 1.6rem!important;
-  font-family: "quicksandbold", sans-serif;
+  font-family: "poppinsmedium", sans-serif;
 }
 .bt-action__btn--body:before {
   border-radius: 0.5rem;
@@ -151,7 +151,7 @@
   right: 1.5rem;
   left: auto;
   height: 100%;
-  font-size: 1.6rem!important;
+  font-size: 1.8rem!important;
 }
 .bt-action__content {
   top: -0.4rem;

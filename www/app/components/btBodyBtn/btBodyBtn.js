@@ -10,7 +10,7 @@ betty2App.component('btBodyBtn',{
     btActive: '<',
     btAction: '&',
     btDisabled: '<',
-    btSubmitForm: '='
+    btSubmitForm: '<'
   },
   controller:function($timeout){
     var zeCtrl = this;

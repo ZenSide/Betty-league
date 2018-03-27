@@ -1,7 +1,8 @@
 <ion-content delegate-handle="btContentHandle" class="bt-content login">
     <h1 class="txt-part-title u-gutter-bottom-regular" translate="TITLES.LOGIN"></h1>
 
-    <form autocomplete="off" novalidate name="loginForm" id="loginformId" ng-submit="submitForm(loginForm)">
+    <form autocomplete="off" class="u-gutter-bottom-big"
+          novalidate name="loginForm" id="loginformId" ng-submit="submitForm(loginForm)">
         <!--//USERNAME-->
         <bt-input-text bt-select-order="1"
                        bt-focus
@@ -25,14 +26,19 @@
         <!--SUBMIT-->
         <bt-body-btn ico="'fa fa-check'"
                        bt-content="loginBtn.content"
-                       bt-context="loginBtn.context"
-                       bt-action="loginBtn.action()"
-                       bt-active="loginBtn.focus"
+                       bt-context="'gold'"
                        bt-disabled="loginBtn.disabled"
-                       bt-submit-form="user"
+                       bt-submit-form="loginformId"
         >
         </bt-body-btn>
-
         <!--TODO conditions generales-->
     </form>
+
+    <!--FB Connect-->
+    <bt-body-btn ico="'fab fa-facebook'"
+                 bt-content="fbBtn.content"
+                 bt-disabled="fbBtn.disabled"
+                 bt-action="fbConnect()"
+    >
+    </bt-body-btn>
 </ion-content>
