@@ -46,5 +46,31 @@ betty2App.run(function($localForage, $http, $ionicPlatform, $rootScope, $timeout
       });
     }, null);
   }
+}).config(function($stateProvider, $urlRouterProvider) {
+  $stateProvider
+    .state('login', {
+      url: '/login',
+      templateUrl: 'app/pages/login/login.html',
+      controller: 'LoginCtrl',
+      resolve: {
+        translations: function ($translate) {
+          return $translate([
+              'LOGIN.FOOTER.MDP',
+              'LOGIN.FOOTER.SIGN',
+              'LOGIN.FOOTER.LOG',
+              'LOGIN.FOOTER.FB'
+            ]
+          ).then(function (translations) {
+            return translations
+          });
+        }
+      }
+    })
+    .state('signin', {
+      url: '/signin',
+      templateUrl: 'app/pages/signin/signin.html',
+      controller: 'SigninCtrl'
+    });
+  $urlRouterProvider.otherwise('/login');
 });
 
