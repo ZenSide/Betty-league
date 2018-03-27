@@ -51,92 +51,89 @@
 <!--//HEADER BAR-->
 <body ng-app="betty2" ng-controller="ParentCtrl" >
     <div class="bar bt-header" >
-        <img class="bt-logo"  src="img/logo_216x240.png">
+        <img class="bt-logo" ng-if="withHeadLogo" src="img/logo_216x240.png">
     </div>
 
-    <!--<div class="ng-cloak">-->
-        <!--<ui-view autoscroll="true" class="animated {{viewAnimClass}}"></ui-view>-->
-    <!--</div>-->
+    <!--///CONTENT-->
+    <ui-view autoscroll="true" class="animated {{viewAnimClass}}"></ui-view>
 
-    <!--<div class="bt-loading-container ng-cloak" ng-if="btLoading">-->
-        <!--<div class="bt-loading-back"></div>-->
-        <!--<div class="bt-loading" >-->
-            <!--<ion-spinner icon="lines"></ion-spinner>-->
-        <!--</div>-->
-    <!--</div>-->
-    <!--<div class="bt-loading-container nocon ng-cloak" ng-if="btLoadingNoCon">-->
-        <!--<div class="bt-loading-back"></div>-->
-        <!--<div class="bt-loading">-->
-            <!--<div>-->
-                <!--<i class="ico ion-close-circled"></i><br>-->
-                <!--<span class="txt">{{ "MESSAGES.NOCON" | translate }}</span>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
+    <div class="bt-loading-container" ng-if="btLoading">
+        <div class="bt-loading-back"></div>
+        <div class="bt-loading" >
+            <ion-spinner icon="lines"></ion-spinner>
+        </div>
+    </div>
+    <div class="bt-loading-container nocon" ng-if="btLoadingNoCon">
+        <div class="bt-loading-back"></div>
+        <div class="bt-loading">
+            <div>
+                <i class="ico ion-close-circled"></i><br>
+                <span class="txt">{{ "MESSAGES.NOCON" | translate }}</span>
+            </div>
+        </div>
+    </div>
 
 
-<!--//FOOTER BAR-->
-<!--<div class="bar bt-footer ng-cloak">-->
+    <!--//FOOTER BAR-->
+    <div class="bar bt-footer">
+        <div class="bt-footer-container">
+            <bt-footer-btn ng-repeat="btn in footerStatus track by $index"
+                           bt-show="btn.active"
+                           ico="btn.ico"
+                           bt-position="btn.position"
+                           bt-size="btn.size"
+                           bt-label="btn.label"
+                           bt-context="btn.context"
+                           bt-action="btn.action()"
+                           bt-active="btn.focus"
+                           bt-disabled="btn.disabled"
+                           bt-submit-form="btn.submitform"
+            >
+            </bt-footer-btn>
+        </div>
 
-    <!--<div class="bt-footer-container">-->
-        <!--<bt-footer-btn ng-repeat="btn in footerStatus track by $index"-->
-                       <!--bt-show="btn.active"-->
-                       <!--ico="btn.ico"-->
-                       <!--bt-position="btn.position"-->
-                       <!--bt-size="btn.size"-->
-                       <!--bt-label="btn.label"-->
-                       <!--bt-context="btn.context"-->
-                       <!--bt-action="btn.action()"-->
-                       <!--bt-active="btn.focus"-->
-                       <!--bt-disabled="btn.disabled"-->
-                       <!--bt-submit-form="btn.submitform"-->
-        <!--&gt;-->
-        <!--</bt-footer-btn>-->
-    <!--</div>-->
+        <div class="bt-alert-messages animated" ng-class="{expanded:showMessages == true}">
+            <div ng-repeat="message in messages track by $index"
+                 ng-class="message.context"
+                 class="bt-message">
+                <div>{{message.content | translate}} </div>
+            </div>
+        </div>
+    </div>
 
-    <!--<div class="bt-alert-messages animated" ng-class="{expanded:showMessages == true}">-->
-        <!--<div ng-repeat="message in messages track by $index"-->
-             <!--ng-class="message.context"-->
-             <!--class="bt-message">-->
-            <!--<div>{{message.content | translate}} </div>-->
-        <!--</div>-->
-    <!--</div>-->
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/ionic-pro/ionic-pro.module.min.js"></script>
 
-<!--</div>-->
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
+    <script src="cordova.js"></script>
 
-<!-- ionic/angularjs js -->
-<script src="lib/ionic/js/ionic.bundle.js"></script>
-<script src="lib/ionic-pro/ionic-pro.module.min.js"></script>
+    <!-- libs -->
+    <script src="lib/restangular/dist/restangular.min.js"></script>
+    <script src="lib/lodash/lodash.min.js"></script>
+    <script src="lib/angular-translate/angular-translate.min.js"></script>
+    <script src="lib/angular-messages/angular-messages.min.js"></script>
+    <script src="lib/localforage/dist/localforage.min.js"></script>
+    <script src="lib/angular-localforage/dist/angular-localForage.min.js"></script>
 
-<!-- cordova script (this will be a 404 during development) -->
-<script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
-<script src="cordova.js"></script>
-
-<!-- libs -->
-<script src="lib/restangular/dist/restangular.min.js"></script>
-<script src="lib/lodash/lodash.min.js"></script>
-<script src="lib/angular-translate/angular-translate.min.js"></script>
-<script src="lib/angular-messages/angular-messages.min.js"></script>
-<script src="lib/localforage/dist/localforage.min.js"></script>
-<script src="lib/angular-localforage/dist/angular-localForage.min.js"></script>
-
-<!-- grunt included -->
-<script src="app/app.js"></script>
-<script src="app/components/btBodyBtn/btBodyBtn.js"></script>
-<script src="app/components/btFooterBtn/btFooterBtn.js"></script>
-<script src="app/components/btInputText/btInputText.js"></script>
-<script src="app/components/legacy.js"></script>
-<script src="app/config/api.js"></script>
-<script src="app/directives/btFocus.js"></script>
-<script src="app/pages/login/loginCtrl.js"></script>
-<script src="app/pages/parentCtrl.js"></script>
-<script src="app/pages/signin/signinCtrl.js"></script>
-<script src="app/resources/ResourcesFactory.js"></script>
-<script src="app/resources/User.js"></script>
-<script src="app/routing.js"></script>
-<script src="app/services/BtLoading.js"></script>
-<script src="app/services/BtMessages.js"></script>
-<script src="app/services/BtNavigate.js"></script>
-<script src="app/traductions.js"></script>
+    <!-- grunt included -->
+    <script src="app/app.js"></script>
+    <script src="app/components/btBodyBtn/btBodyBtn.js"></script>
+    <script src="app/components/btFooterBtn/btFooterBtn.js"></script>
+    <script src="app/components/btInputText/btInputText.js"></script>
+    <script src="app/components/legacy.js"></script>
+    <script src="app/config/api.js"></script>
+    <script src="app/directives/btFocus.js"></script>
+    <script src="app/pages/login/loginCtrl.js"></script>
+    <script src="app/pages/parentCtrl.js"></script>
+    <script src="app/pages/signin/signinCtrl.js"></script>
+    <script src="app/resources/ResourcesFactory.js"></script>
+    <script src="app/resources/User.js"></script>
+    <script src="app/routing.js"></script>
+    <script src="app/services/BtLoading.js"></script>
+    <script src="app/services/BtMessages.js"></script>
+    <script src="app/services/BtNavigate.js"></script>
+    <script src="app/traductions.js"></script>
 </body>
 </html>
