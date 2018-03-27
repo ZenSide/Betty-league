@@ -33,7 +33,7 @@
     "plugins": {
       "cordova-sqlite-storage": {},
       "cordova-plugin-ionic": {
-        "APP_ID": "f6f5a1c7",
+        "APP_ID": "35c9fb85",
         "CHANNEL_NAME": "Production",
         "UPDATE_METHOD": "background|auto|none",
         "WARN_DEBUG": "true",
