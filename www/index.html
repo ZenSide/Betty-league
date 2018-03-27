@@ -50,30 +50,29 @@
 
 <!--//HEADER BAR-->
 <body ng-app="betty2" ng-controller="ParentCtrl" >
-<div class="bar bt-header ng-cloak" >
-    <img class="bt-logo" ng-if="withHeadLogo" src="img/logo_216x240.png">
-</div>
-
-<div class="ng-cloak">
-    <ui-view autoscroll="true" class="animated {{viewAnimClass}}"></ui-view>
-</div>
-
-<div class="bt-loading-container ng-cloak" ng-if="btLoading">
-    <div class="bt-loading-back"></div>
-    <div class="bt-loading" >
-        <ion-spinner icon="lines"></ion-spinner>
+    <div class="bar bt-header ng-cloak" >
+        <img class="bt-logo" ng-if="withHeadLogo" src="img/logo_216x240.png">
     </div>
-</div>
-<div class="bt-loading-container nocon ng-cloak" ng-if="btLoadingNoCon">
-    <div class="bt-loading-back"></div>
-    <div class="bt-loading">
-        <div>
-            <i class="ico ion-close-circled"></i><br>
-            <span class="txt">{{ "MESSAGES.NOCON" | translate }}</span>
-        </div>
+
+    <div class="ng-cloak">
+        <ui-view autoscroll="true" class="animated {{viewAnimClass}}"></ui-view>
     </div>
-</div>
-<h1>HELLOOO3</h1>
+
+    <!--<div class="bt-loading-container ng-cloak" ng-if="btLoading">-->
+        <!--<div class="bt-loading-back"></div>-->
+        <!--<div class="bt-loading" >-->
+            <!--<ion-spinner icon="lines"></ion-spinner>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="bt-loading-container nocon ng-cloak" ng-if="btLoadingNoCon">-->
+        <!--<div class="bt-loading-back"></div>-->
+        <!--<div class="bt-loading">-->
+            <!--<div>-->
+                <!--<i class="ico ion-close-circled"></i><br>-->
+                <!--<span class="txt">{{ "MESSAGES.NOCON" | translate }}</span>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
 
 
 <!--//FOOTER BAR-->
