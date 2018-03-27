@@ -50,20 +50,22 @@
 
 <!--//HEADER BAR-->
 <body ng-app="betty2" ng-controller="ParentCtrl" >
-    <div class="bar bt-header" >
+    <div class="bar bt-header ng-cloak" >
         <img class="bt-logo" ng-if="withHeadLogo" src="img/logo_216x240.png">
     </div>
 
     <!--///CONTENT-->
-    <ui-view autoscroll="true" class="animated {{viewAnimClass}}"></ui-view>
+    <div class="ng-cloak">
+        <ui-view autoscroll="true" class="animated {{viewAnimClass}}"></ui-view>
+    </div>
 
-    <div class="bt-loading-container" ng-if="btLoading">
+    <div class="bt-loading-container ng-cloak" ng-if="btLoading">
         <div class="bt-loading-back"></div>
         <div class="bt-loading" >
             <ion-spinner icon="lines"></ion-spinner>
         </div>
     </div>
-    <div class="bt-loading-container nocon" ng-if="btLoadingNoCon">
+    <div class="bt-loading-container nocon ng-cloak" ng-if="btLoadingNoCon">
         <div class="bt-loading-back"></div>
         <div class="bt-loading">
             <div>
@@ -75,7 +77,8 @@
 
 
     <!--//FOOTER BAR-->
-    <div class="bar bt-footer">
+    <div class="bar bt-footer ng-cloak">
+
         <div class="bt-footer-container">
             <bt-footer-btn ng-repeat="btn in footerStatus track by $index"
                            bt-show="btn.active"
@@ -99,6 +102,7 @@
                 <div>{{message.content | translate}} </div>
             </div>
         </div>
+
     </div>
 
     <!-- ionic/angularjs js -->
