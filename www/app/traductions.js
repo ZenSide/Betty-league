@@ -24,10 +24,8 @@ var translations = {
             SIGNSUCCESS : 'Inscription réussie',
             AUTHFAIL : 'Echec de la connection, verifiez vos identifiants',
             PLACEHOLDERS : {
-                USERNAME : 'username',
                 EMAIL : 'e-mail',
                 PSW: 'mot de passe',
-                CONFIRMPSW: 'confirmez mot de passe'
             },
             FOOTER : {
                 MDP : 'MDP perdu',
@@ -37,6 +35,12 @@ var translations = {
             }
         },
         SIGNIN : {
+            PLACEHOLDERS : {
+                EMAIL : 'e-mail',
+                PSW: 'mot de passe',
+                CONFIRMPSW: 'confirmez mot de passe',
+                NEXT: 'Continuer'
+            },
             MESSAGES : {
                 PASSWORDDIFF : 'Les mots de passe diffèrent',
                 required : {

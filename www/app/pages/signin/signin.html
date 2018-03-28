@@ -1,45 +1,44 @@
 <ion-content delegate-handle="btContentHandle" class="bt-content signin">
 
     <form novalidate name="signInForm" id="signFormId" ng-submit="submitForm(signInForm)">
-        <!--//USERNAME-->
-        <bt-input-text bt-select-order="1"
-                       bt-focus
-                       bt-ng-model="newUser.pseudo"
-                       bt-type="text" bt-name="btUsername"
-                       bt-placeholder="'LOGIN.PLACEHOLDERS.USERNAME'"
-                       bt-required="true"
-                       class="bt-input-text-component {{activeinputs}}"
-        ></bt-input-text>
-
         <!--EMAIL-->
-        <bt-input-text bt-select-order="2"
+        <bt-input-text bt-select-order="1"
                        bt-focus
                        bt-ng-model="newUser.email"
                        bt-type="email" bt-name="btEmail"
-                       bt-placeholder="'LOGIN.PLACEHOLDERS.EMAIL'"
+                       bt-placeholder="'SIGNIN.PLACEHOLDERS.EMAIL'"
                        bt-required="true"
                        class="bt-input-text-component {{activeinputs}}"
         ></bt-input-text>
 
         <!--MDP-->
-        <bt-input-text bt-select-order="3"
+        <bt-input-text bt-select-order="2"
                        bt-focus
                        bt-ng-model="newUser.plainPassword"
                        bt-type="password" bt-name="btPlainPassword"
-                       bt-placeholder="'LOGIN.PLACEHOLDERS.PSW'"
+                       bt-placeholder="'SIGNIN.PLACEHOLDERS.PSW'"
                        bt-required="true"
                        class="bt-input-text-component {{activeinputs}}"
         ></bt-input-text>
 
         <!--CONFIRM-->
-        <bt-input-text bt-select-order="4"
+        <bt-input-text bt-select-order="3"
                        bt-focus
                        bt-ng-model="newUser.confirmPassword"
                        bt-type="password" bt-name="btConfirmPassword"
-                       bt-placeholder="'LOGIN.PLACEHOLDERS.CONFIRMPSW'"
+                       bt-placeholder="'SIGNIN.PLACEHOLDERS.CONFIRMPSW'"
                        bt-required="true"
                        class="bt-input-text-component {{activeinputs}}"
         ></bt-input-text>
+
+        <!--SUBMIT-->
+        <bt-body-btn ico="'fas fa-arrow-right'"
+                     bt-content="submitBtn.content"
+                     bt-context="'gold'"
+                     bt-disabled="submitBtn.disabled"
+                     bt-submit-form="submitForm"
+        >
+        </bt-body-btn>
 
         <!--TODO conditions generales-->
     </form>

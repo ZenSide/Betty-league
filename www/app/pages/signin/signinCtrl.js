@@ -1,8 +1,7 @@
-betty2App.controller('SigninCtrl', function (BtMessages,UserApi,BtNavigate,$timeout,Restangular,$scope,$translate,$rootScope) {
+betty2App.controller('SigninCtrl', function (BtMessages, UserApi, BtNavigate, $timeout, $scope, translations) {
 
     // fosuser
     $scope.newUser = {
-        pseudo:'sgfqs',
         email:'sdfg@sdfg.sdfg',
         plainPassword:'123',
         confirmPassword:'123'
@@ -13,73 +12,57 @@ betty2App.controller('SigninCtrl', function (BtMessages,UserApi,BtNavigate,$time
         'btEmail',
         'btPlainPassword',
         'btConfirmPassword'
-    ]
+    ];
+
+    $scope.submitBtn = {
+        'content' : translations['SIGNIN.PLACEHOLDERS.NEXT']
+    };
 
     $scope.submitForm = function(form){
-            if(form.$valid){
-                //form message handling
-                if($scope.newUser.plainPassword != $scope.newUser.confirmPassword){
-                    BtMessages.showFormMessages(form,['btPlainPassword','btConfirmPassword'],null,null,true);
-                    BtMessages.show([{content:"SIGNIN.MESSAGES.PASSWORDDIFF",context:"alert"}])
-                }
-                else{
-                    UserApi.sign($scope.newUser);
-                }
+        if(form.$valid){
+            //form message handling
+            if($scope.newUser.plainPassword != $scope.newUser.confirmPassword){
+                BtMessages.showFormMessages(form,['btPlainPassword','btConfirmPassword'],null,null,true);
+                BtMessages.show([{content:"SIGNIN.MESSAGES.PASSWORDDIFF",context:"alert"}])
             }
             else{
-                BtMessages.showFormMessages(form,$scope.fieldsNames);
+                UserApi.sign($scope.newUser);
             }
+        }
+        else{
+            BtMessages.showFormMessages(form,$scope.fieldsNames);
+        }
     };
 
     $scope.signInForm = {};
 
-    $translate([
-            'LOGIN.FOOTER.LOG'
-        ]
-    ).then(function (translations) {
-        $scope.$parent.withHeadLogo = false;
+    $scope.$parent.withHeadLogo = false;
 
-        $scope.$parent.headerNavStatus = {
-            leftBt : {
-                active : false,
-            },
-            rightBt : {
-                active : false,
-            }
+    $scope.$parent.headerNavStatus = {
+        leftBt : {
+            active : false,
+        },
+        rightBt : {
+            active : false,
         }
-        $scope.$parent.footerStatus = {
-            leftBt : {
-                active : true,
-                ico : "ion-arrow-left-c",
-                position: "left",
-                size: "tiny",
-                context:"red",
-                focus : false,
-                disabled: false,
-                action:function(){
-                    BtNavigate.stateChange('goRight','login');
-                }
-            },
-            middleBt : {
-                active : false,
-            },
-            rightBt : {
-                active : true,
-                ico : "ion-checkmark-round",
-                position: "right",
-                size: "huge",
-                label:"",
-                context:"red",
-                focus : false,
-                disabled: false,
-                submitform: 'signFormId',
-                action:function(){
-                }
+    };
+    $scope.$parent.footerStatus = {
+        leftBt : {
+            active : true,
+            ico : "fas fa-arrow-left",
+            position: "left",
+            size: "tiny",
+            focus : false,
+            disabled: false,
+            action:function(){
+                BtNavigate.stateChange('goRight','login');
             }
+        },
+        middleBt : {
+            active : false,
+        },
+        rightBt : {
+            active : false,
         }
-
-    });//TRANSLATIONS
-
-
-
-})
+    };
+});

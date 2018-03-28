@@ -5,7 +5,8 @@ betty2App.controller('LoginCtrl', function (UserApi,BtMessages,BtNavigate,$scope
     // Connection
     $scope.user = {
         email:'',
-        password:''
+        password:'',
+        pseudo: 'sdfhgsdfghsdfhg'
     };
 
     $scope.fieldsNames = [
@@ -14,7 +15,7 @@ betty2App.controller('LoginCtrl', function (UserApi,BtMessages,BtNavigate,$scope
     ];
 
     $scope.loginBtn = {
-        content:translations['LOGIN.FOOTER.LOG']
+        content: translations['LOGIN.FOOTER.LOG']
     };
 
     $scope.submitForm = function(form){

@@ -15,12 +15,23 @@ betty2App.factory('ResourcesFactory', function($q, $http, $rootScope, API_BASE_U
                     )
                 });
             } else {
-                messages = [
-                    {
-                        context:'alert',
-                        content:"MESSAGES.GENERALERROR"
-                    }
-                ];
+                switch (status) {
+                    case 401:
+                        messages = [
+                            {
+                                context:'alert',
+                                content:"LOGIN.AUTHFAIL"
+                            }
+                        ];
+                        break;
+                    default:
+                        messages = [
+                            {
+                                context:'alert',
+                                content:"MESSAGES.GENERALERROR"
+                            }
+                        ];
+                }
             }
 
             return messages;
