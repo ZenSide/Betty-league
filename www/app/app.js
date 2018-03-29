@@ -9,6 +9,7 @@ var betty2App = angular.module(
     'ionic',
     'ionic.native',
     'restangular',
+    'ngCordova',
     'pascalprecht.translate'
   ]
 );
