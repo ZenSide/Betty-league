@@ -1,5 +1,5 @@
 'use strict';
-betty2App.factory('UserApi', function($cordovaFacebook, BtMessages, BtNavigate, BtLoading, ResourcesFactory, BtLocalStorage) {
+betty2App.factory('UserApi', function($timeout, $cordovaFacebook, BtMessages, BtNavigate, BtLoading, ResourcesFactory, BtLocalStorage) {
   var UserApi = {
 
     //User Sign In
@@ -55,7 +55,11 @@ betty2App.factory('UserApi', function($cordovaFacebook, BtMessages, BtNavigate, 
 
     fbLogin: function () {
       //BtLoading.startLoad();
-      $cordovaFacebook.login();
+      $cordovaFacebook.login(['public_profile']).then(function (response) {
+        $timeout(function() {
+          $scope.response = response;
+        });
+      });
       console.log('nobug');
 
       //return $q(function (resolve, reject) {
