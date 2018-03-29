@@ -2,11 +2,10 @@ betty2App.controller('LoginCtrl', function (UserApi,BtMessages,BtNavigate,$scope
 
     $scope.$parent.withHeadLogo = true;
 
-    // Connection
+    // Login
     $scope.user = {
         email:'',
-        password:'',
-        pseudo: 'sdfhgsdfghsdfhg'
+        password:''
     };
 
     $scope.fieldsNames = [
@@ -17,7 +16,6 @@ betty2App.controller('LoginCtrl', function (UserApi,BtMessages,BtNavigate,$scope
     $scope.loginBtn = {
         content: translations['LOGIN.FOOTER.LOG']
     };
-
     $scope.submitForm = function(form){
         if(form.$valid){
             UserApi.login($scope.user);
@@ -33,7 +31,7 @@ betty2App.controller('LoginCtrl', function (UserApi,BtMessages,BtNavigate,$scope
     };
 
     $scope.fbConnect = function () {
-        console.log('facebook');
+        UserApi.fbLogin();
     };
 
     //footer actions

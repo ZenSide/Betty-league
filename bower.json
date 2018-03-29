@@ -12,7 +12,8 @@
     "angular-translate": "^2.13.1",
     "angular-messages": "^1.6.1",
     "ngCordova": "^0.1.27-alpha",
-    "angular-local-storage": "^0.7.1"
+    "angular-local-storage": "^0.7.1",
+    "ionic-native": "^2.0.3"
   },
   "resolutions": {
     "angular": "1.6.1"

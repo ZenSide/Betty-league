@@ -1,13 +1,15 @@
 'use strict';
-betty2App.factory('UserApi', function($rootScope, BtMessages, BtNavigate, BtLoading, ResourcesFactory, BtLocalStorage) {
+betty2App.factory('UserApi', function($cordovaFacebook, BtMessages, BtNavigate, BtLoading, ResourcesFactory, BtLocalStorage) {
   var UserApi = {
 
     //User Sign In
     sign : function(newUser){
       BtLoading.startLoad();
-      ResourcesFactory.post('/api/users/signin', newUser).then(function () {
-
+      ResourcesFactory.post('/api/users/signin', newUser).then(function (data) {
         //Success Sign In
+
+        BtLocalStorage.setObject('User', data);
+
         var messages = [
           {
             context:'success',
@@ -34,8 +36,6 @@ betty2App.factory('UserApi', function($rootScope, BtMessages, BtNavigate, BtLoad
 
         BtLocalStorage.setObject('User', data);
 
-        console.log(BtLocalStorage.getObject('User'));
-
         var messages = [
           {
             context:'success',
@@ -52,30 +52,35 @@ betty2App.factory('UserApi', function($rootScope, BtMessages, BtNavigate, BtLoad
         return;
       });
     },
+
     fbLogin: function () {
-      return $q(function (resolve, reject) {
-        $cordovaFacebook.login(['public_profile', 'user_friends', 'email']).then(function (response) {
-          var authtoken = response.authResponse.accessToken;
-          $cordovaFacebook.api('me/' + '?fields=id, name,email,first_name,last_name,gender,picture.height(' + Config.CONST.AVATAR_HEIGHT + ').width(' + Config.CONST.AVATAR_WIDTH + ')' + '&access_token=' + authtoken, ['public_profile', 'user_friends', 'email']).then(function (response) {
-            $log.log(response);
-            var fbCredentials = {
-              logfromfb: true,
-              fbresult: response
-            };
-            User.login(fbCredentials).then(function (response) {
-              resolve(response);
-            }, function (error) {
-              reject(error);
-            });
-          }, function (error) {
-            $log.log(error);
-            reject(error);
-          });
-        }, function (error) {
-          $log.log(error);
-          reject(error);
-        });
-      });
+      //BtLoading.startLoad();
+      $cordovaFacebook.login();
+      console.log('nobug');
+
+      //return $q(function (resolve, reject) {
+      //  $cordovaFacebook.login(['public_profile', 'user_friends', 'email']).then(function (response) {
+      //    var authtoken = response.authResponse.accessToken;
+      //    $cordovaFacebook.api('me/' + '?fields=id, name,email,first_name,last_name,gender,picture.height(' + Config.CONST.AVATAR_HEIGHT + ').width(' + Config.CONST.AVATAR_WIDTH + ')' + '&access_token=' + authtoken, ['public_profile', 'user_friends', 'email']).then(function (response) {
+      //      $log.log(response);
+      //      var fbCredentials = {
+      //        logfromfb: true,
+      //        fbresult: response
+      //      };
+      //      User.login(fbCredentials).then(function (response) {
+      //        resolve(response);
+      //      }, function (error) {
+      //        reject(error);
+      //      });
+      //    }, function (error) {
+      //      $log.log(error);
+      //      reject(error);
+      //    });
+      //  }, function (error) {
+      //    $log.log(error);
+      //    reject(error);
+      //  });
+      //});
     },
 
   };

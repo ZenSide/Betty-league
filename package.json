@@ -3,6 +3,8 @@
   "version": "1.1.1",
   "description": "ionicBetty: An Ionic project",
   "dependencies": {
+    "@ionic-native/core": "^4.6.0",
+    "@ionic-native/facebook": "^4.6.0",
     "@ionic/app-scripts": "^3.1.8",
     "@ionic/pro": "^1.0.20",
     "cordova-plugin-facebook4": "^1.9.1",
