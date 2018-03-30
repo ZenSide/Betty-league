@@ -25,6 +25,7 @@ var translations = {
             AUTHFAIL : 'Echec de la connection, verifiez vos identifiants',
             PLACEHOLDERS : {
                 EMAIL : 'e-mail',
+                USERNAME : 'e-mail',
                 PSW: 'mot de passe',
             },
             FOOTER : {

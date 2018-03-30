@@ -1,5 +1,5 @@
 'use strict';
-betty2App.factory('UserApi', function($timeout, $cordovaFacebook, BtMessages, BtNavigate, BtLoading, ResourcesFactory, BtLocalStorage) {
+betty2App.factory('UserApi', function($rootScope, $timeout, $cordovaFacebook, BtMessages, BtNavigate, BtLoading, ResourcesFactory, BtLocalStorage, AVATAR_HEIGHT, AVATAR_WIDTH) {
   var UserApi = {
 
     //User Sign In
@@ -56,9 +56,36 @@ betty2App.factory('UserApi', function($timeout, $cordovaFacebook, BtMessages, Bt
     fbLogin: function () {
       //BtLoading.startLoad();
       $cordovaFacebook.login(['public_profile']).then(function (response) {
-        $timeout(function() {
-          $scope.response = response;
-        });
+        var authtoken = response.authResponse.accessToken;
+        $cordovaFacebook
+            .api('me/' + '?fields=id, name,email,first_name,last_name,gender,picture.height(' + AVATAR_HEIGHT + ').width(' + AVATAR_WIDTH + ')' + '&access_token=' + authtoken, ['public_profile', 'user_friends', 'email'])
+            .then(function (response) {
+              console.log(response);
+              var fbCredentials = {
+                logfromfb: true,
+                fbresult: response
+              };
+
+              ResourcesFactory.post('/login_api', fbCredentials, true).then(function (data) {
+
+                BtLocalStorage.setObject('User', data);
+
+                var messages = [
+                  {
+                    context:'success',
+                    content: 'LOGIN.AUTHSUCCESS'
+                  }
+                ];
+                BtMessages.show(messages, null, function(){
+                  BtNavigate.stateChange('goTop','leagues');
+                  BtLoading.endLoad();
+                });
+              }, function (messages) {
+                BtMessages.show(messages);
+                BtLoading.endLoad();
+                return;
+              });
+            });
       });
       console.log('nobug');
 
