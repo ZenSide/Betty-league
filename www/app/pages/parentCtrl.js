@@ -1,24 +1,6 @@
-betty2App.controller('ParentCtrl', function ($scope, $rootScope, $timeout, $state, $cordovaNetwork ,BtLoading) {
+betty2App.controller('ParentCtrl', function ($scope, $rootScope) {
 
         document.addEventListener("deviceready", function () {
-
-            // listen for Online event
-            $rootScope.$on('$cordovaNetwork:online', function(event, networkState){
-                BtMessages.show([{
-                    context:"success",
-                    content:"ONLINE : "+onlineState
-                }]);
-                BtLoading.endLoad(true);
-            })
-
-            // listen for Offline event
-            $rootScope.$on('$cordovaNetwork:offline', function(event, networkState){
-                BtMessages.show([{
-                    context:"alert",
-                    content:"OFFLINE : "+networkState
-                }]);
-                BtLoading.startLoad(true);
-            })
 
         }, false);
 
@@ -97,6 +79,4 @@ betty2App.controller('ParentCtrl', function ($scope, $rootScope, $timeout, $stat
             }
         }
     }
-
-
-})
+});
