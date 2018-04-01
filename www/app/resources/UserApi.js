@@ -5,7 +5,7 @@ betty2App.factory('UserApi', function($rootScope, $timeout, $cordovaFacebook, Bt
     //User Sign In
     sign : function(newUser){
       BtLoading.startLoad();
-      ResourcesFactory.post('/api/users/signin', newUser).then(function (data) {
+      ResourcesFactory.post('/api/users/signin', newUser, true).then(function (data) {
         //Success Sign In
 
         BtLocalStorage.setObject('User', data);
@@ -29,10 +29,10 @@ betty2App.factory('UserApi', function($rootScope, $timeout, $cordovaFacebook, Bt
       });
     },
 
-    login : function(user){
+    login : function(credentials){
       BtLoading.startLoad();
-      user.logfromfb = false;
-      ResourcesFactory.post('/login_api', user, true).then(function (data) {
+      credentials.logfromfb = false;
+      ResourcesFactory.post('/login_api', credentials, true).then(function (data) {
 
         BtLocalStorage.setObject('User', data);
 
@@ -60,7 +60,7 @@ betty2App.factory('UserApi', function($rootScope, $timeout, $cordovaFacebook, Bt
         $cordovaFacebook
             .api('me/' + '?fields=id, name,email,first_name,last_name,gender,picture.height(' + AVATAR_HEIGHT + ').width(' + AVATAR_WIDTH + ')' + '&access_token=' + authtoken, ['public_profile', 'user_friends', 'email'])
             .then(function (response) {
-              console.log(response);
+              BtLoading.startLoad();
               var fbCredentials = {
                 logfromfb: true,
                 fbresult: response
@@ -88,30 +88,6 @@ betty2App.factory('UserApi', function($rootScope, $timeout, $cordovaFacebook, Bt
             });
       });
       console.log('nobug');
-
-      //return $q(function (resolve, reject) {
-      //  $cordovaFacebook.login(['public_profile', 'user_friends', 'email']).then(function (response) {
-      //    var authtoken = response.authResponse.accessToken;
-      //    $cordovaFacebook.api('me/' + '?fields=id, name,email,first_name,last_name,gender,picture.height(' + Config.CONST.AVATAR_HEIGHT + ').width(' + Config.CONST.AVATAR_WIDTH + ')' + '&access_token=' + authtoken, ['public_profile', 'user_friends', 'email']).then(function (response) {
-      //      $log.log(response);
-      //      var fbCredentials = {
-      //        logfromfb: true,
-      //        fbresult: response
-      //      };
-      //      User.login(fbCredentials).then(function (response) {
-      //        resolve(response);
-      //      }, function (error) {
-      //        reject(error);
-      //      });
-      //    }, function (error) {
-      //      $log.log(error);
-      //      reject(error);
-      //    });
-      //  }, function (error) {
-      //    $log.log(error);
-      //    reject(error);
-      //  });
-      //});
     },
 
   };

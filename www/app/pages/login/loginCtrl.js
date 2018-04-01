@@ -4,7 +4,7 @@ betty2App.controller('LoginCtrl', function (UserApi,BtMessages,BtNavigate,$scope
 
     // Login
     $scope.user = {
-        email:'',
+        username:'',
         password:''
     };
 
@@ -31,7 +31,7 @@ betty2App.controller('LoginCtrl', function (UserApi,BtMessages,BtNavigate,$scope
     };
 
     $scope.fbConnect = function () {
-        UserApi.fbLogin();
+        UserApi.fbLogin()
     };
 
     //footer actions

@@ -36,6 +36,37 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
             }
         })
 
+        .state('landing', {
+            url: '/landing/:connected:int',
+            templateUrl: 'app/pages/landing/landing.html',
+            controller: 'LandingCtrl',
+            resolve: {
+                routeDispatcher: function ($q, $stateParams, BtLocalStorage, UserApi) {
+                    var deferred = $q.defer();
+                    var connected = $stateParams.connected;
+                    var localUser =  BtLocalStorage.getObject('User');
 
-    $urlRouterProvider.otherwise('/login');
+                    //User found
+                    if (localUser !== {}) {
+                        //LogIn
+                        UserApi.login({
+                            username: localUser.username,
+                            password: localUser.password
+                        })
+
+                    } else {
+
+                    }
+
+
+
+
+                    return deferred.promise;
+
+                }
+            }
+        })
+
+
+    $urlRouterProvider.otherwise('/landing');
 });
