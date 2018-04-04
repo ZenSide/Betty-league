@@ -2,7 +2,8 @@
 .bt-input-text-component.btEmail input[name=btEmail],
 .bt-input-text-component.btPlainPassword input[name=btPlainPassword],
 .bt-input-text-component.btConfirmPassword input[name=btConfirmPassword],
-.bt-input-text-component.btPassword input[name=btPassword] {
+.bt-input-text-component.btPassword input[name=btPassword],
+.bt-input-text-component.btPseudo input[name=btPseudo] {
   border: 0.1rem solid #fa393c;
 }
 .bt-input-text-container {

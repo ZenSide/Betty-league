@@ -1,17 +1,21 @@
 betty2App.controller('SigninCtrl', function (BtMessages, UserApi, BtNavigate, $timeout, $scope, translations) {
 
+    $scope.parentParams.withHeadLogo = true;
+
     // fosuser
     $scope.newUser = {
-        email:'sdfg@sdfg.sdfg',
-        plainPassword:'123',
-        confirmPassword:'123'
+        email:'',
+        plainPassword:'',
+        confirmPassword:'',
+        pseudo:''
     };
 
     $scope.fieldsNames = [
         'btUsername',
         'btEmail',
         'btPlainPassword',
-        'btConfirmPassword'
+        'btConfirmPassword',
+        'btPseudo'
     ];
 
     $scope.submitBtn = {
@@ -36,22 +40,13 @@ betty2App.controller('SigninCtrl', function (BtMessages, UserApi, BtNavigate, $t
 
     $scope.signInForm = {};
 
-    $scope.$parent.withHeadLogo = false;
-
-    $scope.$parent.headerNavStatus = {
-        leftBt : {
-            active : false,
-        },
-        rightBt : {
-            active : false,
-        }
-    };
-    $scope.$parent.footerStatus = {
+    $scope.parentCtrl.footerStatus = {
         leftBt : {
             active : true,
             ico : "fas fa-arrow-left",
             position: "left",
             size: "tiny",
+            context: "blue",
             focus : false,
             disabled: false,
             action:function(){

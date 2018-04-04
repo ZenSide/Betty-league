@@ -40,6 +40,7 @@ var translations = {
                 EMAIL : 'e-mail',
                 PSW: 'mot de passe',
                 CONFIRMPSW: 'confirmez mot de passe',
+                PSEUDO: 'pseudo',
                 NEXT: 'Continuer'
             },
             MESSAGES : {
@@ -49,6 +50,7 @@ var translations = {
                     btEmail : "email requis",
                     btPlainPassword : "mot de passe requis",
                     btPassword : "mot de passe requis",
+                    btPseudo : "pseudo requis",
                     btConfirmPassword : "confirmation du mot de passe requise"
                 },
                 email : {
@@ -62,7 +64,8 @@ var translations = {
         },
         TITLES : {
             LOGIN : "Connectez vous à Betty !",
-            SIGNIN : "Inscrivez vous sur BettyLeague !",
+            SIGNIN : "Inscription",
+            SIGNIN2 : "Finalisez l'inscription",
             CHOOSELEAGUE : "Bienvenue sur BettyLeague"
         }
     }

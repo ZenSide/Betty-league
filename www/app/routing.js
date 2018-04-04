@@ -5,6 +5,7 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
             url: '/login',
             templateUrl: 'app/pages/login/login.html',
             controller: 'LoginCtrl',
+            controllerAs: 'loginCtrl',
             resolve: {
                 translations: function ($translate) {
                     return $translate([
@@ -23,7 +24,8 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
         .state('signin', {
             url: '/signin',
             templateUrl: 'app/pages/signin/signin.html',
-            controller: 'SigninCtrl',
+            controller: 'SigninCtrl as signinCtrl',
+            controllerAs: 'signinCtrl',
             resolve: {
                 translations: function ($translate) {
                     return $translate([
@@ -37,29 +39,27 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
         })
 
         .state('landing', {
-            url: '/landing/:connected:int',
+            url: '/landing',
             templateUrl: 'app/pages/landing/landing.html',
             controller: 'LandingCtrl',
+            controllerAs: 'landingCtrl',
             resolve: {
-                routeDispatcher: function ($q, $stateParams, BtLocalStorage, UserApi) {
+                routeDispatcher: function ($q, BtLocalStorage, $state, BtNavigate, ShowdownApi) {
                     var deferred = $q.defer();
-                    var connected = $stateParams.connected;
                     var localUser =  BtLocalStorage.getObject('User');
 
                     //User found
                     if (localUser !== {}) {
-                        //LogIn
-                        UserApi.login({
-                            username: localUser.username,
-                            password: localUser.password
-                        })
-
+                        //ShowdownApi.getFullRange();
+                        BtNavigate.stateChange('goTop', 'bettyleague.showdown.step', {
+                            'bettyLeagueId' : 'world',
+                            'showdownId' : '2',
+                            'stepId' : '1'
+                        });
                     } else {
-
+                        //User not found
+                        BtNavigate.stateChange('', 'login');
                     }
-
-
-
 
                     return deferred.promise;
 
@@ -67,6 +67,32 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
             }
         })
 
+        .state('bettyleague', {
+            abstract: true,
+            url: '/bettyleague/:bettyLeagueId',
+            templateUrl: 'app/pages/bettyleague/bettyleague.html',
+            controller: 'BettyLeagueCtrl',
+            controllerAs: 'bettyLeagueCtrl',
+        })
+
+        .state('bettyleague.showdown', {
+            abstract: true,
+            url: '/showdown/:showdownId',
+            templateUrl: 'app/pages/bettyleague/showdown/showdown.html',
+            controller: 'ShowdownCtrl',
+            controllerAs: 'showdownCtrl',
+            resolve: {
+            }
+        })
+
+        .state('bettyleague.showdown.step', {
+            url: '/step/:stepId',
+            templateUrl: 'app/pages/bettyleague/showdown/step/step.html',
+            controller: 'StepCtrl',
+            controllerAs: 'stepCtrl',
+            resolve: {
+            }
+        });
 
     $urlRouterProvider.otherwise('/landing');
 });

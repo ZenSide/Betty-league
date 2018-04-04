@@ -1,9 +1,7 @@
 betty2App.controller('ParentCtrl', function ($scope, $rootScope) {
+    var parentCtrl = this;
 
-        document.addEventListener("deviceready", function () {
-
-        }, false);
-
+    $rootScope.fbCredentials = {};
 
     $rootScope.viewAnimClass = 'goTop';
     $rootScope.showMessages = false;
@@ -11,41 +9,18 @@ betty2App.controller('ParentCtrl', function ($scope, $rootScope) {
     $rootScope.showFormMessages = false;
     $rootScope.activeinputs = "";
 
-    $scope.headerNavStatus = {
-        leftBt : {
-            active : false,
-            ico : "",
-            position: "left",
-            size: "tiny",
-            context:"normal",
-            focus : false,
-            disabled: false,
-            submitform:false,
-            action:function(){
-            }
-        },
-        rightBt : {
-            active : false,
-            ico : "",
-            position: "right",
-            size: "tiny",
-            context:"normal",
-            focus : false,
-            disabled: false,
-            submitform:false,
-            action:function(){
-            }
-        }
-    }
 
-    $scope.footerStatus = {
+    $scope.parentParams = {};
+    $scope.parentParams.withHeadLogo = false;
+
+
+    parentCtrl.footerStatus = {
         leftBt : {
             active : false,
             ico : "",
             position: "left",
             size: "tiny",
             label:"",
-            context:"normal",
             focus : false,
             disabled: false,
             submitform:false,
@@ -58,7 +33,6 @@ betty2App.controller('ParentCtrl', function ($scope, $rootScope) {
             position: "middle",
             size: "tiny",
             label:"",
-            context:"normal",
             focus : false,
             disabled: false,
             submitform:false,
@@ -71,7 +45,6 @@ betty2App.controller('ParentCtrl', function ($scope, $rootScope) {
             position: "right",
             size: "tiny",
             label:"",
-            context:"normal",
             focus : false,
             disabled: false,
             submitform:false,

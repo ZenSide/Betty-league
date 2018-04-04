@@ -1,6 +1,6 @@
-betty2App.controller('LoginCtrl', function (UserApi,BtMessages,BtNavigate,$scope,translations) {
+betty2App.controller('LoginCtrl', function ($rootScope, UserApi,BtMessages,BtNavigate,$scope,translations) {
 
-    $scope.$parent.withHeadLogo = true;
+    $scope.parentParams.withHeadLogo = true;
 
     // Login
     $scope.user = {
@@ -35,7 +35,7 @@ betty2App.controller('LoginCtrl', function (UserApi,BtMessages,BtNavigate,$scope
     };
 
     //footer actions
-    $scope.$parent.footerStatus = {
+    $scope.parentCtrl.footerStatus = {
         leftBt : {
             active : true,
             ico : "fas fa-unlock",
@@ -52,7 +52,7 @@ betty2App.controller('LoginCtrl', function (UserApi,BtMessages,BtNavigate,$scope
             active : true,
             ico : "icon-bty-ico-join",
             position: "middle",
-            size: "big",
+            size: "medium",
             label:translations['LOGIN.FOOTER.SIGN'],
             focus : false,
             disabled: false,

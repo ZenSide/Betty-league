@@ -1,4 +1,5 @@
 <ion-content delegate-handle="btContentHandle" class="bt-content signin">
+    <h1 class="txt-part-title u-gutter-bottom-regular" translate="TITLES.SIGNIN"></h1>
 
     <form novalidate name="signInForm" id="signFormId" ng-submit="submitForm(signInForm)">
         <!--EMAIL-->
@@ -31,8 +32,18 @@
                        class="bt-input-text-component {{activeinputs}}"
         ></bt-input-text>
 
+        <!--PSEUDO-->
+        <bt-input-text bt-select-order="4"
+                       bt-focus
+                       bt-ng-model="newUser.pseudo"
+                       bt-type="text" bt-name="btPseudo"
+                       bt-placeholder="'SIGNIN.PLACEHOLDERS.PSEUDO'"
+                       bt-required="true"
+                       class="bt-input-text-component {{activeinputs}}"
+        ></bt-input-text>
+
         <!--SUBMIT-->
-        <bt-body-btn ico="'fas fa-arrow-right'"
+        <bt-body-btn ico="'fa fa-check'"
                      bt-content="submitBtn.content"
                      bt-context="'gold'"
                      bt-disabled="submitBtn.disabled"

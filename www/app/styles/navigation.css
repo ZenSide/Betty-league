@@ -1,30 +1,32 @@
-ui-view {
+.main-view {
   top: 70px;
   bottom: 50px;
-  width: 100%;
+}
+ui-view {
   position: absolute;
+  width: 100%;
 }
 ui-view.goLeft.ng-enter {
-  animation: slideInLeft 800ms;
+  animation: slideInLeft 400ms;
 }
 ui-view.goLeft.ng-leave {
-  animation: slideOutRight 800ms;
+  animation: slideOutRight 400ms;
 }
 ui-view.goRight.ng-enter {
-  animation: slideInRight 800ms;
+  animation: slideInRight 400ms;
 }
 ui-view.goRight.ng-leave {
-  animation: slideOutLeft 800ms;
+  animation: slideOutLeft 400ms;
 }
 ui-view.goTop.ng-enter {
-  animation: slideInDown 800ms;
+  animation: slideInDown 400ms;
 }
 ui-view.goTop.ng-leave {
-  animation: slideOutDown 800ms;
+  animation: slideOutDown 400ms;
 }
 ui-view.goBottom.ng-enter {
-  animation: slideInUp 800ms;
+  animation: slideInUp 400ms;
 }
 ui-view.goBottom.ng-leave {
-  animation: slideOutUp 800ms;
+  animation: slideOutUp 400ms;
 }

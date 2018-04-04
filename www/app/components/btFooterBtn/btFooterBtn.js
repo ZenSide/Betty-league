@@ -9,7 +9,7 @@ betty2App.component('btFooterBtn',{
     btPosition: '<',
     btSize: '=',
     btLabel: '=',
-    btContext: '=',
+    btColor: '<',
     btActive: '<',
     btAction: '&',
     btDisabled: '<',
@@ -19,6 +19,7 @@ betty2App.component('btFooterBtn',{
     var zeCtrl = this;
     this.btActiveClasse = "";
     this.btDisabledClasse = "";
+    this.btColorClasse = this.btColor;
     this.icoResult = this.ico;
     if (this.btActive) this.btActiveClasse = "active" ;
     if (this.btDisabled) this.btDisabledClasse = "disabled" ;
@@ -32,6 +33,9 @@ betty2App.component('btFooterBtn',{
         $timeout(function(){
           zeCtrl.icoResult = newValue;
         },300)
+      }
+      if (changes.btColor){
+        zeCtrl.btColorClasse = changes.btColor.currentValue;
       }
     };
   }

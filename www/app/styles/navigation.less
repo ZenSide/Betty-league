@@ -1,10 +1,13 @@
 @import "../../less/constant";
 
-ui-view{
+.main-view {
   top: @header-height;
   bottom: @footer-height;
-  width: 100%;
+}
+
+ui-view{
   position: absolute;
+  width: 100%;
 
   &.goLeft{
     &.ng-enter{
