@@ -1,6 +1,6 @@
 betty2App.controller('StepCtrl', function ($scope, $stateParams, BtNavigate, $rootScope) {
 	$scope.stepId = $stateParams.stepId;
-	$scope.parentParams.withHeadLogo = false;
+	$scope.parentCtrl.withHeadLogo = false;
 
 	$scope.parentCtrl.footerStatus = {
 		leftBt : {
@@ -19,9 +19,9 @@ betty2App.controller('StepCtrl', function ($scope, $stateParams, BtNavigate, $ro
 		middleBt : {
 			btShow : true,
 			btPosition: "middle",
-			btClasses: "bt-action--medium",
-			btButtonClasses: "",
-			btIco : "fab fa-accessible-icon",
+			btClasses: "bt-action--big",
+			btButtonClasses: "bt-action__btn--gold",
+			btIco : "icon-bty-ico-coin",
 			btLabel:translations['LOGIN.FOOTER.SIGN'],
 			btDisabled: false,
 			btSubmitForm: null,

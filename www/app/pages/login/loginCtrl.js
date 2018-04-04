@@ -1,6 +1,6 @@
 betty2App.controller('LoginCtrl', function ($rootScope, UserApi,BtMessages,BtNavigate,$scope,translations) {
 
-    $scope.parentParams.withHeadLogo = true;
+    $scope.parentCtrl.withHeadLogo = true;
 
     // Login
     $scope.user = {
@@ -34,29 +34,6 @@ betty2App.controller('LoginCtrl', function ($rootScope, UserApi,BtMessages,BtNav
         UserApi.fbLogin()
     };
 
-    //footer actions
-    $scope.parentCtrl.footerStatus = {
-        leftBt : {
-            btShow : true,
-            btPosition: "left",
-            btClasses: "bt-action--big",
-            btButtonClasses: "bt-action__btn--gold bt-action__btn--disabled",
-            btIco : "fas fa-unlock",
-            btLabel:translations['LOGIN.FOOTER.MDP'],
-            btDisabled: false,
-            btSubmitForm: null,
-            action:function(){
-                BtNavigate.stateChange('goRight','login');
-            }
-        },
-        middleBt : {
-            active : false,
-        },
-        rightBt : {
-            active : false
-        }
-    }
-
     $scope.parentCtrl.footerStatus = {
         leftBt : {
             btShow : true,
@@ -76,7 +53,7 @@ betty2App.controller('LoginCtrl', function ($rootScope, UserApi,BtMessages,BtNav
             btPosition: "middle",
             btClasses: "bt-action--big",
             btButtonClasses: "",
-            btIco : "fab fa-angellist",
+            btIco : "icon-bty-ico-join",
             btLabel:translations['LOGIN.FOOTER.SIGN'],
             btDisabled: false,
             btSubmitForm: null,

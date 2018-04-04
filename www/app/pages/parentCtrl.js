@@ -10,10 +10,7 @@ betty2App.controller('ParentCtrl', function ($scope, $rootScope) {
     $rootScope.activeinputs = "";
 
 
-    $scope.parentParams = {};
-    $scope.parentParams.withHeadLogo = false;
-
-
+    parentCtrl.withHeadLogo = false;
     parentCtrl.footerStatus = {
         leftBt : {
             btShow : false,

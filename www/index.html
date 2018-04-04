@@ -45,12 +45,7 @@
 <!--//HEADER BAR-->
 <body ng-app="betty2" ng-controller="ParentCtrl as parentCtrl" >
     <div class="bar bt-header ng-cloak">
-        <div>
-            <pre>
-                {{debug}}
-            </pre>
-        </div>
-        <img class="bt-logo" ng-if="parentParams.withHeadLogo" src="img/logo_216x240.png">
+        <img class="bt-logo" ng-if="parentCtrl.withHeadLogo" src="img/logo_216x240.png">
     </div>
 
     <!--///CONTENT-->
