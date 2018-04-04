@@ -1,19 +1,15 @@
 <!--//FOOTER/HEADER-->
 <div ng-if="$ctrl.btShow"
-     class="animated
-         bt-action
-         bt-action--{{$ctrl.btPosition}}
-         bt-action--{{$ctrl.btSize}}"
->
+     class="animated bt-action bt-action--{{$ctrl.btPosition}}"
+     ng-class="$ctrl.btClasses"
+    >
     <button ng-click="$ctrl.btAction()"
-            class="
-                bt-action__btn
-                bt-action__btn--{{$ctrl.btColorClasse}}
-                bt-action__btn--{{$ctrl.btActiveClasse}}
-                bt-action__btn--{{$ctrl.btDisabledClasse}}"
+            class="bt-action__btn"
+            ng-class="$ctrl.btButtonClasses"
+
             ng-form="$ctrl.btSubmitForm" type="submit"
             ng-disabled="$ctrl.btDisabled">
-        <i class="bt-action__ico {{$ctrl.icoResult}}" ></i>
+        <i class="bt-action__ico" ng-class="$ctrl.icoResult"></i>
     </button>
 
     <div class="bt-action__label bt-text-tiny" ng-show="$ctrl.btLabel">

@@ -79,16 +79,15 @@
 
         <div class="bt-footer-container">
             <bt-footer-btn ng-repeat="btn in parentCtrl.footerStatus track by $index"
-                           bt-show="btn.active"
-                           ico="btn.ico"
-                           bt-position="btn.position"
-                           bt-size="btn.size"
-                           bt-color="btn.color"
-                           bt-label="btn.label"
-                           bt-action="btn.action()"
-                           bt-active="btn.focus"
-                           bt-disabled="btn.disabled"
+                           bt-show="btn.btShow"
+                           bt-position="{{btn.btPosition}}"
+                           bt-classes="btn.btClasses"
+                           bt-button-classes="btn.btButtonClasses"
+                           bt-ico="btn.btIco"
+                           bt-label="btn.btLabel"
+                           bt-disabled="btn.btDisabled"
                            bt-submit-form="btn.submitform"
+                           bt-action="btn.action()"
             >
             </bt-footer-btn>
         </div>

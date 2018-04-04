@@ -37,25 +37,49 @@ betty2App.controller('LoginCtrl', function ($rootScope, UserApi,BtMessages,BtNav
     //footer actions
     $scope.parentCtrl.footerStatus = {
         leftBt : {
-            active : true,
-            ico : "fas fa-unlock",
-            position: "left",
-            size: "medium",
-            label:translations['LOGIN.FOOTER.MDP'],
-            focus : false,
-            disabled: false,
+            btShow : true,
+            btPosition: "left",
+            btClasses: "bt-action--big",
+            btButtonClasses: "bt-action__btn--gold bt-action__btn--disabled",
+            btIco : "fas fa-unlock",
+            btLabel:translations['LOGIN.FOOTER.MDP'],
+            btDisabled: false,
+            btSubmitForm: null,
             action:function(){
                 BtNavigate.stateChange('goRight','login');
             }
         },
         middleBt : {
-            active : true,
-            ico : "icon-bty-ico-join",
-            position: "middle",
-            size: "medium",
-            label:translations['LOGIN.FOOTER.SIGN'],
-            focus : false,
-            disabled: false,
+            active : false,
+        },
+        rightBt : {
+            active : false
+        }
+    }
+
+    $scope.parentCtrl.footerStatus = {
+        leftBt : {
+            btShow : true,
+            btPosition: "left",
+            btClasses: "bt-action--medium",
+            btButtonClasses: "",
+            btIco : "fas fa-unlock",
+            btLabel:translations['LOGIN.FOOTER.MDP'],
+            btDisabled: false,
+            btSubmitForm: null,
+            action:function(){
+                BtNavigate.stateChange('goRight','login');
+            }
+        },
+        middleBt : {
+            btShow : true,
+            btPosition: "middle",
+            btClasses: "bt-action--big",
+            btButtonClasses: "",
+            btIco : "fab fa-angellist",
+            btLabel:translations['LOGIN.FOOTER.SIGN'],
+            btDisabled: false,
+            btSubmitForm: null,
             action:function(){
                 BtNavigate.stateChange('goLeft','signin');
             }

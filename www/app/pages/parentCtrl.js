@@ -16,40 +16,13 @@ betty2App.controller('ParentCtrl', function ($scope, $rootScope) {
 
     parentCtrl.footerStatus = {
         leftBt : {
-            active : false,
-            ico : "",
-            position: "left",
-            size: "tiny",
-            label:"",
-            focus : false,
-            disabled: false,
-            submitform:false,
-            action:function(){
-            }
+            btShow : false,
         },
         middleBt : {
-            active : false,
-            ico : "",
-            position: "middle",
-            size: "tiny",
-            label:"",
-            focus : false,
-            disabled: false,
-            submitform:false,
-            action:function(){
-            }
+            btShow : false,
         },
         rightBt : {
-            active : false,
-            ico : "",
-            position: "right",
-            size: "tiny",
-            label:"",
-            focus : false,
-            disabled: false,
-            submitform:false,
-            action:function(){
-            }
+            btShow : false,
         }
     }
 });
