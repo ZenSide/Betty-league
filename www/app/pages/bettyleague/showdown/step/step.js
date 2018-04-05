@@ -1,5 +1,9 @@
-betty2App.controller('StepCtrl', function ($scope, $stateParams, BtNavigate, $rootScope) {
-	$scope.stepId = $stateParams.stepId;
+betty2App.controller('StepCtrl', function ($scope, $stateParams, BtNavigate) {
+	var loginCtrl = this;
+
+	loginCtrl.stepId = $stateParams.stepId;
+
+	//parent config
 	$scope.parentCtrl.withHeadLogo = false;
 
 	$scope.parentCtrl.footerStatus = {

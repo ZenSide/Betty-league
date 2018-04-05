@@ -1,16 +1,16 @@
 betty2App.controller('SigninCtrl', function (BtMessages, UserApi, BtNavigate, $timeout, $scope, translations) {
 
-    $scope.parentCtrl.withHeadLogo = true;
+    var signinCtrl = this;
 
     // fosuser
-    $scope.newUser = {
+    signinCtrl.newUser = {
         email:'',
         plainPassword:'',
         confirmPassword:'',
         pseudo:''
     };
 
-    $scope.fieldsNames = [
+    var fieldsNames = [
         'btUsername',
         'btEmail',
         'btPlainPassword',
@@ -18,28 +18,28 @@ betty2App.controller('SigninCtrl', function (BtMessages, UserApi, BtNavigate, $t
         'btPseudo'
     ];
 
-    $scope.submitBtn = {
+    signinCtrl.submitBtn = {
         'content' : translations['SIGNIN.PLACEHOLDERS.NEXT']
     };
 
-    $scope.submitForm = function(form){
+    signinCtrl.submitForm = function(form){
         if(form.$valid){
             //form message handling
-            if($scope.newUser.plainPassword != $scope.newUser.confirmPassword){
+            if(signinCtrl.newUser.plainPassword != signinCtrl.newUser.confirmPassword){
                 BtMessages.showFormMessages(form,['btPlainPassword','btConfirmPassword'],null,null,true);
                 BtMessages.show([{content:"SIGNIN.MESSAGES.PASSWORDDIFF",context:"alert"}])
             }
             else{
-                UserApi.sign($scope.newUser);
+                UserApi.sign(signinCtrl.newUser);
             }
         }
         else{
-            BtMessages.showFormMessages(form,$scope.fieldsNames);
+            BtMessages.showFormMessages(form, fieldsNames);
         }
     };
 
-    $scope.signInForm = {};
-
+    //parent config
+    $scope.parentCtrl.withHeadLogo = true;
     $scope.parentCtrl.footerStatus = {
         leftBt : {
             btShow : true,

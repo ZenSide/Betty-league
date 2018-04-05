@@ -1,11 +1,11 @@
 <ion-content delegate-handle="btContentHandle" class="bt-content signin">
     <h1 class="txt-part-title u-gutter-bottom-regular" translate="TITLES.SIGNIN"></h1>
 
-    <form novalidate name="signInForm" id="signFormId" ng-submit="submitForm(signInForm)">
+    <form novalidate name="signInForm" id="signFormId" ng-submit="signinCtrl.submitForm(signInForm)">
         <!--EMAIL-->
         <bt-input-text bt-select-order="1"
                        bt-focus
-                       bt-ng-model="newUser.email"
+                       bt-ng-model="signinCtrl.newUser.email"
                        bt-type="email" bt-name="btEmail"
                        bt-placeholder="'SIGNIN.PLACEHOLDERS.EMAIL'"
                        bt-required="true"
@@ -15,7 +15,7 @@
         <!--MDP-->
         <bt-input-text bt-select-order="2"
                        bt-focus
-                       bt-ng-model="newUser.plainPassword"
+                       bt-ng-model="signinCtrl.newUser.plainPassword"
                        bt-type="password" bt-name="btPlainPassword"
                        bt-placeholder="'SIGNIN.PLACEHOLDERS.PSW'"
                        bt-required="true"
@@ -25,7 +25,7 @@
         <!--CONFIRM-->
         <bt-input-text bt-select-order="3"
                        bt-focus
-                       bt-ng-model="newUser.confirmPassword"
+                       bt-ng-model="signinCtrl.newUser.confirmPassword"
                        bt-type="password" bt-name="btConfirmPassword"
                        bt-placeholder="'SIGNIN.PLACEHOLDERS.CONFIRMPSW'"
                        bt-required="true"
@@ -35,7 +35,7 @@
         <!--PSEUDO-->
         <bt-input-text bt-select-order="4"
                        bt-focus
-                       bt-ng-model="newUser.pseudo"
+                       bt-ng-model="signinCtrl.newUser.pseudo"
                        bt-type="text" bt-name="btPseudo"
                        bt-placeholder="'SIGNIN.PLACEHOLDERS.PSEUDO'"
                        bt-required="true"
@@ -44,10 +44,9 @@
 
         <!--SUBMIT-->
         <bt-body-btn ico="'fa fa-check'"
-                     bt-content="submitBtn.content"
+                     bt-content="signinCtrl.submitBtn.content"
                      bt-context="'gold'"
-                     bt-disabled="submitBtn.disabled"
-                     bt-submit-form="submitForm"
+                     bt-disabled="signinCtrl.submitBtn.disabled"
         >
         </bt-body-btn>
 

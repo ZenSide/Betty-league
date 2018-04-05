@@ -2,11 +2,12 @@
     <h1 class="txt-part-title u-gutter-bottom-regular" translate="TITLES.LOGIN"></h1>
 
     <form autocomplete="off" class="u-gutter-bottom-big"
-          novalidate name="loginForm" id="loginformId" ng-submit="submitForm(loginForm)">
+          novalidate name="loginForm" id="loginformId"
+          ng-submit="loginCtrl.submitForm(loginForm)">
         <!--//USERNAME-->
         <bt-input-text bt-select-order="1"
                        bt-focus
-                       bt-ng-model="user.username"
+                       bt-ng-model="loginCtrl.user.username"
                        bt-type="email" bt-name="btEmail"
                        bt-placeholder="'LOGIN.PLACEHOLDERS.USERNAME'"
                        bt-required="true"
@@ -16,7 +17,7 @@
         <!--MDP-->
         <bt-input-text bt-select-order="2"
                        bt-focus
-                       bt-ng-model="user.password"
+                       bt-ng-model="loginCtrl.user.password"
                        bt-type="password" bt-name="btPassword"
                        bt-placeholder="'LOGIN.PLACEHOLDERS.PSW'"
                        bt-required="true"
@@ -25,9 +26,9 @@
 
         <!--SUBMIT-->
         <bt-body-btn ico="'fa fa-check'"
-                       bt-content="loginBtn.content"
+                       bt-content="loginCtrl.loginBtn.content"
                        bt-context="'gold'"
-                       bt-disabled="loginBtn.disabled"
+                       bt-disabled="loginCtrl.loginBtn.disabled"
                        bt-submit-form="loginformId"
         >
         </bt-body-btn>
@@ -36,9 +37,9 @@
 
     <!--FB Connect-->
     <bt-body-btn ico="'fab fa-facebook'"
-                 bt-content="fbBtn.content"
-                 bt-disabled="fbBtn.disabled"
-                 bt-action="fbConnect()"
+                 bt-content="loginCtrl.fbBtn.content"
+                 bt-disabled="loginCtrl.fbBtn.disabled"
+                 bt-action="loginCtrl.fbConnect()"
     >
     </bt-body-btn>
 </ion-content>

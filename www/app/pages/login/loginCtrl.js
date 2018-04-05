@@ -1,39 +1,43 @@
-betty2App.controller('LoginCtrl', function ($rootScope, UserApi,BtMessages,BtNavigate,$scope,translations) {
+betty2App.controller('LoginCtrl', function ($scope, UserApi,BtMessages,BtNavigate,translations) {
 
-    $scope.parentCtrl.withHeadLogo = true;
+    var loginCtrl = this;
 
     // Login
-    $scope.user = {
+    loginCtrl.user = {
         username:'',
         password:''
     };
 
-    $scope.fieldsNames = [
+    loginCtrl.loginBtn = {
+        content: translations['LOGIN.FOOTER.LOG']
+    };
+
+    var fieldsNames = [
         'btEmail',
         'btPassword'
     ];
 
-    $scope.loginBtn = {
-        content: translations['LOGIN.FOOTER.LOG']
-    };
-    $scope.submitForm = function(form){
+    loginCtrl.submitForm = function(form){
         if(form.$valid){
-            UserApi.login($scope.user);
+            UserApi.login(loginCtrl.user);
         }
         else{
-            BtMessages.showFormMessages(form,$scope.fieldsNames);
+            BtMessages.showFormMessages(form, fieldsNames);
         }
     };
 
     //FB Connect
-    $scope.fbBtn = {
+    loginCtrl.fbBtn = {
         content:translations['LOGIN.FOOTER.FB']
     };
 
-    $scope.fbConnect = function () {
+    loginCtrl.fbConnect = function () {
         UserApi.fbLogin()
     };
 
+    //parent config
+
+    $scope.parentCtrl.withHeadLogo = true;
     $scope.parentCtrl.footerStatus = {
         leftBt : {
             btShow : true,
