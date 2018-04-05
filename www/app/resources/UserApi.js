@@ -1,5 +1,5 @@
 'use strict';
-betty2App.factory('UserApi', function ($rootScope, $timeout, $cordovaFacebook, BtMessages, BtNavigate, ResourcesFactory, BtLocalStorage, AVATAR_HEIGHT, AVATAR_WIDTH) {
+betty2App.factory('UserApi', function (BtLoading, $rootScope, $timeout, $cordovaFacebook, BtMessages, BtNavigate, ResourcesFactory, BtLocalStorage, AVATAR_HEIGHT, AVATAR_WIDTH) {
 	var UserApi = {
 
 		//User Sign In
