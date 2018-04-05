@@ -24,7 +24,7 @@ betty2App.component('btFooterBtn',{
         zeCtrl.icoResult = oldValue+" bt-ico-hide";
         $timeout(function(){
           zeCtrl.icoResult = newValue;
-        },300)
+        },200)
       }
     };
   }

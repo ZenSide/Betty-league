@@ -25,18 +25,18 @@
         ></bt-input-text>
 
         <!--SUBMIT-->
-        <bt-body-btn ico="'fa fa-check'"
-                       bt-content="loginCtrl.loginBtn.content"
-                       bt-context="'gold'"
-                       bt-disabled="loginCtrl.loginBtn.disabled"
-                       bt-submit-form="loginformId"
+        <bt-body-btn bt-ico="'fa fa-check'"
+                   bt-content="loginCtrl.loginBtn.content"
+                   bt-btn-classes="'bt-action__btn--gold'"
+                   bt-disabled="loginCtrl.loginBtn.disabled"
+                   bt-submit-form="loginformId"
         >
         </bt-body-btn>
         <!--TODO conditions generales-->
     </form>
 
     <!--FB Connect-->
-    <bt-body-btn ico="'fab fa-facebook'"
+    <bt-body-btn bt-ico="'fab fa-facebook'"
                  bt-content="loginCtrl.fbBtn.content"
                  bt-disabled="loginCtrl.fbBtn.disabled"
                  bt-action="loginCtrl.fbConnect()"

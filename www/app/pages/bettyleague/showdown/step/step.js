@@ -1,4 +1,5 @@
-betty2App.controller('StepCtrl', function ($scope, $stateParams, BtNavigate) {
+betty2App.controller('StepCtrl', function ($scope, $stateParams, BtNavigate, BtLoading) {
+	BtLoading.endLoad();
 	var loginCtrl = this;
 
 	loginCtrl.stepId = $stateParams.stepId;

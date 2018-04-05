@@ -4,31 +4,24 @@
 betty2App.component('btBodyBtn',{
   templateUrl:'app/components/btBodyBtn/btBodyBtn.html',
   bindings:{
-    ico: '<',
-    btContent: '=',
-    btContext: '=',
-    btActive: '<',
-    btAction: '&',
+    btIco: '<',
+    btBtnClasses: '<',
     btDisabled: '<',
-    btSubmitForm: '<'
+    btSubmitForm: '<',
+    btContent: '<',
+    btAction: '&'
   },
   controller:function($timeout){
     var zeCtrl = this;
-    this.btActiveClasse = "";
-    this.btDisabledClasse = "";
-    this.icoResult = this.ico;
-    if (this.btActive) this.btActiveClasse = "active" ;
-    if (this.btDisabled) this.btDisabledClasse = "disabled" ;
+    this.icoResult = this.btIco;
     this.$onChanges = function(changes) {
-      if (changes.btActive) changes.btActive.currentValue ? this.btActiveClasse = "active" : this.btActiveClasse = "";
-      if (changes.btDisabled) changes.btDisabled.currentValue ? this.btDisabledClasse = "disabled" : this.btDisabledClasse = "";
-      if (changes.ico){
-        var oldValue = changes.ico.previousValue;
-        var newValue = changes.ico.currentValue
+      if (changes.btIco){
+        var oldValue = changes.btIco.previousValue;
+        var newValue = changes.btIco.currentValue
         zeCtrl.icoResult = oldValue+" bt-ico-hide";
         $timeout(function(){
           zeCtrl.icoResult = newValue;
-        },300)
+        },200)
       }
     };
   }

@@ -44,25 +44,21 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
             controller: 'LandingCtrl',
             controllerAs: 'landingCtrl',
             resolve: {
-                routeDispatcher: function ($q, BtLocalStorage, $state, BtNavigate, ShowdownApi) {
-                    var deferred = $q.defer();
+                routeDispatcher: function ($q, BtLocalStorage, $state, BtNavigate) {
                     var localUser =  BtLocalStorage.getObject('User');
 
                     //User found
                     if (localUser !== {}) {
                         //ShowdownApi.getFullRange();
-                        BtNavigate.stateChange('goTop', 'bettyleague.showdown.step', {
+                        return BtNavigate.stateChange('goTop' ,'bettyleague.showdown.step', {
                             'bettyLeagueId' : 'world',
-                            'showdownId' : '2',
-                            'stepId' : '1'
+                            'showdownId' : 'next',
+                            'stepId' : '0'
                         });
                     } else {
                         //User not found
                         BtNavigate.stateChange('', 'login');
                     }
-
-                    return deferred.promise;
-
                 }
             }
         })
@@ -73,6 +69,17 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
             templateUrl: 'app/pages/bettyleague/bettyleague.html',
             controller: 'BettyLeagueCtrl',
             controllerAs: 'bettyLeagueCtrl',
+            resolve: {
+                fullRange: function (ShowdownApi, BtNavigate, $stateParams, $q) {
+                    var deferred = $q.defer();
+                    ShowdownApi.getFullRange($stateParams.bettyLeagueId, function (data) {
+                        deferred.resolve(data);
+                    }, function () {
+                        BtNavigate.stateChange('', 'login');
+                    }, true);
+                    return deferred.promise;
+                }
+            }
         })
 
         .state('bettyleague.showdown', {

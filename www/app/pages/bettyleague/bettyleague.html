@@ -1,3 +1,9 @@
 <ion-content delegate-handle="btContentHandle" class="bt-content signin">
-        <ui-view autoscroll="true" class="animated {{viewAnimClass}}" ng-animate-children="false"></ui-view>
+
+        <div ng-repeat="showdown in bettyLeagueCtrl.fullRange">
+                <p>{{showdown.smFixture.homeTeam.sm__name}} - {{showdown.smFixture.awayTeam.sm__name}}</p>
+        </div>
+
+
+        <ui-view autoscroll="false" class="animated {{viewAnimClass}}" ng-animate-children="false"></ui-view>
 </ion-content>

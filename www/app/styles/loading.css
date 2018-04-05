@@ -21,7 +21,7 @@
   right: 0;
   justify-content: center;
   align-items: center;
-  background-color: #20232a;
+  background-color: #222222;
   opacity: 0.5;
 }
 .bt-loading {
@@ -37,13 +37,13 @@
 .bt-loading .spinner svg {
   width: 50px;
   height: 50px;
-  stroke: #FFBB00 !important;
-  fill: #FFBB00 !important;
+  stroke: #b6850f !important;
+  fill: #b6850f !important;
 }
 .bt-loading-container.nocon .bt-loading {
-  color: #FB6542;
-  padding-left: 20px;
-  padding-right: 20px;
+  color: #bc2e33;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 .bt-loading-container.nocon .bt-loading .ico {
   text-align: center;

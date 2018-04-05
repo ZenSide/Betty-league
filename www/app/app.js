@@ -15,6 +15,7 @@ var betty2App = angular.module(
 
 betty2App.run(function($http, $ionicPlatform, $cordovaNetwork, $rootScope, $timeout, $state, $translate, $cordovaKeyboard, BtLoading, BtMessages) {
 
+
   //INIT ROOTSCOPES
   $rootScope.btLoading = false;
   $rootScope.btLoadingNoCon = false;
@@ -29,6 +30,8 @@ betty2App.run(function($http, $ionicPlatform, $cordovaNetwork, $rootScope, $time
       });
     }, null);
   }
+
+  BtLoading.startLoad();
 
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard

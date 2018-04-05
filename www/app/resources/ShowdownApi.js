@@ -1,32 +1,21 @@
 'use strict';
-betty2App.factory('ShowdownApi', function ($rootScope, $timeout, $cordovaFacebook, BtMessages, BtNavigate, BtLoading, ResourcesFactory, BtLocalStorage, AVATAR_HEIGHT, AVATAR_WIDTH) {
+betty2App.factory('ShowdownApi', function ($rootScope, $timeout, $cordovaFacebook, BtMessages, BtNavigate, ResourcesFactory, BtLocalStorage) {
 	var ShowdownApi = {
 
 		//User Sign In
-		getFullRange: function (bettyLeagueId) {
-
-			BtLoading.startLoad();
+		getFullRange: function (bettyLeagueId, resolve, reject, noCache) {
+			var fullRange = BtLocalStorage.getObject('FullRange' + bettyLeagueId);
+			if (fullRange !== {} && !noCache) {
+				console.log('cachedFullrange');
+				resolve(fullRange);
+			}
 			ResourcesFactory.get('/api/showdowns/fullrange').then(function (data) {
-				//Success Sign In
-
-				BtLocalStorage.setObject('FullRange', data);
-
-				var messages = [
-					{
-						context: 'success',
-						content: 'LOGIN.SIGNSUCCESS'
-					}
-				];
-				BtMessages.show(messages, null, function () {
-					BtNavigate.stateChange('goRight', 'login');
-					BtLoading.endLoad();
-				});
+				BtLocalStorage.setObject('FullRange' + bettyLeagueId, data);
+				resolve(data);
 			}, function (messages) {
-
-				//Sign Fail
+				//error
 				BtMessages.show(messages);
-				BtLoading.endLoad();
-				return;
+				reject();
 			});
 		},
 

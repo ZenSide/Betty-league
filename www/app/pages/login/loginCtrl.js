@@ -1,5 +1,5 @@
-betty2App.controller('LoginCtrl', function ($scope, UserApi,BtMessages,BtNavigate,translations) {
-
+betty2App.controller('LoginCtrl', function ($scope, UserApi,BtMessages,BtNavigate,translations,BtLoading) {
+    BtLoading.endLoad();
     var loginCtrl = this;
 
     // Login
@@ -19,6 +19,7 @@ betty2App.controller('LoginCtrl', function ($scope, UserApi,BtMessages,BtNavigat
 
     loginCtrl.submitForm = function(form){
         if(form.$valid){
+            BtLoading.startLoad();
             UserApi.login(loginCtrl.user);
         }
         else{
@@ -32,6 +33,7 @@ betty2App.controller('LoginCtrl', function ($scope, UserApi,BtMessages,BtNavigat
     };
 
     loginCtrl.fbConnect = function () {
+        BtLoading.startLoad();
         UserApi.fbLogin()
     };
 
