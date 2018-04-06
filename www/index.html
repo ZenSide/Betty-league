@@ -49,7 +49,7 @@
     </div>
 
     <!--///CONTENT-->
-    <ui-view autoscroll="true" class="main-view animated {{viewAnimClass}}" ng-animate-children="false"></ui-view>
+    <ui-view autoscroll="false" class="main-view animated {{viewAnimClass}}" ng-animate-children="false"></ui-view>
 
     <!---->
     <div class="bt-loading-container ng-cloak" ng-if="btLoading">
@@ -120,6 +120,7 @@
     <script src="app/pages/login/loginCtrl.js"></script>
     <script src="app/pages/parentCtrl.js"></script>
     <script src="app/pages/signin/signinCtrl.js"></script>
+    <script src="app/resources/BettyLeagueApi.js"></script>
     <script src="app/resources/ResourcesFactory.js"></script>
     <script src="app/resources/ShowdownApi.js"></script>
     <script src="app/resources/UserApi.js"></script>

@@ -44,21 +44,33 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
             controller: 'LandingCtrl',
             controllerAs: 'landingCtrl',
             resolve: {
-                routeDispatcher: function ($q, BtLocalStorage, $state, BtNavigate) {
+                routeDispatcher: function ($q, BtLocalStorage, $state, BtNavigate, BettyLeagueApi) {
+                    var deferred = $q.defer();
+
                     var localUser =  BtLocalStorage.getObject('User');
 
                     //User found
                     if (localUser !== {}) {
-                        //ShowdownApi.getFullRange();
-                        return BtNavigate.stateChange('goTop' ,'bettyleague.showdown.step', {
-                            'bettyLeagueId' : 'world',
-                            'showdownId' : 'next',
-                            'stepId' : '0'
-                        });
+                        //Get my availables bettyleagues
+                        BettyLeagueApi.getMyBettyLeagues(function () {
+
+                            //find worldbettyLeague
+
+
+                            //go to world bettyleague
+                            BtNavigate.stateChange('goTop' ,'bettyleague.showdown.step', {
+                                'bettyLeagueId' : 'world',
+                                'showdownId' : 'next',
+                                'stepId' : '0'
+                            });
+                        }, function () {
+                            BtNavigate.stateChange('', 'login');
+                        }, true);
                     } else {
                         //User not found
                         BtNavigate.stateChange('', 'login');
                     }
+                    return deferred.promise;
                 }
             }
         })

@@ -3,5 +3,5 @@ betty2App.controller('BettyLeagueCtrl', function ($scope, $stateParams, fullRang
 
 	bettyLeagueCtrl.bettyLeagueId = $stateParams.bettyLeagueId;
 
-	bettyLeagueCtrl.fullRange = fullRange['hydra:member'];
+	bettyLeagueCtrl.fullRange = fullRange;
 });

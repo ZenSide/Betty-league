@@ -7,11 +7,11 @@ betty2App.factory('ShowdownApi', function ($rootScope, $timeout, $cordovaFaceboo
 			var fullRange = BtLocalStorage.getObject('FullRange' + bettyLeagueId);
 			if (fullRange !== {} && !noCache) {
 				console.log('cachedFullrange');
-				resolve(fullRange);
+				resolve(fullRange['hydra:member']);
 			}
 			ResourcesFactory.get('/api/showdowns/fullrange').then(function (data) {
 				BtLocalStorage.setObject('FullRange' + bettyLeagueId, data);
-				resolve(data);
+				resolve(data['hydra:member']);
 			}, function (messages) {
 				//error
 				BtMessages.show(messages);
