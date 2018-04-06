@@ -18,6 +18,14 @@ betty2App.factory('BettyLeagueApi', function ($rootScope, $timeout, $cordovaFace
 			});
 		},
 
+		getBettyWorld: function (resolve, reject) {
+			var myBettyLeagues = BettyLeagueApi.getMyBettyLeagues(function () {
+
+			}, function () {
+				reject();
+			})
+		}
+
 	};
 	return BettyLeagueApi;
 });
