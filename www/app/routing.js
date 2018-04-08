@@ -92,13 +92,15 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
             controller: 'BettyLeagueCtrl',
             controllerAs: 'bettyLeagueCtrl',
             resolve: {
-                fullRange: function (ShowdownApi, BtNavigate, $stateParams, $q) {
+                bettyLeague: function (BettyLeagueApi, BtNavigate, $stateParams, $q) {
                     var deferred = $q.defer();
-                    ShowdownApi.getFullRange($stateParams.bettyLeagueId, function (data) {
-                        deferred.resolve(data);
-                    }, function () {
-                        BtNavigate.stateChange('', 'login');
-                    }, true);
+                    BettyLeagueApi.getBettyLeague($stateParams.bettyLeagueId, function (bettyLeague) {
+                        deferred.resolve(bettyLeague);
+                    }, function (messages) {
+                        BtMessages.show(messages, null, function () {
+                            BtNavigate.stateChange('', 'login');
+                        })
+                    });
                     return deferred.promise;
                 }
             }
@@ -111,6 +113,18 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
             controller: 'ShowdownCtrl',
             controllerAs: 'showdownCtrl',
             resolve: {
+                showdown: function (ShowdownApi, BtNavigate, $stateParams, $q) {
+                    console.log('showdown route');
+                    var deferred = $q.defer();
+                    ShowdownApi.getShowdown($stateParams.bettyLeagueId, $stateParams.showdownId, function (showdown) {
+                        deferred.resolve(showdown);
+                    }, function (messages) {
+                        BtMessages.show(messages, null, function () {
+                            BtNavigate.stateChange('', 'login');
+                        })
+                    });
+                    return deferred.promise;
+                }
             }
         })
 

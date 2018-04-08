@@ -1,9 +1,24 @@
-<ion-content delegate-handle="btContentHandle" class="bt-content signin">
+<ion-content delegate-handle="btContentHandle" class="bt-content bettyleague">
 
-        <div ng-repeat="showdown in bettyLeagueCtrl.fullRange">
-                <p>{{showdown.smFixture.homeTeam.sm__name}} - {{showdown.smFixture.awayTeam.sm__name}}</p>
-        </div>
+    <div class="bettyLeague-title">{{bettyLeagueCtrl.bettyLeague.name}}</div>
 
+    <div class="bettyLeague-header">
+        <bt-body-btn bt-ico="'fas fa-list-ul'"
+                     bt-content=" "
+                     bt-btn-classes="'bt-action__btn--body-square bt-action__btn--body-small u-pull-left bt-action__btn--blue'"
+                     bt-disabled=""
+                     bt-submit-form=""
+        >
+        </bt-body-btn>
+        <bt-body-btn bt-ico="'icon-bty-ico-coin'"
+                     bt-content="'15 000'"
+                     bt-btn-classes="'bt-action__btn--body-small u-pull-right bt-action__btn--gold'"
+                     bt-disabled="loginCtrl.loginBtn.disabled"
+                     bt-submit-form="loginformId"
+        >
+        </bt-body-btn>
+    </div>
+    <div class="u-clearfix"></div>
 
-        <ui-view autoscroll="false" class="animated {{viewAnimClass}}" ng-animate-children="false"></ui-view>
+    <ui-view autoscroll="false" class="showdown animated {{viewAnimClass}}" ng-animate-children="false"></ui-view>
 </ion-content>

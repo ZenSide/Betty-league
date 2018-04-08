@@ -3,7 +3,7 @@ betty2App.factory('UserApi', function (BtLoading, $rootScope, $timeout, $cordova
 	var UserApi = {
 
 		//User Sign In
-		sign: function (newUser) {
+		sign: function (newUser, resolve, reject) {
 			ResourcesFactory.post('/api/users/signin', newUser, true).then(function (data) {
 				//Success Sign In
 
@@ -15,38 +15,34 @@ betty2App.factory('UserApi', function (BtLoading, $rootScope, $timeout, $cordova
 						content: 'LOGIN.SIGNSUCCESS'
 					}
 				];
-				BtMessages.show(messages, null, function () {
-					BtNavigate.stateChange('', 'landing');
-				});
+				resolve (messages);
+				return;
 			}, function (messages) {
-
-				//Sign Fail
-				BtMessages.show(messages);
+				reject(messages);
+				return;
 			});
 		},
 
-		login: function (credentials) {
+		login: function (credentials, resolve, reject) {
 			credentials.logfromfb = false;
 			ResourcesFactory.post('/login_api', credentials, true).then(function (data) {
 
 				BtLocalStorage.setObject('User', data);
-
 				var messages = [
 					{
 						context: 'success',
 						content: 'LOGIN.AUTHSUCCESS'
 					}
 				];
-				BtMessages.show(messages, null, function () {
-					BtNavigate.stateChange('', 'landing');
-				});
+				resolve(messages);
+				return;
 			}, function (messages) {
-				BtMessages.show(messages);
-				BtLoading.endLoad();
+				reject(messages);
+				return;
 			});
 		},
 
-		fbLogin: function () {
+		fbLogin: function (resolve, reject) {
 			$cordovaFacebook.login(['public_profile']).then(function (response) {
 				var authtoken = response.authResponse.accessToken;
 				$cordovaFacebook
@@ -65,23 +61,22 @@ betty2App.factory('UserApi', function (BtLoading, $rootScope, $timeout, $cordova
 									content: 'LOGIN.AUTHSUCCESS'
 								}
 							];
-							BtMessages.show(messages, null, function () {
-								BtNavigate.stateChange('', 'landing');
-							});
+							resolve(messages);
+							return;
 						}, function (messages) {
-							BtMessages.show(messages);
-							BtLoading.endLoad();
+							reject (messages);
+							return;
 						});
-					}.catch(function () {
+					}).catch(function () {
 						var messages = [
 							{
 								context: 'alert',
 								content: 'MESSAGES.GENERALERROR'
 							}
 						];
-						BtMessages.show(messages);
-						BtLoading.endLoad();
-					}));
+						reject (messages);
+						return;
+					});
 			});
 			console.log('nobug');
 		},

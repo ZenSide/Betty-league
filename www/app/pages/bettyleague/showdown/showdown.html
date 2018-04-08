@@ -1,1 +1,26 @@
-<ui-view autoscroll="false" class="animated {{viewAnimClass}}"></ui-view>
+<div class="showdown-header">
+    <div class="u-pull-left bt-text showdown-league">
+        <div>
+            {{showdownCtrl.showdown.smFixture.smSeason.smLeague.sm__name}}
+        </div>
+        <div>
+        <span ng-if="showdownCtrl.showdown.smFixture.sm__round__data__name">
+            {{showdownCtrl.showdown.smFixture.sm__round__data__name}}<span translate="SHOWDOWN.ROUNDSUFFIX"></span>
+        </span>
+        <span ng-if="!showdownCtrl.showdown.smFixture.sm__round__data__name && showdownCtrl.showdown.smFixture.sm__stage__data__name">
+            {{showdownCtrl.showdown.smFixture.sm__stage__data__name}}
+        </span>
+        </div>
+    </div>
+
+    <bt-body-btn bt-ico="'fas fa-info'"
+                 bt-content=""
+                 bt-btn-classes="'bt-action__btn--body-square bt-action__btn--body-small u-pull-right bt-action__btn--blue'"
+                 bt-disabled="loginCtrl.loginBtn.disabled"
+                 bt-submit-form="loginformId"
+    >
+    </bt-body-btn>
+    <div class="u-clearfix"></div>
+</div>
+
+<ui-view autoscroll="false" class="step animated {{viewAnimClass}}"></ui-view>

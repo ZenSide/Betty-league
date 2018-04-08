@@ -44,6 +44,31 @@ betty2App.factory('BettyLeagueApi', function ($filter, $rootScope, ResourcesFact
 				reject(messages);
 				return;
 			}, noCache)
+		},
+
+		getBettyLeague: function (bettyLeagueId, resolve, reject, noCache) {
+			BettyLeagueApi.getMyBettyLeagues(function (bettyLeagues) {
+				var result = $filter('filter')(bettyLeagues, {'id': bettyLeagueId});
+				if (result.length > 0)
+				{
+					resolve(result[0]);
+					return;
+				} else {
+					var messages = [
+						{
+							context:'alert',
+							content:"MESSAGES.BETTYLEAGUENOTFOUND"
+						}
+					];
+					reject(messages);
+					return;
+				}
+
+
+			}, function (messages) {
+				reject(messages);
+				return;
+			}, noCache)
 		}
 
 	};

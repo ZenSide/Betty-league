@@ -5,6 +5,8 @@
 ui-view {
   position: absolute;
   width: 100%;
+  left: 0;
+  right: 0;
 }
 ui-view.goLeft.ng-enter {
   animation: slideInLeft 400ms;

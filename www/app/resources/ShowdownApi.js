@@ -55,7 +55,32 @@ betty2App.factory('ShowdownApi', function ($filter, ResourcesFactory, BtLocalSto
 			}, function (messages) {
 				reject(messages);
 				return;
-			}, true)
+			}, noCache)
+		},
+		getShowdown: function (bettyLeagueId, showdownId, resolve, reject, noCache) {
+			ShowdownApi.getFullRange(bettyLeagueId, function (fullRange) {
+
+				var showdown = $filter('filter')(fullRange, {id: showdownId});
+
+				if (showdown.length > 0) {
+					console.log(showdown[0]);
+					resolve(showdown[0]);
+					return;
+				}
+
+				var messages = [
+					{
+						context:'alert',
+						content:"MESSAGES.SHOWDOWNNOTFOUND"
+					}
+				];
+				reject(messages);
+				return;
+
+			}, function (messages) {
+				reject(messages);
+				return;
+			}, noCache)
 		}
 
 	};

@@ -1,5 +1,5 @@
-betty2App.controller('SigninCtrl', function (BtMessages, UserApi, BtNavigate, $timeout, $scope, translations) {
-
+betty2App.controller('SigninCtrl', function (BtLoading, BtMessages, UserApi, BtNavigate, $scope, translations) {
+    BtLoading.endLoad();
     var signinCtrl = this;
 
     // fosuser
@@ -30,7 +30,15 @@ betty2App.controller('SigninCtrl', function (BtMessages, UserApi, BtNavigate, $t
                 BtMessages.show([{content:"SIGNIN.MESSAGES.PASSWORDDIFF",context:"alert"}])
             }
             else{
-                UserApi.sign(signinCtrl.newUser);
+                BtLoading.startLoad();
+                UserApi.sign(signinCtrl.newUser, function (messages) {
+                    BtMessages.show(messages, null, function () {
+                        BtNavigate.stateChange('', 'landing');
+                    });
+                }, function (messages) {
+                    BtLoading.endLoad();
+                    BtMessages.show(messages, null);
+                })
             }
         }
         else{

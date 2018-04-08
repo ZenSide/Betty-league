@@ -1,7 +1,7 @@
-betty2App.controller('BettyLeagueCtrl', function ($scope, $stateParams, fullRange) {
+betty2App.controller('BettyLeagueCtrl', function ($scope, $stateParams, bettyLeague) {
 	var bettyLeagueCtrl = this;
 
 	bettyLeagueCtrl.bettyLeagueId = $stateParams.bettyLeagueId;
 
-	bettyLeagueCtrl.fullRange = fullRange;
+	bettyLeagueCtrl.bettyLeague = bettyLeague;
 });

@@ -153,6 +153,28 @@
   height: 100%;
   font-size: 1.8rem!important;
 }
+.bt-action__btn--body-small {
+  min-height: 4rem!important;
+  font-size: 1.4rem!important;
+  width: auto;
+  padding: 1.2rem 5rem 0.9rem 1.3rem!important;
+}
+.bt-action__btn--body-small .bt-action__ico {
+  font-size: 3.5rem!important;
+  line-height: 4rem!important;
+  right: 1rem;
+}
+.bt-action__btn--body-square {
+  width: 4rem;
+  padding: 0rem!important;
+  text-align: center;
+}
+.bt-action__btn--body-square .bt-action__ico {
+  font-size: 2rem!important;
+  line-height: 4rem!important;
+  right: 0rem;
+  width: 100%;
+}
 .bt-action__content {
   top: -0.4rem;
   color: #123a5c;

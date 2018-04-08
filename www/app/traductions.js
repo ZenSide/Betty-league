@@ -9,7 +9,9 @@ var translations = {
             GENERALERROR : 'Un problême est survenu, réessayez plus tard',
             NOCON : 'Veuillez vous connecter à internet',
             NOBETTYWORLD : 'Betty World non trouvé',
-            NONEXTOPENSHOWDOWN : 'Pas de paris ouverts'
+            NONEXTOPENSHOWDOWN : 'Pas de paris ouverts',
+            BETTYLEAGUENOTFOUND : 'Betty League non trouvée',
+            SHOWDOWNNOTFOUND : 'Match non trouvé'
         },
         USER : {
             ASSERT : {
@@ -69,7 +71,10 @@ var translations = {
             SIGNIN : "Inscription",
             SIGNIN2 : "Finalisez l'inscription",
             CHOOSELEAGUE : "Bienvenue sur BettyLeague"
-        }
+        },
+        SHOWDOWN : {
+            ROUNDSUFFIX : "ème journée",
+        },
     }
 }
 ;
