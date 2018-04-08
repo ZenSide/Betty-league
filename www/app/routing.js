@@ -44,7 +44,7 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
             controller: 'LandingCtrl',
             controllerAs: 'landingCtrl',
             resolve: {
-                routeDispatcher: function ($q, BtLocalStorage, $state, BtNavigate, BettyLeagueApi) {
+                routeDispatcher: function ($q, BtLocalStorage, $state, BtNavigate, BettyLeagueApi, $filter) {
                     var deferred = $q.defer();
 
                     var localUser =  BtLocalStorage.getObject('User');
@@ -52,14 +52,12 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
                     //User found
                     if (localUser !== {}) {
                         //Get my availables bettyleagues
-                        BettyLeagueApi.getMyBettyLeagues(function () {
-
+                        BettyLeagueApi.getBettyWorld(function (bettyWorld) {
                             //find worldbettyLeague
-
-
                             //go to world bettyleague
+                            console.log(bettyWorld);
                             BtNavigate.stateChange('goTop' ,'bettyleague.showdown.step', {
-                                'bettyLeagueId' : 'world',
+                                'bettyLeagueId' : bettyWorld.id,
                                 'showdownId' : 'next',
                                 'stepId' : '0'
                             });

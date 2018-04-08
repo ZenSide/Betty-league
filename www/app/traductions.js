@@ -7,7 +7,8 @@ var translations = {
     fr : {
         MESSAGES : {
             GENERALERROR : 'Un problême est survenu, réessayez plus tard',
-            NOCON : 'Veuillez vous connecter à internet'
+            NOCON : 'Veuillez vous connecter à internet',
+            NOBETTYWORLD : 'Betty World non trouvé'
         },
         USER : {
             ASSERT : {
