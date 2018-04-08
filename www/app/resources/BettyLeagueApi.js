@@ -1,5 +1,5 @@
 'use strict';
-betty2App.factory('BettyLeagueApi', function ($filter, $rootScope, BtMessages, ResourcesFactory, BtLocalStorage) {
+betty2App.factory('BettyLeagueApi', function ($filter, $rootScope, ResourcesFactory, BtLocalStorage) {
 	var BettyLeagueApi = {
 		//User Sign In
 		getMyBettyLeagues: function (resolve, reject, noCache) {

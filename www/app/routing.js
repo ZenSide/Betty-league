@@ -44,7 +44,7 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
             controller: 'LandingCtrl',
             controllerAs: 'landingCtrl',
             resolve: {
-                routeDispatcher: function ($q, BtLocalStorage, $state, BtNavigate, BettyLeagueApi, $filter) {
+                routeDispatcher: function ($q, BtLocalStorage, $state, BtNavigate, ShowdownApi, BettyLeagueApi, BtMessages) {
                     var deferred = $q.defer();
 
                     var localUser =  BtLocalStorage.getObject('User');
@@ -56,13 +56,25 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
                             //find worldbettyLeague
                             //go to world bettyleague
                             console.log(bettyWorld);
-                            BtNavigate.stateChange('goTop' ,'bettyleague.showdown.step', {
-                                'bettyLeagueId' : bettyWorld.id,
-                                'showdownId' : 'next',
-                                'stepId' : '0'
-                            });
-                        }, function () {
-                            BtNavigate.stateChange('', 'login');
+
+                            //go to the next unbet showdown
+                            ShowdownApi.getNextOpenShowDown(bettyWorld.id, function (showdown) {
+
+                                BtNavigate.stateChange('goTop' ,'bettyleague.showdown.step', {
+                                    'bettyLeagueId' : bettyWorld.id,
+                                    'showdownId' : showdown.id,
+                                    'stepId' : '0'
+                                });
+                            }, function (messages) {
+                                BtMessages.show(messages, null, function () {
+                                    BtNavigate.stateChange('', 'login');
+                                })
+                            }, true);
+
+                        }, function (messages) {
+                            BtMessages.show(messages, null, function () {
+                                BtNavigate.stateChange('', 'login');
+                            })
                         }, true);
                     } else {
                         //User not found
