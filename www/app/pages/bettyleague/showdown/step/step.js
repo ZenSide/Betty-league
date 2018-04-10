@@ -1,4 +1,4 @@
-betty2App.controller('StepCtrl', function ($scope, $stateParams, BtNavigate, BtLoading) {
+betty2App.controller('StepCtrl', function (previousShowDownId, nextShowDownId, $scope, $stateParams, BtNavigate, BtLoading, ShowdownApi) {
 	BtLoading.endLoad();
 	var loginCtrl = this;
 
@@ -12,13 +12,17 @@ betty2App.controller('StepCtrl', function ($scope, $stateParams, BtNavigate, BtL
 			btShow : true,
 			btPosition: "left",
 			btClasses: "bt-action--medium",
-			btButtonClasses: "bt-action__btn--gold",
-			btIco : "fas fa-unlock",
+			btButtonClasses: "bt-action__btn--blue",
+			btIco : "fas fa-arrow-left",
 			btLabel:translations['LOGIN.FOOTER.MDP'],
 			btDisabled: false,
 			btSubmitForm: null,
 			action:function(){
-				BtNavigate.stateChange('goRight','login');
+				BtNavigate.stateChange('goLeft' ,'bettyleague.showdown.step', {
+					'bettyLeagueId' : $stateParams.bettyLeagueId,
+					'showdownId' : previousShowDownId,
+					'stepId' : '0'
+				});
 			}
 		},
 		middleBt : {
@@ -38,13 +42,17 @@ betty2App.controller('StepCtrl', function ($scope, $stateParams, BtNavigate, BtL
 			btShow : true,
 			btPosition: "right",
 			btClasses: "bt-action--medium",
-			btButtonClasses: "bt-action__btn--gold",
-			btIco : "fab fa-angellist",
+			btButtonClasses: "bt-action__btn--blue",
+			btIco : "fas fa-arrow-right",
 			btLabel:translations['LOGIN.FOOTER.SIGN'],
 			btDisabled: false,
 			btSubmitForm: null,
 			action:function(){
-				BtNavigate.stateChange('goLeft','signin');
+				BtNavigate.stateChange('goRight' ,'bettyleague.showdown.step', {
+					'bettyLeagueId' : $stateParams.bettyLeagueId,
+					'showdownId' : nextShowDownId,
+					'stepId' : '0'
+				});
 			}
 		}
 	}

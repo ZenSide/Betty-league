@@ -43,7 +43,6 @@
   width: 4rem;
   height: 4rem;
   position: relative;
-  transition: all 200ms;
   will-change: transform;
   padding: 0!important;
   min-width: 0!important;
@@ -51,7 +50,6 @@
   font-weight: normal;
 }
 .bt-action__btn:before {
-  transition: all 200ms;
   z-index: 14;
   content: ' ';
   width: 100%;
@@ -106,8 +104,6 @@
   color: #222222;
   width: 100%;
   vertical-align: top;
-  transition: transform 1200ms;
-  will-change: transform;
 }
 .bt-action__ico {
   position: absolute;
@@ -120,7 +116,7 @@
   opacity: 1;
   top: -0.4rem;
   text-align: center;
-  transition: all 200ms;
+  transition: transform 200ms;
   will-change: transform;
 }
 .bt-action__ico.bt-ico-hide {
@@ -181,5 +177,4 @@
   position: relative;
   z-index: 14;
   line-height: 1.1rem!important;
-  transition: top 200ms;
 }

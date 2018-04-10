@@ -134,6 +134,26 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
             controller: 'StepCtrl',
             controllerAs: 'stepCtrl',
             resolve: {
+                nextShowDownId: function ($stateParams, ShowdownApi, BtMessages, $q) {
+                    var deferred = $q.defer();
+                    ShowdownApi.getNextShowdown($stateParams.bettyLeagueId, $stateParams.showdownId, function (nextShowdownID) {
+                        deferred.resolve(nextShowdownID);
+                    }, function (messages) {
+                        BtMessages.show(messages, null, function () {
+                        })
+                    });
+                    return deferred.promise;
+                },
+                previousShowDownId: function ($stateParams, ShowdownApi, BtMessages, $q) {
+                    var deferred = $q.defer();
+                    ShowdownApi.getPreviousShowdown($stateParams.bettyLeagueId, $stateParams.showdownId, function (previousShowDownId) {
+                        deferred.resolve(previousShowDownId);
+                    }, function (messages) {
+                        BtMessages.show(messages, null, function () {
+                        })
+                    });
+                    return deferred.promise;
+                }
             }
         });
 

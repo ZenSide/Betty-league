@@ -66,7 +66,7 @@
   width: @medium-size;
   height: @medium-size;
   position: relative;
-  transition: all @btn-press-time;
+  //transition: all @btn-press-time;
   will-change: transform;
   padding: 0!important;
   min-width: 0!important;
@@ -74,7 +74,7 @@
   font-weight: normal;
 
   &:before {
-    transition: all @btn-press-time;
+    //transition: all @btn-press-time;
     z-index: 14;
     content: ' ';
     width: 100%;
@@ -152,8 +152,8 @@
   color: @black;
   width: 100%;
   vertical-align: top;
-  transition: transform @bouncing-time;
-  will-change: transform;
+  //transition: transform @bouncing-time;
+  //will-change: transform;
 }
 
 //ico
@@ -168,7 +168,7 @@
   opacity: 1;
   top: -@press-distance;
   text-align: center;
-  transition: all @btn-press-time;
+  transition: transform @btn-press-time;
   will-change: transform;
   &.bt-ico-hide {
     transform: rotateY(90deg);
@@ -239,5 +239,5 @@
   position: relative;
   z-index: 14;
   line-height: 1.1rem!important;
-  transition: top @btn-press-time;
+  //transition: top @btn-press-time;
 }

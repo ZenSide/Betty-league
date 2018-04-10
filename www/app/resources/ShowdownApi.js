@@ -81,6 +81,46 @@ betty2App.factory('ShowdownApi', function ($filter, ResourcesFactory, BtLocalSto
 				reject(messages);
 				return;
 			}, noCache)
+		},
+		getNextShowdown: function (bettyLeagueId, showdownId, resolve, reject, noCache) {
+			ShowdownApi.getFullRange(bettyLeagueId, function (fullRange) {
+
+				var arrayLength = fullRange.length;
+				var nextShowdownId = null;
+				for (var i = 0; i < arrayLength; i++) {
+					if (fullRange[i].id == showdownId) {
+						nextShowdownId = fullRange[i+1].id
+					}
+				}
+				resolve(nextShowdownId);
+				console.log('hophop');
+
+				return;
+
+			}, function (messages) {
+				reject(messages);
+				return;
+			}, noCache)
+		},
+		getPreviousShowdown: function (bettyLeagueId, showdownId, resolve, reject, noCache) {
+			ShowdownApi.getFullRange(bettyLeagueId, function (fullRange) {
+
+				var arrayLength = fullRange.length;
+				var nextShowdownId = null;
+				for (var i = 0; i < arrayLength; i++) {
+					if (fullRange[i].id == showdownId) {
+						nextShowdownId = fullRange[i-1].id
+					}
+				}
+				resolve(nextShowdownId);
+				console.log('hophop');
+
+				return;
+
+			}, function (messages) {
+				reject(messages);
+				return;
+			}, noCache)
 		}
 
 	};

@@ -1,8 +1,52 @@
 <div class="fixture-block">
-    <div class="bt-text-md">
+    <div class="bt-text-md u-gutter-bottom-micro">
         {{showdownCtrl.showdown.smFixture.sm__time__startingAt__dateTime| date : 'longDate'}}
     </div>
 
+    <!--//aggregates-->
+    <div ng-if="showdownCtrl.showdown.smFixture.matchRetour" class="row row-center">
+        <div class="col u-text-right bt-text-nano"><span translate="SHOWDOWN.AGGREGATE_SCORE"></span></div>
+        <div class="col col-10 col-magic u-nowrap u-text-center bt-text-tiny-medium">
+            (
+            <span ng-if="!showdownCtrl.showdown.smFixture.aggregateVisitorteamScore">-</span>
+            <span ng-if="showdownCtrl.showdown.smFixture.aggregateVisitorteamScore">
+                {{showdownCtrl.showdown.smFixture.aggregateVisitorteamScore}}
+            </span>
+            -
+            <span ng-if="!showdownCtrl.showdown.smFixture.aggregateLocalteamScore">-</span>
+            <span ng-if="showdownCtrl.showdown.smFixture.aggregateLocalteamScore">
+                {{showdownCtrl.showdown.smFixture.aggregateLocalteamScore}}
+            </span>
+            )
+        </div>
+        <div class="col u-text-left"></div>
+    </div>
 
-    <bt-logo-team bt-team="showdownCtrl.showdown.smFixture.homeTeam"></bt-logo-team>
+    <!--scores-->
+    <div class="showdown-summary">
+        <div class="showdown-summary__row">
+            <div class="showdown-summary__homeTeam">
+                <span class="showdown-summary__teamName bt-text">
+                    {{showdownCtrl.showdown.smFixture.homeTeam.sm__name}}
+                </span>
+                <span class="showdown-summary__logo">
+                    <bt-logo-team bt-team="showdownCtrl.showdown.smFixture.homeTeam"></bt-logo-team>
+                </span>
+            </div>
+            <div class="showdown-summary__score">
+                <span class="bt-text-lg showdown-score showdown-score--time">
+                    {{showdownCtrl.showdown.smFixture.sm__time__startingAt__dateTime| date : 'shortTime'}}
+                </span>
+            </div>
+            <div class="showdown-summary__awayTeam">
+                <span class="showdown-summary__logo">
+                    <bt-logo-team bt-team="showdownCtrl.showdown.smFixture.awayTeam"></bt-logo-team>
+                </span>
+                <span class="showdown-summary__teamName bt-text">
+                    {{showdownCtrl.showdown.smFixture.awayTeam.sm__name}}
+                </span>
+            </div>
+        </div>
+    </div>
 </div>
+

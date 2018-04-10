@@ -74,6 +74,8 @@ var translations = {
         },
         SHOWDOWN : {
             ROUNDSUFFIX : "ème journée",
+            AGGREGATE_TITLE : "match retour",
+            AGGREGATE_SCORE : "cumul des deux matchs"
         },
     }
 }

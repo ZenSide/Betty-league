@@ -1,3 +1,9 @@
+.u-gutter-bottom-micro {
+  margin-bottom: 0.5rem !important;
+}
+.u-gutter-bottom-small {
+  margin-bottom: 1rem !important;
+}
 .u-gutter-bottom-regular {
   margin-bottom: 1.5rem !important;
 }
@@ -16,4 +22,19 @@
 }
 .u-pull-right {
   float: right;
+}
+.u-text-left {
+  text-align: left;
+}
+.u-text-right {
+  text-align: right;
+}
+.u-text-center {
+  text-align: center;
+}
+.u-inline-block {
+  display: inline-block;
+}
+.u-nowrap {
+  white-space: nowrap;
 }

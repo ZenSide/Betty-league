@@ -5,6 +5,7 @@ body {
 }
 body {
   background-color: #2BB289;
+  color: #222222;
 }
 .scroll-bar-indicator {
   background-color: #e6e6e6;
@@ -21,4 +22,12 @@ body {
 }
 .bt-content.bettyleague {
   padding: 0;
+}
+.col-magic {
+  flex: 0 0 20px;
+  max-width: 50%;
+}
+.col-nopadding {
+  padding-left: 0;
+  padding-right: 0;
 }

@@ -9,26 +9,26 @@ ui-view {
   right: 0;
 }
 ui-view.goLeft.ng-enter {
-  animation: slideInLeft 400ms;
+  animation: slideInLeft 500ms;
 }
 ui-view.goLeft.ng-leave {
-  animation: slideOutRight 400ms;
+  animation: slideOutRight 500ms;
 }
 ui-view.goRight.ng-enter {
-  animation: slideInRight 400ms;
+  animation: slideInRight 500ms;
 }
 ui-view.goRight.ng-leave {
-  animation: slideOutLeft 400ms;
+  animation: slideOutLeft 500ms;
 }
 ui-view.goTop.ng-enter {
-  animation: slideInDown 400ms;
+  animation: slideInDown 500ms;
 }
 ui-view.goTop.ng-leave {
-  animation: slideOutDown 400ms;
+  animation: slideOutDown 500ms;
 }
 ui-view.goBottom.ng-enter {
-  animation: slideInUp 400ms;
+  animation: slideInUp 500ms;
 }
 ui-view.goBottom.ng-leave {
-  animation: slideOutUp 400ms;
+  animation: slideOutUp 500ms;
 }

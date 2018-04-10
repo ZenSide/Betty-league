@@ -7,3 +7,90 @@
 .showdown-league {
   padding-top: 0.4rem;
 }
+
+.showdown-summary {
+  position: relative;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.showdown-summary__row {
+  display: table-row;
+  text-align: center;
+}
+
+.showdown-summary__homeTeam {
+  text-align: right;
+  display: table-cell;
+  vertical-align: middle;
+  box-sizing: border-box;
+  position: relative;
+  width: 38%;
+  .showdown-summary__logo {
+    right: 0;
+  }
+  .showdown-summary__teamName {
+    padding-right: 4rem;
+  }
+}
+
+.showdown-summary__awayTeam {
+  text-align: left;
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  box-sizing: border-box;
+  width: 38%;
+  .showdown-summary__logo {
+    left: 0;
+  }
+  .showdown-summary__teamName {
+    padding-left: 4rem;
+  }
+}
+
+.showdown-summary__score {
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.showdown-score {
+  display: block;
+  line-height: 4rem;
+  padding: 0 0.5rem 0 0.5rem;
+  color: @white;
+  background-color: @light-blue;
+  margin: 0 @margin-micro 0 @margin-micro;
+}
+
+.showdown-score--time {
+  color: @white;
+  background-color: @light-blue;
+
+}
+
+
+.showdown-summary__teamName {
+  display: block;
+  vertical-align: middle;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: normal;
+}
+
+.showdown-summary__logo {
+  vertical-align: middle;
+  display: block;
+  position: absolute;
+  top: 50%;
+  margin-top: -2rem;
+}
+
+.logo-team {
+  width: 40px;
+  height: 40px;
+}
