@@ -57,9 +57,11 @@
   background-color: #0583d0;
   margin: 0 0.5rem 0 0.5rem;
 }
-.showdown-score--time {
-  color: #e6e6e6;
-  background-color: #0583d0;
+.showdown-score--locked {
+  background-color: #fa393c;
+}
+.showdown-score--closed {
+  background-color: #2BB289;
 }
 .showdown-summary__teamName {
   display: block;
@@ -78,4 +80,57 @@
 .logo-team {
   width: 40px;
   height: 40px;
+}
+.event-picto {
+  display: inline-block;
+}
+.event-goal {
+  width: 8px;
+  height: 6px;
+  background-image: url("../../img/goal.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.event-yellowred {
+  width: 1.5rem;
+  height: 0.8rem;
+  position: relative;
+}
+.event-yellowred:before,
+.event-yellowred:after {
+  left: 0;
+  bottom: 0;
+  content: "";
+  position: absolute;
+  height: 0.8rem;
+  transform: rotate(15deg);
+  width: 0.5rem;
+  background-color: #fdcf21;
+}
+.event-yellowred:after {
+  left: 1rem;
+  width: 0.5rem;
+  background-color: #fa393c;
+}
+.event-yellowred {
+  width: 1.5rem;
+  height: 0.8rem;
+  position: relative;
+}
+.event-yellowred:before,
+.event-yellowred:after {
+  left: 0;
+  bottom: 0;
+  content: "";
+  position: absolute;
+  height: 0.8rem;
+  transform: rotate(15deg);
+  width: 0.5rem;
+  background-color: #fdcf21;
+}
+.event-yellowred:after {
+  left: 1rem;
+  width: 0.5rem;
+  background-color: #fa393c;
 }

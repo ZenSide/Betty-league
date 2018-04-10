@@ -1,8 +1,20 @@
 betty2App.controller('StepCtrl', function (previousShowDownId, nextShowDownId, $scope, $stateParams, BtNavigate, BtLoading, ShowdownApi) {
 	BtLoading.endLoad();
-	var loginCtrl = this;
+	var stepCtrl = this;
 
-	loginCtrl.stepId = $stateParams.stepId;
+	stepCtrl.stepId = $stateParams.stepId;
+
+	stepCtrl.isShownEvent = function (eventType) {
+		var okEventTypes = [
+			'goal', 'penalty', 'own-goal', 'yellowred', 'redcard'
+		]
+
+		if (okEventTypes.indexOf(eventType) !== -1) {
+			return true;
+		}
+
+		return false;
+	};
 
 	//parent config
 	$scope.parentCtrl.withHeadLogo = false;

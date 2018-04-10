@@ -4,22 +4,16 @@
     </div>
 
     <!--//aggregates-->
-    <div ng-if="showdownCtrl.showdown.smFixture.matchRetour" class="row row-center">
-        <div class="col u-text-right bt-text-nano"><span translate="SHOWDOWN.AGGREGATE_SCORE"></span></div>
-        <div class="col col-10 col-magic u-nowrap u-text-center bt-text-tiny-medium">
+    <div ng-if="showdownCtrl.showdown.smFixture.matchRetour" class="row row-center col-nopadding u-gutter-bottom-micro">
+        <div class="col-nopadding col u-text-right bt-text-nano"><span translate="SHOWDOWN.AGGREGATE_SCORE"></span>&nbsp;</div>
+        <div class="col-nopadding col col-10 col-magic u-nowrap u-text-center bt-text-tiny-medium">
             (
-            <span ng-if="!showdownCtrl.showdown.smFixture.aggregateVisitorteamScore">-</span>
-            <span ng-if="showdownCtrl.showdown.smFixture.aggregateVisitorteamScore">
-                {{showdownCtrl.showdown.smFixture.aggregateVisitorteamScore}}
-            </span>
+            {{showdownCtrl.showdown.smFixture.aggregateVisitorteamScore + showdownCtrl.showdown.smFixture.sm__scores__localteamScore}}
             -
-            <span ng-if="!showdownCtrl.showdown.smFixture.aggregateLocalteamScore">-</span>
-            <span ng-if="showdownCtrl.showdown.smFixture.aggregateLocalteamScore">
-                {{showdownCtrl.showdown.smFixture.aggregateLocalteamScore}}
-            </span>
+            {{showdownCtrl.showdown.smFixture.aggregateLocalteamScore + showdownCtrl.showdown.smFixture.sm__scores__visitorteamScore}}
             )
         </div>
-        <div class="col u-text-left"></div>
+        <div class="col-nopadding col u-text-left"></div>
     </div>
 
     <!--scores-->
@@ -34,8 +28,17 @@
                 </span>
             </div>
             <div class="showdown-summary__score">
-                <span class="bt-text-lg showdown-score showdown-score--time">
+                <!--OPEN-->
+                <span ng-if="showdownCtrl.showdown.smFixture.showdownStatus === 'OPEN'" class="bt-text-lg showdown-score showdown-score--open">
                     {{showdownCtrl.showdown.smFixture.sm__time__startingAt__dateTime| date : 'shortTime'}}
+                </span>
+                <!--LOCKED-->
+                <span ng-if="showdownCtrl.showdown.smFixture.showdownStatus === 'LOCKED'" class="bt-text-lg showdown-score showdown-score--locked">
+                    {{showdownCtrl.showdown.smFixture.sm__scores__localteamScore}} - {{showdownCtrl.showdown.smFixture.sm__scores__visitorteamScore}}
+                </span>
+                <!--CLOSED-->
+                <span ng-if="showdownCtrl.showdown.smFixture.showdownStatus === 'CLOSED'" class="bt-text-lg showdown-score showdown-score--closed">
+                    {{showdownCtrl.showdown.smFixture.sm__scores__localteamScore}} - {{showdownCtrl.showdown.smFixture.sm__scores__visitorteamScore}}
                 </span>
             </div>
             <div class="showdown-summary__awayTeam">
@@ -45,6 +48,26 @@
                 <span class="showdown-summary__teamName bt-text">
                     {{showdownCtrl.showdown.smFixture.awayTeam.sm__name}}
                 </span>
+            </div>
+        </div>
+    </div>
+
+    <!--//events - tirs aux buts-->
+    <div ng-if="showdownCtrl.showdown.smFixture.smEvents.length > 0">
+        <div class="u-gutter-bottom-micro"></div>
+        <div class="row row-top col-nopadding">
+            <div class="col-nopadding col u-text-right bt-text-nano">
+                <div ng-repeat="event in showdownCtrl.showdown.smFixture.smEvents" ng-if="stepCtrl.isShownEvent(event.sm__type) && event.teamType == 'home'">
+                    <span class="event-picto event-{{event.sm__type}}"></span> <span>{{event.sm__playerName}}</span> <span>{{event.sm__minute}}'</span>
+                </div>
+            </div>
+            <div class="col-nopadding col col-10 col-magic u-nowrap u-text-center bt-text-nano">
+
+            </div>
+            <div class="col-nopadding col u-text-left  bt-text-nano">
+                <div ng-repeat="event in showdownCtrl.showdown.smFixture.smEvents" ng-if="stepCtrl.isShownEvent(event.sm__type) && event.teamType == 'away'">
+                    <span>{{event.sm__minute}}'</span> <span>{{event.sm__playerName}}</span> <span class="event-picto event-{{event.sm__type}}"></span>
+                </div>
             </div>
         </div>
     </div>
