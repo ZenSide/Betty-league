@@ -8,13 +8,13 @@ var betty2App = angular.module(
   [
     'ionic',
     'ionic.native',
-    'restangular',
+    'ngTouch',
     'pascalprecht.translate'
   ]
 );
 
 betty2App.run(function($http, $ionicPlatform, $cordovaNetwork, $rootScope, $timeout, $state, $translate, $cordovaKeyboard, BtLoading, BtMessages) {
-
+  FastClick.attach(document.body);
 
   //INIT ROOTSCOPES
   $rootScope.btLoading = false;

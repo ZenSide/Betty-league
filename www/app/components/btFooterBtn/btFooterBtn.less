@@ -66,8 +66,8 @@
   width: @medium-size;
   height: @medium-size;
   position: relative;
-  //transition: all @btn-press-time;
-  will-change: transform;
+  transition: color @btn-press-time;
+  will-change: color;
   padding: 0!important;
   min-width: 0!important;
   min-height: 0!important;
@@ -87,61 +87,25 @@
   }
 
   &:active, &.bt-action__btn--active{
-
-    .bt-action__ico {
-      color: @white;
-      top: 0;
-    }
-
-    .bt-action__content {
-      top: 0;
-      color: @white;
-    }
-
-    &:before {
-      bottom: 0;
-    }
-
+    color: @white;
   }
-
-  &:disabled{
-
-
-  }
-
-
-
 }
 
 //Context (colors)
 .bt-action__btn--gold {
   background-color: @medium-gold;
+  color: @hard-gold;
 
   &:before {
     background-color: @light-gold;
   }
-
-  .bt-action__ico {
-    color: @hard-gold;
-  }
-
-  .bt-action__content {
-    color: @hard-gold;
-  }
 }
 .bt-action__btn--red {
   background-color: @medium-red;
+  color: @hard-red;
 
   &:before {
     background-color: @light-red;
-  }
-
-  .bt-action__ico{
-    color: @hard-red;
-  }
-
-  .bt-action__content {
-    color: @hard-red;
   }
 }
 

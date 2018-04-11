@@ -1,6 +1,6 @@
 <ion-content delegate-handle="btContentHandle" class="bt-content bettyleague">
 
-    <div class="bettyLeague-title">{{bettyLeagueCtrl.bettyLeague.name}}</div>
+    <div class="bettyLeague-title">{{::bettyLeagueCtrl.bettyLeague.name}}</div>
 
     <div class="bettyLeague-header">
         <bt-body-btn bt-ico="'fas fa-list-ul'"
@@ -13,7 +13,7 @@
         <bt-body-btn bt-ico="'icon-bty-ico-coin'"
                      bt-content="'15 000'"
                      bt-btn-classes="'bt-action__btn--body-small u-pull-right bt-action__btn--gold'"
-                     bt-disabled="loginCtrl.loginBtn.disabled"
+                     bt-disabled=""
                      bt-submit-form="loginformId"
         >
         </bt-body-btn>

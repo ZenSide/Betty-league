@@ -1,23 +1,23 @@
 <div class="showdown-header">
     <div class="u-pull-left bt-text showdown-league">
             <div>
-                {{showdownCtrl.showdown.smFixture.smSeason.smLeague.sm__name}}
+                {{::showdownCtrl.showdown.smFixture.smSeason.smLeague.sm__name}}
             </div>
         <div>
             <span ng-if="showdownCtrl.showdown.smFixture.sm__round__data__name">
-                {{showdownCtrl.showdown.smFixture.sm__round__data__name}}<span translate="SHOWDOWN.ROUNDSUFFIX"></span>
+                {{::showdownCtrl.showdown.smFixture.sm__round__data__name}}<span translate="SHOWDOWN.ROUNDSUFFIX"></span>
             </span>
             <span ng-if="!showdownCtrl.showdown.smFixture.sm__round__data__name && showdownCtrl.showdown.smFixture.sm__stage__data__name">
-                {{showdownCtrl.showdown.smFixture.sm__stage__data__name}}<span ng-if="showdownCtrl.showdown.smFixture.matchRetour">, </span>
+                {{::showdownCtrl.showdown.smFixture.sm__stage__data__name}}<span ng-if="::showdownCtrl.showdown.smFixture.matchRetour">, </span>
             </span>
-            <span ng-if="showdownCtrl.showdown.smFixture.matchRetour" translate="SHOWDOWN.AGGREGATE_TITLE"></span>
+            <span ng-if="::showdownCtrl.showdown.smFixture.matchRetour" translate="SHOWDOWN.AGGREGATE_TITLE"></span>
         </div>
     </div>
 
     <bt-body-btn bt-ico="'fas fa-info'"
                  bt-content=""
                  bt-btn-classes="'bt-action__btn--body-square bt-action__btn--body-small u-pull-right bt-action__btn--blue'"
-                 bt-disabled="loginCtrl.loginBtn.disabled"
+                 bt-disabled=""
                  bt-submit-form="loginformId"
     >
     </bt-body-btn>

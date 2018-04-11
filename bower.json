@@ -14,7 +14,9 @@
     "ngCordova": "^0.1.27-alpha",
     "angular-local-storage": "^0.7.1",
     "ionic-native": "^2.0.3",
-    "angular-i18n": "^1.6.9"
+    "angular-i18n": "^1.6.9",
+    "angular-touch": "1.6.1",
+    "fastclick": "^1.0.6"
   },
   "resolutions": {
     "angular": "1.6.1"

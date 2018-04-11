@@ -43,7 +43,8 @@
   width: 4rem;
   height: 4rem;
   position: relative;
-  will-change: transform;
+  transition: color 200ms;
+  will-change: color;
   padding: 0!important;
   min-width: 0!important;
   min-height: 0!important;
@@ -60,43 +61,23 @@
   position: absolute;
   background-color: #0583d0;
 }
-.bt-action__btn:active .bt-action__ico,
-.bt-action__btn.bt-action__btn--active .bt-action__ico {
+.bt-action__btn:active,
+.bt-action__btn.bt-action__btn--active {
   color: #e6e6e6;
-  top: 0;
-}
-.bt-action__btn:active .bt-action__content,
-.bt-action__btn.bt-action__btn--active .bt-action__content {
-  top: 0;
-  color: #e6e6e6;
-}
-.bt-action__btn:active:before,
-.bt-action__btn.bt-action__btn--active:before {
-  bottom: 0;
 }
 .bt-action__btn--gold {
   background-color: #b6850f;
+  color: #83600b;
 }
 .bt-action__btn--gold:before {
   background-color: #fdcf21;
 }
-.bt-action__btn--gold .bt-action__ico {
-  color: #83600b;
-}
-.bt-action__btn--gold .bt-action__content {
-  color: #83600b;
-}
 .bt-action__btn--red {
   background-color: #bc2e33;
+  color: #892225;
 }
 .bt-action__btn--red:before {
   background-color: #fa393c;
-}
-.bt-action__btn--red .bt-action__ico {
-  color: #892225;
-}
-.bt-action__btn--red .bt-action__content {
-  color: #892225;
 }
 .bt-action__label {
   position: relative;
