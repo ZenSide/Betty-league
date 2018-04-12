@@ -3,9 +3,11 @@
   bottom: 0;
   height: auto;
   padding: 0;
-  background-color: #289172;
+  background: none;
   display: block;
 }
 .bt-footer-container {
-  height: 50px;
+  height: 70px;
+  background-color: #289172;
+  border-bottom: 3.7rem solid #2BB289;
 }

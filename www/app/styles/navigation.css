@@ -1,6 +1,6 @@
 .main-view {
   top: 70px;
-  bottom: 50px;
+  bottom: 70px;
 }
 ui-view {
   position: absolute;
