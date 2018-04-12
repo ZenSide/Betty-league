@@ -3,14 +3,16 @@
      class="animated bt-action bt-action--{{$ctrl.btPosition}}"
      ng-class="$ctrl.btClasses"
     >
-    <a ng-click="$ctrl.btAction()"
+    <button ng-click="$ctrl.btAction()"
             class="bt-action__btn"
             ng-class="$ctrl.btButtonClasses"
             ng-form="$ctrl.btSubmitForm"
             type="button"
             ng-disabled="$ctrl.btDisabled">
-        <i class="bt-action__ico" ng-class="$ctrl.icoResult"></i>
-    </a>
+        <div class="bt-action__facade">
+            <i class="bt-action__ico" ng-class="$ctrl.icoResult"></i>
+        </div>
+    </button>
 
     <div class="bt-action__label bt-text-tiny" ng-show="$ctrl.btLabel">
         {{$ctrl.btLabel}}

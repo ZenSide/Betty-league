@@ -6,8 +6,10 @@
             ng-form="$ctrl.btSubmitForm"
             type="submit"
             ng-disabled="$ctrl.btDisabled">
-        <span class="bt-action__content">{{$ctrl.btContent}}</span>
-        <i class="bt-action__ico {{$ctrl.icoResult}}" ></i>
+        <div class="bt-action__facade">
+            <span class="bt-action__content">{{$ctrl.btContent}}</span>
+            <i class="bt-action__ico {{$ctrl.icoResult}}" ></i>
+        </div>
     </button>
 </div>
 

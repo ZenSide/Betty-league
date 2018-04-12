@@ -67,18 +67,18 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
                                 });
                             }, function (messages) {
                                 BtMessages.show(messages, null, function () {
-                                    BtNavigate.stateChange('', 'login');
+                                    BtNavigate.stateChange(null, 'login');
                                 })
                             }, true);
 
                         }, function (messages) {
                             BtMessages.show(messages, null, function () {
-                                BtNavigate.stateChange('', 'login');
+                                BtNavigate.stateChange(null, 'login');
                             })
                         }, true);
                     } else {
                         //User not found
-                        BtNavigate.stateChange('', 'login');
+                        BtNavigate.stateChange(null, 'login');
                     }
                     return deferred.promise;
                 }
@@ -98,7 +98,7 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
                         deferred.resolve(bettyLeague);
                     }, function (messages) {
                         BtMessages.show(messages, null, function () {
-                            BtNavigate.stateChange('', 'login');
+                            BtNavigate.stateChange(null, 'login');
                         })
                     });
                     return deferred.promise;
@@ -120,7 +120,7 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
                         deferred.resolve(showdown);
                     }, function (messages) {
                         BtMessages.show(messages, null, function () {
-                            BtNavigate.stateChange('', 'login');
+                            BtNavigate.stateChange(null, 'login');
                         })
                     });
                     return deferred.promise;

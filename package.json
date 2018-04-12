@@ -6,9 +6,11 @@
     "@ionic-native/core": "^4.6.0",
     "@ionic-native/facebook": "^4.6.0",
     "@ionic-native/keyboard": "^4.6.0",
+    "@ionic-native/native-page-transitions": "^4.7.0",
     "@ionic-native/network": "^4.6.0",
     "@ionic/app-scripts": "^3.1.8",
     "@ionic/pro": "^1.0.20",
+    "com.telerik.plugins.nativepagetransitions": "^0.6.5",
     "cordova-browser": "~5.0.3",
     "cordova-plugin-device": "^2.0.1",
     "cordova-plugin-facebook4": "^1.9.1",
@@ -60,7 +62,8 @@
       "cordova-plugin-ionic-webview": {},
       "cordova-plugin-ionic-keyboard": {},
       "cordova-plugin-network-information": {},
-      "ionic-plugin-keyboard": {}
+      "ionic-plugin-keyboard": {},
+      "com.telerik.plugins.nativepagetransitions": {}
     },
     "platforms": [
       "browser"

@@ -21,9 +21,7 @@ betty2App.controller('LoginCtrl', function ($scope, UserApi,BtMessages,BtNavigat
         if(form.$valid){
             BtLoading.startLoad();
             UserApi.login(loginCtrl.user, function (messages) {
-                BtMessages.show(messages, null, function () {
-                    BtNavigate.stateChange('', 'landing');
-                });
+                BtNavigate.stateChange(null, 'landing');
             }, function (messages) {
                 BtLoading.endLoad();
                 BtMessages.show(messages, null);
@@ -42,9 +40,7 @@ betty2App.controller('LoginCtrl', function ($scope, UserApi,BtMessages,BtNavigat
     loginCtrl.fbConnect = function () {
         BtLoading.startLoad();
         UserApi.fbLogin(function (messages) {
-            BtMessages.show(messages, null, function () {
-                BtNavigate.stateChange('', 'landing');
-            });
+            BtNavigate.stateChange(null, 'landing');
         }, function (messages) {
             BtLoading.endLoad();
             BtMessages.show(messages, null);

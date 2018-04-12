@@ -66,18 +66,16 @@
   width: @medium-size;
   height: @medium-size;
   position: relative;
-  transition: color @btn-press-time;
   will-change: color;
   padding: 0!important;
   min-width: 0!important;
   min-height: 0!important;
   font-weight: normal;
 
-  &:before {
-    //transition: all @btn-press-time;
+  .bt-action__facade {
     z-index: 14;
     content: ' ';
-    width: 100%;
+    width: 100% ;
     height: 100%;
     right: 0;
     bottom: @press-distance;
@@ -86,8 +84,12 @@
     background-color: @light-blue;
   }
 
-  &:active, &.bt-action__btn--active{
+  &:active, &.bt-action__btn--active {
     color: @white;
+
+    .bt-action__facade {
+      transform: translate3d(0, @press-distance, 0);
+    }
   }
 }
 
@@ -96,7 +98,7 @@
   background-color: @medium-gold;
   color: @hard-gold;
 
-  &:before {
+  .bt-action__facade {
     background-color: @light-gold;
   }
 }
@@ -104,7 +106,7 @@
   background-color: @medium-red;
   color: @hard-red;
 
-  &:before {
+  .bt-action__facade {
     background-color: @light-red;
   }
 }
@@ -116,13 +118,13 @@
   color: @black;
   width: 100%;
   vertical-align: top;
-  //transition: transform @bouncing-time;
-  //will-change: transform;
+  transition: transform @bouncing-time;
+  will-change: transform;
 }
 
 //ico
 .bt-action__ico {
-  position: absolute;
+  position: relative;
   line-height: @medium-size!important;
   z-index: 14;
   width: 100%;
@@ -130,7 +132,7 @@
   left: 0;
   height: 100%;
   opacity: 1;
-  top: -@press-distance;
+  top: 0;
   text-align: center;
   transition: transform @btn-press-time;
   will-change: transform;
@@ -154,7 +156,7 @@
   padding-bottom: 1.6rem!important;
   font-family: @normal-font-medium;
 
-  &:before {
+  .bt-action__facade {
     border-radius: 0.5rem;
   }
 
@@ -203,5 +205,4 @@
   position: relative;
   z-index: 14;
   line-height: 1.1rem!important;
-  //transition: top @btn-press-time;
 }
