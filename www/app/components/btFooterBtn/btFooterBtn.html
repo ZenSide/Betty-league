@@ -3,7 +3,7 @@
      class="animated bt-action bt-action--{{$ctrl.btPosition}}"
      ng-class="$ctrl.btClasses"
     >
-    <button ng-click="$ctrl.btAction()"
+    <button ng-mouseup="$ctrl.btActionTimed()"
             class="bt-action__btn"
             ng-class="$ctrl.btButtonClasses"
             ng-form="$ctrl.btSubmitForm"

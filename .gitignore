@@ -7,3 +7,4 @@ plugins/
 /www/node_modules/
 /www/lib/
 
+/www/app/config/parameters.js

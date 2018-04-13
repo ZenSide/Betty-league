@@ -93,7 +93,6 @@ betty2App.factory('ShowdownApi', function ($filter, ResourcesFactory, BtLocalSto
 					}
 				}
 				resolve(nextShowdownId);
-				console.log('hophop');
 
 				return;
 
@@ -113,7 +112,6 @@ betty2App.factory('ShowdownApi', function ($filter, ResourcesFactory, BtLocalSto
 					}
 				}
 				resolve(nextShowdownId);
-				console.log('hophop');
 
 				return;
 

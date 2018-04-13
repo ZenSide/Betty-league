@@ -134,6 +134,9 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
             controller: 'StepCtrl',
             controllerAs: 'stepCtrl',
             resolve: {
+                animation: function (BtNavigate) {
+                    return BtNavigate.anim('goLeft');
+                },
                 nextShowDownId: function ($stateParams, ShowdownApi, BtMessages, $q) {
                     var deferred = $q.defer();
                     ShowdownApi.getNextShowdown($stateParams.bettyLeagueId, $stateParams.showdownId, function (nextShowdownID) {

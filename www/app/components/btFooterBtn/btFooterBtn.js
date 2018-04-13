@@ -17,6 +17,11 @@ betty2App.component('btFooterBtn',{
   controller:function($timeout){
     var zeCtrl = this;
     this.icoResult = this.btIco;
+    this.btActionTimed = function() {
+      $timeout(function(){
+        zeCtrl.btAction();
+      }, 300)
+    }
     this.$onChanges = function(changes) {
       if (changes.btIco){
         var oldValue = changes.btIco.previousValue;

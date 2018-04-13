@@ -70,7 +70,7 @@ betty2App.controller('LoginCtrl', function ($scope, UserApi,BtMessages,BtNavigat
             btClasses: "bt-action--big",
             btButtonClasses: "",
             btIco : "icon-bty-ico-join",
-            btLabel:translations['LOGIN.FOOTER.SIGN'],
+            btLabel:translations['LOGIN.FOOTER.MDP'],
             btDisabled: false,
             btSubmitForm: null,
             action:function(){

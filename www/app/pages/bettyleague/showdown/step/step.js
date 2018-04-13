@@ -1,25 +1,12 @@
-betty2App.controller('StepCtrl', function (previousShowDownId, nextShowDownId, $scope, $stateParams, BtNavigate, BtLoading, ShowdownApi) {
-	BtLoading.endLoad();
+betty2App.controller('StepCtrl', function (ENV, previousShowDownId, nextShowDownId, $scope, $stateParams, BtNavigate, BtLoading, animation, $timeout) {
 	var stepCtrl = this;
-
 	stepCtrl.stepId = $stateParams.stepId;
 
-	stepCtrl.isShownEvent = function (eventType) {
-		var okEventTypes = [
-			'goal', 'penalty', 'own-goal', 'yellowred', 'redcard'
-		]
-
-		if (okEventTypes.indexOf(eventType) !== -1) {
-			return true;
-		}
-
-		return false;
-	};
+	BtLoading.endLoad();
 
 	//parent config
-	$scope.parentCtrl.withHeadLogo = false;
-
-	$scope.parentCtrl.footerStatus = {
+	var withHeadLogo = false;
+	var footerStatus = {
 		leftBt : {
 			btShow : true,
 			btPosition: "left",
@@ -41,13 +28,14 @@ betty2App.controller('StepCtrl', function (previousShowDownId, nextShowDownId, $
 			btShow : true,
 			btPosition: "middle",
 			btClasses: "bt-action--big",
-			btButtonClasses: "bt-action__btn--gold",
+			btButtonClasses: "bt-action__btn--blue",
 			btIco : "icon-bty-ico-coin",
-			btLabel:translations['LOGIN.FOOTER.SIGN'],
+			btLabel:translations['LOGIN.FOOTER.MDP'],
 			btDisabled: false,
 			btSubmitForm: null,
 			action:function(){
-				BtNavigate.stateChange('goLeft','signin');
+				BtNavigate.stateChange('goLeft' ,'login', {
+				});
 			}
 		},
 		rightBt : {
@@ -67,5 +55,26 @@ betty2App.controller('StepCtrl', function (previousShowDownId, nextShowDownId, $
 				});
 			}
 		}
-	}
+	};
+	animation.promise.then(function () {
+		$timeout(function(){
+			$scope.parentCtrl.withHeadLogo = withHeadLogo;
+			$scope.parentCtrl.footerStatus = footerStatus;
+		});
+	});
+
+	stepCtrl.isShownEvent = function (eventType) {
+		var okEventTypes = [
+			'goal', 'penalty', 'own-goal', 'yellowred', 'redcard'
+		];
+
+		if (okEventTypes.indexOf(eventType) !== -1) {
+			return true;
+		}
+
+		return false;
+	};
+
+
+
 });

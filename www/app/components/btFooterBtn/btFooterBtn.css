@@ -60,6 +60,8 @@
   border-radius: 0.5rem;
   position: absolute;
   background-color: #0583d0;
+  will-change: transform;
+  transition: transform 75ms;
 }
 .bt-action__btn:active,
 .bt-action__btn.bt-action__btn--active {
@@ -101,12 +103,13 @@
   z-index: 14;
   width: 100%;
   border-radius: 0.5rem;
+  display: block;
   left: 0;
   height: 100%;
   opacity: 1;
   top: 0;
   text-align: center;
-  transition: transform 150ms;
+  transition: transform 75ms;
   will-change: transform;
 }
 .bt-action__ico.bt-ico-hide {
