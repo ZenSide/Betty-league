@@ -63,7 +63,8 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
                                 BtNavigate.stateChange('goTop' ,'bettyleague.showdown.step', {
                                     'bettyLeagueId' : bettyWorld.id,
                                     'showdownId' : showdown.id,
-                                    'stepId' : '0'
+                                    'stepId' : '0',
+                                    'animDirection' : 'down'
                                 });
                             }, function (messages) {
                                 BtMessages.show(messages, null, function () {
@@ -129,13 +130,13 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
         })
 
         .state('bettyleague.showdown.step', {
-            url: '/step/:stepId',
+            url: '/step/:stepId/:animDirection',
             templateUrl: 'app/pages/bettyleague/showdown/step/step.html',
             controller: 'StepCtrl',
             controllerAs: 'stepCtrl',
             resolve: {
-                animation: function (BtNavigate) {
-                    return BtNavigate.anim('goLeft');
+                animation: function (BtNavigate, $stateParams) {
+                    return BtNavigate.anim($stateParams.animDirection);
                 },
                 nextShowDownId: function ($stateParams, ShowdownApi, BtMessages, $q) {
                     var deferred = $q.defer();

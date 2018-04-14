@@ -20,7 +20,8 @@ betty2App.controller('StepCtrl', function (ENV, previousShowDownId, nextShowDown
 				BtNavigate.stateChange('goLeft' ,'bettyleague.showdown.step', {
 					'bettyLeagueId' : $stateParams.bettyLeagueId,
 					'showdownId' : previousShowDownId,
-					'stepId' : '0'
+					'stepId' : '0',
+					'animDirection' : 'right'
 				});
 			}
 		},
@@ -51,7 +52,8 @@ betty2App.controller('StepCtrl', function (ENV, previousShowDownId, nextShowDown
 				BtNavigate.stateChange('goRight' ,'bettyleague.showdown.step', {
 					'bettyLeagueId' : $stateParams.bettyLeagueId,
 					'showdownId' : nextShowDownId,
-					'stepId' : '0'
+					'stepId' : '0',
+					'animDirection' : 'left'
 				});
 			}
 		}

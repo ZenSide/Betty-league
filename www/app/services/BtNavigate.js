@@ -1,23 +1,16 @@
-betty2App.factory('BtNavigate', function(ENV, $state,$rootScope,$timeout, $cordovaNativePageTransitions, BtLoading, $q) {
+betty2App.factory('BtNavigate', function(ENV, $state, $cordovaNativePageTransitions, BtLoading, $q) {
   var service = {
     stateChange : function(animClass, route, routeparams){
       $state.go(route, routeparams);
     },
-    anim : function (animClass) {
+    anim : function (direction) {
       var deffered = $q.defer();
 
-      var directions = {
-        'goBottom': 'down',
-        'goTop': 'up',
-        'goLeft': 'left',
-        'goRight': 'right'
-      }
-
-      if (ENV == 'PROD' && animClass) {
+      if (ENV == 'PROD') {
         BtLoading.endLoad();
 
         var options = {
-          "direction"        : directions[animClass], // 'left|right|up|down', default 'left' (which is like 'next')
+          "direction"        : direction, // 'left|right|up|down', default 'left' (which is like 'next')
           "duration"         :  400, // in milliseconds (ms), default 400
           "slowdownfactor"   :    4, // overlap views (higher number is more) or no overlap (1). -1 doesn't slide at all. Default 4
           "slidePixels"      :   null, // optional, works nice with slowdownfactor -1 to create a 'material design'-like effect. Default not set so it slides the entire page.
