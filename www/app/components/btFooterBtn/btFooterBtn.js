@@ -18,9 +18,13 @@ betty2App.component('btFooterBtn',{
     var zeCtrl = this;
     this.icoResult = this.btIco;
     this.btActionTimed = function() {
+      zeCtrl.btDisabled = true;
       $timeout(function(){
         zeCtrl.btAction();
-      }, 300)
+      }, 300);
+      $timeout(function(){
+        zeCtrl.btDisabled = false;
+      }, 350);
       return
     };
     this.$onChanges = function(changes) {
@@ -30,7 +34,7 @@ betty2App.component('btFooterBtn',{
         zeCtrl.icoResult = oldValue+" bt-ico-hide";
         $timeout(function(){
           zeCtrl.icoResult = newValue;
-        },200)
+        },200);
         return
       }
     };

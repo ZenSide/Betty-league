@@ -15,9 +15,13 @@ betty2App.component('btBodyBtn',{
     var zeCtrl = this;
     this.icoResult = this.btIco;
     this.btActionTimed = function() {
+      zeCtrl.btDisabled = true;
       $timeout(function(){
         zeCtrl.btAction();
-      }, 300)
+      }, 300);
+      $timeout(function(){
+        zeCtrl.btDisabled = false;
+      }, 350);
       return
     };
     this.$onChanges = function(changes) {

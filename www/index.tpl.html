@@ -26,7 +26,7 @@
     <!--///CONTENT-->
     <ui-view autoscroll="false" class="main-view" ng-animate-children="false"></ui-view>
 
-    <!---->
+    <!--LOADING--->
     <div class="bt-loading-container ng-cloak" ng-if="btLoading">
         <div class="bt-loading-back"></div>
         <div class="bt-loading">
@@ -39,14 +39,8 @@
         </div>
     </div>
 
-    <div class="bt-loading-container nocon ng-cloak" ng-if="btLoadingNoCon">
-        <div class="bt-loading-back"></div>
-        <div class="bt-loading">
-            <div>
-                <i class="ico ion-close-circled"></i><br>
-                <span class="txt">{{ "MESSAGES.NOCON" | translate }}</span>
-            </div>
-        </div>
+    <div class="bt-loading-container ng-cloak" ng-if="btLoadingPhantom">
+        <div class="bt-loading-back bt-loading-back--phantom"></div>
     </div>
 
 

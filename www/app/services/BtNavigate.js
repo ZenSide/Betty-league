@@ -5,7 +5,6 @@ betty2App.factory('BtNavigate', function(ENV, $state, $cordovaNativePageTransiti
     },
     anim : function (direction) {
       var deffered = $q.defer();
-
       if (direction) {
         //BtLoading.endLoad();
 

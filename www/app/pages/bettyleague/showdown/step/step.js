@@ -1,4 +1,4 @@
-betty2App.controller('StepCtrl', function (translations, ENV, previousShowDownId, nextShowDownId, $scope, $stateParams, BtNavigate, BtLoading, animation) {
+betty2App.controller('StepCtrl', function ($timeout, translations, ENV, previousShowDownId, nextShowDownId, $scope, $stateParams, BtNavigate, BtLoading, animation) {
 	var stepCtrl = this;
 	stepCtrl.stepId = $stateParams.stepId;
 

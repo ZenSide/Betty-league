@@ -39,6 +39,5 @@ betty2App.component('btCountDown',{
     $scope.$on('$destroy', function () {
       clearInterval(x);
     })
-
   }
 });

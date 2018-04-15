@@ -14,12 +14,10 @@ var betty2App = angular.module(
 );
 
 betty2App.run(function($http, $ionicPlatform, $cordovaNetwork, $rootScope, $timeout, $state, $translate, $cordovaKeyboard, BtLoading, BtMessages) {
-  FastClick.attach(document.body);
-
 
   //INIT ROOTSCOPES
   $rootScope.btLoading = false;
-  $rootScope.btLoadingNoCon = false;
+  $rootScope.btLoadingPhantom = false;
 
   //TRANSLATION
   if(typeof navigator.globalization !== "undefined") {
