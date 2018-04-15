@@ -38,3 +38,15 @@
 .u-nowrap {
   white-space: nowrap;
 }
+.u-text-blue {
+  color: #0583d0;
+}
+.u-text-red {
+  color: #fa393c;
+}
+.u-text-green {
+  color: #2BB289;
+}
+.u-text-uppercase {
+  text-transform: uppercase;
+}

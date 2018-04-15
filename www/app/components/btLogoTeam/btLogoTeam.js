@@ -6,6 +6,6 @@ betty2App.component('btLogoTeam',{
   bindings:{
     btTeam: '<',
   },
-  controller:function($timeout){
+  controller:function(){
   }
 });

@@ -75,7 +75,12 @@ var translations = {
         SHOWDOWN : {
             ROUNDSUFFIX : "ème journée",
             AGGREGATE_TITLE : "match retour",
-            AGGREGATE_SCORE : "cumul des deux matchs"
+            AGGREGATE_SCORE : "cumul des deux matchs",
+            BET : "parier !",
+            OPEN_BET : "paris ouverts",
+            REPORTE : "reporté",
+            CLOSED : "match terminé",
+            LIVE : "LIVE"
         },
     }
 }

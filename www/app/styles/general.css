@@ -16,10 +16,6 @@ body {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
-.bt-content.signin,
-.bt-content.login {
-  padding-top: 5.5rem;
-}
 .bt-content.bettyleague {
   padding: 0;
 }

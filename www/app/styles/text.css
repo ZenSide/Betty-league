@@ -24,6 +24,10 @@
   font-size: 1.4rem;
   font-family: "poppinsregular", sans-serif;
 }
+.bt-text-md-medium {
+  font-size: 1.4rem;
+  font-family: "poppinsmedium", sans-serif;
+}
 .bt-text-lg {
   font-size: 1.6rem;
   font-family: "poppinsmedium", sans-serif;

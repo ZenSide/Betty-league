@@ -4,9 +4,7 @@ betty2App.factory('BettyLeagueApi', function ($filter, $rootScope, ResourcesFact
 		//User Sign In
 		getMyBettyLeagues: function (resolve, reject, noCache) {
 			var myBettyLeagues = BtLocalStorage.getObject('MyBettyLeagues');
-			console.log(myBettyLeagues);
 			if (myBettyLeagues !== {} && !noCache) {
-				console.log('cachedMyBettyLeagues');
 				resolve(myBettyLeagues['hydra:member']);
 				return;
 			}

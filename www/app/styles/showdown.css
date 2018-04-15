@@ -63,6 +63,9 @@
 .showdown-score--closed {
   background-color: #2BB289;
 }
+.showdown-score--reporte {
+  background-color: #a1a1a1;
+}
 .showdown-summary__teamName {
   display: block;
   vertical-align: middle;
@@ -133,4 +136,7 @@
   left: 1rem;
   width: 0.5rem;
   background-color: #fa393c;
+}
+.bt-showdown-status {
+  line-height: 2.5rem;
 }

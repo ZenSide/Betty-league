@@ -1,6 +1,36 @@
-betty2App.controller('SigninCtrl', function (BtLoading, BtMessages, UserApi, BtNavigate, $scope, translations) {
+betty2App.controller('SigninCtrl', function (animation, BtLoading, BtMessages, UserApi, BtNavigate, $scope, translations) {
     BtLoading.endLoad();
     var signinCtrl = this;
+
+    //parent config
+    withHeadLogo = true;
+    footerStatus = {
+        leftBt : {
+            btShow : true,
+            btPosition: "left",
+            btClasses: "bt-action--medium",
+            btButtonClasses: "",
+            btIco : "fas fa-arrow-left",
+            btLabel: null,
+            btDisabled: false,
+            btSubmitForm: null,
+            action:function(){
+                BtNavigate.stateChange('goRight','login', {
+                    'animDirection' : 'left'
+                });
+            }
+        },
+        middleBt : {
+            btShow : false,
+        },
+        rightBt : {
+            active : false
+        }
+    };
+    animation.promise.then(function () {
+        $scope.parentCtrl.withHeadLogo = withHeadLogo;
+        $scope.parentCtrl.footerStatus = footerStatus;
+    });
 
     // fosuser
     signinCtrl.newUser = {
@@ -45,28 +75,4 @@ betty2App.controller('SigninCtrl', function (BtLoading, BtMessages, UserApi, BtN
             BtMessages.showFormMessages(form, fieldsNames);
         }
     };
-
-    //parent config
-    $scope.parentCtrl.withHeadLogo = true;
-    $scope.parentCtrl.footerStatus = {
-        leftBt : {
-            btShow : true,
-            btPosition: "left",
-            btClasses: "bt-action--medium",
-            btButtonClasses: "",
-            btIco : "fas fa-arrow-left",
-            btLabel: null,
-            btDisabled: false,
-            btSubmitForm: null,
-            action:function(){
-                BtNavigate.stateChange('goRight','login');
-            }
-        },
-        middleBt : {
-            btShow : false,
-        },
-        rightBt : {
-            active : false
-        }
-    }
 });

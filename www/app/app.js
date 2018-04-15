@@ -16,6 +16,7 @@ var betty2App = angular.module(
 betty2App.run(function($http, $ionicPlatform, $cordovaNetwork, $rootScope, $timeout, $state, $translate, $cordovaKeyboard, BtLoading, BtMessages) {
   FastClick.attach(document.body);
 
+
   //INIT ROOTSCOPES
   $rootScope.btLoading = false;
   $rootScope.btLoadingNoCon = false;
@@ -24,9 +25,7 @@ betty2App.run(function($http, $ionicPlatform, $cordovaNetwork, $rootScope, $time
   if(typeof navigator.globalization !== "undefined") {
     navigator.globalization.getPreferredLanguage(function(language) {
       $translate.use((language.value).split("-")[0]).then(function(data) {
-        console.log("SUCCESS -> " + data);
       }, function(error) {
-        console.log("ERROR -> " + error);
       });
     }, null);
   }
@@ -49,23 +48,6 @@ betty2App.run(function($http, $ionicPlatform, $cordovaNetwork, $rootScope, $time
     $translate(['MESSAGES.NOCON']).then(function (translations) {
 
       //Network listener
-      $cordovaNetwork.onConnect().subscribe(function() {
-        console.log('online');
-        $timeout(function() {
-          BtLoading.endLoad(true);
-        })
-      });
-
-      $cordovaNetwork.onDisconnect().subscribe(function() {
-        console.log('offline');
-        $timeout(function() {
-          BtMessages.show([{
-            context:"success",
-            content:translations['MESSAGES.NOCON']
-          }]);
-          BtLoading.startLoad(true);
-        })
-      });
     });
   });
 });

@@ -2,11 +2,15 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
     //USER
         .state('login', {
-            url: '/login',
+            url: '/login/:animDirection',
+            params: {animDirection: null},
             templateUrl: 'app/pages/login/login.html',
             controller: 'LoginCtrl',
             controllerAs: 'loginCtrl',
             resolve: {
+                animation: function (BtNavigate, $stateParams) {
+                    return BtNavigate.anim($stateParams.animDirection);
+                },
                 translations: function ($translate) {
                     return $translate([
                             'LOGIN.FOOTER.MDP',
@@ -22,11 +26,15 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
         })
 
         .state('signin', {
-            url: '/signin',
+            url: '/signin/:animDirection',
+            params: {animDirection: null},
             templateUrl: 'app/pages/signin/signin.html',
             controller: 'SigninCtrl as signinCtrl',
             controllerAs: 'signinCtrl',
             resolve: {
+                animation: function (BtNavigate, $stateParams) {
+                    return BtNavigate.anim($stateParams.animDirection);
+                },
                 translations: function ($translate) {
                     return $translate([
                             'SIGNIN.PLACEHOLDERS.NEXT',
@@ -55,8 +63,6 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
                         BettyLeagueApi.getBettyWorld(function (bettyWorld) {
                             //find worldbettyLeague
                             //go to world bettyleague
-                            console.log(bettyWorld);
-
                             //go to the next unbet showdown
                             ShowdownApi.getNextOpenShowDown(bettyWorld.id, function (showdown) {
 
@@ -64,7 +70,7 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
                                     'bettyLeagueId' : bettyWorld.id,
                                     'showdownId' : showdown.id,
                                     'stepId' : '0',
-                                    'animDirection' : 'down'
+                                    'animDirection' : 'fade'
                                 });
                             }, function (messages) {
                                 BtMessages.show(messages, null, function () {
@@ -89,6 +95,7 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
         .state('bettyleague', {
             abstract: true,
             url: '/bettyleague/:bettyLeagueId',
+            cache: false,
             templateUrl: 'app/pages/bettyleague/bettyleague.html',
             controller: 'BettyLeagueCtrl',
             controllerAs: 'bettyLeagueCtrl',
@@ -110,12 +117,12 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
         .state('bettyleague.showdown', {
             abstract: true,
             url: '/showdown/:showdownId',
+            cache: false,
             templateUrl: 'app/pages/bettyleague/showdown/showdown.html',
             controller: 'ShowdownCtrl',
             controllerAs: 'showdownCtrl',
             resolve: {
                 showdown: function (ShowdownApi, BtNavigate, $stateParams, $q) {
-                    console.log('showdown route');
                     var deferred = $q.defer();
                     ShowdownApi.getShowdown($stateParams.bettyLeagueId, $stateParams.showdownId, function (showdown) {
                         deferred.resolve(showdown);
@@ -131,10 +138,20 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
 
         .state('bettyleague.showdown.step', {
             url: '/step/:stepId/:animDirection',
+            cache: false,
+            params: {animDirection: null},
             templateUrl: 'app/pages/bettyleague/showdown/step/step.html',
             controller: 'StepCtrl',
             controllerAs: 'stepCtrl',
             resolve: {
+                translations: function ($translate) {
+                    return $translate([
+                            'SHOWDOWN.BET',
+                        ]
+                    ).then(function (translations) {
+                        return translations
+                    });
+                },
                 animation: function (BtNavigate, $stateParams) {
                     return BtNavigate.anim($stateParams.animDirection);
                 },

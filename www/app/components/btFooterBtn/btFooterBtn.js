@@ -21,7 +21,8 @@ betty2App.component('btFooterBtn',{
       $timeout(function(){
         zeCtrl.btAction();
       }, 300)
-    }
+      return
+    };
     this.$onChanges = function(changes) {
       if (changes.btIco){
         var oldValue = changes.btIco.previousValue;
@@ -30,6 +31,7 @@ betty2App.component('btFooterBtn',{
         $timeout(function(){
           zeCtrl.icoResult = newValue;
         },200)
+        return
       }
     };
   }

@@ -6,7 +6,6 @@ betty2App.factory('ShowdownApi', function ($filter, ResourcesFactory, BtLocalSto
 		getFullRange: function (bettyLeagueId, resolve, reject, noCache) {
 			var fullRange = BtLocalStorage.getObject('FullRange' + bettyLeagueId);
 			if (fullRange !== {} && !noCache) {
-				console.log('cachedFullrange');
 				resolve(fullRange['hydra:member']);
 				return;
 			}
@@ -27,16 +26,12 @@ betty2App.factory('ShowdownApi', function ($filter, ResourcesFactory, BtLocalSto
 		getNextOpenShowDown: function (bettyLeagueId, resolve, reject, noCache) {
 			ShowdownApi.getFullRange(bettyLeagueId, function (fullRange) {
 
-				console.log(fullRange);
-
 				var openShowdowns = $filter('filter')(fullRange, function (showdown) {
 					if (showdown.smFixture.showdownStatus !== "OPEN") {
 						return false;
 					}
 					return true;
 				});
-
-				console.log(openShowdowns);
 
 				if (openShowdowns.length > 0) {
 					resolve(openShowdowns[0]);
@@ -63,7 +58,6 @@ betty2App.factory('ShowdownApi', function ($filter, ResourcesFactory, BtLocalSto
 				var showdown = $filter('filter')(fullRange, {id: showdownId});
 
 				if (showdown.length > 0) {
-					console.log(showdown[0]);
 					resolve(showdown[0]);
 					return;
 				}

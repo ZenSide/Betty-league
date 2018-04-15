@@ -1,5 +1,5 @@
 'use strict';
-betty2App.factory('UserApi', function (BtLoading, $rootScope, $timeout, $cordovaFacebook, BtMessages, BtNavigate, ResourcesFactory, BtLocalStorage, AVATAR_HEIGHT, AVATAR_WIDTH) {
+betty2App.factory('UserApi', function (BtLoading, $rootScope, $cordovaFacebook, BtMessages, BtNavigate, ResourcesFactory, BtLocalStorage, AVATAR_HEIGHT, AVATAR_WIDTH) {
 	var UserApi = {
 
 		//User Sign In
@@ -48,6 +48,7 @@ betty2App.factory('UserApi', function (BtLoading, $rootScope, $timeout, $cordova
 				$cordovaFacebook
 					.api('me/' + '?fields=id, name,email,first_name,last_name,gender,picture.height(' + AVATAR_HEIGHT + ').width(' + AVATAR_WIDTH + ')' + '&access_token=' + authtoken, ['public_profile', 'user_friends', 'email'])
 					.then(function (response) {
+						BtLoading.startLoad();
 						var fbCredentials = {
 							logfromfb: true,
 							fbresult: response
@@ -78,7 +79,6 @@ betty2App.factory('UserApi', function (BtLoading, $rootScope, $timeout, $cordova
 						return;
 					});
 			});
-			console.log('nobug');
 		},
 
 	};

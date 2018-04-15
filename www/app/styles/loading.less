@@ -4,8 +4,9 @@
   position: absolute;
   left: 0;
   right: 0;
-  top:@header-height;
-  bottom: @footer-height;
+  top:0;
+  bottom: 0;
+  z-index: 999;
   opacity: 1;
   transition: opacity @fast-fade-time;
   &.ng-hide{
@@ -25,7 +26,7 @@
   justify-content: center;
   align-items: center;
   background-color: @black;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 .bt-loading{
   position: absolute;
@@ -36,13 +37,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
 
-  .spinner svg {
-    width: 50px;
-    height: 50px;
-    stroke: @medium-gold!important;
-    fill: @medium-gold!important;
-  }
+.bt-logoload {
+  text-align: center;
+}
+
+.bt-logoload__img {
+  height: 8rem;
+}
+
+.bt-logoload__label {
+  height: 8rem;
+  text-shadow: 1px 0 0 @black, -1px 0 0 @black, 0 1px 0 @black, 0 -1px 0 @black, 1px 1px @black, -1px -1px 0 @black, 1px -1px 0 @black, -1px 1px 0 @black;
+  color: @white;
 }
 
 .bt-loading-container.nocon{

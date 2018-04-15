@@ -1,0 +1,10 @@
+.bt-count-down__item {
+  line-height: 2.5rem;
+  background-color: #fa393c;
+  color: #e6e6e6;
+  display: inline-block;
+  text-align: center;
+  width: 2.5rem;
+  font-size: 1.2rem;
+  font-family: "poppinsregular", sans-serif;
+}

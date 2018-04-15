@@ -3,8 +3,6 @@ betty2App.factory('ResourcesFactory', function($q, $http, $rootScope, API_BASE_U
     var ResourcesFactory = {
         errorHandling: function (data, status) {
             var messages = [];
-            console.log('status: ' + status);
-
             if (data && data['@type'] === "ConstraintViolationList") {
                 angular.forEach(data['violations'], function(value) {
                     messages.push(

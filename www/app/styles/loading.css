@@ -2,8 +2,9 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 70px;
-  bottom: 70px;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
   opacity: 1;
   transition: opacity 150ms;
 }
@@ -22,7 +23,7 @@
   justify-content: center;
   align-items: center;
   background-color: #222222;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 .bt-loading {
   position: absolute;
@@ -34,11 +35,16 @@
   justify-content: center;
   align-items: center;
 }
-.bt-loading .spinner svg {
-  width: 50px;
-  height: 50px;
-  stroke: #b6850f !important;
-  fill: #b6850f !important;
+.bt-logoload {
+  text-align: center;
+}
+.bt-logoload__img {
+  height: 8rem;
+}
+.bt-logoload__label {
+  height: 8rem;
+  text-shadow: 1px 0 0 #222222, -1px 0 0 #222222, 0 1px 0 #222222, 0 -1px 0 #222222, 1px 1px #222222, -1px -1px 0 #222222, 1px -1px 0 #222222, -1px 1px 0 #222222;
+  color: #e6e6e6;
 }
 .bt-loading-container.nocon .bt-loading {
   color: #bc2e33;

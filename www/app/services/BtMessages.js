@@ -8,6 +8,7 @@ betty2App.factory('BtMessages', function($rootScope, $timeout) {
       $timeout(function(){
         $rootScope.showMessages = false;
       },duration)
+      return
     },
     showFormMessages : function(form,fieldsNames,duration,callback,justShow){
       if (!duration) duration =2000;
@@ -45,6 +46,7 @@ betty2App.factory('BtMessages', function($rootScope, $timeout) {
       if(!justShow){
         service.show(messages,duration);
       }
+      return
     }
   };
 

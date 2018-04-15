@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="lib/animate.css/animate.min.css">
 
     <!-- grunt included -->
+    <link rel="stylesheet" type="text/css" href="app/components/btCountDown/btCountDown.css" />
     <link rel="stylesheet" type="text/css" href="app/components/btFooterBtn/btFooterBtn.css" />
     <link rel="stylesheet" type="text/css" href="app/components/btInputText/btInputText.css" />
     <link rel="stylesheet" type="text/css" href="app/fonts/bty-ico/style.css" />
@@ -57,10 +58,16 @@
     <!---->
     <div class="bt-loading-container ng-cloak" ng-if="btLoading">
         <div class="bt-loading-back"></div>
-        <div class="bt-loading" >
-            <ion-spinner icon="lines"></ion-spinner>
+        <div class="bt-loading">
+            <div>
+                <div class="bt-logoload">
+                    <img class="bt-logoload__img animated infinite bounce" src="img/logo_216x240.png">
+                    <div class="bt-logoload__label bt-text-lg animated infinite pulse">CHARGEMENT</div>
+                </div>
+            </div>
         </div>
     </div>
+
     <div class="bt-loading-container nocon ng-cloak" ng-if="btLoadingNoCon">
         <div class="bt-loading-back"></div>
         <div class="bt-loading">
@@ -112,6 +119,7 @@
     <!-- grunt included -->
     <script src="app/app.js"></script>
     <script src="app/components/btBodyBtn/btBodyBtn.js"></script>
+    <script src="app/components/btCountDown/btCountDown.js"></script>
     <script src="app/components/btFooterBtn/btFooterBtn.js"></script>
     <script src="app/components/btInputText/btInputText.js"></script>
     <script src="app/components/btLogoTeam/btLogoTeam.js"></script>
