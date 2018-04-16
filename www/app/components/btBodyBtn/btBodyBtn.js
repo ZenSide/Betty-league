@@ -9,20 +9,26 @@ betty2App.component('btBodyBtn',{
     btDisabled: '<',
     btSubmitForm: '<',
     btContent: '<',
-    btAction: '&'
+    btAction: '&',
+    btType: '@'
   },
   controller:function($timeout){
     var zeCtrl = this;
+    if (!zeCtrl.btType) {
+      zeCtrl.btType = 'button';
+    }
     this.icoResult = this.btIco;
     this.btActionTimed = function() {
-      zeCtrl.btDisabled = true;
-      $timeout(function(){
-        zeCtrl.btAction();
-      }, 300);
-      $timeout(function(){
-        zeCtrl.btDisabled = false;
-      }, 350);
-      return
+      if (zeCtrl.btAction()) {
+        zeCtrl.btDisabled = true;
+        $timeout(function(){
+          zeCtrl.btAction();
+        }, 300);
+        $timeout(function(){
+          zeCtrl.btDisabled = false;
+        }, 350);
+        return
+      }
     };
     this.$onChanges = function(changes) {
       if (changes.btIco){

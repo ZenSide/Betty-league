@@ -1,10 +1,10 @@
 <!--//FOOTER/HEADER-->
 <div class="u-center-content">
-    <button ng-mouseup="$ctrl.btActionTimed()"
+    <button ng-click="$ctrl.btActionTimed()"
             class="bt-action__btn bt-action__btn--body"
             ng-class="$ctrl.btBtnClasses"
             ng-form="$ctrl.btSubmitForm"
-            type="submit"
+            type="{{$ctrl.btType}}"
             ng-disabled="$ctrl.btDisabled">
         <div class="bt-action__facade">
             <span class="bt-action__content">{{$ctrl.btContent}}</span>
