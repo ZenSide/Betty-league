@@ -25,8 +25,8 @@
   z-index: 10;
 }
 .bt-logo.ng-enter {
-  animation: fadeIn 1200ms;
+  animation: fadeIn 150ms;
 }
 .bt-logo.ng-leave {
-  animation: fadeOut 1200ms;
+  animation: fadeOut 150ms;
 }

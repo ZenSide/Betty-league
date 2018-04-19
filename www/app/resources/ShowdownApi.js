@@ -55,7 +55,7 @@ betty2App.factory('ShowdownApi', function ($filter, ResourcesFactory, BtLocalSto
 		getShowdown: function (bettyLeagueId, showdownId, resolve, reject, noCache) {
 			ShowdownApi.getFullRange(bettyLeagueId, function (fullRange) {
 
-				var showdown = $filter('filter')(fullRange, {id: showdownId});
+				var showdown = $filter('filter')(fullRange, {id: parseInt(showdownId)}, true);
 
 				if (showdown.length > 0) {
 					resolve(showdown[0]);

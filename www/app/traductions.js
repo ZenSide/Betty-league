@@ -80,8 +80,17 @@ var translations = {
             OPEN_BET : "paris ouverts",
             REPORTE : "reporté",
             CLOSED : "match terminé",
-            LIVE : "LIVE"
-        },
+            LIVE : "LIVE",
+            BET_FORM : {
+                "TITLE" : "Mon pari",
+                "HOW_MANY_GOALS" : "Combien de buts pour",
+                "SHOOTOUT_WARNING" : "Sur ce score il va y avoir une séance de tirs au but.",
+                "WHO_WIN" : "Qui va l'emporter ?",
+                "WHO_QUALIF" : "Qui va se qualifier ?",
+                "EMPTY_SCORE" : "Vous devez saisir un score",
+                "EMPTY_WINNER" : "Vous devez choisir une équipe"
+            }
+        }
     }
 }
 ;

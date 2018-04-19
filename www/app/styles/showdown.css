@@ -44,10 +44,30 @@
 .showdown-summary__awayTeam .showdown-summary__teamName {
   padding-left: 4rem;
 }
+.showdown-summary__teamName {
+  display: block;
+  vertical-align: middle;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: normal;
+}
+.showdown-summary__logo {
+  vertical-align: middle;
+  display: block;
+  position: absolute;
+  top: 50%;
+  margin-top: -2rem;
+}
 .showdown-summary__score {
   text-align: center;
   display: table-cell;
   vertical-align: middle;
+}
+.showdown-summary__suffix {
+  text-align: left;
+  display: table-cell;
+  vertical-align: middle;
+  height: 4rem;
 }
 .showdown-score {
   display: block;
@@ -65,20 +85,6 @@
 }
 .showdown-score--reporte {
   background-color: #a1a1a1;
-}
-.showdown-summary__teamName {
-  display: block;
-  vertical-align: middle;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  word-wrap: normal;
-}
-.showdown-summary__logo {
-  vertical-align: middle;
-  display: block;
-  position: absolute;
-  top: 50%;
-  margin-top: -2rem;
 }
 .logo-team {
   width: 40px;
@@ -139,4 +145,34 @@
 }
 .bt-showdown-status {
   line-height: 2.5rem;
+}
+.bet-form {
+  background-color: #e6e6e6;
+  border-radius: 0.5rem;
+  border: 1px solid #0583d0;
+  overflow: hidden;
+}
+.bet-form__title {
+  text-align: center;
+  background-color: #0583d0;
+  color: #e6e6e6;
+  font-family: "quicksandbold", sans-serif;
+  font-size: 1rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+.bet-form__summary {
+  text-align: center;
+  border-bottom: 1px solid #0583d0;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+.bet-form__content {
+  text-align: center;
+  padding: 1rem;
+}
+.bt-form__team {
+  min-height: 4rem;
+}
+.bt-form__team span {
+  display: inline-block;
+  vertical-align: middle;
 }

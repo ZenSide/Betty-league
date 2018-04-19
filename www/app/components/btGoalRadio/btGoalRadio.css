@@ -1,0 +1,18 @@
+.bt-goal-radio__radio {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.bt-goal-radio__button--radio {
+  line-height: 4rem;
+  font-family: "poppinsbold", sans-serif;
+}
+.bt-goal-radio__radio:checked + .bt-goal-radio__button--radio {
+  color: #e6e6e6;
+  background-color: #289172;
+}
+.bt-goal-radio__radio:checked + .bt-goal-radio__button--radio .bt-action__facade {
+  background-color: #2BB289;
+  transform: translate3d(0, 0.4rem, 0);
+}

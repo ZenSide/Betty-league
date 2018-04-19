@@ -5,10 +5,10 @@
   text-align: center;
 }
 .bt-action.ng-leave {
-  animation: bounceOutDown 1200ms;
+  animation: slideOutDown 150ms;
 }
 .bt-action.ng-enter {
-  animation: bounceInUp 1200ms;
+  animation: slideInUp 150ms;
 }
 .bt-action--big {
   top: 0.8rem;
@@ -63,11 +63,11 @@
   will-change: transform;
   transition: transform 75ms;
 }
-.bt-action__btn:active,
+.bt-action__btn:active:not(.bt-action__facade--no-press),
 .bt-action__btn.bt-action__btn--active {
   color: #e6e6e6;
 }
-.bt-action__btn:active .bt-action__facade,
+.bt-action__btn:active:not(.bt-action__facade--no-press) .bt-action__facade,
 .bt-action__btn.bt-action__btn--active .bt-action__facade {
   transform: translate3d(0, 0.4rem, 0);
 }
@@ -94,7 +94,7 @@
   top: -2px;
   vertical-align: top;
   line-height: 0.9rem;
-  transition: transform 1200ms;
+  transition: transform 150ms;
   will-change: transform;
 }
 .bt-action__ico {

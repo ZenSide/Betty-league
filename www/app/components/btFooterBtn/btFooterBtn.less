@@ -14,10 +14,10 @@
   text-align: center;
   //ANIMATIONS
   &.ng-leave{
-    animation: bounceOutDown @bouncing-time;
+    animation: slideOutDown @bouncing-time;
   }
   &.ng-enter{
-    animation: bounceInUp @bouncing-time;
+    animation: slideInUp @bouncing-time;
   }
 }
 
@@ -87,7 +87,7 @@
     transition: transform @btn-press-time;
   }
 
-  &:active, &.bt-action__btn--active {
+  &:active:not(.bt-action__facade--no-press), &.bt-action__btn--active {
     color: @white;
 
     .bt-action__facade {

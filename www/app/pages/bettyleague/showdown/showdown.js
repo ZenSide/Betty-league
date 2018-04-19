@@ -6,8 +6,8 @@ betty2App.controller('ShowdownCtrl', function ($scope, $stateParams, showdown) {
 	showdownCtrl.newBet = {
 		bettyLeagueId : $scope.bettyLeagueCtrl.bettyLeagueId,
 		showdownId : showdownCtrl.showdownId,
-		winner : 'draw',
-		homeScore: 0,
-		awayScore: 0
+		winner : null,
+		homeScore: null,
+		awayScore: null
 	};
 });

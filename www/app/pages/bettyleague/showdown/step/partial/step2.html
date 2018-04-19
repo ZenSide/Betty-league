@@ -1,0 +1,33 @@
+<div class="bet-form">
+    <div class="bet-form__title">
+        <span class="u-pull-left">II</span>
+        <span translate="SHOWDOWN.BET_FORM.TITLE"></span>
+    </div>
+    <div class="bet-form__summary bt-text-md-medium">
+        <!--home score-->
+        <span ng-if="showdownCtrl.newBet.homeScore !== null">{{showdownCtrl.newBet.homeScore}}</span>
+        <span ng-if="showdownCtrl.newBet.homeScore == null">_</span>
+        <span> - </span>
+        <!--away score-->
+        <span ng-if="showdownCtrl.newBet.awayScore !== null">{{showdownCtrl.newBet.awayScore}}</span>
+        <span ng-if="showdownCtrl.newBet.awayScore == null">_</span>
+
+        <!--aggregate-->
+        <span ng-if="showdownCtrl.showdown.smFixture.matchRetour">
+                ({{(showdownCtrl.showdown.smFixture.aggregateVisitorteamScore + showdownCtrl.newBet.homeScore|number)}} - {{showdownCtrl.showdown.smFixture.aggregateLocalteamScore + showdownCtrl.newBet.awayScore|number}})
+        </span>
+    </div>
+    <div class="bet-form__content">
+        <div translate="SHOWDOWN.BET_FORM.HOW_MANY_GOALS" class="u-gutter-bottom-micro bt-text-md-medium"></div>
+
+        <div class="bt-form__team u-gutter-bottom-regular">
+            <span class="bt-text-lg">{{showdownCtrl.showdown.smFixture.awayTeam.sm__name}}</span>
+                    <span>
+                        <bt-logo-team bt-team="showdownCtrl.showdown.smFixture.awayTeam"></bt-logo-team>
+                    </span>
+            <span class="bt-text-md">?</span>
+        </div>
+
+        <bt-goal-radio bt-model="showdownCtrl.newBet.awayScore"></bt-goal-radio>
+    </div>
+</div>
