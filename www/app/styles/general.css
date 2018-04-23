@@ -11,13 +11,10 @@ body {
   background-color: #e6e6e6;
 }
 .bt-content {
-  padding-top: 1.5rem;
-  padding-bottom: 4.5rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-.bt-content.bettyleague {
-  padding: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .col-magic {
   flex: 0 0 20px;
@@ -25,4 +22,9 @@ body {
 }
 .col-nopadding {
   padding: 0;
+}
+.bt-coin {
+  width: 3.5rem;
+  vertical-align: middle;
+  height: 3.5rem;
 }

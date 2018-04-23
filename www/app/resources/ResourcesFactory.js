@@ -1,4 +1,4 @@
-betty2App.factory('ResourcesFactory', function($q, $http, $rootScope, API_BASE_URL, BtLocalStorage) {
+betty2App.factory('ResourcesFactory', function($q, $http, $rootScope, API_BASE_URL, BtLocalStorage, BtNavigate) {
 
     var ResourcesFactory = {
         errorHandling: function (data, status) {
@@ -15,6 +15,7 @@ betty2App.factory('ResourcesFactory', function($q, $http, $rootScope, API_BASE_U
             } else {
                 switch (status) {
                     case 401:
+                        BtNavigate.stateChange(null, 'login');
                         messages = [
                             {
                                 context:'alert',

@@ -1,5 +1,5 @@
 'use strict';
-betty2App.factory('ShowdownApi', function ($filter, ResourcesFactory, BtLocalStorage) {
+betty2App.factory('ShowdownApi', function ($q, BetApi, $filter, ResourcesFactory, BtLocalStorage) {
 	var ShowdownApi = {
 
 		//User Sign In
@@ -24,33 +24,56 @@ betty2App.factory('ShowdownApi', function ($filter, ResourcesFactory, BtLocalSto
 
 		//get next open showdown
 		getNextOpenShowDown: function (bettyLeagueId, resolve, reject, noCache) {
-			ShowdownApi.getFullRange(bettyLeagueId, function (fullRange) {
+			function sdFull() {
+				var sdDefer = $q.defer();
+				ShowdownApi.getFullRange(bettyLeagueId, function (fullRange) {
+					var openShowdowns = $filter('filter')(fullRange, function (showdown) {
+						if (showdown.smFixture.showdownStatus !== "OPEN") {
+							return false;
+						}
+						return true;
+					});
 
-				var openShowdowns = $filter('filter')(fullRange, function (showdown) {
-					if (showdown.smFixture.showdownStatus !== "OPEN") {
-						return false;
+					if (openShowdowns.length > 0) {
+						sdDefer.resolve(openShowdowns[0]);
+						return;
 					}
-					return true;
-				});
 
-				if (openShowdowns.length > 0) {
-					resolve(openShowdowns[0]);
+					var messages = [
+						{
+							context:'alert',
+							content:"MESSAGES.NONEXTOPENSHOWDOWN"
+						}
+					];
+					sdDefer.reject(messages);
 					return;
-				}
 
-				var messages = [
-					{
-						context:'alert',
-						content:"MESSAGES.NONEXTOPENSHOWDOWN"
-					}
-				];
-				reject(messages);
-				return;
+				}, function (messages) {
+					sdDefer.reject(messages);
+					return;
+				}, noCache);
+				return sdDefer.promise;
+			}
 
-			}, function (messages) {
-				reject(messages);
-				return;
-			}, noCache)
+			function betFull() {
+				var d = $q.defer();
+				BetApi.getFullRange(bettyLeagueId, function (fullRange) {
+					d.resolve(fullRange);
+				}, function (messages) {
+					d.reject(messages)
+				}, noCache);
+				return d.promise;
+			}
+
+			$q.all([
+				sdFull(),
+				betFull()
+			]).then(function(data) {
+				resolve(data[0], data[1]);
+			}).catch(function(error) {
+				reject(error[0], error[1]);
+			});
+
 		},
 		getShowdown: function (bettyLeagueId, showdownId, resolve, reject, noCache) {
 			ShowdownApi.getFullRange(bettyLeagueId, function (fullRange) {

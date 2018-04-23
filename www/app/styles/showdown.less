@@ -1,7 +1,7 @@
 @import "../../less/constant";
 
-.showdown {
-  padding: @margin-small @margin-medium 0 @margin-medium;
+.showdown-header {
+  padding: @margin-micro @margin-medium @margin-micro @margin-medium;
 }
 
 .showdown-league {
@@ -74,11 +74,39 @@
   vertical-align: middle;
 }
 
+.showdown-summary__score--left {
+  text-align: left;
+}
+
 .showdown-summary__suffix {
   text-align: left;
   display: table-cell;
   vertical-align: middle;
   height: 4rem;
+}
+
+.showdown-summary--tiny {
+  .showdown-summary__logo {
+    margin-top: -1rem;
+  }
+
+  .showdown-summary__awayTeam {
+    width: 30%;
+    .showdown-summary__teamName {
+      padding-left: 2.5rem;
+    }
+  }
+  .showdown-summary__homeTeam {
+    width: 30%;
+    .showdown-summary__teamName {
+      padding-right: 2.5rem;
+    }
+  }
+
+  .showdown-score {
+    padding: 0;
+    line-height: 3rem;
+  }
 }
 
 .showdown-score {
@@ -101,12 +129,11 @@
 .showdown-score--reporte{
   background-color: @medium-grey;
 }
-
-
-.logo-team {
-  width: 40px;
-  height: 40px;
+.showdown-score--gold {
+  background-color: @light-gold;
+  color: @black;
 }
+
 
 .event-picto {
   display: inline-block;
@@ -186,7 +213,7 @@
 .bet-form__summary {
   text-align: center;
   border-bottom: 1px solid @light-blue;
-  padding: @margin-micro @margin-small @margin-micro @margin-small;
+  padding: @margin-micro @margin-micro @margin-micro @margin-micro;
 }
 
 .bet-form__content{
@@ -201,4 +228,28 @@
     display: inline-block;
     vertical-align: middle;
   }
+}
+
+.bt-bet-summary {
+  border: 1px solid @light-gold;
+  border-radius: 0.5rem;
+  background-color: @white;
+}
+
+.bet-bet-summary__head {
+  background-color: @light-gold;
+  padding: @margin-micro @margin-small @margin-micro @margin-small;
+}
+
+.bt-bet-summary__part {
+  padding: @margin-micro @margin-small @margin-micro @margin-small;
+  &:not(:last-child){
+    border-bottom: 1px solid @light-gold;
+  }
+}
+
+.bt-bet-summary__score {
+  //background-color: @light-gold;
+  //color: @black;
+  //padding: @margin-micro @margin-small @margin-micro @margin-small;
 }

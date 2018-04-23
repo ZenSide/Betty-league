@@ -34,6 +34,7 @@
 }
 .u-inline-block {
   display: inline-block;
+  vertical-align: middle;
 }
 .u-nowrap {
   white-space: nowrap;

@@ -52,13 +52,14 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
             controller: 'LandingCtrl',
             controllerAs: 'landingCtrl',
             resolve: {
-                routeDispatcher: function ($q, BtLocalStorage, $state, BtNavigate, ShowdownApi, BettyLeagueApi, BtMessages) {
+                routeDispatcher: function ($timeout, $q, BtLocalStorage, $state, BtNavigate, ShowdownApi, BettyLeagueApi, BtMessages) {
                     var deferred = $q.defer();
 
                     var localUser =  BtLocalStorage.getObject('User');
-
+                    console.log(localUser);
                     //User found
-                    if (localUser !== {}) {
+                    if (Object.keys(localUser).length > 0) {
+                        console.log('user ofund');
                         //Get my availables bettyleagues
                         BettyLeagueApi.getBettyWorld(function (bettyWorld) {
                             //find worldbettyLeague
@@ -66,10 +67,9 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
                             //go to the next unbet showdown
                             ShowdownApi.getNextOpenShowDown(bettyWorld.id, function (showdown) {
 
-                                BtNavigate.stateChange('goTop' ,'bettyleague.showdown.step', {
+                                BtNavigate.stateChange('goTop' ,'bettyleague.showdown.step0', {
                                     'bettyLeagueId' : bettyWorld.id,
                                     'showdownId' : showdown.id,
-                                    'stepId' : '0',
                                     'animDirection' : 'fade'
                                 });
                             }, function (messages) {
@@ -85,7 +85,10 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
                         }, true);
                     } else {
                         //User not found
-                        BtNavigate.stateChange(null, 'login');
+                        console.log('user not ofund');
+                        $timeout(function () {
+                            BtNavigate.stateChange(null, 'login');
+                        })
                     }
                     return deferred.promise;
                 }
@@ -132,28 +135,17 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
                         })
                     });
                     return deferred.promise;
-                }
-            }
-        })
-
-        .state('bettyleague.showdown.step', {
-            url: '/step/:stepId/:animDirection',
-            cache: false,
-            params: {animDirection: null},
-            templateUrl: 'app/pages/bettyleague/showdown/step/step.html',
-            controller: 'StepCtrl',
-            controllerAs: 'stepCtrl',
-            resolve: {
-                translations: function ($translate) {
-                    return $translate([
-                            'SHOWDOWN.BET',
-                        ]
-                    ).then(function (translations) {
-                        return translations
-                    });
                 },
-                animation: function (BtNavigate, $stateParams) {
-                    return BtNavigate.anim($stateParams.animDirection);
+                bet: function (BetApi, BtNavigate, $stateParams, $q) {
+                    var deferred = $q.defer();
+                    BetApi.getBet($stateParams.bettyLeagueId, $stateParams.showdownId, function (bet) {
+                        deferred.resolve(bet);
+                    }, function(messages) {
+                        BtMessages.show(messages, null, function () {
+                            BtNavigate.stateChange(null, 'login');
+                        })
+                    });
+                    return deferred.promise;
                 },
                 nextShowDownId: function ($stateParams, ShowdownApi, BtMessages, $q) {
                     var deferred = $q.defer();
@@ -176,7 +168,74 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
                     return deferred.promise;
                 }
             }
-        });
+        })
+
+        .state('bettyleague.showdown.step0', {
+            url: '/step0/:animDirection',
+            cache: false,
+            params: {animDirection: null},
+            templateUrl: 'app/pages/bettyleague/showdown/step0/step0.html',
+            controller: 'Step0Ctrl',
+            controllerAs: 'step0Ctrl',
+            resolve: {
+                translations: function ($translate) {
+                    return $translate([
+                            'SHOWDOWN.BET',
+                            'SHOWDOWN.MODIFY'
+                        ]
+                    ).then(function (translations) {
+                        return translations
+                    });
+                },
+                animation: function (BtNavigate, $stateParams) {
+                    return BtNavigate.anim($stateParams.animDirection);
+                },
+            }
+        })
+    
+        .state('bettyleague.showdown.step1', {
+            url: '/step1/:animDirection',
+            cache: false,
+            params: {animDirection: null},
+            templateUrl: 'app/pages/bettyleague/showdown/step1/step1.html',
+            controller: 'Step1Ctrl',
+            controllerAs: 'step1Ctrl',
+            resolve: {
+                translations: function ($translate) {
+                    return $translate([
+                        ]
+                    ).then(function (translations) {
+                        return translations
+                    });
+                },
+                animation: function (BtNavigate, $stateParams) {
+                    return BtNavigate.anim($stateParams.animDirection);
+                },
+            }
+        })
+    
+        .state('bettyleague.showdown.step2', {
+            url: '/step2/:animDirection',
+            cache: false,
+            params: {animDirection: null},
+            templateUrl: 'app/pages/bettyleague/showdown/step2/step2.html',
+            controller: 'Step2Ctrl',
+            controllerAs: 'step2Ctrl',
+            resolve: {
+                translations: function ($translate) {
+                    return $translate([
+                        ]
+                    ).then(function (translations) {
+                        return translations
+                    });
+                },
+                animation: function (BtNavigate, $stateParams) {
+                    return BtNavigate.anim($stateParams.animDirection);
+                },
+            }
+        })
+
+    ;
 
     $urlRouterProvider.otherwise('/landing');
 });

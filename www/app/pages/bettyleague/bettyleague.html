@@ -1,24 +1,22 @@
-<ion-content delegate-handle="btContentHandle" class="bt-content bettyleague">
+<div class="bettyLeague-title">{{::bettyLeagueCtrl.bettyLeague.name}}</div>
 
-    <div class="bettyLeague-title">{{::bettyLeagueCtrl.bettyLeague.name}}</div>
-
-    <div class="bettyLeague-header">
-        <bt-body-btn bt-ico="'fas fa-list-ul'"
-                     bt-content=" "
-                     bt-btn-classes="'bt-action__btn--body-square bt-action__btn--body-small u-pull-left bt-action__btn--blue'"
-                     bt-disabled=""
-                     bt-submit-form=""
-        >
-        </bt-body-btn>
-        <bt-body-btn bt-ico="'icon-bty-ico-coin'"
-                     bt-content="'15 000'"
-                     bt-btn-classes="'bt-action__btn--body-small u-pull-right bt-action__btn--gold'"
-                     bt-disabled=""
-                     bt-submit-form="loginformId"
-        >
-        </bt-body-btn>
-    </div>
+<div class="bettyLeague-header">
+    <bt-body-btn bt-ico="'fas fa-list-ul'"
+                 bt-content=" "
+                 bt-btn-classes="'bt-action__btn--body-square bt-action__btn--body-small u-pull-left bt-action__btn--blue'"
+                 bt-disabled=""
+                 bt-submit-form=""
+                 bt-action="bettyLeagueCtrl.logout()"
+    >
+    </bt-body-btn>
+    <bt-body-btn bt-ico="'icon-bty-ico-coin'"
+                 bt-content="'15 000'"
+                 bt-btn-classes="'bt-action__btn--body-small u-pull-right bt-action__btn--gold'"
+                 bt-disabled=""
+                 bt-submit-form="loginformId"
+    >
+    </bt-body-btn>
     <div class="u-clearfix"></div>
+</div>
 
-    <ui-view autoscroll="false" class="showdown" ng-animate-children="false"></ui-view>
-</ion-content>
+<ui-view autoscroll="false" class="showdown-view" ng-animate-children="false"></ui-view>

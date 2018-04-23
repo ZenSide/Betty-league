@@ -1,9 +1,15 @@
 betty2App.factory('BtNavigate', function(ENV, $state, $cordovaNativePageTransitions, BtLoading, $q) {
   var service = {
     lockedAnim : false,
-    stateChange : function(animClass, route, routeparams){
+    stateChange : function(animClass, route, routeparams, reload){
+      console.log(routeparams);
+      console.log(route);
+      var params = {};
+      if (reload) {
+        params = {reload: true};
+      }
       if (!service.lockedAnim) {
-        $state.go(route, routeparams);
+        $state.go(route, routeparams, params);
       }
     },
     anim : function (direction) {
@@ -37,10 +43,10 @@ betty2App.factory('BtNavigate', function(ENV, $state, $cordovaNativePageTransiti
 
             if (direction.charAt(0) == 2) {
               direction = direction.substring(1);
-              fixedPixelsTop = 146;
+              fixedPixelsTop = 149;
             } else if(direction.charAt(0) == 3) {
               direction = direction.substring(1);
-              fixedPixelsTop = 196;
+              fixedPixelsTop = 199;
             }
 
             var options = {

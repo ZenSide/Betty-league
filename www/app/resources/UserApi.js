@@ -81,6 +81,11 @@ betty2App.factory('UserApi', function (BtLoading, $rootScope, $cordovaFacebook, 
 			});
 		},
 
+		logout: function () {
+			BtLocalStorage.remove('User');
+			BtNavigate.stateChange(null, 'landing');
+		}
+
 	};
 	return UserApi;
 });

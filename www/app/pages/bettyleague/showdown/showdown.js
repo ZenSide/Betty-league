@@ -1,7 +1,8 @@
-betty2App.controller('ShowdownCtrl', function ($scope, $stateParams, showdown) {
+betty2App.controller('ShowdownCtrl', function ($scope, $stateParams, showdown, bet, previousShowDownId, nextShowDownId) {
 	var showdownCtrl = this;
 	showdownCtrl.showdownId = $stateParams.showdownId;
 	showdownCtrl.showdown = showdown;
+	showdownCtrl.bet = bet;
 
 	showdownCtrl.newBet = {
 		bettyLeagueId : $scope.bettyLeagueCtrl.bettyLeagueId,
@@ -10,4 +11,7 @@ betty2App.controller('ShowdownCtrl', function ($scope, $stateParams, showdown) {
 		homeScore: null,
 		awayScore: null
 	};
+
+	showdownCtrl.previousShowDownId = previousShowDownId;
+	showdownCtrl.nextShowDownId = nextShowDownId;
 });

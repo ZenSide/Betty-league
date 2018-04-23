@@ -6,8 +6,8 @@ var translations = {
     },
     fr : {
         MESSAGES : {
-            GENERALERROR : 'Un problême est survenu, réessayez plus tard',
-            NOCON : 'Veuillez vous connecter à internet',
+            GENERALERROR : 'Un problême est survenu, réessaye plus tard',
+            NOCON : 'Connecte toi à internet',
             NOBETTYWORLD : 'Betty World non trouvé',
             NONEXTOPENSHOWDOWN : 'Pas de paris ouverts',
             BETTYLEAGUENOTFOUND : 'Betty League non trouvée',
@@ -43,7 +43,7 @@ var translations = {
             PLACEHOLDERS : {
                 EMAIL : 'e-mail',
                 PSW: 'mot de passe',
-                CONFIRMPSW: 'confirmez mot de passe',
+                CONFIRMPSW: 'confirme ton mot de passe',
                 PSEUDO: 'pseudo',
                 NEXT: 'Continuer'
             },
@@ -77,18 +77,28 @@ var translations = {
             AGGREGATE_TITLE : "match retour",
             AGGREGATE_SCORE : "cumul des deux matchs",
             BET : "parier !",
+            MODIFY : "modifier",
             OPEN_BET : "paris ouverts",
             REPORTE : "reporté",
             CLOSED : "match terminé",
             LIVE : "LIVE",
             BET_FORM : {
-                "TITLE" : "Mon pari",
+                "TITLE" : "Ton pari",
                 "HOW_MANY_GOALS" : "Combien de buts pour",
                 "SHOOTOUT_WARNING" : "Sur ce score il va y avoir une séance de tirs au but.",
                 "WHO_WIN" : "Qui va l'emporter ?",
                 "WHO_QUALIF" : "Qui va se qualifier ?",
-                "EMPTY_SCORE" : "Vous devez saisir un score",
-                "EMPTY_WINNER" : "Vous devez choisir une équipe"
+                "EMPTY_SCORE" : "Tu dois saisir un score",
+                "EMPTY_WINNER" : "Tu dois choisir une équipe"
+            },
+            BET_SUMMARY : {
+                "MY_BETS" : "Tes mises",
+                "ON_QUALIF" : "sur une <b>qualification</b> de",
+                "ON_WIN" : "sur une <b>victoire</b> de",
+                "ON_DRAW" : "sur un match nul",
+                "ON_SCORE" : "sur un <b>score</b> de",
+                "USER_PERCENT" : "des parieurs",
+                "ODD" : "Cote"
             }
         }
     }

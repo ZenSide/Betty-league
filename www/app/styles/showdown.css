@@ -1,5 +1,5 @@
-.showdown {
-  padding: 1rem 1.5rem 0 1.5rem;
+.showdown-header {
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
 }
 .showdown-league {
   padding-top: 0.4rem;
@@ -63,11 +63,33 @@
   display: table-cell;
   vertical-align: middle;
 }
+.showdown-summary__score--left {
+  text-align: left;
+}
 .showdown-summary__suffix {
   text-align: left;
   display: table-cell;
   vertical-align: middle;
   height: 4rem;
+}
+.showdown-summary--tiny .showdown-summary__logo {
+  margin-top: -1rem;
+}
+.showdown-summary--tiny .showdown-summary__awayTeam {
+  width: 30%;
+}
+.showdown-summary--tiny .showdown-summary__awayTeam .showdown-summary__teamName {
+  padding-left: 2.5rem;
+}
+.showdown-summary--tiny .showdown-summary__homeTeam {
+  width: 30%;
+}
+.showdown-summary--tiny .showdown-summary__homeTeam .showdown-summary__teamName {
+  padding-right: 2.5rem;
+}
+.showdown-summary--tiny .showdown-score {
+  padding: 0;
+  line-height: 3rem;
 }
 .showdown-score {
   display: block;
@@ -86,9 +108,9 @@
 .showdown-score--reporte {
   background-color: #a1a1a1;
 }
-.logo-team {
-  width: 40px;
-  height: 40px;
+.showdown-score--gold {
+  background-color: #fdcf21;
+  color: #222222;
 }
 .event-picto {
   display: inline-block;
@@ -163,7 +185,7 @@
 .bet-form__summary {
   text-align: center;
   border-bottom: 1px solid #0583d0;
-  padding: 0.5rem 1rem 0.5rem 1rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
 .bet-form__content {
   text-align: center;
@@ -175,4 +197,19 @@
 .bt-form__team span {
   display: inline-block;
   vertical-align: middle;
+}
+.bt-bet-summary {
+  border: 1px solid #fdcf21;
+  border-radius: 0.5rem;
+  background-color: #e6e6e6;
+}
+.bet-bet-summary__head {
+  background-color: #fdcf21;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+.bt-bet-summary__part {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+.bt-bet-summary__part:not(:last-child) {
+  border-bottom: 1px solid #fdcf21;
 }
