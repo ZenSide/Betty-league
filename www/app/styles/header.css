@@ -5,6 +5,7 @@
   background-color: #289172;
   border: none;
   top: 0;
+  z-index: 100;
 }
 .bt-header:after {
   content: "";

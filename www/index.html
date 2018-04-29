@@ -11,12 +11,16 @@
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link rel="stylesheet" href="lib/animate.css/animate.min.css">
 
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+
     <!-- grunt included -->
     <link rel="stylesheet" type="text/css" href="app/components/btCountDown/btCountDown.css" />
     <link rel="stylesheet" type="text/css" href="app/components/btFooterBtn/btFooterBtn.css" />
     <link rel="stylesheet" type="text/css" href="app/components/btGoalRadio/btGoalRadio.css" />
     <link rel="stylesheet" type="text/css" href="app/components/btInputText/btInputText.css" />
     <link rel="stylesheet" type="text/css" href="app/components/btLogoTeam/btLogoTeam.css" />
+    <link rel="stylesheet" type="text/css" href="app/components/btTeamRadio/btTeamRadio.css" />
     <link rel="stylesheet" type="text/css" href="app/fonts/bty-ico/style.css" />
     <link rel="stylesheet" type="text/css" href="app/fonts/fontawesome-free-5.0.8/web-fonts-with-css/css/fa-brands.css" />
     <link rel="stylesheet" type="text/css" href="app/fonts/fontawesome-free-5.0.8/web-fonts-with-css/css/fa-brands.min.css" />
@@ -55,7 +59,9 @@
     </div>
 
     <!--///CONTENT-->
-    <ui-view autoscroll="false" class="main-view" ng-animate-children="false"></ui-view>
+    <div class="ng-cloak">
+        <ui-view autoscroll="false" class="main-view" ng-animate-children="false"></ui-view>
+    </div>
 
     <!--LOADING--->
     <div class="bt-loading-container ng-cloak" ng-if="btLoading">
@@ -104,7 +110,6 @@
     </div>
 
     <!-- ionic/angularjs js -->
-    <script src="lib/ionic/js/ionic.bundle.js"></script>
     <script src="lib/ionic-native/ionic.native.min.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
@@ -118,16 +123,17 @@
     <script src="app/components/btGoalRadio/btGoalRadio.js"></script>
     <script src="app/components/btInputText/btInputText.js"></script>
     <script src="app/components/btLogoTeam/btLogoTeam.js"></script>
+    <script src="app/components/btTeamRadio/btTeamRadio.js"></script>
     <script src="app/components/legacy.js"></script>
     <script src="app/config/parameters.dist.js"></script>
     <script src="app/config/parameters.js"></script>
     <script src="app/directives/btFocus.js"></script>
     <script src="app/pages/bettyleague/bettyleague.js"></script>
     <script src="app/pages/bettyleague/showdown/showdown.js"></script>
-    <script src="app/pages/bettyleague/showdown/step0/step0-2.js"></script>
     <script src="app/pages/bettyleague/showdown/step0/step0.js"></script>
     <script src="app/pages/bettyleague/showdown/step1/step1.js"></script>
     <script src="app/pages/bettyleague/showdown/step2/step2.js"></script>
+    <script src="app/pages/bettyleague/showdown/step3/step3.js"></script>
     <script src="app/pages/landing/landing.js"></script>
     <script src="app/pages/login/loginCtrl.js"></script>
     <script src="app/pages/parentCtrl.js"></script>

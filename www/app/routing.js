@@ -98,7 +98,6 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
         .state('bettyleague', {
             abstract: true,
             url: '/bettyleague/:bettyLeagueId',
-            cache: false,
             templateUrl: 'app/pages/bettyleague/bettyleague.html',
             controller: 'BettyLeagueCtrl',
             controllerAs: 'bettyLeagueCtrl',
@@ -120,7 +119,6 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
         .state('bettyleague.showdown', {
             abstract: true,
             url: '/showdown/:showdownId',
-            cache: false,
             templateUrl: 'app/pages/bettyleague/showdown/showdown.html',
             controller: 'ShowdownCtrl',
             controllerAs: 'showdownCtrl',
@@ -172,7 +170,6 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
 
         .state('bettyleague.showdown.step0', {
             url: '/step0/:animDirection',
-            cache: false,
             params: {animDirection: null},
             templateUrl: 'app/pages/bettyleague/showdown/step0/step0.html',
             controller: 'Step0Ctrl',
@@ -195,7 +192,6 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
     
         .state('bettyleague.showdown.step1', {
             url: '/step1/:animDirection',
-            cache: false,
             params: {animDirection: null},
             templateUrl: 'app/pages/bettyleague/showdown/step1/step1.html',
             controller: 'Step1Ctrl',
@@ -216,11 +212,30 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
     
         .state('bettyleague.showdown.step2', {
             url: '/step2/:animDirection',
-            cache: false,
             params: {animDirection: null},
             templateUrl: 'app/pages/bettyleague/showdown/step2/step2.html',
             controller: 'Step2Ctrl',
             controllerAs: 'step2Ctrl',
+            resolve: {
+                translations: function ($translate) {
+                    return $translate([
+                        ]
+                    ).then(function (translations) {
+                        return translations
+                    });
+                },
+                animation: function (BtNavigate, $stateParams) {
+                    return BtNavigate.anim($stateParams.animDirection);
+                },
+            }
+        })
+
+        .state('bettyleague.showdown.step3', {
+            url: '/step3/:animDirection',
+            params: {animDirection: null},
+            templateUrl: 'app/pages/bettyleague/showdown/step3/step3.html',
+            controller: 'Step3Ctrl',
+            controllerAs: 'stepCtrl',
             resolve: {
                 translations: function ($translate) {
                     return $translate([

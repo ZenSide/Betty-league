@@ -1,0 +1,36 @@
+@import "../../../less/constant";
+@press-distance:0.4rem;
+
+.bt-team-radio__col {
+  &:first-child {
+    padding-right: @margin-micro;
+  }
+  &:last-child {
+    padding-left: @margin-micro;
+  }
+}
+.bt-team-radio__radio {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.bt-team-radio__button--radio {
+  font-family: @normal-font-bold;
+}
+
+.bt-team-radio__button--radio {
+  .bt-action__facade {
+    padding-right: @margin-medium!important;
+  }
+}
+
+.bt-team-radio__radio:checked + .bt-team-radio__button--radio {
+  color: @white;
+  background-color: @medium-green;
+  .bt-action__facade {
+    background-color: @light-green;
+    transform: translate3d(0, @press-distance, 0);
+  }
+}

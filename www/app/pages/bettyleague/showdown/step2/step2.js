@@ -1,4 +1,4 @@
-betty2App.controller('Step2Ctrl', function (BtMessages, translations, $scope, $stateParams, BtNavigate, BtLoading, animation) {
+betty2App.controller('Step2Ctrl', function (BetApi, BtMessages, translations, $scope, $stateParams, BtNavigate, BtLoading, animation) {
 	var step2Ctrl = this;
 	BtLoading.endLoad();
 	step2Ctrl.stepId = $stateParams.stepId;
@@ -40,6 +40,7 @@ betty2App.controller('Step2Ctrl', function (BtMessages, translations, $scope, $s
 							'showdownId' : $stateParams.showdownId,
 							'animDirection' : '3left'
 						});
+						return;
 					}
 
 					//winner home
@@ -62,6 +63,7 @@ betty2App.controller('Step2Ctrl', function (BtMessages, translations, $scope, $s
 						'showdownId' : $stateParams.showdownId,
 						'animDirection' : '3left'
 					});
+					return;
 					//winner home
 				} else if (parseInt(betHomeScore) > parseInt(betAwayScore)) {
 					console.log('home');
@@ -92,18 +94,19 @@ betty2App.controller('Step2Ctrl', function (BtMessages, translations, $scope, $s
 				console.log('away');
 				$scope.showdownCtrl.newBet.winner = "away";
 			}
-			BtLoading.startLoad();
-			BetApi.createBet($scope.showdownCtrl.newBet, function () {
-				BtNavigate.stateChange('goRight' ,'bettyleague.showdown.step0', {
-					'bettyLeagueId' : $stateParams.bettyLeagueId,
-					'showdownId' : $stateParams.showdownId,
-					'animDirection' : '3left'
-				}, true);
-			}, function () {
-				BtLoading.endLoad();
-			});
 		}
-	}
+
+		BtLoading.startLoad();
+		BetApi.createBet($scope.showdownCtrl.newBet, function () {
+			BtNavigate.stateChange('goRight' ,'bettyleague.showdown.step0', {
+				'bettyLeagueId' : $stateParams.bettyLeagueId,
+				'showdownId' : $stateParams.showdownId,
+				'animDirection' : '3left'
+			}, true);
+		}, function () {
+			BtLoading.endLoad();
+		});
+	};
 
 	var withHeadLogo = false;
 	var footerStatus = {};
@@ -134,7 +137,7 @@ betty2App.controller('Step2Ctrl', function (BtMessages, translations, $scope, $s
 		btPosition: "right",
 		btClasses: "bt-action--big",
 		btButtonClasses: "bt-action__btn--gold",
-		btIco : "fas fa-arrow-right",
+		btIco : "fas fa-check",
 		btLabel:translations['LOGIN.FOOTER.MDP'],
 		btDisabled: false,
 		btSubmitForm: null,

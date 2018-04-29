@@ -1,0 +1,41 @@
+<!--//FOOTER/HEADER-->
+<div class="bt-team-radio row row-center">
+    <div class="bt-team-radio__col col u-text-center">
+        <input class="bt-team-radio__radio"
+               type="radio"
+               ng-model="$ctrl.btModel"
+               ng-value="'home'"
+               name="radio"
+        >
+        <button ng-mouseup="$ctrl.select('home')" class="u-text-center bt-action__btn bt-action__btn--body bt-action__btn--gold bt-team-radio__button bt-team-radio__button--radio" type="button">
+            <div class="u-text-center bt-action__facade">
+                <div class="u-gutter-bottom-micro">
+                    <bt-logo-team bt-team="$ctrl.btHomeTeam"></bt-logo-team>
+                </div>
+                <div class="bt-text-lg">
+                    {{$ctrl.btHomeTeam.sm__name}}
+                </div>
+            </div>
+        </button>
+    </div>
+
+    <div class="bt-team-radio__col col u-text-center">
+        <input class="bt-team-radio__radio"
+               type="radio"
+               ng-model="$ctrl.btModel"
+               ng-value="'away'"
+               name="radio"
+        >
+        <button ng-mouseup="$ctrl.select('away')" class="u-text-center bt-action__btn bt-action__btn--body bt-action__btn--gold bt-team-radio__button bt-team-radio__button--radio" type="button">
+            <div class="u-text-center bt-action__facade">
+                <div class="u-gutter-bottom-micro">
+                    <bt-logo-team bt-team="$ctrl.btAwayTeam"></bt-logo-team>
+                </div>
+                <div class="bt-text-lg">
+                    {{$ctrl.btAwayTeam.sm__name}}
+                </div>
+            </div>
+        </button>
+    </div>
+
+</div>

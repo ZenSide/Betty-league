@@ -1,0 +1,49 @@
+<div class="bet-form">
+    <div class="bet-form__title">
+        <span class="u-pull-left">II</span>
+        <span translate="SHOWDOWN.BET_FORM.TITLE"></span>
+    </div>
+    <div class="bet-form__summary">
+        <div class="showdown-summary showdown-summary--tiny">
+            <div class="showdown-summary__row">
+                <div class="showdown-summary__homeTeam">
+                <span class="showdown-summary__teamName bt-text-tiny">
+                    {{showdownCtrl.showdown.smFixture.homeTeam.sm__name}}
+                </span>
+                <span class="showdown-summary__logo">
+                    <bt-logo-team bt-size="20" bt-team="showdownCtrl.showdown.smFixture.homeTeam"></bt-logo-team>
+                </span>
+                </div>
+                <div class="showdown-summary__score">
+                    <div class="bt-text-lg showdown-score showdown-score--gold">
+                        <span ng-if="showdownCtrl.newBet.homeScore !== null">{{showdownCtrl.newBet.homeScore}}</span>
+                        <span ng-if="showdownCtrl.newBet.homeScore == null">_</span>
+                            <span class="bt-text-md" ng-if="showdownCtrl.showdown.smFixture.matchRetour">
+                                ({{(showdownCtrl.showdown.smFixture.aggregateVisitorteamScore + showdownCtrl.newBet.homeScore|number)}})
+                            </span>
+                        <span>-</span>
+                            <span class="bt-text-md" ng-if="showdownCtrl.showdown.smFixture.matchRetour">
+                                ({{showdownCtrl.showdown.smFixture.aggregateLocalteamScore + showdownCtrl.newBet.awayScore|number}})
+                            </span>
+                        <span ng-if="showdownCtrl.newBet.awayScore !== null">{{showdownCtrl.newBet.awayScore}}</span>
+                        <span ng-if="showdownCtrl.newBet.awayScore == null">_</span>
+                    </div>
+                </div>
+                <div class="showdown-summary__awayTeam">
+                <span class="showdown-summary__logo">
+                    <bt-logo-team bt-size="20" bt-team="showdownCtrl.showdown.smFixture.awayTeam"></bt-logo-team>
+                </span>
+                <span class="showdown-summary__teamName bt-text-tiny">
+                    {{showdownCtrl.showdown.smFixture.awayTeam.sm__name}}
+                </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bet-form__content">
+        <div translate="SHOWDOWN.BET_FORM.SHOOTOUT_WARNING" class="u-gutter-bottom-micro bt-text-md"></div>
+        <div ng-if="showdownCtrl.showdown.smFixture.matchRetour" class="u-gutter-bottom-micro bt-text-md-medium" translate="SHOWDOWN.BET_FORM.WHO_WIN"></div>
+
+        <bt-team-radio bt-home-team="showdownCtrl.showdown.smFixture.homeTeam" bt-away-team="showdownCtrl.showdown.smFixture.awayTeam" bt-model="showdownCtrl.newBet.winner"></bt-team-radio>
+    </div>
+</div>

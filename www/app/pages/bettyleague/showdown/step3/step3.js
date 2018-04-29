@@ -1,25 +1,37 @@
-betty2App.controller('Step1Ctrl', function (BtMessages, translations, $scope, $stateParams, BtNavigate, BtLoading, animation) {
-	var step1Ctrl = this;
+betty2App.controller('Step3Ctrl', function (BetApi, BtMessages, translations, $scope, $stateParams, BtNavigate, BtLoading, animation) {
+	var step3Ctrl = this;
 	BtLoading.endLoad();
-	step1Ctrl.stepId = $stateParams.stepId;
+	step3Ctrl.stepId = $stateParams.stepId;
 
 	var checkForm = function () {
 		var withPenalty = $scope.showdownCtrl.showdown.smFixture.withPenalty;
 		var betHomeScore = $scope.showdownCtrl.newBet.homeScore;
 		var betAwayScore = $scope.showdownCtrl.newBet.awayScore;
+		var betWinner = $scope.showdownCtrl.newBet.winner;
 		var aggregateVisitorScore = $scope.showdownCtrl.showdown.smFixture.aggregateVisitorteamScore;
 		var aggregateLocalScore = $scope.showdownCtrl.showdown.smFixture.aggregateLocalteamScore;
 
-		if (betHomeScore === null) {
-			BtMessages.show([{content:"SHOWDOWN.BET_FORM.EMPTY_SCORE",context:"alert"}])
+		if (betAwayScore === null) {
+			BtMessages.show([{content:"SHOWDOWN.BET_FORM.EMPTY_SCORE",context:"alert"}]);
 			return;
 		}
-		BtNavigate.stateChange('goRight' ,'bettyleague.showdown.step2', {
-			'bettyLeagueId' : $stateParams.bettyLeagueId,
-			'showdownId' : $stateParams.showdownId,
-			'animDirection' : '3left'
+
+		if (betWinner === null) {
+			BtMessages.show([{content:"SHOWDOWN.BET_FORM.EMPTY_WINNER",context:"alert"}]);
+			return;
+		}
+
+		BtLoading.startLoad();
+		BetApi.createBet($scope.showdownCtrl.newBet, function () {
+			BtNavigate.stateChange('goRight' ,'bettyleague.showdown.step0', {
+				'bettyLeagueId' : $stateParams.bettyLeagueId,
+				'showdownId' : $stateParams.showdownId,
+				'animDirection' : '3left'
+			}, true);
+		}, function () {
+			BtLoading.endLoad();
 		});
-	}
+	};
 
 	var withHeadLogo = false;
 	var footerStatus = {};
@@ -34,8 +46,8 @@ betty2App.controller('Step1Ctrl', function (BtMessages, translations, $scope, $s
 		btDisabled: false,
 		btSubmitForm: null,
 		action:function(){
-			$scope.showdownCtrl.newBet.homeScore = null;
-			BtNavigate.stateChange('goLeft' ,'bettyleague.showdown.step0', {
+			$scope.showdownCtrl.newBet.awayScore = null;
+			BtNavigate.stateChange('goLeft' ,'bettyleague.showdown.step1', {
 				'bettyLeagueId' : $stateParams.bettyLeagueId,
 				'showdownId' : $stateParams.showdownId,
 				'animDirection' : '3right'

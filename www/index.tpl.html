@@ -11,6 +11,9 @@
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link rel="stylesheet" href="lib/animate.css/animate.min.css">
 
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+
     <!-- grunt included -->
     <!-- include: "type": "css", "files": "app/**/*.css" -->
 
@@ -24,7 +27,9 @@
     </div>
 
     <!--///CONTENT-->
-    <ui-view autoscroll="false" class="main-view" ng-animate-children="false"></ui-view>
+    <div class="ng-cloak">
+        <ui-view autoscroll="false" class="main-view" ng-animate-children="false"></ui-view>
+    </div>
 
     <!--LOADING--->
     <div class="bt-loading-container ng-cloak" ng-if="btLoading">
@@ -73,7 +78,6 @@
     </div>
 
     <!-- ionic/angularjs js -->
-    <script src="lib/ionic/js/ionic.bundle.js"></script>
     <script src="lib/ionic-native/ionic.native.min.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
