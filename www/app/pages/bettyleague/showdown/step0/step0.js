@@ -10,7 +10,7 @@ betty2App.controller('Step0Ctrl', function (BtMessages, BetApi, $timeout, transl
 			var now = new Date().getTime();
 			var start = startdate.getTime();
 			var distance = start - now;
-			if (distance < 0) {
+			if (distance <= 0) {
 				return 'REPORTE';
 			} else {
 				return 'OPEN';

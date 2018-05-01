@@ -47,7 +47,7 @@ betty2App.controller('Step3Ctrl', function (BetApi, BtMessages, translations, $s
 		btSubmitForm: null,
 		action:function(){
 			$scope.showdownCtrl.newBet.awayScore = null;
-			BtNavigate.stateChange('goLeft' ,'bettyleague.showdown.step1', {
+			BtNavigate.stateChange('goLeft' ,'bettyleague.showdown.step2', {
 				'bettyLeagueId' : $stateParams.bettyLeagueId,
 				'showdownId' : $stateParams.showdownId,
 				'animDirection' : '3right'

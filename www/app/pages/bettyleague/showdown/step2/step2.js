@@ -29,10 +29,13 @@ betty2App.controller('Step2Ctrl', function (BetApi, BtMessages, translations, $s
 					if ((aggregateVisitorScore - parseInt(betHomeScore)) > (parseInt(betAwayScore) - aggregateLocalScore)) {
 						console.log('home');
 						$scope.showdownCtrl.newBet.winner = "home";
-						//plus de buts à exterieur pour away Team
+
+					//plus de buts à exterieur pour away Team
 					} else if ((aggregateVisitorScore - parseInt(betHomeScore)) < (parseInt(betAwayScore) - aggregateLocalScore)) {
 						console.log('away');
 						$scope.showdownCtrl.newBet.winner = "away";
+
+					// vrai egalité
 					} else {
 						console.log('draw');
 						BtNavigate.stateChange('goRight' ,'bettyleague.showdown.step3', {
