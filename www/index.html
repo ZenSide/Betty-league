@@ -20,6 +20,7 @@
     <link rel="stylesheet" type="text/css" href="app/components/btGoalRadio/btGoalRadio.css" />
     <link rel="stylesheet" type="text/css" href="app/components/btInputText/btInputText.css" />
     <link rel="stylesheet" type="text/css" href="app/components/btLogoTeam/btLogoTeam.css" />
+    <link rel="stylesheet" type="text/css" href="app/components/btModalOdds/btModalOdds.css" />
     <link rel="stylesheet" type="text/css" href="app/components/btTeamRadio/btTeamRadio.css" />
     <link rel="stylesheet" type="text/css" href="app/fonts/bty-ico/style.css" />
     <link rel="stylesheet" type="text/css" href="app/fonts/fontawesome-free-5.0.8/web-fonts-with-css/css/fa-brands.css" />
@@ -80,6 +81,15 @@
         <div class="bt-loading-back bt-loading-back--phantom"></div>
     </div>
 
+    <!--modales-->
+
+    <!--Detail cotes-->
+    <bt-modal-odds bt-data="parentCtrl.detailCotesModalData"
+                   bt-show="parentCtrl.showDetailCotesModal"
+                   bt-on-close="parentCtrl.detailCotesModalOnClose()">
+    </bt-modal-odds>
+
+
 
     <!--//FOOTER BAR-->
     <div class="bar bt-footer ng-cloak">
@@ -123,6 +133,7 @@
     <script src="app/components/btGoalRadio/btGoalRadio.js"></script>
     <script src="app/components/btInputText/btInputText.js"></script>
     <script src="app/components/btLogoTeam/btLogoTeam.js"></script>
+    <script src="app/components/btModalOdds/btModalOdds.js"></script>
     <script src="app/components/btTeamRadio/btTeamRadio.js"></script>
     <script src="app/components/legacy.js"></script>
     <script src="app/config/parameters.dist.js"></script>
@@ -141,6 +152,7 @@
     <script src="app/resources/BetApi.js"></script>
     <script src="app/resources/BettyLeagueApi.js"></script>
     <script src="app/resources/ResourcesFactory.js"></script>
+    <script src="app/resources/ScoreOddApi.js"></script>
     <script src="app/resources/ShowdownApi.js"></script>
     <script src="app/resources/UserApi.js"></script>
     <script src="app/routing.js"></script>

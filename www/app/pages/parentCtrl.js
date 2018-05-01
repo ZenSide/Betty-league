@@ -21,5 +21,12 @@ betty2App.controller('ParentCtrl', function ($scope, $rootScope) {
         rightBt : {
             btShow : false,
         }
+    };
+
+    parentCtrl.showDetailCotesModal = false;
+    parentCtrl.detailCotesModalData = {};
+    parentCtrl.detailCotesModalOnClose = function () {
+        parentCtrl.detailCotesModalData = {};
+        parentCtrl.showDetailCotesModal = false;
     }
 });

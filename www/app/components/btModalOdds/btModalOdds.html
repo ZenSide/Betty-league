@@ -1,0 +1,103 @@
+<div class="bt-modal animated" ng-if="$ctrl.btShow">
+    <div class="bt-modal__bg"></div>
+    <div class="bt-modal__block">
+        <div class="bt-modal__body">
+            <div class="u-gutter-bottom-small bt-text-lg u-text-center u-text-uppercase" translate="{{$ctrl.title}}"></div>
+
+            <div class="u-gutter-bottom-small showdown-summary showdown-summary--tiny showdown-summary--tight">
+                <div class="showdown-summary__row">
+                    <div class="showdown-summary__homeTeam">
+                        <span class="showdown-summary__teamName bt-text-tiny">
+                            {{$ctrl.btData.homeTeam.sm__name}}
+                        </span>
+                        <span class="showdown-summary__logo">
+                            <bt-logo-team bt-size="20" bt-team="$ctrl.btData.homeTeam"></bt-logo-team>
+                        </span>
+                    </div>
+                    <div class="showdown-summary__score">
+                        -
+                    </div>
+                    <div class="showdown-summary__awayTeam">
+                        <span class="showdown-summary__logo">
+                            <bt-logo-team bt-size="20" bt-team="$ctrl.btData.awayTeam"></bt-logo-team>
+                        </span>
+                        <span class="showdown-summary__teamName bt-text-tiny">
+                            {{$ctrl.btData.awayTeam.sm__name}}
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <table class="bt-modal__table bt-text">
+                <tr>
+                    <th translate="SHOWDOWN.MODAL_ODD_DETAIL.QUALIF"></th>
+                    <th translate="SHOWDOWN.MODAL_ODD_DETAIL.ODD"></th>
+                    <th>
+                        <span>% </span>
+                        <span translate="SHOWDOWN.MODAL_ODD_DETAIL.PERCENT"></span>
+                    </th>
+                </tr>
+
+                <tr>
+                    <td>
+                        <span class="u-inline-block">
+                            {{$ctrl.btData.homeTeam.sm__name}}
+                        </span>
+                        <span class="u-inline-block">
+                            <bt-logo-team bt-size="20" bt-team="$ctrl.btData.homeTeam"></bt-logo-team>
+                        </span>
+                    </td>
+                    <td class="bt-text-lg" ng-if="$ctrl.btData.bet.scoreOdd.showdown.homeWinOdd">
+                        {{$ctrl.btData.bet.scoreOdd.showdown.homeWinOdd}}
+                    </td>
+                    <td class="bt-text-lg" ng-if="!$ctrl.btData.bet.scoreOdd.showdown.homeWinOdd">
+                        -
+                    </td>
+
+                    <td class="bt-text-md" ng-if="$ctrl.btData.bet.scoreOdd.showdown.homeWinOdd > 0">
+                        {{100 / $ctrl.btData.bet.scoreOdd.showdown.homeWinOdd | number : 0}} %
+                    </td>
+                    <td class="bt-text-md" ng-if="!$ctrl.btData.bet.scoreOdd.showdown.homeWinOdd">
+                        0 %
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <span class="u-inline-block">
+                            {{$ctrl.btData.awayTeam.sm__name}}
+                        </span>
+                        <span class="u-inline-block">
+                            <bt-logo-team bt-size="20" bt-team="$ctrl.btData.awayTeam"></bt-logo-team>
+                        </span>
+                    </td>
+
+                    <td class="bt-text-lg" ng-if="$ctrl.btData.bet.scoreOdd.showdown.awayWinOdd">
+                        {{$ctrl.btData.bet.scoreOdd.showdown.awayWinOdd}}
+                    </td>
+                    <td class="bt-text-lg" ng-if="!$ctrl.btData.bet.scoreOdd.showdown.awayWinOdd">
+                        -
+                    </td>
+
+                    <td class="bt-text-md" ng-if="$ctrl.btData.bet.scoreOdd.showdown.awayWinOdd > 0">
+                        {{100 / $ctrl.btData.bet.scoreOdd.showdown.awayWinOdd | number : 0}} %
+                    </td>
+                    <td class="bt-text-md" ng-if="!$ctrl.btData.bet.scoreOdd.showdown.awayWinOdd">
+                        0 %
+                    </td>
+                </tr>
+
+                <!--MATCH NUL-->
+            </table>
+        </div>
+        <div class="bt-modal__close-btn">
+            <bt-body-btn bt-ico="'fas fa-times'"
+                         bt-content=""
+                         bt-btn-classes="'bt-action__btn--body-square bt-action__btn--body-small u-pull-right bt-action__btn--red'"
+                         bt-disabled=""
+                         bt-action="$ctrl.close()"
+            >
+            </bt-body-btn>
+        </div>
+    </div>
+</div>

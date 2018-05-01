@@ -99,6 +99,14 @@ var translations = {
                 "ON_SCORE" : "sur un <b>score</b> de",
                 "USER_PERCENT" : "des parieurs",
                 "ODD" : "Cote"
+            },
+            MODAL_ODD_DETAIL : {
+                "TITLE" : "Détail des cotes",
+                "WINNER" : "Vainqueur",
+                "QUALIF" : "Qualif",
+                "ODD" : 'Cote',
+                "PERCENT" : "des paris",
+                "SCORE" : "Score exacte"
             }
         }
     }

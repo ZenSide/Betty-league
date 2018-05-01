@@ -1,0 +1,78 @@
+@import "../../../less/constant";
+
+.bt-modal {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top:0;
+  bottom: 0;
+  z-index: 200;
+
+  &.ng-leave{
+    animation: fadeOut @modal-entrance-time;
+  }
+  &.ng-enter{
+    animation: fadeIn @modal-entrance-time;
+  }
+}
+
+.bt-modal__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: transparent;
+  z-index: 210;
+}
+
+.bt-modal__block {
+  z-index: 220;
+  position: absolute;
+  background-color: @azur-blue;
+  border-radius: 0.5rem;
+  top: @margin-small;
+  right: @margin-micro;
+  bottom: @margin-small;
+  left: @margin-micro;
+}
+
+.bt-modal__body {
+  overflow-y: auto;
+  background-color: @white;
+  border-radius: 0.5rem;
+  position: absolute;
+  top: @margin-big;
+  right: @margin-small;
+  bottom: @margin-medium;
+  left: @margin-small;
+  padding: 4rem @margin-micro @margin-medium @margin-micro;
+}
+
+.bt-modal__close-btn {
+  position: absolute;
+  top: @margin-small;
+  right: @margin-micro;
+}
+
+.bt-modal__table {
+  table-layout: fixed;
+  width: 100%;
+
+  tr {
+    border: 1px solid @azur-blue;
+  }
+
+  th, td {
+    padding: @margin-micro;
+    color:  @black;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  th {
+    background-color: @azur-blue;
+    color: @white;
+  }
+}
+

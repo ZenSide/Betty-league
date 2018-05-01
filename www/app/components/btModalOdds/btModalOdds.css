@@ -1,0 +1,67 @@
+.bt-modal {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 200;
+}
+.bt-modal.ng-leave {
+  animation: fadeOut 400ms;
+}
+.bt-modal.ng-enter {
+  animation: fadeIn 400ms;
+}
+.bt-modal__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: transparent;
+  z-index: 210;
+}
+.bt-modal__block {
+  z-index: 220;
+  position: absolute;
+  background-color: #59a4d0;
+  border-radius: 0.5rem;
+  top: 1rem;
+  right: 0.5rem;
+  bottom: 1rem;
+  left: 0.5rem;
+}
+.bt-modal__body {
+  overflow-y: auto;
+  background-color: #e6e6e6;
+  border-radius: 0.5rem;
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+  bottom: 1.5rem;
+  left: 1rem;
+  padding: 4rem 0.5rem 1.5rem 0.5rem;
+}
+.bt-modal__close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 0.5rem;
+}
+.bt-modal__table {
+  table-layout: fixed;
+  width: 100%;
+}
+.bt-modal__table tr {
+  border: 1px solid #59a4d0;
+}
+.bt-modal__table th,
+.bt-modal__table td {
+  padding: 0.5rem;
+  color: #222222;
+  text-align: center;
+  vertical-align: middle;
+}
+.bt-modal__table th {
+  background-color: #59a4d0;
+  color: #e6e6e6;
+}
