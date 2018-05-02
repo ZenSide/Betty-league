@@ -126,9 +126,9 @@
                         </span>
                         <span ng-if="$ctrl.btData.matchRetour">
                             (
-                                {{aggregateVisitorteamScore + scoreOdd.homeScore}}
+                                {{$ctrl.btData.aggregateVisitorScore + scoreOdd.homeScore}}
                                 -
-                                {{aggregateLocalteamScore + scoreOdd.awayScore}}
+                                {{$ctrl.btData.aggregateLocalScore + scoreOdd.awayScore}}
                             )
                         </span>
                     </td>
