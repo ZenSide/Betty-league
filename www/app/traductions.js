@@ -103,7 +103,8 @@ var translations = {
             MODAL_ODD_DETAIL : {
                 "TITLE" : "Détail des cotes",
                 "WINNER" : "Vainqueur",
-                "QUALIF" : "Qualif",
+                "QUALIF" : "Qualifié",
+                "DRAW" : "Match nul",
                 "ODD" : 'Cote',
                 "PERCENT" : "des paris",
                 "SCORE" : "Score exacte"

@@ -22,7 +22,11 @@ betty2App.controller('ShowdownCtrl', function (BtLoading, ScoreOddApi, BtMessage
 				'homeTeam' : showdownCtrl.showdown.smFixture.homeTeam,
 				'awayTeam' : showdownCtrl.showdown.smFixture.awayTeam,
 				'bet' : showdownCtrl.bet,
-				'scoreOdds' : data
+				'matchRetour' : showdownCtrl.showdown.smFixture.matchRetour,
+				'withPenalty' : showdownCtrl.showdown.smFixture.withPenalty,
+				'scoreOdds' : data,
+				'aggregateVisitorScore' : showdownCtrl.showdown.smFixture.aggregateVisitorteamScore,
+				'aggregateLocalScore' : showdownCtrl.showdown.smFixture.aggregateLocalteamScore
 			};
 			BtLoading.endLoad();
 			$scope.parentCtrl.showDetailCotesModal = true;

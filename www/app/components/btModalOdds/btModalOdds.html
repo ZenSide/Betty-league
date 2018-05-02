@@ -28,9 +28,10 @@
                 </div>
             </div>
 
-            <table class="bt-modal__table bt-text">
+            <table class="bt-modal__table bt-text u-gutter-bottom-small">
                 <tr>
-                    <th translate="SHOWDOWN.MODAL_ODD_DETAIL.QUALIF"></th>
+                    <th ng-if="$ctrl.btData.matchRetour" translate="SHOWDOWN.MODAL_ODD_DETAIL.QUALIF"></th>
+                    <th ng-if="!$ctrl.btData.matchRetour" translate="SHOWDOWN.MODAL_ODD_DETAIL.WINNER"></th>
                     <th translate="SHOWDOWN.MODAL_ODD_DETAIL.ODD"></th>
                     <th>
                         <span>% </span>
@@ -88,6 +89,58 @@
                 </tr>
 
                 <!--MATCH NUL-->
+                <tr ng-if="!$ctrl.btData.withPenalty">
+                    <td translate="SHOWDOWN.MODAL_ODD_DETAIL.DRAW">
+                    </td>
+
+                    <td class="bt-text-lg" ng-if="$ctrl.btData.bet.scoreOdd.showdown.drawOdd">
+                        {{$ctrl.btData.bet.scoreOdd.showdown.drawOdd}}
+                    </td>
+                    <td class="bt-text-lg" ng-if="!$ctrl.btData.bet.scoreOdd.showdown.drawOdd">
+                        -
+                    </td>
+
+                    <td class="bt-text-md" ng-if="$ctrl.btData.bet.scoreOdd.showdown.drawOdd > 0">
+                        {{100 / $ctrl.btData.bet.scoreOdd.showdown.drawOdd | number : 0}} %
+                    </td>
+                    <td class="bt-text-md" ng-if="!$ctrl.btData.bet.scoreOdd.showdown.drawOdd">
+                        0 %
+                    </td>
+                </tr>
+            </table>
+
+            <table class="bt-modal__table bt-text u-gutter-bottom-big">
+                <tr>
+                    <th translate="SHOWDOWN.MODAL_ODD_DETAIL.SCORE"></th>
+                    <th translate="SHOWDOWN.MODAL_ODD_DETAIL.ODD"></th>
+                    <th>
+                        <span>% </span>
+                        <span translate="SHOWDOWN.MODAL_ODD_DETAIL.PERCENT"></span>
+                    </th>
+                </tr>
+
+                <tr ng-repeat="scoreOdd in $ctrl.btData.scoreOdds">
+                    <td>
+                        <span class="bt-text-md">
+                        {{scoreOdd.homeScore}} - {{scoreOdd.awayScore}}
+                        </span>
+                        <span ng-if="$ctrl.btData.matchRetour">
+                            (
+                                {{aggregateVisitorteamScore + scoreOdd.homeScore}}
+                                -
+                                {{aggregateLocalteamScore + scoreOdd.awayScore}}
+                            )
+                        </span>
+                    </td>
+
+                    <td class="bt-text-lg">
+                        {{scoreOdd.odd}}
+                    </td>
+
+                    <td class="bt-text-md">
+                        {{100 / scoreOdd.odd | number : 0}} %
+                    </td>
+                </tr>
             </table>
         </div>
         <div class="bt-modal__close-btn">
