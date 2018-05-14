@@ -1,5 +1,5 @@
 'use strict';
-betty2App.factory('ShowdownApi', function ($q, BetApi, $filter, ResourcesFactory, BtLocalStorage) {
+betty2App.factory('ShowdownApi', function ($q, BetApi, $filter, BettyLeagueApi, ResourcesFactory, BtLocalStorage) {
 	var ShowdownApi = {
 
 		//User Sign In
@@ -65,13 +65,24 @@ betty2App.factory('ShowdownApi', function ($q, BetApi, $filter, ResourcesFactory
 				return d.promise;
 			}
 
+			function seasonScore() {
+				var d = $q.defer();
+				BettyLeagueApi.getSeasonScore(bettyLeagueId, function (score) {
+					d.resolve(score);
+				}, function (messages) {
+					d.reject(messages)
+				}, noCache);
+				return d.promise;
+			}
+
 			$q.all([
 				sdFull(),
-				betFull()
+				betFull(),
+				seasonScore()
 			]).then(function(data) {
-				resolve(data[0], data[1]);
+				resolve(data[0]);
 			}).catch(function(error) {
-				reject(error[0], error[1]);
+				reject(error[0]);
 			});
 
 		},
@@ -106,14 +117,22 @@ betty2App.factory('ShowdownApi', function ($q, BetApi, $filter, ResourcesFactory
 				var nextShowdownId = null;
 				for (var i = 0; i < arrayLength; i++) {
 					if (fullRange[i].id == showdownId) {
-						nextShowdownId = fullRange[i+1].id
+
+						if (fullRange[i+1] !== undefined) {
+							nextShowdownId = fullRange[i+1].id
+						} else {
+							nextShowdownId = null;
+						}
 					}
 				}
+				console.log(nextShowdownId);
 				resolve(nextShowdownId);
 
 				return;
 
 			}, function (messages) {
+
+				console.log('message'+messages);
 				reject(messages);
 				return;
 			}, noCache)
@@ -121,18 +140,31 @@ betty2App.factory('ShowdownApi', function ($q, BetApi, $filter, ResourcesFactory
 		getPreviousShowdown: function (bettyLeagueId, showdownId, resolve, reject, noCache) {
 			ShowdownApi.getFullRange(bettyLeagueId, function (fullRange) {
 
+				console.log('pouetpouet');
+
 				var arrayLength = fullRange.length;
+				console.log(arrayLength);
+
 				var nextShowdownId = null;
 				for (var i = 0; i < arrayLength; i++) {
 					if (fullRange[i].id == showdownId) {
-						nextShowdownId = fullRange[i-1].id
+						if (fullRange[i-1] !== undefined) {
+							nextShowdownId = fullRange[i-1].id
+						} else {
+							nextShowdownId = null;
+						}
 					}
 				}
+				console.log('pouetpouet');
+
+				console.log(nextShowdownId);
 				resolve(nextShowdownId);
 
 				return;
 
 			}, function (messages) {
+
+				console.log('message'+messages);
 				reject(messages);
 				return;
 			}, noCache)

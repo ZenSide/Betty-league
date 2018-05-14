@@ -76,6 +76,24 @@ betty2App.factory('BetApi', function ($filter, ResourcesFactory, BtLocalStorage)
 			}, noCache)
 		},
 
+		getBetSync: function (betfullrange, showdownId) {
+
+			var bet = $filter('filter')(betfullrange, function (bet) {
+				if (bet.scoreOdd.showdown.id !== parseInt(showdownId)) {
+					return false;
+				}
+				return true;
+			});
+			if (bet.length > 0) {
+				return bet[0];
+			}
+
+			if (bet.length === 0) {
+				return null;
+			}
+
+		},
+
 		setBet: function (bet, bettyLeagueId, showdownId, resolve, reject, noCache) {
 			BetApi.getFullRange(bettyLeagueId, function (betfullrange) {
 				console.log(betfullrange);

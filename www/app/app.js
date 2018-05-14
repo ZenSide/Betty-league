@@ -48,4 +48,7 @@ betty2App.run(function($http, $ionicPlatform, $cordovaNetwork, $rootScope, $time
       //Network listener
     });
   });
-});
+}).config(function ($ionicConfigProvider) {
+  $ionicConfigProvider.scrolling.jsScrolling(false);
+})
+;

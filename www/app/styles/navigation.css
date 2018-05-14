@@ -10,6 +10,13 @@
   top: 50px;
   bottom: 0;
 }
+.list-match-view {
+  top: 2.4rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
 ui-view {
   position: absolute;
   width: 100%;

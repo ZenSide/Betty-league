@@ -1,0 +1,63 @@
+<div class="bettyLeague-title">{{::listMatchCtrl.bettyLeague.name}}</div>
+
+<div class="list-match-view">
+    <ion-content delegate-handle="btContentHandle" class="bt-content step">
+        <table class="bt-modal__table bt-modal__table--list bt-text u-gutter-bottom-small">
+            <tr id="{{::showdown.id}}" ng-repeat-start="showdown in listMatchCtrl.showdowns" ng-class="listMatchCtrl.classRow(showdown)" ng-click="listMatchCtrl.toggleTooltip(showdown, true)">
+                <td>
+                    {{::showdown.smFixture.sm__time__startingAt__dateTime| date : 'longDate'}}
+                </td>
+                <td>
+                    {{::showdown.smFixture.smSeason.smLeague.sm__name}}
+                </td>
+                <td>
+                    {{::showdown.smFixture.homeTeam.sm__name}}
+                    <span class="u-inline-block">
+                        <bt-logo-team bt-size="20" bt-team="::showdown.smFixture.homeTeam"></bt-logo-team>
+                    </span>
+                </td>
+                <td>
+                    {{::showdown.smFixture.awayTeam.sm__name}}
+                    <span class="u-inline-block">
+                        <bt-logo-team bt-size="20" bt-team="::showdown.smFixture.awayTeam"></bt-logo-team>
+                    </span>
+                </td>
+            </tr>
+            <tr class="bt-tooltip-row" ng-class="listMatchCtrl.classRow(showdown)" ng-repeat-end ng-if="listMatchCtrl.openedTooltip == showdown.id">
+                <td colspan="4" class="bt-tooltip-col">
+                    <div class="bt-tooltip">
+                        <div class="u-pull-left">
+                            <bt-body-btn bt-ico="'fas fa-times'"
+                                         bt-btn-classes="'bt-action__btn--body-square bt-action__btn--body-small bt-action__btn--red'"
+                                         bt-action="listMatchCtrl.toggleTooltip(showdown, false)"
+                            >
+                            </bt-body-btn>
+                        </div>
+
+
+                        <div ng-if="listMatchCtrl.initialRange" class="u-pull-right">
+                            <bt-body-btn bt-ico="'fas fa-caret-right'"
+                                         bt-btn-classes="'bt-action__btn--body-square bt-action__btn--body-small bt-action__btn--green'"
+                                         bt-action="listMatchCtrl.goShowdown(showdown)"
+                            >
+                            </bt-body-btn>
+                        </div>
+
+                        <div class="u-pull-right u-gutter-right-small">
+                            <bt-body-btn bt-ico="'fas fa-info'"
+                                         bt-btn-classes="'bt-action__btn--body-square bt-action__btn--body-small bt-action__btn--blue'"
+                                         bt-action="listMatchCtrl.openOddDetail(showdown)"
+                            >
+                            </bt-body-btn>
+                        </div>
+
+
+                    </div>
+                </td>
+            </tr>
+            <tr>
+
+            </tr>
+        </table>
+    </ion-content>
+</div>

@@ -85,6 +85,13 @@
 .bt-action__btn--red .bt-action__facade {
   background-color: #fa393c;
 }
+.bt-action__btn--green {
+  background-color: #289172;
+  color: #267450;
+}
+.bt-action__btn--green .bt-action__facade {
+  background-color: #2BB289;
+}
 .bt-action__label {
   position: relative;
   display: inline-block;

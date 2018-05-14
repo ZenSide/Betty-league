@@ -1,7 +1,6 @@
 betty2App.controller('Step2Ctrl', function (BetApi, BtMessages, translations, $scope, $stateParams, BtNavigate, BtLoading, animation) {
 	var step2Ctrl = this;
 	BtLoading.endLoad();
-	step2Ctrl.stepId = $stateParams.stepId;
 
 	var checkForm = function () {
 		var withPenalty = $scope.showdownCtrl.showdown.smFixture.withPenalty;

@@ -67,8 +67,27 @@ betty2App.factory('BettyLeagueApi', function ($filter, $rootScope, ResourcesFact
 				reject(messages);
 				return;
 			}, noCache)
-		}
+		},
 
+		getSeasonScore: function (bettyLeagueId, resolve, reject, noCache) {
+			var seasonScore = BtLocalStorage.getObject('ScoreSeason' + bettyLeagueId);
+			if (seasonScore !== {} && !noCache) {
+				resolve(seasonScore['score']);
+				return;
+			}
+			ResourcesFactory.get('/api/betty_league/' + bettyLeagueId + '/user-scores', {
+				period: 'full_season'
+			}).then(function (data) {
+				BtLocalStorage.setObject('ScoreSeason' + bettyLeagueId, data);
+				console.log(data);
+				resolve(data['score']);
+				return;
+			}, function (messages) {
+				//error
+				reject(messages);
+				return;
+			}, noCache);
+		}
 	};
 	return BettyLeagueApi;
 });

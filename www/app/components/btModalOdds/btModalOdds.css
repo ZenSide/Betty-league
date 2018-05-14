@@ -65,3 +65,31 @@
   background-color: #59a4d0;
   color: #e6e6e6;
 }
+.bt-modal__table--list {
+  background-color: #e6e6e6;
+}
+.bt-modal__table--list tr {
+  border: 2px solid #e6e6e6;
+}
+.bt-modal__table--list tr.active {
+  background-color: #a1a1a1;
+  border-bottom: none;
+}
+.bt-modal__table--list tr.active.bt-tooltip-row {
+  border-top: none;
+}
+.bt-modal__table--list tr:not(.active).open-parie {
+  background-color: #fdcf21;
+}
+.bt-modal__table--list tr:not(.active).open-non-parie {
+  background-color: #0583d0;
+}
+.bt-modal__table--list tr:not(.active).closed {
+  background-color: #2BB289;
+}
+.bt-modal__table--list tr:not(.active).locked {
+  background-color: #fa393c;
+}
+.bt-modal__table--list tr:not(.active).reporte {
+  background-color: #c2c2c2;
+}

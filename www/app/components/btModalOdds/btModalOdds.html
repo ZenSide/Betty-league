@@ -30,8 +30,8 @@
 
             <table class="bt-modal__table bt-text u-gutter-bottom-small">
                 <tr>
-                    <th ng-if="$ctrl.btData.matchRetour" translate="SHOWDOWN.MODAL_ODD_DETAIL.QUALIF"></th>
-                    <th ng-if="!$ctrl.btData.matchRetour" translate="SHOWDOWN.MODAL_ODD_DETAIL.WINNER"></th>
+                    <th ng-if="$ctrl.btData.showdown.smFixture.matchRetour" translate="SHOWDOWN.MODAL_ODD_DETAIL.QUALIF"></th>
+                    <th ng-if="!$ctrl.btData.showdown.smFixture.matchRetour" translate="SHOWDOWN.MODAL_ODD_DETAIL.WINNER"></th>
                     <th translate="SHOWDOWN.MODAL_ODD_DETAIL.ODD"></th>
                     <th>
                         <span>% </span>
@@ -47,6 +47,9 @@
                         <span class="u-inline-block">
                             <bt-logo-team bt-size="20" bt-team="$ctrl.btData.homeTeam"></bt-logo-team>
                         </span>
+                    </td>
+                    <td class="bt-text-lg" ng-if="$ctrl.btData.bet.scoreOdd.showdown.homeWinOdd">
+                        {{$ctrl.btData.bet.scoreOdd.showdown.homeWinOdd}}
                     </td>
                     <td class="bt-text-lg" ng-if="$ctrl.btData.bet.scoreOdd.showdown.homeWinOdd">
                         {{$ctrl.btData.bet.scoreOdd.showdown.homeWinOdd}}
@@ -89,7 +92,7 @@
                 </tr>
 
                 <!--MATCH NUL-->
-                <tr ng-if="!$ctrl.btData.withPenalty">
+                <tr ng-if="!$ctrl.btData.showdown.smFixture.withPenalty">
                     <td translate="SHOWDOWN.MODAL_ODD_DETAIL.DRAW">
                     </td>
 
@@ -124,11 +127,11 @@
                         <span class="bt-text-md">
                         {{scoreOdd.homeScore}} - {{scoreOdd.awayScore}}
                         </span>
-                        <span ng-if="$ctrl.btData.matchRetour">
+                        <span ng-if="$ctrl.btData.showdown.smFixture.matchRetour">
                             (
-                                {{$ctrl.btData.aggregateVisitorScore + scoreOdd.homeScore}}
+                                {{$ctrl.btData.showdown.smFixture.aggregateVisitorteamScore + scoreOdd.homeScore}}
                                 -
-                                {{$ctrl.btData.aggregateLocalScore + scoreOdd.awayScore}}
+                                {{$ctrl.btData.showdown.smFixture.aggregateLocalteamScore + scoreOdd.awayScore}}
                             )
                         </span>
                     </td>

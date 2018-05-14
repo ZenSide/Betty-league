@@ -10,6 +10,30 @@
 .u-gutter-bottom-big {
   margin-bottom: 2rem !important;
 }
+.u-gutter-left-micro {
+  margin-left: 0.5rem !important;
+}
+.u-gutter-left-small {
+  margin-left: 1rem !important;
+}
+.u-gutter-left-regular {
+  margin-left: 1.5rem !important;
+}
+.u-gutter-left-big {
+  margin-left: 2rem !important;
+}
+.u-gutter-right-micro {
+  margin-right: 0.5rem !important;
+}
+.u-gutter-right-small {
+  margin-right: 1rem !important;
+}
+.u-gutter-right-regular {
+  margin-right: 1.5rem !important;
+}
+.u-gutter-right-big {
+  margin-right: 2rem !important;
+}
 .u-center-content {
   text-align: center!important;
   width: 100%!important;

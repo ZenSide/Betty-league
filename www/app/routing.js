@@ -66,7 +66,6 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
                             //go to world bettyleague
                             //go to the next unbet showdown
                             ShowdownApi.getNextOpenShowDown(bettyWorld.id, function (showdown) {
-
                                 BtNavigate.stateChange('goTop' ,'bettyleague.showdown.step0', {
                                     'bettyLeagueId' : bettyWorld.id,
                                     'showdownId' : showdown.id,
@@ -112,6 +111,15 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
                         })
                     });
                     return deferred.promise;
+                },
+                seasonScore: function seasonScore(BettyLeagueApi, $q, $stateParams) {
+                    var d = $q.defer();
+                    BettyLeagueApi.getSeasonScore($stateParams.bettyLeagueId, function (score) {
+                        d.resolve(score);
+                    }, function (messages) {
+                        d.reject(messages)
+                    });
+                    return d.promise;
                 }
             }
         })
@@ -191,7 +199,7 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
         })
     
         .state('bettyleague.showdown.step1', {
-            url: '/step1/:animDirection',
+                url: '/step1/:animDirection',
             params: {animDirection: null},
             templateUrl: 'app/pages/bettyleague/showdown/step1/step1.html',
             controller: 'Step1Ctrl',
@@ -210,7 +218,7 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
             }
         })
     
-        .state('bettyleague.showdown.step2', {
+        .state('bettyleague.showdown.step2'    , {
             url: '/step2/:animDirection',
             params: {animDirection: null},
             templateUrl: 'app/pages/bettyleague/showdown/step2/step2.html',
@@ -235,7 +243,7 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
             params: {animDirection: null},
             templateUrl: 'app/pages/bettyleague/showdown/step3/step3.html',
             controller: 'Step3Ctrl',
-            controllerAs: 'stepCtrl',
+            controllerAs: 'step3Ctrl',
             resolve: {
                 translations: function ($translate) {
                     return $translate([
@@ -247,6 +255,60 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
                 animation: function (BtNavigate, $stateParams) {
                     return BtNavigate.anim($stateParams.animDirection);
                 },
+            }
+        })
+
+        .state('listMatch', {
+            url: '/bettyleague/:bettyLeagueId/showdown/:showdownId/listmatch/:animDirection',
+            params: {animDirection: null},
+            templateUrl: 'app/pages/bettyleague/showdown/listMatch/listMatch.html',
+            controller: 'ListMatchCtrl',
+            controllerAs: 'listMatchCtrl',
+            resolve: {
+                translations: function ($translate) {
+                    return $translate([
+                        ]
+                    ).then(function (translations) {
+                        return translations
+                    });
+                },
+                animation: function (BtNavigate, $stateParams) {
+                    return BtNavigate.anim($stateParams.animDirection);
+                },
+                showdowns: function (ShowdownApi, $stateParams, $q, BtMessages, BtNavigate) {
+                    var deferred = $q.defer();
+                    ShowdownApi.getFullRange($stateParams.bettyLeagueId, function (fullrange) {
+                        deferred.resolve(fullrange);
+                    }, function (messages) {
+                        BtMessages.show(messages, null, function () {
+                            BtNavigate.stateChange(null, 'login');
+                        });
+                    });
+                    return deferred.promise;
+
+                },
+                bets: function (BetApi, $stateParams, $q, BtMessages, BtNavigate) {
+                    var deffered = $q.defer();
+                    BetApi.getFullRange($stateParams.bettyLeagueId, function (fullrange) {
+                        deffered.resolve(fullrange);
+                    }, function (messages) {
+                        BtMessages.show(messages, null, function () {
+                            BtNavigate.stateChange(null, 'login');
+                        });
+                    })
+                    return deffered.promise;
+                },
+                bettyLeague: function (BettyLeagueApi, BtNavigate, $stateParams, $q) {
+                    var deferred = $q.defer();
+                    BettyLeagueApi.getBettyLeague($stateParams.bettyLeagueId, function (bettyLeague) {
+                        deferred.resolve(bettyLeague);
+                    }, function (messages) {
+                        BtMessages.show(messages, null, function () {
+                            BtNavigate.stateChange(null, 'login');
+                        })
+                    });
+                    return deferred.promise;
+                }
             }
         })
 

@@ -1,6 +1,7 @@
 betty2App.controller('ShowdownCtrl', function (BtLoading, ScoreOddApi, BtMessages, $scope, $stateParams, showdown, bet, previousShowDownId, nextShowDownId) {
 	var showdownCtrl = this;
 	showdownCtrl.showdownId = $stateParams.showdownId;
+	$scope.bettyLeagueCtrl.showdownId = showdownCtrl.showdownId;
 	showdownCtrl.showdown = showdown;
 	showdownCtrl.bet = bet;
 
@@ -22,11 +23,8 @@ betty2App.controller('ShowdownCtrl', function (BtLoading, ScoreOddApi, BtMessage
 				'homeTeam' : showdownCtrl.showdown.smFixture.homeTeam,
 				'awayTeam' : showdownCtrl.showdown.smFixture.awayTeam,
 				'bet' : showdownCtrl.bet,
-				'matchRetour' : showdownCtrl.showdown.smFixture.matchRetour,
-				'withPenalty' : showdownCtrl.showdown.smFixture.withPenalty,
+				'showdown' : showdownCtrl.showdown,
 				'scoreOdds' : data,
-				'aggregateVisitorScore' : showdownCtrl.showdown.smFixture.aggregateVisitorteamScore,
-				'aggregateLocalScore' : showdownCtrl.showdown.smFixture.aggregateLocalteamScore
 			};
 			BtLoading.endLoad();
 			$scope.parentCtrl.showDetailCotesModal = true;
