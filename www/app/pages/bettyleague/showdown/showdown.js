@@ -1,4 +1,4 @@
-betty2App.controller('ShowdownCtrl', function (BtLoading, ScoreOddApi, BtMessages, $scope, $stateParams, showdown, bet, previousShowDownId, nextShowDownId) {
+betty2App.controller('ShowdownCtrl', function (UserApi, BtLoading, ScoreOddApi, BtMessages, $scope, $stateParams, showdown, bet, previousShowDownId, nextShowDownId) {
 	var showdownCtrl = this;
 	showdownCtrl.showdownId = $stateParams.showdownId;
 	$scope.bettyLeagueCtrl.showdownId = showdownCtrl.showdownId;
@@ -15,6 +15,10 @@ betty2App.controller('ShowdownCtrl', function (BtLoading, ScoreOddApi, BtMessage
 
 	showdownCtrl.previousShowDownId = previousShowDownId;
 	showdownCtrl.nextShowDownId = nextShowDownId;
+
+	showdownCtrl.logout = function () {
+		UserApi.logout();
+	};
 
 	showdownCtrl.openOddDetail  = function () {
 		BtLoading.startLoad();

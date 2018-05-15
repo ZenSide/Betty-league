@@ -10,15 +10,11 @@ betty2App.controller('BettyLeagueCtrl', function (seasonScore, $scope, $statePar
 
 	bettyLeagueCtrl.seasonScore = seasonScore;
 
-	bettyLeagueCtrl.logout = function () {
-		UserApi.logout();
-	};
-
 	bettyLeagueCtrl.goListMatch = function () {
 		BtNavigate.stateChange('goLeft' ,'listMatch', {
 			'bettyLeagueId' : $stateParams.bettyLeagueId,
 			'showdownId' : bettyLeagueCtrl.showdownId,
-			'animDirection' : '3right'
+			'animDirection' : 'fade'
 		});
 	}
 });
