@@ -28,6 +28,10 @@
   font-size: 1.4rem;
   font-family: "poppinsmedium", sans-serif;
 }
+.bt-text-md-bold {
+  font-size: 1.4rem;
+  font-family: "poppinsbold", sans-serif;
+}
 .bt-text-lg {
   font-size: 1.6rem;
   font-family: "poppinsmedium", sans-serif;

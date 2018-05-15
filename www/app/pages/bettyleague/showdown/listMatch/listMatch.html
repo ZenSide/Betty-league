@@ -6,6 +6,22 @@
             <tr id="{{::showdown.id}}" ng-repeat-start="showdown in listMatchCtrl.showdowns" ng-class="listMatchCtrl.classRow(showdown)" ng-click="listMatchCtrl.toggleTooltip(showdown, true)">
                 <td>
                     {{::showdown.smFixture.sm__time__startingAt__dateTime| date : 'longDate'}}
+                    <!--OPEN NON PARIE-->
+                    <div class="showdown-score showdown-score--open" ng-if="listMatchCtrl.extendedStatus(showdown) === 'open-non-parie'">
+                        {{showdown.smFixture.sm__time__startingAt__dateTime| date : 'shortTime'}}
+                    </div>
+                    <div class="showdown-score showdown-score--gold" ng-if="listMatchCtrl.extendedStatus(showdown) === 'open-parie'">
+                        {{showdown.smFixture.sm__time__startingAt__dateTime| date : 'shortTime'}}
+                    </div>
+                    <div class="showdown-score showdown-score--closed" ng-if="listMatchCtrl.extendedStatus(showdown) === 'closed'">
+                        {{showdown.smFixture.sm__scores__localteamScore}} - {{showdown.smFixture.sm__scores__visitorteamScore}}
+                    </div>
+                    <div class="showdown-score showdown-score--locked" ng-if="listMatchCtrl.extendedStatus(showdown) === 'locked'">
+                        {{showdown.smFixture.sm__scores__localteamScore}} - {{showdown.smFixture.sm__scores__visitorteamScore}}
+                    </div>
+                    <div class="showdown-score showdown-score--reporte" ng-if="listMatchCtrl.extendedStatus(showdown) === 'reporte'">
+                        {{showdown.smFixture.sm__scores__localteamScore}} - {{showdown.smFixture.sm__scores__visitorteamScore}}
+                    </div>
                 </td>
                 <td>
                     {{::showdown.smFixture.smSeason.smLeague.sm__name}}
@@ -22,7 +38,19 @@
                         <bt-logo-team bt-size="20" bt-team="::showdown.smFixture.awayTeam"></bt-logo-team>
                     </span>
                 </td>
-                <td ng-bind-html="listMatchCtrl.betCol(showdown)">
+                <td>
+                    <div ng-bind-html="listMatchCtrl.betCol(showdown)">
+                    </div>
+
+                    <div class="bt-text-md-bold u-text-gold" ng-if="listMatchCtrl.betResume(showdown).potentiel && listMatchCtrl.betResume(showdown).gain">
+                        + {{listMatchCtrl.betResume(showdown).gain}} ?
+                    </div>
+                    <div class="bt-text-md-bold u-text-green" ng-if="!listMatchCtrl.betResume(showdown).potentiel && listMatchCtrl.betResume(showdown).gain">
+                        + {{listMatchCtrl.betResume(showdown).gain}}
+                    </div>
+                    <div class="bt-text-md-bold u-text-red" ng-if="!listMatchCtrl.betResume(showdown).potentiel && listMatchCtrl.betResume(showdown).gain === 0">
+                        + 0
+                    </div>
                 </td>
             </tr>
             <tr class="bt-tooltip-row" ng-class="listMatchCtrl.classRow(showdown)" ng-repeat-end ng-if="listMatchCtrl.openedTooltip == showdown.id">

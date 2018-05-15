@@ -152,6 +152,187 @@ betty2App.factory('BetApi', function ($filter, ResourcesFactory, BtLocalStorage)
 			}
 
 			return response;
+		},
+
+		getMyBetResume: function (showdown, bet, status) {
+			var gain = 0;
+
+			var response = {
+				'potentiel': false,
+				'gain': gain,
+				'winner': null
+			};
+
+			//gain potentiel
+
+			//CLOSED : gain reel
+			if (bet && status === 'CLOSED') {
+				var winner = BetApi.getSmFixtureWinner(showdown.smFixture, showdown.smFixture.sm__scores__localteamScore, showdown.smFixture.sm__scores__visitorteamScore);
+				response.winner = winner;
+
+				//Check winner
+				if (bet.winner === winner) {
+					//GOOD WINNER !
+
+					if (winner === 'home') {
+						gain += bet.scoreOdd.showdown.homeWinOdd;
+					} else if (winner === 'away') {
+						gain += bet.scoreOdd.showdown.awayWinOdd;
+					} else if (winner === 'draw') {
+						gain += bet.scoreOdd.showdown.drawOdd;
+					}
+				} else {
+					//bad
+				}
+
+				//check score
+				if (bet.scoreOdd.homeScore === showdown.smFixture.sm__scores__localteamScore && bet.scoreOdd.awayScore === showdown.smFixture.sm__scores__visitorteamScore) {
+					//GOOD SCORE !!!
+					gain += bet.scoreOdd.odd;
+				} else {
+					//bad
+				}
+			} else if (bet) {
+				//gain potentiel
+				response.potentiel = true;
+				if (bet.winner === 'home') {
+					gain += bet.scoreOdd.showdown.homeWinOdd;
+				} else if (bet.winner === 'away') {
+					gain += bet.scoreOdd.showdown.awayWinOdd;
+				} else if (bet.winner === 'draw') {
+					gain += bet.scoreOdd.showdown.drawOdd;
+				}
+
+				gain += bet.scoreOdd.odd;
+			} else {
+				response.potentiel = true;
+			}
+
+			response.gain = gain;
+
+			return response;
+		},
+
+		getSmFixtureWinner: function (smFixture, betHomeScore, betAwayScore, returnPossibilities) {
+			var withPenalty = smFixture.withPenalty;
+			var aggregateVisitorScore = smFixture.aggregateVisitorteamScore;
+			var aggregateLocalScore = smFixture.aggregateLocalteamScore;
+
+			if (withPenalty) {
+				console.log('penalty');
+
+				//cas des matchs retour
+				console.log('match retour');
+				if (smFixture.matchRetour) {
+
+					//if score du cumul des deux matchs nuls
+					if ((aggregateVisitorScore + parseInt(betHomeScore)) == (aggregateLocalScore + parseInt(betAwayScore))) {
+
+						//plus de buts à exterieur pour home Team
+						if ((aggregateVisitorScore - parseInt(betHomeScore)) > (parseInt(betAwayScore) - aggregateLocalScore)) {
+							console.log('home');
+							if (returnPossibilities) {
+								return ['home'];
+							}
+							return 'home';
+
+
+							//plus de buts à exterieur pour away Team
+						} else if ((aggregateVisitorScore - parseInt(betHomeScore)) < (parseInt(betAwayScore) - aggregateLocalScore)) {
+							console.log('away');
+							if (returnPossibilities) {
+								return ['away'];
+							}
+							return 'away';
+
+							// vrai egalité
+						} else {
+							if (returnPossibilities) {
+								return ['home','away'];
+							}
+
+							if (smFixture.sm__scores__localteamPenScore > smFixture.sm__scores__visitorteamPenScore) {
+								return 'home';
+							} else if (smFixture.sm__scores__localteamPenScore < smFixture.sm__scores__visitorteamPenScore) {
+								return 'away';
+							}
+						}
+
+						//winner home
+					} else if ((aggregateVisitorScore + parseInt(betHomeScore)) > (aggregateLocalScore + parseInt(betAwayScore))) {
+						console.log('home');
+						if (returnPossibilities) {
+							return ['home'];
+						}
+						return 'home';
+						//winner away
+					} else if ((aggregateVisitorScore + parseInt(betHomeScore)) < (aggregateLocalScore + parseInt(betAwayScore))) {
+						console.log('away');
+						if (returnPossibilities) {
+							return ['away'];
+						}
+						return 'away';
+					}
+
+					//matchs avec penalty simples
+				} else {
+					//if score nul
+					if (parseInt(betHomeScore) == parseInt(betAwayScore)) {
+						console.log('draw');
+						if (returnPossibilities) {
+							return ['home','away'];
+						}
+
+						if (smFixture.sm__scores__localteamPenScore > smFixture.sm__scores__visitorteamPenScore) {
+							return 'home';
+						} else if (smFixture.sm__scores__localteamPenScore < smFixture.sm__scores__visitorteamPenScore) {
+							return 'away';
+						}
+						//winner home
+					} else if (parseInt(betHomeScore) > parseInt(betAwayScore)) {
+						console.log('home');
+						if (returnPossibilities) {
+							return ['home'];
+						}
+						return 'home';
+					} else if (parseInt(betHomeScore) < parseInt(betAwayScore)) {
+						console.log('away');
+						if (returnPossibilities) {
+							return ['away'];
+						}
+						return 'away';
+					}
+				}
+
+				//matchs sans penalty
+			} else {
+				console.log('sans penalty');
+
+				//draw
+				if (parseInt(betHomeScore) == parseInt(betAwayScore)) {
+					console.log('draw');
+					if (returnPossibilities) {
+						return ['draw'];
+					}
+					return 'draw';
+
+					//winner home
+				} else if (parseInt(betHomeScore) > parseInt(betAwayScore)) {
+					console.log('home');
+					if (returnPossibilities) {
+						return ['home'];
+					}
+					return 'home';
+
+					//winner away
+				} else if (parseInt(betHomeScore) < parseInt(betAwayScore)) {
+					console.log('away');
+					if (returnPossibilities) {
+						return ['away'];
+					}
+					return 'away';
+				}
+			}
 		}
 	};
 	return BetApi;

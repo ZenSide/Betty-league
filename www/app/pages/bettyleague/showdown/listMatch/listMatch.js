@@ -33,6 +33,11 @@ betty2App.controller('ListMatchCtrl', function ($timeout, $location, $ionicScrol
 		});
 	};
 
+	listMatchCtrl.extendedStatus = function (showdown) {
+		var bet = BetApi.getBetSync(bets, showdown.id);
+		return ShowdownApi.getShowdownExtendedStatus(showdown, bet);
+	};
+
 	listMatchCtrl.classRow = function (showdown) {
 		var bet = BetApi.getBetSync(bets, showdown.id);
 		var classes = ShowdownApi.getShowdownExtendedStatus(showdown, bet);
@@ -49,7 +54,7 @@ betty2App.controller('ListMatchCtrl', function ($timeout, $location, $ionicScrol
 		var resumee = BetApi.getMyBetResumee(bet, showdown);
 
 		if (!resumee) {
-			return 'X';
+			return "<span class=''><i class='far fa-times-circle'></i></span>";
 		}
 
 		var stringed = resumee.home + "-" + resumee.away;
@@ -59,6 +64,12 @@ betty2App.controller('ListMatchCtrl', function ($timeout, $location, $ionicScrol
 		}
 
 		return stringed;
+	};
+
+	listMatchCtrl.betResume = function (showdown) {
+		var bet = BetApi.getBetSync(bets, showdown.id);
+
+		return BetApi.getMyBetResume(showdown, bet, ShowdownApi.getShowdownStatus(showdown));
 	};
 
 	listMatchCtrl.openedTooltip = null;
@@ -71,8 +82,6 @@ betty2App.controller('ListMatchCtrl', function ($timeout, $location, $ionicScrol
 		}
 
 		console.log(listMatchCtrl.openedTooltip);
-
-
 	};
 
 	listMatchCtrl.openOddDetail = function (showdown) {
