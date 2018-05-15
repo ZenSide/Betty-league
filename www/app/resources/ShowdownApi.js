@@ -168,6 +168,43 @@ betty2App.factory('ShowdownApi', function ($q, BetApi, $filter, BettyLeagueApi, 
 				reject(messages);
 				return;
 			}, noCache)
+		},
+
+		getShowdownStatus: function (showdown) {
+			if (showdown.smFixture.sm__time__status === 'POSTP') {
+				var startdate = new Date(showdown.smFixture.sm__time__startingAt__dateTime);
+				var now = new Date().getTime();
+				var start = startdate.getTime();
+				var distance = start - now;
+				if (distance <= 0) {
+					return 'REPORTE';
+				} else {
+					return 'OPEN';
+				}
+			}
+
+			return showdown.smFixture.showdownStatus;
+		},
+
+		getShowdownExtendedStatus: function (showdown, bet) {
+			var status = ShowdownApi.getShowdownStatus(showdown);
+			var classes = '';
+
+			if (bet && status == 'OPEN') {
+				classes += 'open-parie';
+			} else if (status == 'OPEN') {
+				classes += 'open-non-parie';
+
+			} else if (status == 'CLOSED') {
+				classes += 'closed';
+
+			} else if (status == 'LOCKED') {
+				classes += 'locked';
+			} else if (status == 'REPORTE') {
+				classes += 'reporte';
+			}
+
+			return classes;
 		}
 
 	};

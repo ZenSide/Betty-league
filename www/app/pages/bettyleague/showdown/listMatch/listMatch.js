@@ -1,33 +1,17 @@
-betty2App.controller('ListMatchCtrl', function ($timeout, $location, $ionicScrollDelegate, bets, BetApi, ScoreOddApi, bettyLeague, showdowns, ShowdownApi, BetApi, BtMessages, translations, $scope, $stateParams, BtNavigate, BtLoading, animation) {
+betty2App.controller('ListMatchCtrl', function ($timeout, $location, $ionicScrollDelegate, bets, BetApi, ScoreOddApi, bettyLeague, showdowns, ShowdownApi, BtMessages, translations, $scope, $stateParams, BtNavigate, BtLoading, animation) {
 	var listMatchCtrl = this;
 
 	listMatchCtrl.bettyLeague = bettyLeague;
-	listMatchCtrl.showdowns = showdowns;
 
 	listMatchCtrl.initialRange = true;
 
 
+	$timeout(function () {
+		listMatchCtrl.showdowns = showdowns;
+	});
 
 	BtLoading.endLoad();
 	console.log(showdowns);
-
-	listMatchCtrl.sdStatus = function (showdown) {
-		//postponed
-		if (showdown.smFixture.sm__time__status === 'POSTP') {
-			var startdate = new Date(showdown.smFixture.sm__time__startingAt__dateTime);
-			var now = new Date().getTime();
-			var start = startdate.getTime();
-			var distance = start - now;
-			if (distance <= 0) {
-				return 'REPORTE';
-			} else {
-				return 'OPEN';
-			}
-		}
-
-		return showdown.smFixture.showdownStatus;
-	};
-
 
 	var scrollHandle = $ionicScrollDelegate.$getByHandle('btContentHandle');
 
@@ -41,7 +25,6 @@ betty2App.controller('ListMatchCtrl', function ($timeout, $location, $ionicScrol
 
 	listMatchCtrl.scrollTo($stateParams.showdownId);
 
-
 	listMatchCtrl.goShowdown = function (showdown) {
 		BtNavigate.stateChange('goRight' ,'bettyleague.showdown.step0', {
 			'bettyLeagueId' : $stateParams.bettyLeagueId,
@@ -51,29 +34,31 @@ betty2App.controller('ListMatchCtrl', function ($timeout, $location, $ionicScrol
 	};
 
 	listMatchCtrl.classRow = function (showdown) {
-		var status = listMatchCtrl.sdStatus(showdown);
-		var classes = '';
-
 		var bet = BetApi.getBetSync(bets, showdown.id);
-
-		if (bet && status == 'OPEN') {
-			classes += 'open-parie';
-		} else if (status == 'OPEN') {
-			classes += 'open-non-parie';
-
-		} else if (status == 'CLOSED') {
-			classes += 'closed';
-
-		} else if (status == 'LOCKED') {
-			classes += 'locked';
-		} else if (status == 'REPORTE') {
-			classes += 'reporte';
-		}
+		var classes = ShowdownApi.getShowdownExtendedStatus(showdown, bet);
 
 		if (showdown.id == listMatchCtrl.openedTooltip) {
 			return classes + ' active'
 		}
 		return classes;
+	};
+
+	listMatchCtrl.betCol = function (showdown) {
+		var bet = BetApi.getBetSync(bets, showdown.id);
+
+		var resumee = BetApi.getMyBetResumee(bet, showdown);
+
+		if (!resumee) {
+			return 'X';
+		}
+
+		var stringed = resumee.home + "-" + resumee.away;
+
+		if (resumee.totalHome && resumee.totalAway) {
+			stringed += "<br>("+resumee.totalHome + "-" + resumee.totalAway+")"
+		}
+
+		return stringed;
 	};
 
 	listMatchCtrl.openedTooltip = null;

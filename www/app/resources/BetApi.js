@@ -124,6 +124,34 @@ betty2App.factory('BetApi', function ($filter, ResourcesFactory, BtLocalStorage)
 				reject(messages);
 				return;
 			}, noCache)
+		},
+
+		getMyBetResumee: function (bet, showdown) {
+			if (!bet) {
+				return null;
+			}
+
+			var response = {
+				'home': '_',
+				'away': '_',
+				'totalHome': null,
+				'totalAway': null
+			};
+
+			if (bet.scoreOdd.homeScore !== null) {
+				response.home = bet.scoreOdd.homeScore;
+			}
+
+			if (bet.scoreOdd.awayScore !== null) {
+				response.away = bet.scoreOdd.awayScore;
+			}
+
+			if (showdown.smFixture.matchRetour) {
+				response.totalHome = showdown.smFixture.aggregateVisitorteamScore + bet.scoreOdd.homeScore;
+				response.totalAway = showdown.smFixture.aggregateLocalteamScore + bet.scoreOdd.awayScore;
+			}
+
+			return response;
 		}
 	};
 	return BetApi;

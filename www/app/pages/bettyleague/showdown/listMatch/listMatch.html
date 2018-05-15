@@ -22,9 +22,11 @@
                         <bt-logo-team bt-size="20" bt-team="::showdown.smFixture.awayTeam"></bt-logo-team>
                     </span>
                 </td>
+                <td ng-bind-html="listMatchCtrl.betCol(showdown)">
+                </td>
             </tr>
             <tr class="bt-tooltip-row" ng-class="listMatchCtrl.classRow(showdown)" ng-repeat-end ng-if="listMatchCtrl.openedTooltip == showdown.id">
-                <td colspan="4" class="bt-tooltip-col">
+                <td colspan="5" class="bt-tooltip-col">
                     <div class="bt-tooltip">
                         <div class="u-pull-left">
                             <bt-body-btn bt-ico="'fas fa-times'"
