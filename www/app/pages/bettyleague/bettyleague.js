@@ -17,4 +17,12 @@ betty2App.controller('BettyLeagueCtrl', function (seasonScore, $scope, $statePar
 			'animDirection' : 'fade'
 		});
 	}
+
+	bettyLeagueCtrl.goRanking = function () {
+		BtNavigate.stateChange('goLeft' ,'ranking', {
+			'bettyLeagueId' : $stateParams.bettyLeagueId,
+			'showdownId' : bettyLeagueCtrl.showdownId,
+			'animDirection' : 'fade'
+		});
+	}
 });

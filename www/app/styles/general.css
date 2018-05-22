@@ -16,6 +16,9 @@ body {
   padding-left: 1rem;
   padding-right: 1rem;
 }
+.bt-content.ranking {
+  top: 15rem;
+}
 .col-magic {
   flex: 0 0 20px;
   max-width: 50%;

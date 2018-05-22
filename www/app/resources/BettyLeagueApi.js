@@ -87,6 +87,18 @@ betty2App.factory('BettyLeagueApi', function ($filter, $rootScope, ResourcesFact
 				reject(messages);
 				return;
 			}, noCache);
+		},
+
+		getRanking: function (bettyLeagueId, params, resolve, reject) {
+			console.log('pouet');
+
+			ResourcesFactory.get('/api/betty_league/' + bettyLeagueId + '/ranking', params).then(function (data) {
+				resolve(data);
+				return;
+			}, function (messages) {
+				reject(messages);
+				return;
+			});
 		}
 	};
 	return BettyLeagueApi;

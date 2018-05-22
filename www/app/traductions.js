@@ -109,6 +109,12 @@ var translations = {
                 "PERCENT" : "des paris",
                 "SCORE" : "Score exacte"
             }
+        },
+        RANKING : {
+            "full_season": "Saison",
+            "half_season": "Mi Saison",
+            "for_rounds": "Mois",
+            "round": "Journée"
         }
     }
 }

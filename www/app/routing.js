@@ -261,7 +261,7 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
         .state('listMatch', {
             url: '/bettyleague/:bettyLeagueId/showdown/:showdownId/listmatch/:animDirection',
             params: {animDirection: null},
-            templateUrl: 'app/pages/bettyleague/showdown/listMatch/listMatch.html',
+            templateUrl: 'app/pages/listMatch/listMatch.html',
             controller: 'ListMatchCtrl',
             controllerAs: 'listMatchCtrl',
             resolve: {
@@ -302,6 +302,51 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
                     var deferred = $q.defer();
                     BettyLeagueApi.getBettyLeague($stateParams.bettyLeagueId, function (bettyLeague) {
                         deferred.resolve(bettyLeague);
+                    }, function (messages) {
+                        BtMessages.show(messages, null, function () {
+                            BtNavigate.stateChange(null, 'login');
+                        })
+                    });
+                    return deferred.promise;
+                }
+            }
+        })
+    
+        .state('ranking', {
+            url: '/bettyleague/:bettyLeagueId/showdown/:showdownId/ranking/:animDirection',
+            params: {animDirection: null},
+            templateUrl: 'app/pages/ranking/ranking.html',
+            controller: 'RankingCtrl',
+            controllerAs: 'rankingCtrl',
+            resolve: {
+                translations: function ($translate) {
+                    return $translate([
+                        ]
+                    ).then(function (translations) {
+                        return translations
+                    });
+                },
+                animation: function (BtNavigate, $stateParams) {
+                    return BtNavigate.anim($stateParams.animDirection);
+                },
+                bettyLeague: function (BettyLeagueApi, BtNavigate, $stateParams, $q) {
+                    var deferred = $q.defer();
+                    BettyLeagueApi.getBettyLeague($stateParams.bettyLeagueId, function (bettyLeague) {
+                        deferred.resolve(bettyLeague);
+                    }, function (messages) {
+                        BtMessages.show(messages, null, function () {
+                            BtNavigate.stateChange(null, 'login');
+                        })
+                    });
+                    return deferred.promise;
+                },
+                ranking: function (BettyLeagueApi, BtNavigate, $stateParams, $q) {
+                    var deferred = $q.defer();
+                    BettyLeagueApi.getRanking($stateParams.bettyLeagueId, {
+                        'period': 'full_season'
+                    }, function (ranking) {
+                        console.log('hop');
+                        deferred.resolve(ranking);
                     }, function (messages) {
                         BtMessages.show(messages, null, function () {
                             BtNavigate.stateChange(null, 'login');

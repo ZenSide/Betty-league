@@ -10,10 +10,11 @@
     >
     </bt-body-btn>
     <bt-body-btn bt-ico="'icon-bty-ico-coin'"
-                 bt-content="bettyLeagueCtrl.seasonScore"
+                 bt-content="bettyLeagueCtrl.seasonScore | number : 2"
                  bt-btn-classes="'bt-action__btn--body-small u-pull-right bt-action__btn--gold'"
                  bt-disabled=""
                  bt-submit-form="loginformId"
+                 bt-action="bettyLeagueCtrl.goRanking()"
     >
     </bt-body-btn>
     <div class="u-clearfix"></div>

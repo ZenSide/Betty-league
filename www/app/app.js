@@ -43,10 +43,7 @@ betty2App.run(function($http, $ionicPlatform, $cordovaNetwork, $rootScope, $time
       StatusBar.styleDefault();
     }
 
-    $translate(['MESSAGES.NOCON']).then(function (translations) {
-
-      //Network listener
-    });
+    console.log('ready');
   });
 }).config(function ($ionicConfigProvider) {
   $ionicConfigProvider.scrolling.jsScrolling(false);

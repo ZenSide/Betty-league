@@ -42,6 +42,10 @@ betty2App.factory('UserApi', function (BtLoading, $rootScope, $cordovaFacebook, 
 			});
 		},
 
+		getUser: function () {
+			return BtLocalStorage.getObject('User');
+		},
+
 		fbLogin: function (resolve, reject) {
 			$cordovaFacebook.login(['public_profile']).then(function (response) {
 				var authtoken = response.authResponse.accessToken;
