@@ -23,7 +23,7 @@
             </tr>
             <tr>
                 <td class="bt-text-md-medium ranking-dashboard__description active" colspan="4">
-                    <span class="u-pull-left">
+                    <span class="u-pull-left" ng-if="rankingCtrl.canIPrev(rankingCtrl.ranking)">
                          <bt-body-btn bt-ico="'fas fa-caret-left'"
                                       bt-content=" "
                                       bt-btn-classes="'bt-action__btn--body-square bt-action__btn--body-small u-pull-left bt-action__btn--blue'"
@@ -51,7 +51,7 @@
                         {{rankingCtrl.ranking.roundNb}}
                     </span>
 
-                     <span class="u-pull-right">
+                     <span class="u-pull-right" ng-if="rankingCtrl.canIPrev(rankingCtrl.ranking, true)">
                          <bt-body-btn bt-ico="'fas fa-caret-right'"
                                       bt-content=" "
                                       bt-btn-classes="'bt-action__btn--body-square bt-action__btn--body-small u-pull-left bt-action__btn--blue'"

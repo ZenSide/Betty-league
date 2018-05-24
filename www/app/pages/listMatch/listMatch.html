@@ -3,7 +3,23 @@
 <div class="list-match-view">
     <ion-content delegate-handle="btContentHandle" class="bt-content step">
         <table class="bt-modal__table bt-modal__table--list bt-text u-gutter-bottom-small">
-            <tr id="{{::showdown.id}}" ng-repeat-start="showdown in listMatchCtrl.showdowns" ng-class="listMatchCtrl.classRow(showdown)" ng-click="listMatchCtrl.toggleTooltip(showdown, true)">
+            <tr ng-repeat-start="showdown in listMatchCtrl.showdowns" ng-if="listMatchCtrl.showdowns[$index - 1].bettyRound.roundNb !== showdown.bettyRound.roundNb">
+                <td colspan="5" class="bettyLeague-title-lg bettyLeague-title--grey">
+                    <span ng-if="listMatchCtrl.showdowns[$index - 1].bettyRound.seasonNb !== showdown.bettyRound.seasonNb" colspan="5">
+                        <span translate="RANKING.full_season"></span> {{showdown.bettyRound.seasonNb}} -
+                    </span>
+                    <span ng-if="listMatchCtrl.showdowns[$index - 1].bettyRound.halfSeasonNb !== showdown.bettyRound.halfSeasonNb" colspan="5">
+                        <span translate="RANKING.half_season"></span> {{showdown.bettyRound.halfSeasonNb}} -
+                    </span>
+                    <span ng-if="listMatchCtrl.showdowns[$index - 1].bettyRound.fourRoundsNb !== showdown.bettyRound.fourRoundsNb" colspan="5">
+                        <span translate="RANKING.for_rounds"></span> {{showdown.bettyRound.fourRoundsNb}} -
+                    </span>
+                    <span>
+                        <span translate="RANKING.round"></span> {{showdown.bettyRound.roundNb}}
+                    </span>
+                </td>
+            </tr>
+            <tr id="{{::showdown.id}}" ng-class="listMatchCtrl.classRow(showdown)" ng-click="listMatchCtrl.toggleTooltip(showdown, true)">
                 <td>
                     {{::showdown.smFixture.sm__time__startingAt__dateTime| date : 'longDate'}}
                     <!--OPEN NON PARIE-->
@@ -53,7 +69,7 @@
                     </div>
                 </td>
             </tr>
-            <tr class="bt-tooltip-row" ng-class="listMatchCtrl.classRow(showdown)" ng-repeat-end ng-if="listMatchCtrl.openedTooltip == showdown.id">
+            <tr ng-repeat-end class="bt-tooltip-row" ng-class="listMatchCtrl.classRow(showdown)" ng-if="listMatchCtrl.openedTooltip == showdown.id">
                 <td colspan="5" class="bt-tooltip-col">
                     <div class="bt-tooltip">
                         <div class="u-pull-left">
@@ -82,9 +98,6 @@
                         </div>
                     </div>
                 </td>
-            </tr>
-            <tr>
-
             </tr>
         </table>
     </ion-content>

@@ -7,6 +7,18 @@
   padding: 0.5rem 1.5rem 0.5rem 1.5rem;
   text-transform: uppercase;
 }
+.bettyLeague-title-lg {
+  background-color: #0583d0;
+  color: #e6e6e6;
+  font-family: "quicksandbold", sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+  text-transform: uppercase;
+}
+.bettyLeague-title--grey {
+  background-color: #a1a1a1;
+}
 .bettyLeague-header {
   padding: 1rem 1.5rem 0.5rem 1.5rem;
 }
