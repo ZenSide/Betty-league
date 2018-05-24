@@ -29,26 +29,24 @@
                 </span>
                 </div>
                 <div class="showdown-summary__score">
-                    <!--OPEN NON PARIE-->
-                <span ng-if="!showdownCtrl.bet && step0Ctrl.sdStatus() === 'OPEN'" class="bt-text-lg showdown-score showdown-score--open">
-                    {{showdownCtrl.showdown.smFixture.sm__time__startingAt__dateTime| date : 'shortTime'}}
-                </span>
-                    <!--OPEN PARIE-->
-                <span ng-if="showdownCtrl.bet && step0Ctrl.sdStatus() === 'OPEN'" class="bt-text-lg showdown-score showdown-score--gold">
-                    {{showdownCtrl.showdown.smFixture.sm__time__startingAt__dateTime| date : 'shortTime'}}
-                </span>
-                    <!--LOCKED-->
-                <span ng-if="step0Ctrl.sdStatus() === 'LOCKED'" class="bt-text-lg showdown-score showdown-score--locked">
-                    {{showdownCtrl.showdown.smFixture.sm__scores__localteamScore}} - {{showdownCtrl.showdown.smFixture.sm__scores__visitorteamScore}}
-                </span>
-                    <!--CLOSED-->
-                <span ng-if="step0Ctrl.sdStatus() === 'CLOSED'" class="bt-text-lg showdown-score showdown-score--closed">
-                    {{showdownCtrl.showdown.smFixture.sm__scores__localteamScore}} - {{showdownCtrl.showdown.smFixture.sm__scores__visitorteamScore}}
-                </span>
-                    <!--REPORTE-->
-                <span ng-if="step0Ctrl.sdStatus() === 'REPORTE'" class="bt-text-lg showdown-score showdown-score--reporte">
-                    {{showdownCtrl.showdown.smFixture.sm__scores__localteamScore}} - {{showdownCtrl.showdown.smFixture.sm__scores__visitorteamScore}}
-                </span>
+                    <span ng-class="showdownCtrl.extendedStatus(showdownCtrl.showdown, showdownCtrl.bet)"  class="bt-text-lg showdown-score">
+                        <span ng-if="step0Ctrl.sdStatus() === 'OPEN'">
+                            {{showdownCtrl.showdown.smFixture.sm__time__startingAt__dateTime| date : 'shortTime'}}
+                        </span>
+                            <!--LOCKED-->
+                        <span ng-if="step0Ctrl.sdStatus() === 'LOCKED'">
+                            {{showdownCtrl.showdown.smFixture.sm__scores__localteamScore}} - {{showdownCtrl.showdown.smFixture.sm__scores__visitorteamScore}}
+                        </span>
+                            <!--CLOSED-->
+                        <span ng-if="step0Ctrl.sdStatus() === 'CLOSED'">
+                            {{showdownCtrl.showdown.smFixture.sm__scores__localteamScore}} - {{showdownCtrl.showdown.smFixture.sm__scores__visitorteamScore}}
+                        </span>
+                            <!--REPORTE-->
+                        <span ng-if="step0Ctrl.sdStatus() === 'REPORTE'">
+                            {{showdownCtrl.showdown.smFixture.sm__scores__localteamScore}} - {{showdownCtrl.showdown.smFixture.sm__scores__visitorteamScore}}
+                        </span>
+                    </span>
+
                 </div>
                 <div class="showdown-summary__awayTeam">
                 <span class="showdown-summary__logo">
@@ -87,7 +85,7 @@
         <!--open-->
         <div class="row" ng-if="step0Ctrl.sdStatus() === 'OPEN'">
             <div class="col u-text-left">
-                <span class="bt-showdown-status bt-text-md-medium u-text-blue u-text-uppercase" translate="SHOWDOWN.OPEN_BET"></span>
+                <span class="bt-showdown-status bt-text-md-medium u-text-green u-text-uppercase" translate="SHOWDOWN.OPEN_BET"></span>
             </div>
             <div class="col u-text-right">
                 <bt-count-down bt-start-date="showdownCtrl.showdown.smFixture.sm__time__startingAt__dateTime"></bt-count-down>
@@ -97,7 +95,7 @@
         <!--LOCKED-->
         <div class="row" ng-if="step0Ctrl.sdStatus() === 'CLOSED'">
             <div class="col u-text-center">
-                <span class="bt-showdown-status bt-text-md-medium u-text-green u-text-uppercase" translate="SHOWDOWN.CLOSED"></span>
+                <span class="bt-showdown-status bt-text-md-medium u-text-blue u-text-uppercase" translate="SHOWDOWN.CLOSED"></span>
             </div>
         </div>
 
@@ -117,7 +115,7 @@
     </div>
 
     <!--DEJA PARIE-->
-    <div ng-if="showdownCtrl.bet" class="bt-bet-summary">
+    <div ng-if="showdownCtrl.bet" class="bt-bet-summary u-gutter-bottom-regular">
         <div class="bet-bet-summary__head row row-center">
             <div class="col u-text-left bt-text-md" translate="SHOWDOWN.BET_SUMMARY.MY_BETS"></div>
             <div class="col u-text-right">

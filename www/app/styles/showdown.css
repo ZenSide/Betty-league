@@ -105,13 +105,28 @@
   background-color: #0583d0;
   margin: 0 0.5rem 0 0.5rem;
 }
-.showdown-score--locked {
-  background-color: #fa393c;
+.showdown-score.open-parie {
+  background: repeating-linear-gradient(125deg, #2BB289, #2BB289 80%, #fdcf21 80%, #fdcf21 100%);
 }
-.showdown-score--closed {
+.showdown-score.open {
   background-color: #2BB289;
 }
-.showdown-score--reporte {
+.showdown-score.closed-parie {
+  background: repeating-linear-gradient(125deg, #0583d0, #0583d0 80%, #fdcf21 80%, #fdcf21 100%);
+}
+.showdown-score.closed {
+  background-color: #0583d0;
+}
+.showdown-score.locked-parie {
+  background: repeating-linear-gradient(125deg, #fa393c, #fa393c 80%, #fdcf21 80%, #fdcf21 100%);
+}
+.showdown-score.locked {
+  background-color: #fa393c;
+}
+.showdown-score.reporte-parie {
+  background: repeating-linear-gradient(125deg, #a1a1a1, #a1a1a1 80%, #fdcf21 80%, #fdcf21 100%);
+}
+.showdown-score.report {
   background-color: #a1a1a1;
 }
 .showdown-score--gold {

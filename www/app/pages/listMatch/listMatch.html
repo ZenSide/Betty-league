@@ -22,22 +22,21 @@
             <tr id="{{::showdown.id}}" ng-class="listMatchCtrl.classRow(showdown)" ng-click="listMatchCtrl.toggleTooltip(showdown, true)">
                 <td>
                     {{::showdown.smFixture.sm__time__startingAt__dateTime| date : 'longDate'}}
-                    <!--OPEN NON PARIE-->
-                    <div class="showdown-score showdown-score--open" ng-if="listMatchCtrl.extendedStatus(showdown) === 'open-non-parie'">
-                        {{showdown.smFixture.sm__time__startingAt__dateTime| date : 'shortTime'}}
-                    </div>
-                    <div class="showdown-score showdown-score--gold" ng-if="listMatchCtrl.extendedStatus(showdown) === 'open-parie'">
-                        {{showdown.smFixture.sm__time__startingAt__dateTime| date : 'shortTime'}}
-                    </div>
-                    <div class="showdown-score showdown-score--closed" ng-if="listMatchCtrl.extendedStatus(showdown) === 'closed'">
-                        {{showdown.smFixture.sm__scores__localteamScore}} - {{showdown.smFixture.sm__scores__visitorteamScore}}
-                    </div>
-                    <div class="showdown-score showdown-score--locked" ng-if="listMatchCtrl.extendedStatus(showdown) === 'locked'">
-                        {{showdown.smFixture.sm__scores__localteamScore}} - {{showdown.smFixture.sm__scores__visitorteamScore}}
-                    </div>
-                    <div class="showdown-score showdown-score--reporte" ng-if="listMatchCtrl.extendedStatus(showdown) === 'reporte'">
-                        {{showdown.smFixture.sm__scores__localteamScore}} - {{showdown.smFixture.sm__scores__visitorteamScore}}
-                    </div>
+
+                     <span ng-class="listMatchCtrl.extendedStatus(showdown)"  class="bt-text-medium showdown-score">
+                        <span ng-if="listMatchCtrl.getShowdownStatus(showdown) === 'OPEN'">
+                            {{showdown.smFixture.sm__time__startingAt__dateTime| date : 'shortTime'}}
+                        </span>
+                        <span ng-if="listMatchCtrl.getShowdownStatus(showdown) === 'CLOSED'">
+                            {{showdown.smFixture.sm__scores__localteamScore}} - {{showdown.smFixture.sm__scores__visitorteamScore}}
+                        </span>
+                        <span ng-if="listMatchCtrl.getShowdownStatus(showdown) === 'LOCKED'">
+                            {{showdown.smFixture.sm__scores__localteamScore}} - {{showdown.smFixture.sm__scores__visitorteamScore}}
+                        </span>
+                            <span ng-if="listMatchCtrl.getShowdownStatus(showdown) === 'REPORTE'">
+                            {{showdown.smFixture.sm__scores__localteamScore}} - {{showdown.smFixture.sm__scores__visitorteamScore}}
+                        </span>
+                    </span>
                 </td>
                 <td>
                     {{::showdown.smFixture.smSeason.smLeague.sm__name}}
@@ -55,7 +54,7 @@
                     </span>
                 </td>
                 <td>
-                    <div ng-bind-html="listMatchCtrl.betCol(showdown)">
+                    <div ng-if="listMatchCtrl.betCol(showdown)" class="bt-text-medium showdown-score showdown-score--gold" ng-bind-html="listMatchCtrl.betCol(showdown)">
                     </div>
 
                     <div class="bt-text-md-bold u-text-gold" ng-if="listMatchCtrl.betResume(showdown).potentiel && listMatchCtrl.betResume(showdown).gain">

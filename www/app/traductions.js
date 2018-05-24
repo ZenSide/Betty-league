@@ -115,6 +115,12 @@ var translations = {
             "half_season": "Mi Saison",
             "for_rounds": "Mois",
             "round": "Journée"
+        },
+        COUNTDOWN : {
+            d:'j',
+            h:'h',
+            m:'m',
+            s:'s'
         }
     }
 }

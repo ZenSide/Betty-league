@@ -38,6 +38,10 @@ betty2App.controller('ListMatchCtrl', function ($timeout, $location, $ionicScrol
 		return ShowdownApi.getShowdownExtendedStatus(showdown, bet);
 	};
 
+	listMatchCtrl.getShowdownStatus = function (showdown) {
+		return ShowdownApi.getShowdownStatus(showdown);
+	};
+
 	listMatchCtrl.classRow = function (showdown) {
 		var bet = BetApi.getBetSync(bets, showdown.id);
 		var classes = ShowdownApi.getShowdownExtendedStatus(showdown, bet);
@@ -54,7 +58,7 @@ betty2App.controller('ListMatchCtrl', function ($timeout, $location, $ionicScrol
 		var resumee = BetApi.getMyBetResumee(bet, showdown);
 
 		if (!resumee) {
-			return "<span class=''><i class='far fa-times-circle'></i></span>";
+			return null;
 		}
 
 		var stringed = resumee.home + "-" + resumee.away;

@@ -192,14 +192,25 @@ betty2App.factory('ShowdownApi', function ($q, BetApi, $filter, BettyLeagueApi, 
 
 			if (bet && status == 'OPEN') {
 				classes += 'open-parie';
+
 			} else if (status == 'OPEN') {
-				classes += 'open-non-parie';
+				classes += 'open';
+
+			} else if (bet && status == 'CLOSED') {
+				classes += 'closed-parie';
 
 			} else if (status == 'CLOSED') {
 				classes += 'closed';
 
+			} else if (bet && status == 'LOCKED') {
+				classes += 'locked-parie';
+
 			} else if (status == 'LOCKED') {
 				classes += 'locked';
+
+			} else if (bet && status == 'REPORTE') {
+				classes += 'reporte-parie';
+
 			} else if (status == 'REPORTE') {
 				classes += 'reporte';
 			}
