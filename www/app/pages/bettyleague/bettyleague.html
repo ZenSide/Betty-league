@@ -1,22 +1,31 @@
-<div class="bettyLeague-title">{{::bettyLeagueCtrl.bettyLeague.name}}</div>
-
 <div class="bettyLeague-header">
-    <bt-body-btn bt-ico="'fas fa-list-ul'"
-                 bt-content=" "
-                 bt-btn-classes="'bt-action__btn--body-square bt-action__btn--body-small u-pull-left bt-action__btn--blue'"
-                 bt-disabled=""
-                 bt-submit-form=""
-                 bt-action="bettyLeagueCtrl.goListMatch()"
-    >
-    </bt-body-btn>
-    <bt-body-btn bt-ico="'icon-bty-ico-coin'"
-                 bt-content="bettyLeagueCtrl.seasonScore | number : 2"
-                 bt-btn-classes="'bt-action__btn--body-small u-pull-right bt-action__btn--gold'"
-                 bt-disabled=""
-                 bt-submit-form="loginformId"
-                 bt-action="bettyLeagueCtrl.goRanking()"
-    >
-    </bt-body-btn>
+    <div class="bettyLeague-title-lg">
+        {{::bettyLeagueCtrl.bettyLeague.name}}
+    </div>
+    <div class="row">
+        <div class="col">
+            <bt-body-btn bt-ico="'fas fa-list-ul'"
+                         bt-content="'SHOWDOWN.CALENDAR'"
+                         bt-btn-classes="'bt-action__btn--body-full bt-action__btn--body-small u-pull-left bt-action__btn--green'"
+                         bt-disabled=""
+                         bt-submit-form=""
+                         bt-action="bettyLeagueCtrl.goListMatch()"
+            >
+            </bt-body-btn>
+        </div>
+        <div class="col">
+            <bt-body-btn bt-ico="'coin-coin'"
+                         bt-content="bettyLeagueCtrl.seasonScore | number : 2"
+                         bt-btn-classes="'bt-action__btn--body-full bt-action__btn--body-small u-pull-right bt-action__btn--gold'"
+                         bt-disabled=""
+                         bt-submit-form="loginformId"
+                         bt-action="bettyLeagueCtrl.goRanking()"
+            >
+            </bt-body-btn>
+        </div>
+    </div>
+
+
     <div class="u-clearfix"></div>
 </div>
 

@@ -24,5 +24,12 @@
   background-color: #a1a1a1;
 }
 .bettyLeague-header {
-  padding: 1rem 1.5rem 0.5rem 1.5rem;
+  background-color: #0583d0;
+  padding: 0 1rem 0.5rem 1rem;
+}
+.bettyLeague-header .col:first-child {
+  padding-right: 0.5rem;
+}
+.bettyLeague-header .col:last-child {
+  padding-left: 0.5rem;
 }

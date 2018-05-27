@@ -8,7 +8,8 @@
             ng-disabled="$ctrl.btDisabled">
         <div class="bt-action__facade">
             <span class="bt-action__content" translate="{{$ctrl.btContent}}"></span>
-            <i class="bt-action__ico {{$ctrl.icoResult}}" ></i>
+            <i ng-if="$ctrl.icoResult !== 'coin-coin'" class="bt-action__ico {{$ctrl.icoResult}}" ></i>
+            <img ng-if="$ctrl.icoResult === 'coin-coin'" class="bt-coin" src="img/betty-coin_75x75.png">
         </div>
     </button>
 </div>

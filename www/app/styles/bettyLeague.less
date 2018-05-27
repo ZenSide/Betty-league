@@ -30,5 +30,15 @@
 }
 
 .bettyLeague-header {
-  padding: @margin-small @margin-medium @margin-micro @margin-medium;
+  background-color: @light-blue;
+  padding: 0 @margin-small @margin-micro @margin-small;
+
+  .col {
+    &:first-child {
+      padding-right: @margin-micro;
+    }
+    &:last-child {
+      padding-left: @margin-micro;
+    }
+  }
 }

@@ -63,6 +63,12 @@
   will-change: transform;
   transition: transform 75ms;
 }
+.bt-action__btn .bt-action__facade .bt-coin {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  margin-top: -1.75rem;
+}
 .bt-action__btn:active:not(.bt-action__facade--no-press),
 .bt-action__btn.bt-action__btn--active {
   color: #e6e6e6;

@@ -1,5 +1,24 @@
 .fixture-block {
-  padding: 1rem;
+  padding: 0 1rem 0 1rem;
   background-color: #e6e6e6;
   text-align: center;
+}
+.bet-mark {
+  position: absolute;
+  font-size: 1.4rem;
+  top: -0.5rem;
+  right: 1.7rem;
+}
+.bet-mark--right {
+  left: 1.7rem;
+}
+.bet-mark--score {
+  top: 0.5rem;
+  left: 1rem;
+  text-align: left;
+}
+.bet-mark--center {
+  top: -0.5rem;
+  text-align: center;
+  left: 1.5rem;
 }

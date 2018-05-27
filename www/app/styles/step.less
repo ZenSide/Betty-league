@@ -1,7 +1,30 @@
 @import "../../less/constant";
 
 .fixture-block {
-  padding: @margin-small;
+  padding: 0 @margin-small 0 @margin-small;
   background-color: @white;
   text-align: center;
+}
+
+.bet-mark {
+  position: absolute;
+  font-size: 1.4rem;
+  top: -0.5rem;
+  right: 1.7rem;
+}
+
+.bet-mark--right {
+  left: 1.7rem;
+}
+
+.bet-mark--score {
+  top: 0.5rem;
+  left: 1rem;
+  text-align: left;
+}
+
+.bet-mark--center{
+  top: -0.5rem;
+  text-align: center;
+  left: 1.5rem;
 }

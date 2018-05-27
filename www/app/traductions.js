@@ -81,6 +81,7 @@ var translations = {
             OPEN_BET : "paris ouverts",
             REPORTE : "reporté",
             CLOSED : "match terminé",
+            CALENDAR : "Calendrier",
             LIVE : "LIVE",
             POT_GAIN : 'Gain potentiel',
             GAIN : 'Gain :',

@@ -3,16 +3,8 @@
   bottom: 70px;
 }
 .showdown-view {
-  top: 79px;
+  top: 71px;
   bottom: 0;
-}
-.step-view {
-  top: 50px;
-  bottom: 0;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 .ranking-view {
   padding-top: 0.5rem;

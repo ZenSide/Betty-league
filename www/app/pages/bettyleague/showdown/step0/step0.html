@@ -1,216 +1,242 @@
-<ion-content delegate-handle="btContentHandle" class="bt-content step">
-    <div class="fixture-block">
-        <div class="bt-text-md u-gutter-bottom-micro">
-            {{showdownCtrl.showdown.smFixture.sm__time__startingAt__dateTime| date : 'longDate'}}
-        </div>
+<div class="fixture-block">
+    <div class="bt-text-md-medium">
+        {{showdownCtrl.showdown.smFixture.sm__time__startingAt__dateTime| date : 'longDate'}}
+    </div>
 
-        <!--//aggregates-->
-        <div ng-if="showdownCtrl.showdown.smFixture.matchRetour" class="row row-center col-nopadding u-gutter-bottom-micro">
-            <div class="col-nopadding col u-text-right bt-text-nano"><span translate="SHOWDOWN.AGGREGATE_SCORE"></span>&nbsp;</div>
-            <div class="col-nopadding col col-10 col-magic u-nowrap u-text-center bt-text-tiny-medium">
-                (
-                {{showdownCtrl.showdown.smFixture.aggregateVisitorteamScore + showdownCtrl.showdown.smFixture.sm__scores__localteamScore}}
-                -
-                {{showdownCtrl.showdown.smFixture.aggregateLocalteamScore + showdownCtrl.showdown.smFixture.sm__scores__visitorteamScore}}
-                )
+    <!--//aggregates-->
+    <div ng-if="showdownCtrl.showdown.smFixture.matchRetour" class="row row-center col-nopadding u-gutter-bottom-micro">
+        <div class="col-nopadding col u-text-right bt-text-nano"><span translate="SHOWDOWN.AGGREGATE_SCORE"></span>&nbsp;</div>
+        <div class="col-nopadding col col-10 col-magic u-nowrap u-text-center bt-text-tiny-medium">
+            (
+            {{showdownCtrl.showdown.smFixture.aggregateVisitorteamScore + showdownCtrl.showdown.smFixture.sm__scores__localteamScore}}
+            -
+            {{showdownCtrl.showdown.smFixture.aggregateLocalteamScore + showdownCtrl.showdown.smFixture.sm__scores__visitorteamScore}}
+            )
+        </div>
+        <div class="col-nopadding col u-text-left"></div>
+    </div>
+
+    <!--scores-->
+    <div class="showdown-summary">
+        <div class="showdown-summary__row">
+            <div class="showdown-summary__homeTeam">
+            <span class="showdown-summary__teamName bt-text" ng-class="{'u-underline': showdownCtrl.betResume().winner === 'home'}">
+                {{showdownCtrl.showdown.smFixture.homeTeam.sm__name}}
+            </span>
+            <span class="showdown-summary__logo">
+                <bt-logo-team bt-team="showdownCtrl.showdown.smFixture.homeTeam"></bt-logo-team>
+            </span>
             </div>
-            <div class="col-nopadding col u-text-left"></div>
-        </div>
+            <div class="showdown-summary__score">
+                <span ng-class="showdownCtrl.extendedStatus(showdownCtrl.showdown, showdownCtrl.bet)"  class="bt-text-lg showdown-score">
+                    <span ng-if="step0Ctrl.sdStatus() === 'OPEN'">
+                        {{showdownCtrl.showdown.smFixture.sm__time__startingAt__dateTime| date : 'shortTime'}}
+                    </span>
+                        <!--LOCKED-->
+                    <span ng-if="step0Ctrl.sdStatus() === 'LOCKED'">
+                        {{showdownCtrl.showdown.smFixture.sm__scores__localteamScore}} - {{showdownCtrl.showdown.smFixture.sm__scores__visitorteamScore}}
+                    </span>
+                        <!--CLOSED-->
+                    <span ng-if="step0Ctrl.sdStatus() === 'CLOSED'">
+                        {{showdownCtrl.showdown.smFixture.sm__scores__localteamScore}} - {{showdownCtrl.showdown.smFixture.sm__scores__visitorteamScore}}
+                    </span>
+                        <!--REPORTE-->
+                    <span ng-if="step0Ctrl.sdStatus() === 'REPORTE'">
+                        {{showdownCtrl.showdown.smFixture.sm__scores__localteamScore}} - {{showdownCtrl.showdown.smFixture.sm__scores__visitorteamScore}}
+                    </span>
+                </span>
 
-        <!--scores-->
-        <div class="showdown-summary">
+            </div>
+            <div class="showdown-summary__awayTeam">
+            <span class="showdown-summary__logo">
+                <bt-logo-team bt-team="showdownCtrl.showdown.smFixture.awayTeam"></bt-logo-team>
+            </span>
+            <span class="showdown-summary__teamName bt-text" ng-class="{'u-underline': showdownCtrl.betResume().winner === 'away'}">
+                {{showdownCtrl.showdown.smFixture.awayTeam.sm__name}}
+            </span>
+            </div>
+        </div>
+    </div>
+
+    <!--//events - tirs aux buts-->
+    <div ng-if="showdownCtrl.showdown.smFixture.smEvents.length > 0">
+        <div class="u-gutter-bottom-micro"></div>
+        <div class="row row-top col-nopadding">
+            <div class="col-nopadding col u-text-right bt-text-nano">
+                <div ng-cloak ng-repeat="event in showdownCtrl.showdown.smFixture.smEvents track by event['@id']" ng-if="step0Ctrl.isShownEvent(event.sm__type) && event.teamType == 'home'">
+                    <span class="event-picto event-{{::event.sm__type}}"></span> <span>{{::event.sm__playerName}}</span> <span>{{::event.sm__minute}}'</span>
+                </div>
+            </div>
+            <div class="col-nopadding col col-10 col-magic u-nowrap u-text-center bt-text-nano">
+
+            </div>
+            <div class="col-nopadding col u-text-left  bt-text-nano">
+                <div ng-cloak ng-repeat="event in showdownCtrl.showdown.smFixture.smEvents track by event['@id']" ng-if="step0Ctrl.isShownEvent(event.sm__type) && event.teamType == 'away'">
+                    <span>{{::event.sm__minute}}'</span> <span>{{::event.sm__playerName}}</span> <span class="event-picto event-{{::event.sm__type}}"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--status et timer-->
+    <div class="u-gutter-bottom-small"></div>
+
+    <!--open-->
+    <div class="row" ng-if="step0Ctrl.sdStatus() === 'OPEN'">
+        <div class="col u-text-center">
+            <span class="bt-showdown-status bt-text-md-medium u-text-green u-text-uppercase" translate="SHOWDOWN.OPEN_BET"></span>
+        </div>
+        <!--<div class="col u-text-right">-->
+            <!--<bt-count-down bt-start-date="showdownCtrl.showdown.smFixture.sm__time__startingAt__dateTime"></bt-count-down>-->
+        <!--</div>-->
+    </div>
+
+    <!--LOCKED-->
+    <div class="row" ng-if="step0Ctrl.sdStatus() === 'CLOSED'">
+        <div class="col u-text-center">
+            <span class="bt-showdown-status bt-text-md-medium u-text-blue u-text-uppercase" translate="SHOWDOWN.CLOSED"></span>
+        </div>
+    </div>
+
+    <!--CLOSED-->
+    <div class="row" ng-if="step0Ctrl.sdStatus() === 'LOCKED'">
+        <div class="col u-text-center">
+            <span class="bt-showdown-status bt-text-md-medium u-text-red u-text-uppercase" translate="SHOWDOWN.LIVE"></span>
+        </div>
+    </div>
+
+    <!--reporte-->
+    <div class="row" ng-if="step0Ctrl.sdStatus() === 'REPORTE'">
+        <div class="col u-text-center">
+            <span class="bt-showdown-status bt-text-md-medium u-text-uppercase" translate="SHOWDOWN.REPORTE"></span>
+        </div>
+    </div>
+</div>
+
+<!--DEJA PARIE-->
+<div ng-if="showdownCtrl.bet" class="bt-bet-summary u-gutter-bottom-regular">
+    <div class="bettyLeague-title bettyLeague-title--gold" translate="SHOWDOWN.BET_SUMMARY.MY_BETS">
+    </div>
+    <!--summary-->
+    <div class="bt-bet-summary__part">
+        <div class="showdown-summary showdown-summary--tiny">
             <div class="showdown-summary__row">
                 <div class="showdown-summary__homeTeam">
-                <span class="showdown-summary__teamName bt-text" ng-class="{'u-underline': showdownCtrl.betResume().winner === 'home'}">
-                    {{showdownCtrl.showdown.smFixture.homeTeam.sm__name}}
-                </span>
-                <span class="showdown-summary__logo">
-                    <bt-logo-team bt-team="showdownCtrl.showdown.smFixture.homeTeam"></bt-logo-team>
-                </span>
+                    <span class="showdown-summary__teamName bt-text-tiny" ng-class="{'u-underline' : showdownCtrl.bet.winner === 'home'}">
+                        {{showdownCtrl.showdown.smFixture.homeTeam.sm__name}}
+                    </span>
+                    <span class="showdown-summary__logo">
+                        <bt-logo-team bt-size="20" bt-team="showdownCtrl.showdown.smFixture.homeTeam"></bt-logo-team>
+                    </span>
+
+                    <i ng-if="showdownCtrl.bet.winner === 'home'" class="bet-mark" ng-class="{
+                        'u-text-green fas fa-check-circle': !showdownCtrl.betResume().potentiel && showdownCtrl.betResume().winnerGain,
+                        'u-text-gold fas fa-question-circle': showdownCtrl.betResume().potentiel,
+                        'u-text-red fas fa-times-circle': !showdownCtrl.betResume().potentiel && !showdownCtrl.betResume().winnerGain
+                    }"></i>
                 </div>
                 <div class="showdown-summary__score">
-                    <span ng-class="showdownCtrl.extendedStatus(showdownCtrl.showdown, showdownCtrl.bet)"  class="bt-text-lg showdown-score">
-                        <span ng-if="step0Ctrl.sdStatus() === 'OPEN'">
-                            {{showdownCtrl.showdown.smFixture.sm__time__startingAt__dateTime| date : 'shortTime'}}
+                    <div class="bt-text-lg showdown-score showdown-score--gold">
+                        <span ng-if="showdownCtrl.bet.scoreOdd.homeScore !== null">{{showdownCtrl.bet.scoreOdd.homeScore}}</span>
+                        <span ng-if="showdownCtrl.bet.scoreOdd.homeScore == null">_</span>
+                        <span class="bt-text-md" ng-if="showdownCtrl.showdown.smFixture.matchRetour">
+                            ({{(showdownCtrl.showdown.smFixture.aggregateVisitorteamScore + showdownCtrl.bet.scoreOdd.homeScore|number)}})
                         </span>
-                            <!--LOCKED-->
-                        <span ng-if="step0Ctrl.sdStatus() === 'LOCKED'">
-                            {{showdownCtrl.showdown.smFixture.sm__scores__localteamScore}} - {{showdownCtrl.showdown.smFixture.sm__scores__visitorteamScore}}
+                        <span>-</span>
+                        <span class="bt-text-md" ng-if="showdownCtrl.showdown.smFixture.matchRetour">
+                            ({{showdownCtrl.showdown.smFixture.aggregateLocalteamScore + showdownCtrl.bet.scoreOdd.awayScore|number}})
                         </span>
-                            <!--CLOSED-->
-                        <span ng-if="step0Ctrl.sdStatus() === 'CLOSED'">
-                            {{showdownCtrl.showdown.smFixture.sm__scores__localteamScore}} - {{showdownCtrl.showdown.smFixture.sm__scores__visitorteamScore}}
-                        </span>
-                            <!--REPORTE-->
-                        <span ng-if="step0Ctrl.sdStatus() === 'REPORTE'">
-                            {{showdownCtrl.showdown.smFixture.sm__scores__localteamScore}} - {{showdownCtrl.showdown.smFixture.sm__scores__visitorteamScore}}
-                        </span>
-                    </span>
+                        <span ng-if="showdownCtrl.bet.scoreOdd.awayScore !== null">{{showdownCtrl.bet.scoreOdd.awayScore}}</span>
+                        <span ng-if="showdownCtrl.bet.scoreOdd.awayScore == null">_</span>
+                    </div>
+                    <i class="bet-mark bet-mark--score" ng-class="{
+                            'u-text-green fas fa-check-circle': !showdownCtrl.betResume().potentiel && showdownCtrl.betResume().scoreGain,
+                            'u-text-gold fas fa-question-circle': showdownCtrl.betResume().potentiel,
+                            'u-text-red fas fa-times-circle': !showdownCtrl.betResume().potentiel && !showdownCtrl.betResume().scoreGain
+                        }"></i>
 
+                    <i ng-if="showdownCtrl.bet.winner === 'draw'" class="bet-mark bet-mark--center" ng-class="{
+                        'u-text-green fas fa-check-circle': !showdownCtrl.betResume().potentiel && showdownCtrl.betResume().winnerGain,
+                        'u-text-gold fas fa-question-circle': showdownCtrl.betResume().potentiel,
+                        'u-text-red fas fa-times-circle': !showdownCtrl.betResume().potentiel && !showdownCtrl.betResume().winnerGain
+                    }"></i>
                 </div>
                 <div class="showdown-summary__awayTeam">
-                <span class="showdown-summary__logo">
-                    <bt-logo-team bt-team="showdownCtrl.showdown.smFixture.awayTeam"></bt-logo-team>
-                </span>
-                <span class="showdown-summary__teamName bt-text" ng-class="{'u-underline': showdownCtrl.betResume().winner === 'away'}">
-                    {{showdownCtrl.showdown.smFixture.awayTeam.sm__name}}
-                </span>
-                </div>
-            </div>
-        </div>
+                    <span class="showdown-summary__logo">
+                        <bt-logo-team bt-size="20" bt-team="showdownCtrl.showdown.smFixture.awayTeam"></bt-logo-team>
+                    </span>
+                    <span class="showdown-summary__teamName bt-text-tiny" ng-class="{'u-underline' : showdownCtrl.bet.winner === 'away'}">
+                        {{showdownCtrl.showdown.smFixture.awayTeam.sm__name}}
+                    </span>
 
-        <!--//events - tirs aux buts-->
-        <div ng-if="showdownCtrl.showdown.smFixture.smEvents.length > 0">
-            <div class="u-gutter-bottom-micro"></div>
-            <div class="row row-top col-nopadding">
-                <div class="col-nopadding col u-text-right bt-text-nano">
-                    <div ng-cloak ng-repeat="event in showdownCtrl.showdown.smFixture.smEvents track by event['@id']" ng-if="step0Ctrl.isShownEvent(event.sm__type) && event.teamType == 'home'">
-                        <span class="event-picto event-{{::event.sm__type}}"></span> <span>{{::event.sm__playerName}}</span> <span>{{::event.sm__minute}}'</span>
-                    </div>
-                </div>
-                <div class="col-nopadding col col-10 col-magic u-nowrap u-text-center bt-text-nano">
+                    <!--<i class="u-text-green bet-mark fas fa-check-circle"></i>-->
+                    <!--<i class="u-text-gold bet-mark fas fa-question-circle"></i>-->
+                    <!--<i class="u-text-red bet-mark fas fa-times-circle"></i>-->
+
+                    <i ng-if="showdownCtrl.bet.winner === 'away'" class="bet-mark bet-mark--right" ng-class="{
+                        'u-text-green fas fa-check-circle': !showdownCtrl.betResume().potentiel && showdownCtrl.betResume().winnerGain,
+                        'u-text-gold fas fa-question-circle': showdownCtrl.betResume().potentiel,
+                        'u-text-red fas fa-times-circle': !showdownCtrl.betResume().potentiel && !showdownCtrl.betResume().winnerGain
+                    }"></i>
 
                 </div>
-                <div class="col-nopadding col u-text-left  bt-text-nano">
-                    <div ng-cloak ng-repeat="event in showdownCtrl.showdown.smFixture.smEvents track by event['@id']" ng-if="step0Ctrl.isShownEvent(event.sm__type) && event.teamType == 'away'">
-                        <span>{{::event.sm__minute}}'</span> <span>{{::event.sm__playerName}}</span> <span class="event-picto event-{{::event.sm__type}}"></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!--status et timer-->
-        <div class="u-gutter-bottom-small"></div>
-
-        <!--open-->
-        <div class="row" ng-if="step0Ctrl.sdStatus() === 'OPEN'">
-            <div class="col u-text-left">
-                <span class="bt-showdown-status bt-text-md-medium u-text-green u-text-uppercase" translate="SHOWDOWN.OPEN_BET"></span>
-            </div>
-            <div class="col u-text-right">
-                <bt-count-down bt-start-date="showdownCtrl.showdown.smFixture.sm__time__startingAt__dateTime"></bt-count-down>
-            </div>
-        </div>
-
-        <!--LOCKED-->
-        <div class="row" ng-if="step0Ctrl.sdStatus() === 'CLOSED'">
-            <div class="col u-text-center">
-                <span class="bt-showdown-status bt-text-md-medium u-text-blue u-text-uppercase" translate="SHOWDOWN.CLOSED"></span>
-            </div>
-        </div>
-
-        <!--CLOSED-->
-        <div class="row" ng-if="step0Ctrl.sdStatus() === 'LOCKED'">
-            <div class="col u-text-center">
-                <span class="bt-showdown-status bt-text-md-medium u-text-red u-text-uppercase" translate="SHOWDOWN.LIVE"></span>
-            </div>
-        </div>
-
-        <!--reporte-->
-        <div class="row" ng-if="step0Ctrl.sdStatus() === 'REPORTE'">
-            <div class="col u-text-center">
-                <span class="bt-showdown-status bt-text-md-medium u-text-uppercase" translate="SHOWDOWN.REPORTE"></span>
             </div>
         </div>
     </div>
 
-    <!--DEJA PARIE-->
-    <div ng-if="showdownCtrl.bet" class="bt-bet-summary u-gutter-bottom-regular">
-        <div class="bettyLeague-title bettyLeague-title--gold" translate="SHOWDOWN.BET_SUMMARY.MY_BETS">
-        </div>
-        <!--summary-->
-        <div class="bt-bet-summary__part">
-            <div class="showdown-summary showdown-summary--tiny">
-                <div class="showdown-summary__row">
-                    <div class="showdown-summary__homeTeam">
-                <span class="showdown-summary__teamName bt-text-tiny" ng-class="{'u-underline' : showdownCtrl.bet.winner === 'home'}">
-                    {{showdownCtrl.showdown.smFixture.homeTeam.sm__name}}
+    <!-- PARIS ET COTES WINNER-->
+    <div class="bt-bet-summary__part">
+        <!--//GAIN TOTAL-->
+        <div class="row row-center u-gutter-bottom-small">
+            <div class="col-70 u-text-left">
+                <span class="bt-text-lg-bold">
+                    <span translate="SHOWDOWN.TOTAL_GAIN"></span>
                 </span>
-                <span class="showdown-summary__logo">
-                    <bt-logo-team bt-size="20" bt-team="showdownCtrl.showdown.smFixture.homeTeam"></bt-logo-team>
-                </span>
-                    </div>
-                    <div class="showdown-summary__score">
-                        <div class="bt-text-lg showdown-score showdown-score--gold">
-                            <span ng-if="showdownCtrl.bet.scoreOdd.homeScore !== null">{{showdownCtrl.bet.scoreOdd.homeScore}}</span>
-                            <span ng-if="showdownCtrl.bet.scoreOdd.homeScore == null">_</span>
-                            <span class="bt-text-md" ng-if="showdownCtrl.showdown.smFixture.matchRetour">
-                                ({{(showdownCtrl.showdown.smFixture.aggregateVisitorteamScore + showdownCtrl.bet.scoreOdd.homeScore|number)}})
-                            </span>
-                            <span>-</span>
-                            <span class="bt-text-md" ng-if="showdownCtrl.showdown.smFixture.matchRetour">
-                                ({{showdownCtrl.showdown.smFixture.aggregateLocalteamScore + showdownCtrl.bet.scoreOdd.awayScore|number}})
-                            </span>
-                            <span ng-if="showdownCtrl.bet.scoreOdd.awayScore !== null">{{showdownCtrl.bet.scoreOdd.awayScore}}</span>
-                            <span ng-if="showdownCtrl.bet.scoreOdd.awayScore == null">_</span>
-                        </div>
-                    </div>
-                    <div class="showdown-summary__awayTeam">
-                <span class="showdown-summary__logo">
-                    <bt-logo-team bt-size="20" bt-team="showdownCtrl.showdown.smFixture.awayTeam"></bt-logo-team>
-                </span>
-                <span class="showdown-summary__teamName bt-text-tiny">
-                    {{showdownCtrl.showdown.smFixture.awayTeam.sm__name}}
-                </span>
-                    </div>
-                </div>
+            </div>
+            <div class="col u-text-right bt-text">
+                <bet-resumee modifier-classes="bt-text-lg-bold" showdown="showdownCtrl.showdown" bet="showdownCtrl.bet" type="gain">
+                </bet-resumee>
             </div>
         </div>
 
-        <!-- PARIS ET COTES WINNER-->
-        <div class="bt-bet-summary__part">
-            <!--//GAIN TOTAL-->
-            <div class="row row-center u-gutter-bottom-small">
-                <div class="col-70 u-text-left">
-                    <span class="bt-text-lg-bold">
-                        <span translate="SHOWDOWN.TOTAL_GAIN"></span>
-                    </span>
-                </div>
-                <div class="col u-text-right bt-text">
-                    <bet-resumee modifier-classes="bt-text-lg-bold" showdown="showdownCtrl.showdown" bet="showdownCtrl.bet" type="gain">
-                    </bet-resumee>
-                </div>
+        <!--//GAIN SUR LE VAINQUEUR-->
+        <div class="row row-center u-gutter-bottom-small">
+            <div class="col-70 u-text-left">
+                <span class="bt-text-md">
+                    <span translate="SHOWDOWN.WINNER_GAIN"></span>
+                </span>
             </div>
-
-            <!--//GAIN SUR LE VAINQUEUR-->
-            <div class="row row-center u-gutter-bottom-small">
-                <div class="col-70 u-text-left">
-                    <span class="bt-text-md">
-                        <span translate="SHOWDOWN.WINNER_GAIN"></span>
-                    </span>
-                </div>
-                <div class="col u-text-right bt-text">
-                    <bet-resumee  modifier-coin="bt-coin--small" modifier-classes="bt-text-md" showdown="showdownCtrl.showdown" bet="showdownCtrl.bet" type="winnerGain">
-                    </bet-resumee>
-                </div>
-            </div>
-
-            <!--//GAIN SUR LE SCORE-->
-            <div class="row row-center u-gutter-bottom-regular">
-                <div class="col-70 u-text-left">
-                    <span class="bt-text-md">
-                        <span translate="SHOWDOWN.SCORE_GAIN"></span>
-                    </span>
-                </div>
-                <div class="col u-text-right bt-text">
-                    <bet-resumee modifier-coin="bt-coin--small" modifier-classes="bt-text-md" showdown="showdownCtrl.showdown" bet="showdownCtrl.bet" type="scoreGain">
-                    </bet-resumee>
-                </div>
-            </div>
-
-            <!--//DETAILS DES COTES-->
-            <div class="row">
-                <div class="col">
-                    <bt-body-btn bt-ico="'fas fa-info'"
-                                 bt-content="'SHOWDOWN.BET_SUMMARY.DETAIL'"
-                                 bt-btn-classes="'bt-action__btn--body-small bt-action__btn--body-full'"
-                                 bt-disabled=""
-                                 bt-action="showdownCtrl.openOddDetail()"
-                    >
-                    </bt-body-btn>
-                </div>
+            <div class="col u-text-right bt-text">
+                <bet-resumee  modifier-coin="bt-coin--small" modifier-classes="bt-text-md" showdown="showdownCtrl.showdown" bet="showdownCtrl.bet" type="winnerGain">
+                </bet-resumee>
             </div>
         </div>
 
+        <!--//GAIN SUR LE SCORE-->
+        <div class="row row-center u-gutter-bottom-regular">
+            <div class="col-70 u-text-left">
+                <span class="bt-text-md">
+                    <span translate="SHOWDOWN.SCORE_GAIN"></span>
+                </span>
+            </div>
+            <div class="col u-text-right bt-text">
+                <bet-resumee modifier-coin="bt-coin--small" modifier-classes="bt-text-md" showdown="showdownCtrl.showdown" bet="showdownCtrl.bet" type="scoreGain">
+                </bet-resumee>
+            </div>
+        </div>
+
+        <!--//DETAILS DES COTES-->
+        <div class="row">
+            <div class="col">
+                <bt-body-btn bt-ico="'fas fa-info'"
+                             bt-content="'SHOWDOWN.BET_SUMMARY.DETAIL'"
+                             bt-btn-classes="'bt-action__btn--body-small bt-action__btn--body-full'"
+                             bt-disabled=""
+                             bt-action="showdownCtrl.openOddDetail()"
+                >
+                </bt-body-btn>
+            </div>
+        </div>
     </div>
-</ion-content>
+
+</div>
