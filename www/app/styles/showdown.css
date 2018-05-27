@@ -220,17 +220,11 @@
   vertical-align: middle;
 }
 .bt-bet-summary {
-  border: 1px solid #fdcf21;
-  border-radius: 0.5rem;
   background-color: #e6e6e6;
 }
 .bet-bet-summary__head {
-  background-color: #fdcf21;
   padding: 0.5rem 1rem 0.5rem 1rem;
 }
 .bt-bet-summary__part {
   padding: 0.5rem 1rem 0.5rem 1rem;
-}
-.bt-bet-summary__part:not(:last-child) {
-  border-bottom: 1px solid #fdcf21;
 }

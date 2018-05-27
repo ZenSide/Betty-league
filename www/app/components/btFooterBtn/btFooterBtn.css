@@ -159,9 +159,14 @@
   padding: 1.2rem 5rem 0.9rem 1.3rem!important;
 }
 .bt-action__btn--body-small .bt-action__ico {
-  font-size: 3.5rem!important;
-  line-height: 4rem !important;
   right: 1rem;
+  line-height: 4rem !important;
+}
+.bt-action__btn--body-small .bt-action__ico.icon-bty-ico-coin {
+  font-size: 3.5rem!important;
+}
+.bt-action__btn--body-full {
+  width: 100%;
 }
 .bt-action__btn--body-square {
   width: 4rem;

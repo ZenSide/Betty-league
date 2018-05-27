@@ -156,11 +156,15 @@ betty2App.factory('BetApi', function ($filter, ResourcesFactory, BtLocalStorage)
 
 		getMyBetResume: function (showdown, bet, status) {
 			var gain = 0;
+			var winnerGain = 0;
+			var scoreGain = 0;
 
 			var response = {
 				'potentiel': false,
 				'gain': gain,
-				'winner': null
+				'winnerGain': winnerGain,
+				'scoreGain': scoreGain,
+				'winner': null,
 			};
 
 			//gain potentiel
@@ -176,10 +180,13 @@ betty2App.factory('BetApi', function ($filter, ResourcesFactory, BtLocalStorage)
 
 					if (winner === 'home') {
 						gain += bet.scoreOdd.showdown.homeWinOdd;
+						winnerGain += gain;
 					} else if (winner === 'away') {
 						gain += bet.scoreOdd.showdown.awayWinOdd;
+						winnerGain += gain;
 					} else if (winner === 'draw') {
 						gain += bet.scoreOdd.showdown.drawOdd;
+						winnerGain += gain;
 					}
 				} else {
 					//bad
@@ -189,6 +196,7 @@ betty2App.factory('BetApi', function ($filter, ResourcesFactory, BtLocalStorage)
 				if (bet.scoreOdd.homeScore === showdown.smFixture.sm__scores__localteamScore && bet.scoreOdd.awayScore === showdown.smFixture.sm__scores__visitorteamScore) {
 					//GOOD SCORE !!!
 					gain += bet.scoreOdd.odd;
+					scoreGain += bet.scoreOdd.odd;
 				} else {
 					//bad
 				}
@@ -197,18 +205,24 @@ betty2App.factory('BetApi', function ($filter, ResourcesFactory, BtLocalStorage)
 				response.potentiel = true;
 				if (bet.winner === 'home') {
 					gain += bet.scoreOdd.showdown.homeWinOdd;
+					winnerGain += gain;
 				} else if (bet.winner === 'away') {
 					gain += bet.scoreOdd.showdown.awayWinOdd;
+					winnerGain += gain;
 				} else if (bet.winner === 'draw') {
 					gain += bet.scoreOdd.showdown.drawOdd;
+					winnerGain += gain;
 				}
 
 				gain += bet.scoreOdd.odd;
+				scoreGain += bet.scoreOdd.odd;
 			} else {
 				response.potentiel = true;
 			}
 
 			response.gain = gain;
+			response.winnerGain = winnerGain;
+			response.scoreGain = scoreGain;
 
 			return response;
 		},

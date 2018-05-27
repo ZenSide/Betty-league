@@ -66,6 +66,9 @@
 .u-text-blue {
   color: #0583d0;
 }
+.u-text-black {
+  color: #222222;
+}
 .u-text-gold {
   color: #b6850f;
 }
@@ -77,4 +80,7 @@
 }
 .u-text-uppercase {
   text-transform: uppercase;
+}
+.u-underline {
+  text-decoration: underline;
 }

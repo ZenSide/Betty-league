@@ -73,7 +73,9 @@ betty2App.controller('ListMatchCtrl', function ($timeout, $location, $ionicScrol
 	listMatchCtrl.betResume = function (showdown) {
 		var bet = BetApi.getBetSync(bets, showdown.id);
 
-		return BetApi.getMyBetResume(showdown, bet, ShowdownApi.getShowdownStatus(showdown));
+		var resume = BetApi.getMyBetResume(showdown, bet, ShowdownApi.getShowdownStatus(showdown));
+		console.log(resume);
+		return resume;
 	};
 
 	listMatchCtrl.openedTooltip = null;

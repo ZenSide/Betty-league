@@ -82,6 +82,11 @@ var translations = {
             REPORTE : "reporté",
             CLOSED : "match terminé",
             LIVE : "LIVE",
+            POT_GAIN : 'Gain potentiel',
+            GAIN : 'Gain :',
+            TOTAL_GAIN : 'Gain  total',
+            "WINNER_GAIN" : "Gain sur le vainqueur",
+            "SCORE_GAIN" : "Gain sur le score",
             BET_FORM : {
                 "TITLE" : "Ton pari",
                 "HOW_MANY_GOALS" : "Combien de buts pour",
@@ -92,13 +97,14 @@ var translations = {
                 "EMPTY_WINNER" : "Tu dois choisir une équipe"
             },
             BET_SUMMARY : {
-                "MY_BETS" : "Tes mises",
+                "MY_BETS" : "ton pari et ce que tu peux gagner",
                 "ON_QUALIF" : "sur une <b>qualification</b> de",
                 "ON_WIN" : "sur une <b>victoire</b> de",
                 "ON_DRAW" : "sur un match nul",
                 "ON_SCORE" : "sur un <b>score</b> de",
                 "USER_PERCENT" : "des parieurs",
-                "ODD" : "Cote"
+                "ODD" : "Cote",
+                "DETAIL" : "Detail des cotes",
             },
             MODAL_ODD_DETAIL : {
                 "TITLE" : "Détail des cotes",

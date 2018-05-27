@@ -31,3 +31,7 @@ body {
   vertical-align: middle;
   height: 3.5rem;
 }
+.bt-coin--small {
+  width: 2.5rem;
+  height: 2.5rem;
+}

@@ -37,8 +37,8 @@ betty2App.controller('Step0Ctrl', function (BtMessages, BetApi, $timeout, transl
 	var withHeadLogo = false;
 	var footerStatus = {};
 
-	// OPEN NON PARIE
-	if (step0Ctrl.sdStatus() === 'OPEN' && !$scope.showdownCtrl.bet) {
+	// OPEN
+	if (step0Ctrl.sdStatus() === 'OPEN') {
 		footerStatus.leftBt = {
 			btShow : true,
 			btPosition: "left",
@@ -62,46 +62,7 @@ betty2App.controller('Step0Ctrl', function (BtMessages, BetApi, $timeout, transl
 			btClasses: "bt-action--big",
 			btButtonClasses: "bt-action__btn--gold",
 			btIco : "icon-bty-ico-coin",
-			btLabel:translations['SHOWDOWN.BET'],
-			btDisabled: false,
-			btSubmitForm: null,
-			action:function(){
-				BtNavigate.stateChange('goRight' ,'bettyleague.showdown.step1', {
-					'bettyLeagueId' : $stateParams.bettyLeagueId,
-					'showdownId' : $stateParams.showdownId,
-					'animDirection' : '2left'
-				});
-			}
-		};
-		footerStatus.rightBt = {
-			btShow : false,
-		};
-	// OPEN DEJA PARIE
-	} else if (step0Ctrl.sdStatus() === 'OPEN' && $scope.showdownCtrl.bet) {
-		footerStatus.leftBt = {
-			btShow : true,
-			btPosition: "left",
-			btClasses: "bt-action--medium",
-			btButtonClasses: "bt-action__btn--blue",
-			btIco : "fas fa-arrow-left",
-			btLabel:translations['LOGIN.FOOTER.MDP'],
-			btDisabled: false,
-			btSubmitForm: null,
-			action:function(){
-				BtNavigate.stateChange('goLeft' ,'bettyleague.showdown.step0', {
-					'bettyLeagueId' : $stateParams.bettyLeagueId,
-					'showdownId' : $scope.showdownCtrl.previousShowDownId,
-					'animDirection' : '2right'
-				});
-			}
-		};
-		footerStatus.middleBt = {
-			btShow : true,
-			btPosition: "middle",
-			btClasses: "bt-action--big",
-			btButtonClasses: "bt-action__btn--gold",
-			btIco : "icon-bty-ico-coin",
-			btLabel:translations['SHOWDOWN.MODIFY'],
+			btLabel: $scope.showdownCtrl.bet ? translations['SHOWDOWN.MODIFY'] : translations['SHOWDOWN.BET'],
 			btDisabled: false,
 			btSubmitForm: null,
 			action:function(){

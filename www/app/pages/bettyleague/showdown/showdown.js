@@ -24,6 +24,37 @@ betty2App.controller('ShowdownCtrl', function (BetApi, ShowdownApi, UserApi, BtL
 		return ShowdownApi.getShowdownExtendedStatus(showdown, bet);
 	};
 
+	showdownCtrl.betCol = function (showdown, bet) {
+		showdown = showdown ? showdown : showdownCtrl.showdown;
+		bet = bet ? bet : showdownCtrl.bet;
+
+		var resumee = BetApi.getMyBetResumee(bet, showdown);
+		console.log(resumee);
+		console.log(showdown);
+		console.log(bet);
+
+		if (!resumee) {
+			return null;
+		}
+
+		var stringed = resumee.home + "-" + resumee.away;
+
+		if (resumee.totalHome && resumee.totalAway) {
+			stringed += "<br>("+resumee.totalHome + "-" + resumee.totalAway+")"
+		}
+
+		return stringed;
+	};
+
+	showdownCtrl.betResume = function (showdown, bet) {
+		showdown = showdown ? showdown : showdownCtrl.showdown;
+		bet = bet ? bet : showdownCtrl.bet;
+
+		var resume = BetApi.getMyBetResume(showdown, bet, ShowdownApi.getShowdownStatus(showdown));
+		console.log(resume);
+		return resume;
+	};
+
 
 	showdownCtrl.openOddDetail  = function () {
 		BtLoading.startLoad();
