@@ -1,8 +1,9 @@
 .bt-action {
-  width: 33%;
-  top: 1.3rem;
+  width: 33.333%;
+  top: 1rem;
   position: absolute;
   text-align: center;
+  padding: 0 1rem 0 1rem;
 }
 .bt-action.ng-leave {
   animation: slideOutDown 150ms;
@@ -10,11 +11,20 @@
 .bt-action.ng-enter {
   animation: slideInUp 150ms;
 }
+.bt-action__elipsed-content {
+  line-height: 4rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: block;
+  text-align: center;
+  padding: 0 0.5rem 0 0.5rem;
+}
 .bt-action--big {
-  top: 0.8rem;
+  top: 1rem;
 }
 .bt-action--big .bt-action__btn {
-  width: 5rem;
+  width: 100%;
   height: 5rem;
   line-height: 5rem !important;
 }
@@ -22,14 +32,22 @@
   line-height: 5rem !important;
   font-size: 3.4rem;
 }
+.bt-action--big .bt-action__ico {
+  line-height: 5rem !important;
+  font-size: 3.4rem;
+}
+.bt-action--big .bt-action__ico.fa,
+.bt-action--big .bt-action__ico.fas {
+  font-size: 2.5rem;
+}
 .bt-action--left {
   left: 0;
 }
 .bt-action--middle {
-  left: 33%;
+  left: 33.333%;
 }
 .bt-action--right {
-  left: 66%;
+  left: 66.666%;
 }
 .bt-action__btn {
   z-index: 15!important;
@@ -38,9 +56,9 @@
   background-color: #1c5b8f;
   cursor: pointer;
   display: inline-block;
-  border-radius: 0.5rem;
+  border-radius: 0;
   font-size: 1.6rem!important;
-  width: 4rem;
+  width: 100%;
   height: 4rem;
   position: relative;
   will-change: color;
@@ -57,7 +75,7 @@
   height: 100%;
   right: 0;
   bottom: 0.4rem;
-  border-radius: 0.5rem;
+  border-radius: 0;
   position: absolute;
   background-color: #0583d0;
   will-change: transform;
@@ -173,6 +191,7 @@
 }
 .bt-action__btn--body-full {
   width: 100%;
+  max-width: none;
 }
 .bt-action__btn--body-square {
   width: 4rem;

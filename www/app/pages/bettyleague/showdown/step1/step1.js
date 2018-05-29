@@ -47,7 +47,7 @@ betty2App.controller('Step1Ctrl', function (BtMessages, translations, $scope, $s
 	footerStatus.rightBt = {
 		btShow : true,
 		btPosition: "right",
-		btClasses: "bt-action--big",
+		btClasses: "bt-action--medium",
 		btButtonClasses: "bt-action__btn--gold",
 		btIco : "fas fa-check",
 		btLabel:translations['LOGIN.FOOTER.MDP'],

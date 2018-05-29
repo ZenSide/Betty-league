@@ -193,9 +193,8 @@
 }
 .bet-form {
   background-color: #e6e6e6;
-  border-radius: 0.5rem;
-  border: 1px solid #0583d0;
   overflow: hidden;
+  padding-top: 0.5rem;
 }
 .bet-form__title {
   text-align: center;

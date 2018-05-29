@@ -21,7 +21,7 @@ betty2App.controller('LoginCtrl', function (animation, $scope, UserApi,BtMessage
         middleBt : {
             btShow : true,
             btPosition: "middle",
-            btClasses: "bt-action--big",
+            btClasses: "bt-action--medium",
             btButtonClasses: "",
             btIco : "icon-bty-ico-join",
             btLabel:translations['LOGIN.FOOTER.SIGN'],

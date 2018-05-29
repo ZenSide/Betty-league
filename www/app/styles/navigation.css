@@ -1,9 +1,9 @@
 .main-view {
-  top: 70px;
-  bottom: 70px;
+  top: 7rem;
+  bottom: 5.5rem;
 }
 .showdown-view {
-  top: 71px;
+  top: 7.1rem;
   bottom: 0;
 }
 .ranking-view {

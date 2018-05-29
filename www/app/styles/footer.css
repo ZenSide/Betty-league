@@ -8,7 +8,6 @@
   z-index: 100;
 }
 .bt-footer-container {
-  height: 70px;
+  height: 5.5rem;
   background-color: #289172;
-  border-bottom: 3.7rem solid #289172;
 }

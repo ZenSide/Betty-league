@@ -39,6 +39,12 @@ betty2App.factory('ShowdownApi', function ($q, BetApi, $filter, BettyLeagueApi, 
 						return;
 					}
 
+
+					if (fullRange.length > 0) {
+						sdDefer.resolve(fullRange[fullRange.length - 1]);
+						return;
+					}
+
 					var messages = [
 						{
 							context:'alert',

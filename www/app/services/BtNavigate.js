@@ -39,14 +39,14 @@ betty2App.factory('BtNavigate', function(ENV, $state, $cordovaNativePageTransiti
             );
           } else {
             var fixedPixelsTop = 70;
-            var fixedPixelsBottom = 70;
+            var fixedPixelsBottom = 55;
 
             if (direction.charAt(0) == 2) {
               direction = direction.substring(1);
-              fixedPixelsTop = 70;
+              fixedPixelsTop = 70 + 71;
             } else if(direction.charAt(0) == 3) {
               direction = direction.substring(1);
-              fixedPixelsTop = 70;
+              fixedPixelsTop = 70 + 71;
             }
 
             var options = {

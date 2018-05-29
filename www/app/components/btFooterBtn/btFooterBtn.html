@@ -10,11 +10,12 @@
             type="button"
             ng-disabled="$ctrl.btDisabled">
         <div class="bt-action__facade">
-            <i class="bt-action__ico" ng-class="$ctrl.icoResult"></i>
+            <i ng-if="!$ctrl.btLabel" class="bt-action__ico" ng-class="$ctrl.icoResult"></i>
+            <span class="bt-action__elipsed-content bt-text-tiny-medium u-text-uppercase" ng-if="$ctrl.btLabel">
+                {{$ctrl.btLabel}}
+            </span>
         </div>
+
     </button>
 
-    <div class="bt-action__label bt-text-nano" ng-show="$ctrl.btLabel">
-        {{$ctrl.btLabel}}
-    </div>
 </div>

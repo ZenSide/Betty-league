@@ -3,8 +3,8 @@ betty2App.controller('SigninCtrl', function (animation, BtLoading, BtMessages, U
     var signinCtrl = this;
 
     //parent config
-    withHeadLogo = true;
-    footerStatus = {
+    var withHeadLogo = true;
+    var footerStatus = {
         leftBt : {
             btShow : true,
             btPosition: "left",

@@ -26,6 +26,8 @@
 .bettyLeague-header {
   background-color: #0583d0;
   padding: 0 1rem 0.5rem 1rem;
+  position: relative;
+  z-index: 1;
 }
 .bettyLeague-header .col:first-child {
   padding-right: 0.5rem;

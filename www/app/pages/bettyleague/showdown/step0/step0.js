@@ -38,98 +38,58 @@ betty2App.controller('Step0Ctrl', function (BtMessages, BetApi, $timeout, transl
 	var footerStatus = {};
 
 	// OPEN
-	if (step0Ctrl.sdStatus() === 'OPEN') {
-		footerStatus.leftBt = {
-			btShow : true,
-			btPosition: "left",
-			btClasses: "bt-action--medium",
-			btButtonClasses: "bt-action__btn--blue",
-			btIco : "fas fa-arrow-left",
-			btLabel:translations['LOGIN.FOOTER.MDP'],
-			btDisabled: false,
-			btSubmitForm: null,
-			action:function(){
-				BtNavigate.stateChange('goLeft' ,'bettyleague.showdown.step0', {
-					'bettyLeagueId' : $stateParams.bettyLeagueId,
-					'showdownId' : $scope.showdownCtrl.previousShowDownId,
-					'animDirection' : '2right'
-				});
-			}
-		};
-		footerStatus.middleBt = {
-			btShow : true,
-			btPosition: "middle",
-			btClasses: "bt-action--big",
-			btButtonClasses: "bt-action__btn--gold",
-			btIco : "icon-bty-ico-coin",
-			btLabel: $scope.showdownCtrl.bet ? translations['SHOWDOWN.MODIFY'] : translations['SHOWDOWN.BET'],
-			btDisabled: false,
-			btSubmitForm: null,
-			action:function(){
-				BtNavigate.stateChange('goRight' ,'bettyleague.showdown.step1', {
-					'bettyLeagueId' : $stateParams.bettyLeagueId,
-					'showdownId' : $stateParams.showdownId,
-					'animDirection' : '2left'
-				});
-			}
-		};
-		footerStatus.rightBt = {
-			btShow : true,
-			btPosition: "right",
-			btClasses: "bt-action--medium",
-			btButtonClasses: "bt-action__btn--blue",
-			btIco : "fas fa-arrow-right",
-			btLabel:translations['LOGIN.FOOTER.SIGN'],
-			btDisabled: false,
-			btSubmitForm: null,
-			action:function(){
-				BtNavigate.stateChange('goRight' ,'bettyleague.showdown.step0', {
-					'bettyLeagueId' : $stateParams.bettyLeagueId,
-					'showdownId' : $scope.showdownCtrl.nextShowDownId,
-					'animDirection' : '3left'
-				});
-			}
-		};
-	//AUTRES STATUS
-	} else  {
-		footerStatus.leftBt = {
-			btShow : true,
-			btPosition: "left",
-			btClasses: "bt-action--medium",
-			btButtonClasses: "bt-action__btn--blue",
-			btIco : "fas fa-arrow-left",
-			btLabel:translations['LOGIN.FOOTER.MDP'],
-			btDisabled: false,
-			btSubmitForm: null,
-			action:function(){
-				BtNavigate.stateChange('goLeft' ,'bettyleague.showdown.step0', {
-					'bettyLeagueId' : $stateParams.bettyLeagueId,
-					'showdownId' : $scope.showdownCtrl.previousShowDownId,
-					'animDirection' : '3right'
-				});
-			}
-		};
-		footerStatus.middleBt = {
-			btShow : false
-		};
-		footerStatus.rightBt = {
-			btShow : true,
-			btPosition: "right",
-			btClasses: "bt-action--medium",
-			btButtonClasses: "bt-action__btn--blue",
-			btIco : "fas fa-arrow-right",
-			btLabel:translations['LOGIN.FOOTER.SIGN'],
-			btDisabled: false,
-			btSubmitForm: null,
-			action:function(){
-				BtNavigate.stateChange('goRight' ,'bettyleague.showdown.step0', {
-					'bettyLeagueId' : $stateParams.bettyLeagueId,
-					'showdownId' : $scope.showdownCtrl.nextShowDownId,
-					'animDirection' : '3left'
-				});
-			}
-		};
+	footerStatus.leftBt = {
+		btShow : true,
+		btPosition: "left",
+		btClasses: "bt-action--medium",
+		btButtonClasses: "bt-action__btn--blue",
+		btIco : "fas fa-arrow-left",
+		btLabel:translations['LOGIN.FOOTER.MDP'],
+		btDisabled: false,
+		btSubmitForm: null,
+		action:function(){
+			BtNavigate.stateChange('goLeft' ,'bettyleague.showdown.step0', {
+				'bettyLeagueId' : $stateParams.bettyLeagueId,
+				'showdownId' : $scope.showdownCtrl.previousShowDownId,
+				'animDirection' : '2right'
+			});
+		}
 	};
+	footerStatus.middleBt = {
+		btShow : step0Ctrl.sdStatus() === 'OPEN',
+		btPosition: "middle",
+		btClasses: "bt-action--medium",
+		btButtonClasses: "bt-action__btn--gold",
+		btIco : "icon-bty-ico-coin",
+		btLabel: $scope.showdownCtrl.bet ? translations['SHOWDOWN.MODIFY'] : translations['SHOWDOWN.BET'],
+		btDisabled: false,
+		btSubmitForm: null,
+		action:function(){
+			BtNavigate.stateChange('goRight' ,'bettyleague.showdown.step1', {
+				'bettyLeagueId' : $stateParams.bettyLeagueId,
+				'showdownId' : $stateParams.showdownId,
+				'animDirection' : '2left'
+			});
+		}
+	};
+	footerStatus.rightBt = {
+		btShow : true,
+		btPosition: "right",
+		btClasses: "bt-action--medium",
+		btButtonClasses: "bt-action__btn--blue",
+		btIco : "fas fa-arrow-right",
+		btLabel:translations['LOGIN.FOOTER.SIGN'],
+		btDisabled: false,
+		btSubmitForm: null,
+		action:function(){
+			BtNavigate.stateChange('goRight' ,'bettyleague.showdown.step0', {
+				'bettyLeagueId' : $stateParams.bettyLeagueId,
+				'showdownId' : $scope.showdownCtrl.nextShowDownId,
+				'animDirection' : '3left'
+			});
+		}
+	};
+	//AUTRES STATUS
 
 	animation.promise.then(function () {
 		$scope.parentCtrl.withHeadLogo = withHeadLogo;
