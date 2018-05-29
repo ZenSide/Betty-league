@@ -99,7 +99,29 @@ betty2App.factory('BettyLeagueApi', function ($filter, $rootScope, ResourcesFact
 				reject(messages);
 				return;
 			});
-		}
+		},
+
+		createPrivateBettyLeague: function (newLeague, resolve, reject) {
+			ResourcesFactory.post('/api/betty_league/create', newLeague).then(function (data) {
+				////add new bet to local bets
+				//BetApi.setBet(data, newBet.bettyLeagueId, newBet.showdownId, function () {
+				//	var messages = [
+				//		{
+				//			context: 'success',
+				//			content: 'LOGIN.SIGNSUCCESS'
+				//		}
+				//	];
+				//	resolve (messages);
+				//	return;
+				//}, function (messages) {
+				//	reject(messages);
+				//	return;
+				//});
+			}, function (messages) {
+				reject(messages);
+				return;
+			});
+		},
 	};
 	return BettyLeagueApi;
 });

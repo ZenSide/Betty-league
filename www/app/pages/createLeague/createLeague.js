@@ -1,4 +1,4 @@
-betty2App.controller('CreateLeagueCtrl', function (BtMessages, $scope, BtLoading, animation) {
+betty2App.controller('CreateLeagueCtrl', function (BettyLeagueApi, BtMessages, $scope, BtLoading, animation) {
 	var createLeagueCtrl = this;
 	BtLoading.endLoad();
 
@@ -7,6 +7,7 @@ betty2App.controller('CreateLeagueCtrl', function (BtMessages, $scope, BtLoading
 	};
 
 	createLeagueCtrl.newLeague = {
+		special: 'WC2018',
 		name: ''
 	};
 	var fieldsNames = [
@@ -16,6 +17,11 @@ betty2App.controller('CreateLeagueCtrl', function (BtMessages, $scope, BtLoading
 		console.log('pouet');
 		if(form.$valid){
 			BtLoading.startLoad();
+			BettyLeagueApi.createPrivateBettyLeague(createLeagueCtrl.newLeague, function () {
+
+			}, function(messages) {
+				BtMessages.show(messages);
+			})
 		}
 		else{
 			BtMessages.showFormMessages(form, fieldsNames);

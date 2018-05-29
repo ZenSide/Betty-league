@@ -1,4 +1,4 @@
-betty2App.controller('ParentCtrl', function ($scope, $rootScope, BtNavigate, BettyLeagueApi, ShowdownApi, BtMessages) {
+betty2App.controller('ParentCtrl', function (BtLoading, $scope, $rootScope, BtNavigate, BettyLeagueApi, ShowdownApi, BtMessages) {
     var parentCtrl = this;
 
     $rootScope.fbCredentials = {};
@@ -24,6 +24,7 @@ betty2App.controller('ParentCtrl', function ($scope, $rootScope, BtNavigate, Bet
     };
 
     parentCtrl.goBettyWorld = function () {
+        BtLoading.startLoad();
         BettyLeagueApi.getBettyWorld(function (bettyWorld) {
             //find worldbettyLeague
             //go to world bettyleague
@@ -36,15 +37,15 @@ betty2App.controller('ParentCtrl', function ($scope, $rootScope, BtNavigate, Bet
                 });
             }, function (messages) {
                 BtMessages.show(messages, null, function () {
-                    BtNavigate.stateChange(null, 'login');
+                    BtLoading.endLoad();
                 })
-            }, true);
+            });
 
         }, function (messages) {
             BtMessages.show(messages, null, function () {
-                BtNavigate.stateChange(null, 'login');
+                BtLoading.endLoad();
             })
-        }, true);
+        });
     };
 
     parentCtrl.withHeadLogo = false;
