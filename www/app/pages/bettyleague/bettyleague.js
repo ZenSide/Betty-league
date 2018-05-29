@@ -8,6 +8,11 @@ betty2App.controller('BettyLeagueCtrl', function (seasonScore, $scope, $statePar
 
 	bettyLeagueCtrl.bettyLeague = bettyLeague;
 
+	if (bettyLeagueCtrl.bettyLeague.endless && bettyLeagueCtrl.bettyLeague.public)
+	{
+		$scope.parentCtrl.activeHeaderBtns = [false, true, false, false];
+	}
+
 	bettyLeagueCtrl.seasonScore = seasonScore;
 
 	bettyLeagueCtrl.goListMatch = function () {

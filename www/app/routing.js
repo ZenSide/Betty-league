@@ -356,6 +356,46 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
                 }
             }
         })
+    
+        .state('privateleagues', {
+            url: '/privateleagues/:animDirection',
+            params: {animDirection: null},
+            templateUrl: 'app/pages/privateLeagues/privateLeagues.html',
+            controller: 'PrivateLeaguesCtrl',
+            controllerAs: 'privateLeaguesCtrl',
+            resolve: {
+                translations: function ($translate) {
+                    return $translate([
+                        ]
+                    ).then(function (translations) {
+                        return translations
+                    });
+                },
+                animation: function (BtNavigate, $stateParams) {
+                    return BtNavigate.anim($stateParams.animDirection);
+                }
+            }
+        })
+
+        .state('createleague', {
+            url: '/createLeague/:animDirection',
+            params: {animDirection: null},
+            templateUrl: 'app/pages/createLeague/createLeague.html',
+            controller: 'CreateLeagueCtrl',
+            controllerAs: 'createLeagueCtrl',
+            resolve: {
+                translations: function ($translate) {
+                    return $translate([
+                        ]
+                    ).then(function (translations) {
+                        return translations
+                    });
+                },
+                animation: function (BtNavigate, $stateParams) {
+                    return BtNavigate.anim($stateParams.animDirection);
+                }
+            }
+        })
 
     ;
 

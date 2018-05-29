@@ -55,7 +55,8 @@ var translations = {
                     btPlainPassword : "mot de passe requis",
                     btPassword : "mot de passe requis",
                     btPseudo : "pseudo requis",
-                    btConfirmPassword : "confirmation du mot de passe requise"
+                    btConfirmPassword : "confirmation du mot de passe requise",
+                    btNewLeagueName : "vous devez donner un nom à votre league"
                 },
                 email : {
                     btEmail : "format d'email invalide",
@@ -128,6 +129,18 @@ var translations = {
             h:'h',
             m:'m',
             s:'s'
+        },
+        COMMUNITY : {
+            TITLE : "Ta communauté",
+            TITLE_LEAGUES : "Tes leagues privées",
+            WORLD_CUP_SPEECH : "A l'occasion de la coupe du monde 2018 tu peux créer une betty league privée pour te mesurer à tes amis et ou des gens que tu aimes pas trop",
+            NEW_WORLD_CUP : "Créer une Coupe du monde privée",
+            JOIN_LEAGUE : "Rejoindre une league privée",
+            NEW_LEAGUE : "Nouvelle league privée",
+            NEW_VALIDATE : "Valider",
+            PLACEHOLDERS : {
+                NAME : "Nom de ta league"
+            }
         }
     }
 }

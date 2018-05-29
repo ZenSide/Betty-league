@@ -1,9 +1,9 @@
 .bt-action {
-  width: 33.333%;
   top: 1rem;
-  position: absolute;
+  width: 100%;
   text-align: center;
-  padding: 0 1rem 0 1rem;
+  position: relative;
+  padding: 0 0.5rem 0 0.5rem;
 }
 .bt-action.ng-leave {
   animation: slideOutDown 150ms;
@@ -32,22 +32,18 @@
   line-height: 5rem !important;
   font-size: 3.4rem;
 }
-.bt-action--big .bt-action__ico {
-  line-height: 5rem !important;
-  font-size: 3.4rem;
-}
 .bt-action--big .bt-action__ico.fa,
 .bt-action--big .bt-action__ico.fas {
   font-size: 2.5rem;
 }
 .bt-action--left {
-  left: 0;
+  padding: 0 0.5rem 0 1rem;
 }
 .bt-action--middle {
-  left: 33.333%;
+  padding: 0 0.5rem 0 0.5rem;
 }
 .bt-action--right {
-  left: 66.666%;
+  padding: 0 1rem 0 0.5rem;
 }
 .bt-action__btn {
   z-index: 15!important;
@@ -94,6 +90,18 @@
 .bt-action__btn:active:not(.bt-action__facade--no-press) .bt-action__facade,
 .bt-action__btn.bt-action__btn--active .bt-action__facade {
   transform: translate3d(0, 0.4rem, 0);
+}
+.bt-action--head .bt-action__btn:disabled {
+  color: #e6e6e6;
+}
+.bt-action--head .bt-action__btn:disabled .bt-action__facade {
+  transform: translate3d(0, 0.4rem, 0);
+}
+.bt-action--head.ng-leave {
+  animation: slideOutUp 150ms;
+}
+.bt-action--head.ng-enter {
+  animation: slideInDown 150ms;
 }
 .bt-action__btn--gold {
   background-color: #b6850f;
@@ -142,6 +150,11 @@
   text-align: center;
   transition: transform 75ms;
   will-change: transform;
+  font-size: 3.2rem;
+}
+.bt-action__ico.fa,
+.bt-action__ico.fas {
+  font-size: 1.7rem;
 }
 .bt-action__ico.bt-ico-hide {
   transform: rotateY(90deg);

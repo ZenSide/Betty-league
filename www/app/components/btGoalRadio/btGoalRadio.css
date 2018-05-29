@@ -8,6 +8,9 @@
   line-height: 4rem;
   font-family: "poppinsbold", sans-serif;
 }
+.bt-goal-radio__button--radio .bt-action__ico {
+  font-size: 2.5rem;
+}
 .bt-goal-radio__radio:checked + .bt-goal-radio__button--radio {
   color: #e6e6e6;
   background-color: #289172;

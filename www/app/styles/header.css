@@ -1,21 +1,12 @@
 .bt-header {
   position: fixed;
   padding: 0;
-  height: 7rem;
+  height: 5.5rem;
   background-color: #289172;
+  background-image: none;
   border: none;
   top: 0;
   z-index: 100;
-}
-.bt-header:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #289172;
-  z-index: 9;
 }
 .bt-logo {
   position: absolute;

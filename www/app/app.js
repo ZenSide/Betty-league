@@ -44,8 +44,6 @@ betty2App.run(function($http, $ionicPlatform, $cordovaNetwork, $rootScope, $time
     if(window.StatusBar) {
       StatusBar.styleDefault();
     }
-
-    console.log('ready');
   });
 }).config(function ($ionicConfigProvider) {
   $ionicConfigProvider.scrolling.jsScrolling(false);

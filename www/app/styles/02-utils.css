@@ -84,3 +84,6 @@
 .u-underline {
   text-decoration: underline;
 }
+.u-padding-micro {
+  padding: 0.5rem;
+}

@@ -1,0 +1,27 @@
+<ion-content delegate-handle="btContentHandle" class="bt-content login">
+    <h1 class="txt-part-title u-gutter-bottom-regular" translate="COMMUNITY.NEW_LEAGUE"></h1>
+
+    <form autocomplete="off" class="u-gutter-bottom-big"
+          novalidate name="createLeagueForm" id="createLeagueId"
+          ng-submit="createLeagueCtrl.submitForm(createLeagueForm)">
+        <!--//USERNAME-->
+        <bt-input-text bt-select-order="1"
+                       bt-focus
+                       bt-ng-model="createLeagueCtrl.newLeague.name"
+                       bt-type="text" bt-name="btNewLeagueName"
+                       bt-placeholder="'COMMUNITY.PLACEHOLDERS.NAME'"
+                       bt-required="true"
+                       class="bt-input-text-component {{activeinputs}}"
+        ></bt-input-text>
+
+        <!--SUBMIT-->
+        <bt-body-btn bt-ico="'fa fa-check'"
+                     bt-content="'COMMUNITY.NEW_VALIDATE'"
+                     bt-btn-classes="'bt-action__btn--gold'"
+                     bt-submit-form="createLeagueId"
+                     bt-type="submit"
+        >
+        </bt-body-btn>
+        <!--TODO conditions generales-->
+    </form>
+</ion-content>

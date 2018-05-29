@@ -6,7 +6,7 @@ betty2App.component('btGoalRadio',{
   bindings:{
     btModel: "="
   },
-  controller:function($timeout){
+  controller:function(){
     var $ctrl = this;
 
     $ctrl.buttons = [0, 1, 2, 3, "+"];

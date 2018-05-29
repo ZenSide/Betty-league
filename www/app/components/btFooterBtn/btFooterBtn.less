@@ -8,11 +8,11 @@
 @press-distance:0.4rem;
 
 .bt-action {
-  width: 33.333%;
   top: @margin-small;
-  position: absolute;
+  width: 100%;
   text-align: center;
-  padding: 0 @margin-small 0 @margin-small;
+  position: relative;
+  padding: 0 @margin-micro 0 @margin-micro;
   //ANIMATIONS
   &.ng-leave{
     animation: slideOutDown @bouncing-time;
@@ -48,11 +48,6 @@
   .bt-action__ico {
     line-height: @big-size!important;
     font-size: 3.4rem;
-  }
-
-  .bt-action__ico {
-    line-height: @big-size!important;
-    font-size: 3.4rem;
 
     &.fa, &.fas {
       font-size: 2.5rem;
@@ -63,15 +58,15 @@
 
 //Position
 .bt-action--left {
-  left: 0;
+  padding: 0 @margin-micro 0 @margin-small;
 }
 
 .bt-action--middle {
-  left: 33.333%;
+  padding: 0 @margin-micro 0 @margin-micro;
 }
 
 .bt-action--right {
-  left: 66.666%;
+  padding: 0 @margin-small 0 @margin-micro;
 }
 
 //Button
@@ -121,6 +116,25 @@
     .bt-action__facade {
       transform: translate3d(0, @press-distance, 0);
     }
+  }
+}
+
+.bt-action--head {
+  .bt-action__btn {
+
+    &:disabled {
+      color: @white;
+      .bt-action__facade {
+        transform: translate3d(0, @press-distance, 0);
+      }
+    }
+  }
+
+  &.ng-leave{
+    animation: slideOutUp @bouncing-time;
+  }
+  &.ng-enter{
+    animation: slideInDown @bouncing-time;
   }
 }
 
@@ -180,6 +194,10 @@
   text-align: center;
   transition: transform @btn-press-time;
   will-change: transform;
+  font-size: 3.2rem;
+  &.fa, &.fas {
+    font-size: 1.7rem;
+  }
   &.bt-ico-hide {
     transform: rotateY(90deg);
   }

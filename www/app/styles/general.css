@@ -19,6 +19,9 @@ body {
 .bt-content.ranking {
   top: 15rem;
 }
+.bt-content.privateleagues {
+  top: 5.5rem;
+}
 .col-magic {
   flex: 0 0 20px;
   max-width: 50%;
