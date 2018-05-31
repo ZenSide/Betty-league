@@ -4,7 +4,7 @@ betty2App.factory('BettyLeagueApi', function ($filter, $rootScope, ResourcesFact
 		//User Sign In
 		getMyBettyLeagues: function (resolve, reject, noCache) {
 			var myBettyLeagues = BtLocalStorage.getObject('MyBettyLeagues');
-			if (myBettyLeagues !== {} && !noCache) {
+			if (myBettyLeagues && !noCache) {
 				resolve(myBettyLeagues['hydra:member']);
 				return;
 			}
@@ -17,6 +17,14 @@ betty2App.factory('BettyLeagueApi', function ($filter, $rootScope, ResourcesFact
 				reject(messages);
 				return;
 			}, noCache);
+		},
+
+		setMyBettyLeagues: function (newMyBettyLeague) {
+			var myBettyLeague = BtLocalStorage.getObject('MyBettyLeagues');
+
+			myBettyLeague['hydra:member'] = newMyBettyLeague;
+
+			BtLocalStorage.setObject('MyBettyLeagues', myBettyLeague);
 		},
 
 		getBettyWorld: function (resolve, reject, noCache) {
@@ -71,7 +79,7 @@ betty2App.factory('BettyLeagueApi', function ($filter, $rootScope, ResourcesFact
 
 		getSeasonScore: function (bettyLeagueId, resolve, reject, noCache) {
 			var seasonScore = BtLocalStorage.getObject('ScoreSeason' + bettyLeagueId);
-			if (seasonScore !== {} && !noCache) {
+			if (seasonScore && !noCache) {
 				resolve(seasonScore['score']);
 				return;
 			}
@@ -104,23 +112,45 @@ betty2App.factory('BettyLeagueApi', function ($filter, $rootScope, ResourcesFact
 		createPrivateBettyLeague: function (newLeague, resolve, reject) {
 			ResourcesFactory.post('/api/betty_league/create', newLeague).then(function (data) {
 				////add new bet to local bets
-				//BetApi.setBet(data, newBet.bettyLeagueId, newBet.showdownId, function () {
-				//	var messages = [
-				//		{
-				//			context: 'success',
-				//			content: 'LOGIN.SIGNSUCCESS'
-				//		}
-				//	];
-				//	resolve (messages);
-				//	return;
-				//}, function (messages) {
-				//	reject(messages);
-				//	return;
-				//});
+				BettyLeagueApi.setBettyLeague(data, function () {
+					resolve (data);
+					return;
+				}, function (messages) {
+					reject(messages);
+					return;
+				});
 			}, function (messages) {
 				reject(messages);
 				return;
 			});
+		},
+
+		setBettyLeague: function (bettyleague, resolve, reject, noCache) {
+			BettyLeagueApi.getMyBettyLeagues(function (myBettyLeagues) {
+
+				var arrayLength = myBettyLeagues.length;
+				var fundBetIndex = null;
+				for (var i = 0; i < arrayLength; i++) {
+					if (myBettyLeagues[i].id == bettyleague.id) {
+						fundBetIndex = i;
+					}
+				}
+
+				if (fundBetIndex !== null) {
+					myBettyLeagues[fundBetIndex] = bettyleague;
+				} else {
+					myBettyLeagues.push(bettyleague);
+				}
+
+				BettyLeagueApi.setMyBettyLeagues(myBettyLeagues);
+
+				resolve(true);
+				return;
+
+			}, function (messages) {
+				reject(messages);
+				return;
+			}, noCache)
 		},
 	};
 	return BettyLeagueApi;

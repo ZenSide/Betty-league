@@ -1,4 +1,4 @@
-betty2App.controller('PrivateLeaguesCtrl', function (BtNavigate, $scope, BtLoading, animation) {
+betty2App.controller('PrivateLeaguesCtrl', function (ShowdownApi, BtMessages, myBettyLeagues, BtNavigate, $scope, BtLoading, animation) {
 	var privateLeaguesCtrl = this;
 	BtLoading.endLoad();
 
@@ -6,8 +6,26 @@ betty2App.controller('PrivateLeaguesCtrl', function (BtNavigate, $scope, BtLoadi
 		BtNavigate.stateChange('goRight' ,'createleague', {
 			'animDirection' : '3left'
 		});
-	}
+	};
 
+	privateLeaguesCtrl.joinBettyLeague = function (bettyleagueId) {
+		BtLoading.startLoad();
+		ShowdownApi.getNextOpenShowDown(bettyleagueId, function (showdown) {
+			BtNavigate.stateChange('goTop' ,'bettyleague.showdown.step0', {
+				'bettyLeagueId' : bettyleagueId,
+				'showdownId' : showdown.id,
+				'animDirection' : 'fade'
+			});
+		}, function (messages) {
+			BtMessages.show(messages, null, function () {
+				BtLoading.endLoad();
+			})
+		});
+	};
+
+	privateLeaguesCtrl.myBettyLeagues = myBettyLeagues;
+
+	console.log(myBettyLeagues);
 
 	var footerStatus = {};
 	footerStatus.leftBt = {
@@ -23,7 +41,6 @@ betty2App.controller('PrivateLeaguesCtrl', function (BtNavigate, $scope, BtLoadi
 	$scope.parentCtrl.activeHeaderBtns = [false, false, true, false];
 
 	animation.promise.then(function () {
-		console.log('HOP HOP HOP');
 		$scope.parentCtrl.withHeadLogo = false;
 		$scope.parentCtrl.footerStatus = footerStatus;
 	});

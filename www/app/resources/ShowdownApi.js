@@ -5,7 +5,11 @@ betty2App.factory('ShowdownApi', function ($q, BetApi, $filter, BettyLeagueApi, 
 		//User Sign In
 		getFullRange: function (bettyLeagueId, resolve, reject, noCache) {
 			var fullRange = BtLocalStorage.getObject('FullRange' + bettyLeagueId);
-			if (fullRange !== {} && !noCache) {
+
+
+			if (fullRange && !noCache) {
+				console.log(fullRange);
+
 				resolve(fullRange['hydra:member']);
 				return;
 			}
@@ -24,6 +28,7 @@ betty2App.factory('ShowdownApi', function ($q, BetApi, $filter, BettyLeagueApi, 
 
 		//get next open showdown
 		getNextOpenShowDown: function (bettyLeagueId, resolve, reject, noCache) {
+			console.log(bettyLeagueId);
 			function sdFull() {
 				var sdDefer = $q.defer();
 				ShowdownApi.getFullRange(bettyLeagueId, function (fullRange) {

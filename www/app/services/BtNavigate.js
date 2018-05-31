@@ -38,15 +38,15 @@ betty2App.factory('BtNavigate', function(ENV, $state, $cordovaNativePageTransiti
                 } // called in case you pass in weird values
             );
           } else {
-            var fixedPixelsTop = 70;
+            var fixedPixelsTop = 55;
             var fixedPixelsBottom = 55;
 
             if (direction.charAt(0) == 2) {
               direction = direction.substring(1);
-              fixedPixelsTop = 70 + 71;
+              fixedPixelsTop = 55 + 71;
             } else if(direction.charAt(0) == 3) {
               direction = direction.substring(1);
-              fixedPixelsTop = 70 + 71;
+              fixedPixelsTop = 55 + 71;
             }
 
             var options = {

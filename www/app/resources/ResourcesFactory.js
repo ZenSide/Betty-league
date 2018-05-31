@@ -4,14 +4,21 @@ betty2App.factory('ResourcesFactory', function($q, $http, $rootScope, API_BASE_U
         errorHandling: function (data, status) {
             var messages = [];
             if (data && data['@type'] === "ConstraintViolationList") {
-                angular.forEach(data['violations'], function(value) {
+                angular.forEach(data['violations'], function (value) {
                     messages.push(
-                      {
-                          context:'alert',
-                          content:value.message
-                      }
+                        {
+                            context: 'alert',
+                            content: value.message
+                        }
                     )
                 });
+            } else if (data['hydra:description'] !== undefined) {
+                messages = [
+                    {
+                        context: 'alert',
+                        content: data['hydra:description']
+                    }
+                ]
             } else {
                 switch (status) {
                     case 401:

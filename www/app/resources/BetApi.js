@@ -26,7 +26,7 @@ betty2App.factory('BetApi', function ($filter, ResourcesFactory, BtLocalStorage)
 
 		getFullRange: function (bettyLeagueId, resolve, reject, noCache) {
 			var fullRange = BtLocalStorage.getObject('BetsFullRange' + bettyLeagueId);
-			if (fullRange !== {} && !noCache) {
+			if (fullRange && !noCache) {
 				resolve(fullRange['hydra:member']);
 				return;
 			}

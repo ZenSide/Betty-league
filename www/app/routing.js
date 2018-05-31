@@ -371,6 +371,15 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
                         return translations
                     });
                 },
+                myBettyLeagues: function (BettyLeagueApi, $q, BtMessages) {
+                    var deferred = $q.defer();
+                    BettyLeagueApi.getMyBettyLeagues(function (bettyleagues) {
+                        deferred.resolve(bettyleagues);
+                    }, function (messages) {
+                        BtMessages.show(messages)
+                    })
+                    return deferred.promise;
+                },
                 animation: function (BtNavigate, $stateParams) {
                     return BtNavigate.anim($stateParams.animDirection);
                 }

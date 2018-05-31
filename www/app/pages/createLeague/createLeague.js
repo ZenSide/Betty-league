@@ -1,4 +1,4 @@
-betty2App.controller('CreateLeagueCtrl', function (BettyLeagueApi, BtMessages, $scope, BtLoading, animation) {
+betty2App.controller('CreateLeagueCtrl', function (BtNavigate, ShowdownApi, BettyLeagueApi, BtMessages, $scope, BtLoading, animation) {
 	var createLeagueCtrl = this;
 	BtLoading.endLoad();
 
@@ -17,10 +17,18 @@ betty2App.controller('CreateLeagueCtrl', function (BettyLeagueApi, BtMessages, $
 		console.log('pouet');
 		if(form.$valid){
 			BtLoading.startLoad();
-			BettyLeagueApi.createPrivateBettyLeague(createLeagueCtrl.newLeague, function () {
-
+			BettyLeagueApi.createPrivateBettyLeague(createLeagueCtrl.newLeague, function (newbettyleague) {
+				BtMessages.show({
+						context: 'success',
+						content: 'COMMUNITY.NEW_LEAGUE_CREATED'
+					}, null, function () {
+					BtNavigate.stateChange('goTop' ,'privateleagues', {
+						'animDirection' : 'fade'
+					});
+				});
 			}, function(messages) {
 				BtMessages.show(messages);
+				BtLoading.endLoad();
 			})
 		}
 		else{

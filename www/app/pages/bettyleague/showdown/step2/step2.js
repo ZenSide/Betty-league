@@ -105,7 +105,8 @@ betty2App.controller('Step2Ctrl', function (BetApi, BtMessages, translations, $s
 				'showdownId' : $stateParams.showdownId,
 				'animDirection' : '3left'
 			}, true);
-		}, function () {
+		}, function (messages) {
+			BtMessages.show(messages);
 			BtLoading.endLoad();
 		});
 	};

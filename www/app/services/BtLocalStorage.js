@@ -10,7 +10,7 @@ betty2App.factory('BtLocalStorage', ['$window', function($window) {
       $window.localStorage[key] = JSON.stringify(value);
     },
     getObject: function(key) {
-      return JSON.parse($window.localStorage[key] || '{}');
+      return JSON.parse($window.localStorage[key] || false);
     },
     remove: function(key) {
       $window.localStorage.removeItem(key);

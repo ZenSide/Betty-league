@@ -11,7 +11,8 @@ var translations = {
             NOBETTYWORLD : 'Betty World non trouvé',
             NONEXTOPENSHOWDOWN : 'Pas de paris ouverts',
             BETTYLEAGUENOTFOUND : 'Betty League non trouvée',
-            SHOWDOWNNOTFOUND : 'Match non trouvé'
+            SHOWDOWNNOTFOUND : 'Match non trouvé',
+            NOMOREPRIVATELEAGUE : 'Vous ne pouvez pas créer plus de leagues de ce type',
         },
         USER : {
             ASSERT : {
@@ -140,7 +141,10 @@ var translations = {
             NEW_VALIDATE : "Valider",
             PLACEHOLDERS : {
                 NAME : "Nom de ta league"
-            }
+            },
+            NEW_LEAGUE_CREATED : "Ta league a bien été créée !",
+            CREATED_BY: "Créée par",
+            PLAY: "Jouer !"
         }
     }
 }
