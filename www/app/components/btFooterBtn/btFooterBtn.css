@@ -63,6 +63,9 @@
   min-height: 0!important;
   font-weight: normal;
 }
+.bt-action__btn.btn-disabled {
+  opacity: .3;
+}
 .bt-action__btn .bt-action__facade {
   pointer-events: none;
   z-index: 14;

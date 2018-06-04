@@ -19,7 +19,6 @@
     <link rel="stylesheet" type="text/css" href="app/components/btFooterBtn/btFooterBtn.css" />
     <link rel="stylesheet" type="text/css" href="app/components/btGoalRadio/btGoalRadio.css" />
     <link rel="stylesheet" type="text/css" href="app/components/btInputText/btInputText.css" />
-    <link rel="stylesheet" type="text/css" href="app/components/btLogoTeam/btLogoTeam.css" />
     <link rel="stylesheet" type="text/css" href="app/components/btModalOdds/btModalOdds.css" />
     <link rel="stylesheet" type="text/css" href="app/components/btTeamRadio/btTeamRadio.css" />
     <link rel="stylesheet" type="text/css" href="app/fonts/bty-ico/style.css" />
@@ -55,16 +54,14 @@
 </head>
 
 <!--//HEADER BAR-->
-<body ng-app="betty2" ng-controller="ParentCtrl as parentCtrl" >
-    <div class="bar bt-header ng-cloak">
-        <img class="bt-logo" ng-if="parentCtrl.withHeadLogo" src="img/logo_216x240.png">
-        
-        
+<body ng-app="betty2" ng-controller="ParentCtrl as parentCtrl" ng-class="{'with-head-logo':parentCtrl.withHeadLogo, 'with-big-logo':isCurrent('login')}">
+    <img class="bt-logo" src="img/logo_216x240.png" ng-if="parentCtrl.withHeadLogo">
+    <div class="bar bt-header ng-cloak" ng-if="!parentCtrl.withHeadLogo">
         <div class="row">
             <div class="col">
                 <bt-footer-btn bt-show="!parentCtrl.withHeadLogo"
                                bt-classes="'bt-action--medium bt-action--head'"
-                               bt-button-classes="'bt-action__btn--blue'"
+                               bt-button-classes="'bt-action__btn--blue btn-disabled'"
                                bt-ico="'fas fa-question'"
                                bt-submit-form="btn.submitform"
                                bt-position="left"
@@ -75,7 +72,7 @@
             <div class="col">
                 <bt-footer-btn bt-show="!parentCtrl.withHeadLogo"
                                bt-classes="'bt-action--medium bt-action--head'"
-                               bt-button-classes="'bt-action__btn--blue'"
+                               bt-button-classes="isCurrent('bettyleague')?'bt-action__btn--gold':'bt-action__btn--blue'"
                                bt-ico="'icon-bty-ico-world'"
                                bt-submit-form="btn.submitform"
                                bt-position="middle"
@@ -86,7 +83,7 @@
             <div class="col">
                 <bt-footer-btn bt-show="!parentCtrl.withHeadLogo"
                                bt-classes="'bt-action--medium bt-action--head'"
-                               bt-button-classes="'bt-action__btn--blue'"
+                               bt-button-classes="isCurrent('privateleague')?'bt-action__btn--gold':'bt-action__btn--blue'"
                                bt-ico="'icon-bty-ico-join'"
                                bt-submit-form="btn.submitform"
                                bt-position="middle"
@@ -97,7 +94,7 @@
             <div class="col">
                 <bt-footer-btn bt-show="!parentCtrl.withHeadLogo"
                                bt-classes="'bt-action--medium bt-action--head'"
-                               bt-button-classes="'bt-action__btn--blue'"
+                               bt-button-classes="'bt-action__btn--blue btn-disabled'"
                                bt-ico="'icon-bty-ico-victory'"
                                bt-submit-form="btn.submitform"
                                bt-position="right"
@@ -208,6 +205,17 @@
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
 
+    <!-- libs -->
+    <script src="lib/angular-translate/angular-translate.min.js"></script>
+    <script src="lib/angular-messages/angular-messages.min.js"></script>
+    <!--<script src="lib/angular-messages/angular-messages.min.js"></script>-->
+    <script src="lib/angular-touch/angular-touch.min.js"></script>
+    <script src="lib/angular-i18n/angular-locale_fr-fr.js"></script>
+
+    <!-- removed library -->
+    <!--<script src="lib/restangular/dist/restangular.min.js"></script>-->
+    <!--<script src="lib/lodash/lodash.min.js"></script>-->
+
     <!-- grunt included -->
     <script src="app/app.js"></script>
     <script src="app/components/betResumee/betResumee.js"></script>
@@ -250,14 +258,5 @@
     <script src="app/services/BtMessages.js"></script>
     <script src="app/services/BtNavigate.js"></script>
     <script src="app/traductions.js"></script>
-
-    <!-- libs -->
-    <script src="lib/restangular/dist/restangular.min.js"></script>
-    <script src="lib/lodash/lodash.min.js"></script>
-    <script src="lib/angular-translate/angular-translate.min.js"></script>
-    <script src="lib/angular-messages/angular-messages.min.js"></script>
-    <script src="lib/angular-messages/angular-messages.min.js"></script>
-    <script src="lib/angular-touch/angular-touch.min.js"></script>
-    <script src="lib/angular-i18n/angular-locale_fr-fr.js"></script>
 </body>
 </html>

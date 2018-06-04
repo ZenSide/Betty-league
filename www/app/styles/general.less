@@ -1,7 +1,7 @@
 @import "../../less/constant";
 
 //RESET
-html, body{
+html, body {
   font-size: 10px;
   line-height: 1.4;
 }
@@ -9,21 +9,39 @@ html, body{
 body {
   background-color: @light-green;
   color: @black;
+
+  &.with-head-logo {
+    ui-view {
+      margin-top: 1.3em;
+    }
+  }
+  &.with-big-logo {
+    .bt-logo {
+      position: absolute;
+      left: 50%;
+      margin-left: -4.7rem;
+      top: 2.5rem;
+      width: 9.4rem;
+      z-index: 10;
+    }
+    ui-view {
+      margin-top: 10em;
+    }
+  }
 }
 
-
 //SCROLL INDICATOR
-.scroll-bar-indicator{
+.scroll-bar-indicator {
   background-color: @white;
 }
 
 //CONTENT
-.bt-content{
+.bt-content {
   padding-top: @margin-micro;
   padding-bottom: @margin-micro;
   padding-left: @margin-small;
   padding-right: @margin-small;
-  &.signin,&.login{
+  &.signin, &.login {
   }
   &.step {
     //padding-top: 0;
@@ -36,13 +54,13 @@ body {
   }
 }
 
-.col-magic{
+.col-magic {
   flex: 0 0 20px;
   max-width: 50%;
 }
 
-.col-nopadding{
-padding: 0;
+.col-nopadding {
+  padding: 0;
 }
 
 .bt-coin {
