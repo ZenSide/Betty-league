@@ -11,6 +11,7 @@ var translations = {
             NOBETTYWORLD : 'Betty World non trouvé',
             NONEXTOPENSHOWDOWN : 'Pas de paris ouverts',
             BETTYLEAGUENOTFOUND : 'Betty League non trouvée',
+            ALREADYSUBSCRIBED : 'Tu es déjà inscrit à cette league',
             SHOWDOWNNOTFOUND : 'Match non trouvé',
             NOMOREPRIVATELEAGUE : 'Vous ne pouvez pas créer plus de leagues de ce type',
             COPYSUCCESS : 'Le code a été copié'

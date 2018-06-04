@@ -1,3 +1,7 @@
+.bt-goal-radio__col:not(:first-child),
+.bt-goal-radio__col:not(:last-child) {
+  padding: 0 0.5rem 0 0.5rem !important;
+}
 .bt-goal-radio__radio {
   opacity: 0;
   position: absolute;
@@ -9,7 +13,7 @@
   font-family: "poppinsbold", sans-serif;
 }
 .bt-goal-radio__button--radio .bt-action__ico {
-  font-size: 2.5rem;
+  font-size: 1.6rem;
 }
 .bt-goal-radio__radio:checked + .bt-goal-radio__button--radio {
   color: #e6e6e6;

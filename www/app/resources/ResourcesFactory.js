@@ -67,6 +67,31 @@ betty2App.factory('ResourcesFactory', function($q, $http, $rootScope, API_BASE_U
             });
         },
 
+        basePut: function (url, data, config, resolve, reject) {
+            $http.put(API_BASE_URL + url, data, config)
+                .success(function (data) {
+                    resolve(data);
+                }).error(function (data, status) {
+                reject(ResourcesFactory.errorHandling(data, status));
+            });
+        },
+
+        put: function (url, data, anonimous) {
+            return $q(function (resolve, reject) {
+                var config = {};
+                if (!anonimous) {
+                    var User = BtLocalStorage.getObject('User');
+                    config.headers = {
+                        Authorization: 'Bearer ' + User.token
+                    };
+                    ResourcesFactory.basePut(url, data, config, resolve, reject);
+                }
+                else {
+                    ResourcesFactory.basePut(url, data, config, resolve, reject);
+                }
+            });
+        },
+
         baseGet: function (url, config, resolve, reject) {
             $http.get(API_BASE_URL + url, config)
                 .success(function (data) {

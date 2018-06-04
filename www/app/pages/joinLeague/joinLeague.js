@@ -6,24 +6,17 @@ betty2App.controller('JoinLeagueCtrl', function (BtNavigate, ShowdownApi, BettyL
 		console.log()
 	};
 	joinLeagueCtrl.newLeague = {
-		special: 'WC2018',
-		name: ''
+		codeName: ''
 	};
 	var fieldsNames = [
 		'btNewLeagueName'
 	];
 	joinLeagueCtrl.submitForm = function(form){
-		console.log('pouet');
 		if(form.$valid){
 			BtLoading.startLoad();
-			BettyLeagueApi.createPrivateBettyLeague(joinLeagueCtrl.newLeague, function (newbettyleague) {
-				BtMessages.show({
-						context: 'success',
-						content: 'COMMUNITY.NEW_LEAGUE_CREATED'
-					}, null, function () {
-					BtNavigate.stateChange('goTop' ,'privateleagues', {
-						'animDirection' : 'fade'
-					});
+			BettyLeagueApi.joinPrivateBettyLeague(joinLeagueCtrl.newLeague, function (newbettyleague) {
+				BtNavigate.stateChange('goTop' ,'privateleagues', {
+					'animDirection' : 'fade'
 				});
 			}, function(messages) {
 				BtMessages.show(messages);

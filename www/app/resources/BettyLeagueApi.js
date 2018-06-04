@@ -126,7 +126,7 @@ betty2App.factory('BettyLeagueApi', function ($filter, $rootScope, ResourcesFact
 		},
 
 		joinPrivateBettyLeague: function (newLeague, resolve, reject) {
-			ResourcesFactory.post('/api/betty_league/join', newLeague).then(function (data) {
+			ResourcesFactory.put('/api/betty_league/join', newLeague).then(function (data) {
 				////add new bet to local bets
 				BettyLeagueApi.setBettyLeague(data, function () {
 					resolve (data);

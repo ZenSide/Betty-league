@@ -2,7 +2,9 @@
 @press-distance:0.4rem;
 
 .bt-goal-radio__col {
-
+  &:not(:first-child), &:not(:last-child) {
+    padding: 0 @margin-micro 0 @margin-micro!important;
+  }
 }
 .bt-goal-radio__radio {
   opacity: 0;
@@ -16,7 +18,7 @@
   font-family: @normal-font-bold;
 
   .bt-action__ico {
-    font-size: 2.5rem;
+    font-size: 1.6rem;
   }
 }
 
