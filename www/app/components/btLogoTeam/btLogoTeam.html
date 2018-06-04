@@ -1,7 +1,7 @@
 <div class="logo-team logo-team--{{$ctrl.btSize}}">
-    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-    <svg
+    <img class="logo-team__img" ng-if="$ctrl.imgUrl" ng-src="{{$ctrl.imgUrl}}">
+
+    <svg    ng-if="!$ctrl.imgUrl"
             xmlns:dc="http://purl.org/dc/elements/1.1/"
             xmlns:cc="http://creativecommons.org/ns#"
             xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"

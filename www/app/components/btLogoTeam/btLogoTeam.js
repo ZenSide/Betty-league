@@ -12,5 +12,12 @@ betty2App.component('btLogoTeam',{
     if (!ctrl.btSize) {
       ctrl.btSize = 40;
     }
+
+    ctrl.imgUrl = null;
+    if (ctrl.btTeam.sm__nationalTeam) {
+      ctrl.imgUrl = "/img/flags/" + ctrl.btTeam.sm__id + ".png"
+    }
+
+    console.log(ctrl.imgUrl);
   }
 });
