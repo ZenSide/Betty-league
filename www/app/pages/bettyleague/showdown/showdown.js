@@ -58,10 +58,10 @@ betty2App.controller('ShowdownCtrl', function (BetApi, ShowdownApi, BtLoading, S
 				'bet' : showdownCtrl.bet,
 				'showdown' : showdownCtrl.showdown,
 				'scoreOdds' : data,
+				'betResume' : showdownCtrl.betResume
 			};
 			BtLoading.endLoad();
 			$scope.parentCtrl.showDetailCotesModal = true;
-
 
 		}, function (messages) {
 			BtLoading.endLoad();

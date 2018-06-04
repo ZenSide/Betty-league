@@ -7,7 +7,7 @@ betty2App.controller('LoginCtrl', function (animation, $scope, UserApi,BtMessage
     var withHeadLogo = true;
     var footerStatus = {
         leftBt : {
-            btShow : true,
+            btShow : false,
             btPosition: "left",
             btClasses: "bt-action--medium",
             btButtonClasses: "",

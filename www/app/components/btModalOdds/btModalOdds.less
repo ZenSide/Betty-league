@@ -29,8 +29,7 @@
 .bt-modal__block {
   z-index: 220;
   position: absolute;
-  background-color: @azur-blue;
-  border-radius: 0.5rem;
+  background-color: @light-grey;
   top: @margin-small;
   right: @margin-micro;
   bottom: @margin-small;
@@ -40,7 +39,6 @@
 .bt-modal__body {
   overflow-y: auto;
   background-color: @white;
-  border-radius: 0.5rem;
   position: absolute;
   top: @margin-big;
   right: @margin-small;
@@ -60,20 +58,25 @@
   width: 100%;
 
   tr {
-    border: 1px solid @azur-blue;
-
+    border: 1px solid @light-blue;
+    border-bottom: none;
+    &:last-child {
+      border-bottom: 1px solid @light-blue;
+    }
+    &.spanUp {
+      border-top: none;
+    }
 
   }
 
   th, td {
     padding: @margin-micro @margin-micro/2 @margin-micro @margin-micro/2;
-    color:  @black;
     text-align: center;
     vertical-align: middle;
   }
 
   th {
-    background-color: @azur-blue;
+    background-color: @light-blue;
     color: @white;
   }
 }

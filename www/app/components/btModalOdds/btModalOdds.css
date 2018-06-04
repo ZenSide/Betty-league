@@ -24,8 +24,7 @@
 .bt-modal__block {
   z-index: 220;
   position: absolute;
-  background-color: #59a4d0;
-  border-radius: 0.5rem;
+  background-color: #c2c2c2;
   top: 1rem;
   right: 0.5rem;
   bottom: 1rem;
@@ -34,7 +33,6 @@
 .bt-modal__body {
   overflow-y: auto;
   background-color: #e6e6e6;
-  border-radius: 0.5rem;
   position: absolute;
   top: 2rem;
   right: 1rem;
@@ -52,17 +50,23 @@
   width: 100%;
 }
 .bt-modal__table tr {
-  border: 1px solid #59a4d0;
+  border: 1px solid #0583d0;
+  border-bottom: none;
+}
+.bt-modal__table tr:last-child {
+  border-bottom: 1px solid #0583d0;
+}
+.bt-modal__table tr.spanUp {
+  border-top: none;
 }
 .bt-modal__table th,
 .bt-modal__table td {
   padding: 0.5rem 0.25rem 0.5rem 0.25rem;
-  color: #222222;
   text-align: center;
   vertical-align: middle;
 }
 .bt-modal__table th {
-  background-color: #59a4d0;
+  background-color: #0583d0;
   color: #e6e6e6;
 }
 .bt-modal__table--list {

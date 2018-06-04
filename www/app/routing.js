@@ -236,7 +236,7 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
         })
 
         .state('bettyleague.showdown.step3', {
-            url: '/step3/',
+            url: '/step3/:animDirection',
             params: {animDirection: null},
             templateUrl: 'app/pages/bettyleague/showdown/step3/step3.html',
             controller: 'Step3Ctrl',

@@ -40,11 +40,11 @@ betty2App.controller('Step0Ctrl', function (BtMessages, BetApi, $timeout, transl
 
 	// OPEN
 	footerStatus.leftBt = {
-		btShow : true,
+		btShow : $scope.showdownCtrl.previousShowDownId ? true : false,
 		btPosition: "left",
 		btClasses: "bt-action--medium",
 		btButtonClasses: "bt-action__btn--blue",
-		btIco : "fas fa-arrow-left",
+		btIco : "fas fa-backward",
 		btLabel:translations['LOGIN.FOOTER.MDP'],
 		btDisabled: false,
 		btSubmitForm: null,
@@ -74,11 +74,11 @@ betty2App.controller('Step0Ctrl', function (BtMessages, BetApi, $timeout, transl
 		}
 	};
 	footerStatus.rightBt = {
-		btShow : true,
+		btShow : $scope.showdownCtrl.nextShowDownId ? true : false,
 		btPosition: "right",
 		btClasses: "bt-action--medium",
 		btButtonClasses: "bt-action__btn--blue",
-		btIco : "fas fa-arrow-right",
+		btIco : "fas fa-forward",
 		btLabel:translations['LOGIN.FOOTER.SIGN'],
 		btDisabled: false,
 		btSubmitForm: null,

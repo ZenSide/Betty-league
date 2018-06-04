@@ -118,7 +118,8 @@ var translations = {
                 "DRAW" : "Match nul",
                 "ODD" : 'Cote',
                 "PERCENT" : "des paris",
-                "SCORE" : "Score exacte"
+                "SCORE" : "Score exacte",
+                "BETBY" : "Parié par :"
             }
         },
         RANKING : {

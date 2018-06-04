@@ -3,7 +3,6 @@
     <div class="bt-modal__block">
         <div class="bt-modal__body">
             <div class="u-gutter-bottom-small bt-text-lg u-text-center u-text-uppercase" translate="{{$ctrl.title}}"></div>
-
             <div class="u-gutter-bottom-small showdown-summary showdown-summary--tiny showdown-summary--tight">
                 <div class="showdown-summary__row">
                     <div class="showdown-summary__homeTeam">
@@ -39,12 +38,22 @@
                     </th>
                 </tr>
 
-                <tr>
+                <tr ng-class="{
+                    'u-text-green': $ctrl.realWinner && $ctrl.realWinner === 'home',
+                    'u-text-red': $ctrl.realWinner && $ctrl.realWinner !== 'home'
+                }">
                     <td>
                         <span class="u-inline-block">
                             {{$ctrl.btData.homeTeam.sm__name}}
                         </span>
                         <span class="u-inline-block">
+                              <div class="u-relative">
+                                  <i ng-if="$ctrl.btData.bet.winner === 'home'" class="bet-mark" ng-class="{
+                                    'u-text-green fas fa-check-circle': !$ctrl.btData.betResume.potentiel && $ctrl.btData.betResume.winnerGain,
+                                    'u-text-gold fas fa-question-circle': $ctrl.btData.betResume.potentiel,
+                                    'u-text-red fas fa-times-circle': !$ctrl.btData.betResume.potentiel && !$ctrl.btData.betResume.winnerGain
+                                }"></i>
+                              </div>
                             <bt-logo-team bt-size="20" bt-team="$ctrl.btData.homeTeam"></bt-logo-team>
                         </span>
                     </td>
@@ -62,13 +71,32 @@
                         0 %
                     </td>
                 </tr>
+                <tr class="spanUp" ng-if="$ctrl.homeWinBets.length > 0">
+                    <td colspan="3">
+                        <span translate="SHOWDOWN.MODAL_ODD_DETAIL.BETBY"></span>
+                        <span ng-repeat="bet in $ctrl.homeWinBets track by $index">
+                            <span ng-if="$index !== 0"> / </span>
+                            {{bet.inscription.user.pseudo}}
+                        </span>
+                    </td>
+                </tr>
 
-                <tr>
+                <tr ng-class="{
+                    'u-text-green': $ctrl.realWinner && $ctrl.realWinner === 'away',
+                    'u-text-red': $ctrl.realWinner && $ctrl.realWinner !== 'away'
+                }">
                     <td>
                         <span class="u-inline-block">
                             {{$ctrl.btData.awayTeam.sm__name}}
                         </span>
                         <span class="u-inline-block">
+                            <div class="u-relative">
+                                <i ng-if="$ctrl.btData.bet.winner === 'away'" class="bet-mark" ng-class="{
+                                    'u-text-green fas fa-check-circle': !$ctrl.btData.betResume.potentiel && $ctrl.btData.betResume.winnerGain,
+                                    'u-text-gold fas fa-question-circle': $ctrl.btData.betResume.potentiel,
+                                    'u-text-red fas fa-times-circle': !$ctrl.btData.betResume.potentiel && !$ctrl.btData.betResume.winnerGain
+                                }"></i>
+                            </div>
                             <bt-logo-team bt-size="20" bt-team="$ctrl.btData.awayTeam"></bt-logo-team>
                         </span>
                     </td>
@@ -87,10 +115,30 @@
                         0 %
                     </td>
                 </tr>
+                <tr class="spanUp" ng-if="$ctrl.awayWinBets.length > 0">
+                    <td colspan="3">
+                        <span translate="SHOWDOWN.MODAL_ODD_DETAIL.BETBY"></span>
+                        <span ng-repeat="bet in $ctrl.awayWinBets track by $index">
+                            <span ng-if="$index !== 0"> / </span>
+                            {{bet.inscription.user.pseudo}}
+                        </span>
+                    </td>
+                </tr>
 
                 <!--MATCH NUL-->
-                <tr ng-if="!$ctrl.btData.showdown.smFixture.withPenalty">
-                    <td translate="SHOWDOWN.MODAL_ODD_DETAIL.DRAW">
+                <tr ng-class="{
+                    'u-text-green': $ctrl.realWinner && $ctrl.realWinner === 'draw',
+                    'u-text-red': $ctrl.realWinner && $ctrl.realWinner !== 'draw'
+                }" ng-if="!$ctrl.btData.showdown.smFixture.withPenalty">
+                    <td >
+                        <span translate="SHOWDOWN.MODAL_ODD_DETAIL.DRAW" ></span>
+                        <div class="u-relative">
+                            <i ng-if="$ctrl.btData.bet.winner === 'draw'" class="bet-mark" ng-class="{
+                                    'u-text-green fas fa-check-circle': !$ctrl.btData.betResume.potentiel && $ctrl.btData.betResume.winnerGain,
+                                    'u-text-gold fas fa-question-circle': $ctrl.btData.betResume.potentiel,
+                                    'u-text-red fas fa-times-circle': !$ctrl.btData.betResume.potentiel && !$ctrl.btData.betResume.winnerGain
+                                }"></i>
+                        </div>
                     </td>
 
                     <td class="bt-text-lg" ng-if="$ctrl.btData.bet.scoreOdd.showdown.drawOdd">
@@ -107,8 +155,18 @@
                         0 %
                     </td>
                 </tr>
+                <tr class="spanUp" ng-if="$ctrl.drawBet.length > 0">
+                    <td colspan="3">
+                        <span translate="SHOWDOWN.MODAL_ODD_DETAIL.BETBY"></span>
+                        <span ng-repeat="bet in $ctrl.drawBets track by $index">
+                            <span ng-if="$index !== 0"> / </span>
+                            {{bet.inscription.user.pseudo}}
+                        </span>
+                    </td>
+                </tr>
             </table>
 
+            <!--//SCORES-->
             <table class="bt-modal__table bt-text u-gutter-bottom-big">
                 <tr>
                     <th translate="SHOWDOWN.MODAL_ODD_DETAIL.SCORE"></th>
@@ -119,9 +177,19 @@
                     </th>
                 </tr>
 
-                <tr ng-repeat="scoreOdd in $ctrl.btData.scoreOdds">
+                <tr ng-class="{
+                    'u-text-green': $ctrl.realWinner && scoreOdd.homeScore === $ctrl.btData.showdown.smFixture.sm__scores__localteamScore && scoreOdd.awayScore === $ctrl.btData.showdown.smFixture.sm__scores__visitorteamScore,
+                    'u-text-red': $ctrl.realWinner && (scoreOdd.homeScore !== $ctrl.btData.showdown.smFixture.sm__scores__localteamScore || scoreOdd.awayScore !== $ctrl.btData.showdown.smFixture.sm__scores__visitorteamScore)
+                }" ng-repeat-start="scoreOdd in $ctrl.btData.scoreOdds track by $index">
                     <td>
                         <span class="bt-text-md">
+                        <div class="u-relative">
+                            <i ng-if="scoreOdd.homeScore === $ctrl.btData.bet.scoreOdd.homeScore && scoreOdd.awayScore === $ctrl.btData.bet.scoreOdd.awayScore" class="bet-mark" ng-class="{
+                                'u-text-green fas fa-check-circle': !$ctrl.btData.betResume.potentiel && $ctrl.btData.betResume.scoreGain,
+                                'u-text-gold fas fa-question-circle': $ctrl.btData.betResume.potentiel,
+                                'u-text-red fas fa-times-circle': !$ctrl.btData.betResume.potentiel && !$ctrl.btData.betResume.scoreGain
+                            }"></i>
+                        </div>
                         {{scoreOdd.homeScore}} - {{scoreOdd.awayScore}}
                         </span>
                         <span ng-if="$ctrl.btData.showdown.smFixture.matchRetour">
@@ -139,6 +207,15 @@
 
                     <td class="bt-text-md">
                         {{100 / scoreOdd.odd | number : 0}} %
+                    </td>
+                </tr>
+                <tr ng-repeat-end class="spanUp" ng-if="scoreOdd.bets.length > 0">
+                    <td colspan="3">
+                        <span translate="SHOWDOWN.MODAL_ODD_DETAIL.BETBY"></span>
+                        <span class="bt-text-medium" ng-repeat="bet in scoreOdd.bets track by $index">
+                            <span ng-if="$index !== 0"> / </span>
+                            {{bet.inscription.user.pseudo}}
+                        </span>
                     </td>
                 </tr>
             </table>
