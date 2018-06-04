@@ -29,6 +29,7 @@ body.with-big-logo ui-view {
   padding-bottom: 0.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
+  overflow-y: auto;
 }
 .bt-content.ranking {
   top: 15rem;

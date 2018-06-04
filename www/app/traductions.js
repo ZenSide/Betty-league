@@ -125,7 +125,7 @@ var translations = {
             "full_season": "Saison",
             "half_season": "Mi Saison",
             "for_rounds": "Mois",
-            "round": "Journée"
+            "round": "Semaine"
         },
         COUNTDOWN : {
             d:'j',

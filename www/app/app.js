@@ -47,6 +47,6 @@ betty2App.run(function($http, $ionicPlatform, $cordovaNetwork, $rootScope, $time
     }
   });
 }).config(function ($ionicConfigProvider) {
-  //$ionicConfigProvider.scrolling.jsScrolling(false);
+  $ionicConfigProvider.scrolling.jsScrolling(false);
 })
 ;
