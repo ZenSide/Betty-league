@@ -1,4 +1,4 @@
-betty2App.controller('BettyLeagueCtrl', function (seasonScore, $scope, $stateParams, bettyLeague, UserApi, BtNavigate) {
+betty2App.controller('BettyLeagueCtrl', function (ShowdownApi, seasonScore, $scope, $stateParams, bettyLeague, UserApi, BtNavigate, $interval) {
 	var bettyLeagueCtrl = this;
 
 	console.log('bettyleaguectrl');
@@ -30,4 +30,33 @@ betty2App.controller('BettyLeagueCtrl', function (seasonScore, $scope, $statePar
 			'animDirection' : 'fade'
 		});
 	}
+
+	//STREAMING !
+	//stream fullrange (ttes les 10 minutes)
+	var delay = 1000 * 10;
+	//var delay = 1000 * 60 * 10;
+	var fullSdStream = $interval(function () {
+		console.log("streammm");
+		ShowdownApi.getFullRange(bettyLeagueCtrl.bettyLeagueId, function () {
+			$scope.$broadcast('fullSdStream')
+		}, function (fullrange) {
+
+		}, true);
+
+	}, delay);
+
+
+	$scope.$on('$destroy', function() {
+		// Make sure that the interval is destroyed too
+		if (angular.isDefined(fullSdStream)) {
+			$interval.cancel(fullSdStream);
+			fullSdStream = undefined;
+		}
+	});
+
+
+	//stream fullrange live  (ttes les 30 secondes)
+
+	//stream bet fullrange (ttes les 30 secondes)
+
 });
