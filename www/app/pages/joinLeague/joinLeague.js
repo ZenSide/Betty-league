@@ -5,7 +5,6 @@ betty2App.controller('JoinLeagueCtrl', function (BtNavigate, ShowdownApi, BettyL
 	joinLeagueCtrl.submitNewLeague = function () {
 		console.log()
 	};
-
 	joinLeagueCtrl.newLeague = {
 		special: 'WC2018',
 		name: ''
