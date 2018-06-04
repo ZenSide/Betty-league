@@ -1,0 +1,32 @@
+<ion-content delegate-handle="btContentHandle" class="bt-content login">
+    <h1 class="txt-part-title u-gutter-bottom-regular" translate="COMMUNITY.JOIN_LEAGUE"></h1>
+
+    <div class="bt-text u-gutter-bottom-small">
+        <span translate="COMMUNITY.JOINLEAGUE_SPEECH">
+
+        </span>
+    </div>
+
+    <form autocomplete="off" class="u-gutter-bottom-big"
+          novalidate name="joinLeagueForm" id="joinLeagueId"
+          ng-submit="joinLeagueCtrl.submitForm(joinLeagueForm)">
+        <!--//USERNAME-->
+        <bt-input-text bt-select-order="1"
+                       bt-focus
+                       bt-ng-model="joinLeagueCtrl.newLeague.name"
+                       bt-type="text" bt-name="btNewLeagueName"
+                       bt-placeholder="'COMMUNITY.PLACEHOLDERS.CODE_NAME'"
+                       bt-required="true"
+                       class="bt-input-text-component {{activeinputs}}"
+        ></bt-input-text>
+
+        <!--SUBMIT-->
+        <bt-body-btn bt-ico="'fa fa-check'"
+                     bt-content="'COMMUNITY.NEW_VALIDATE'"
+                     bt-btn-classes="'bt-action__btn--gold'"
+                     bt-submit-form="joinLeagueId"
+                     bt-type="submit"
+        >
+        </bt-body-btn>
+    </form>
+</ion-content>

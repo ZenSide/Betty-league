@@ -13,6 +13,7 @@ var translations = {
             BETTYLEAGUENOTFOUND : 'Betty League non trouvée',
             SHOWDOWNNOTFOUND : 'Match non trouvé',
             NOMOREPRIVATELEAGUE : 'Vous ne pouvez pas créer plus de leagues de ce type',
+            COPYSUCCESS : 'Le code a été copié'
         },
         USER : {
             ASSERT : {
@@ -140,11 +141,14 @@ var translations = {
             NEW_LEAGUE : "Nouvelle league privée",
             NEW_VALIDATE : "Valider",
             PLACEHOLDERS : {
-                NAME : "Nom de ta league"
+                NAME : "Nom de ta league",
+                CODE_NAME : "Code"
             },
+            JOINLEAGUE_SPEECH: "Saisi le code que t'a donné le créateur de la league que tu veux rejoindre",
             NEW_LEAGUE_CREATED : "Ta league a bien été créée !",
             CREATED_BY: "Créée par",
-            PLAY: "Jouer !"
+            PLAY: "Jouer !",
+            SHAREWITHFRIENDS: "Partage ce code avec les gens que tu veux voir rejoindre cette betty league privée"
         }
     }
 }

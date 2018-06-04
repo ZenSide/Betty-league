@@ -406,6 +406,26 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
             }
         })
 
+        .state('joinleague', {
+            url: '/joinLeague/:animDirection',
+            params: {animDirection: null},
+            templateUrl: 'app/pages/joinLeague/joinLeague.html',
+            controller: 'JoinLeagueCtrl',
+            controllerAs: 'joinLeagueCtrl',
+            resolve: {
+                translations: function ($translate) {
+                    return $translate([
+                        ]
+                    ).then(function (translations) {
+                        return translations
+                    });
+                },
+                animation: function (BtNavigate, $stateParams) {
+                    return BtNavigate.anim($stateParams.animDirection);
+                }
+            }
+        })
+
     ;
 
     $urlRouterProvider.otherwise('/landing');

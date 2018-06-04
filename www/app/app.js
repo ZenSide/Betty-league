@@ -9,7 +9,8 @@ var betty2App = angular.module(
     'ionic',
     'ionic.native',
     'ngTouch',
-    'pascalprecht.translate'
+    'pascalprecht.translate',
+    'ngclipboard'
   ]
 );
 

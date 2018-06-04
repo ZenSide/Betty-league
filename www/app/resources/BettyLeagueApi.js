@@ -125,6 +125,22 @@ betty2App.factory('BettyLeagueApi', function ($filter, $rootScope, ResourcesFact
 			});
 		},
 
+		joinPrivateBettyLeague: function (newLeague, resolve, reject) {
+			ResourcesFactory.post('/api/betty_league/join', newLeague).then(function (data) {
+				////add new bet to local bets
+				BettyLeagueApi.setBettyLeague(data, function () {
+					resolve (data);
+					return;
+				}, function (messages) {
+					reject(messages);
+					return;
+				});
+			}, function (messages) {
+				reject(messages);
+				return;
+			});
+		},
+
 		setBettyLeague: function (bettyleague, resolve, reject, noCache) {
 			BettyLeagueApi.getMyBettyLeagues(function (myBettyLeagues) {
 

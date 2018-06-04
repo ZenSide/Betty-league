@@ -87,3 +87,6 @@
 .u-padding-micro {
   padding: 0.5rem;
 }
+.u-pointer {
+  cursor: pointer;
+}

@@ -16,7 +16,8 @@
     "ionic-native": "^2.0.3",
     "angular-i18n": "^1.6.9",
     "angular-touch": "1.6.1",
-    "fastclick": "^1.0.6"
+    "fastclick": "^1.0.6",
+    "ngclipboard": "^2.0.0"
   },
   "resolutions": {
     "angular": "1.6.1"

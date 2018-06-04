@@ -1,23 +1,23 @@
-betty2App.controller('CreateLeagueCtrl', function (BtNavigate, ShowdownApi, BettyLeagueApi, BtMessages, $scope, BtLoading, animation) {
-	var createLeagueCtrl = this;
+betty2App.controller('JoinLeagueCtrl', function (BtNavigate, ShowdownApi, BettyLeagueApi, BtMessages, $scope, BtLoading, animation) {
+	var joinLeagueCtrl = this;
 	BtLoading.endLoad();
 
-	createLeagueCtrl.submitNewLeague = function () {
+	joinLeagueCtrl.submitNewLeague = function () {
 		console.log()
 	};
 
-	createLeagueCtrl.newLeague = {
+	joinLeagueCtrl.newLeague = {
 		special: 'WC2018',
 		name: ''
 	};
 	var fieldsNames = [
 		'btNewLeagueName'
 	];
-	createLeagueCtrl.submitForm = function(form){
+	joinLeagueCtrl.submitForm = function(form){
 		console.log('pouet');
 		if(form.$valid){
 			BtLoading.startLoad();
-			BettyLeagueApi.createPrivateBettyLeague(createLeagueCtrl.newLeague, function (newbettyleague) {
+			BettyLeagueApi.createPrivateBettyLeague(joinLeagueCtrl.newLeague, function (newbettyleague) {
 				BtMessages.show({
 						context: 'success',
 						content: 'COMMUNITY.NEW_LEAGUE_CREATED'

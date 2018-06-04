@@ -8,6 +8,12 @@ betty2App.controller('PrivateLeaguesCtrl', function (ShowdownApi, BtMessages, my
 		});
 	};
 
+	privateLeaguesCtrl.joinNewLeague = function () {
+		BtNavigate.stateChange('goRight' ,'joinleague', {
+			'animDirection' : '3left'
+		});
+	};
+
 	privateLeaguesCtrl.joinBettyLeague = function (bettyleagueId) {
 		BtLoading.startLoad();
 		ShowdownApi.getNextOpenShowDown(bettyleagueId, function (showdown) {
@@ -21,6 +27,16 @@ betty2App.controller('PrivateLeaguesCtrl', function (ShowdownApi, BtMessages, my
 				BtLoading.endLoad();
 			})
 		});
+	};
+
+	privateLeaguesCtrl.copysuccess = function () {
+		BtMessages.show([
+			{
+				'context':'success',
+				'content':'MESSAGES.COPYSUCCESS',
+			},
+
+		])
 	};
 
 	privateLeaguesCtrl.myBettyLeagues = myBettyLeagues;
