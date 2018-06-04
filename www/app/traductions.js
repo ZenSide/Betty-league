@@ -150,6 +150,9 @@ var translations = {
             CREATED_BY: "Créée par",
             PLAY: "Jouer !",
             SHAREWITHFRIENDS: "Partage ce code avec les gens que tu veux voir rejoindre cette betty league privée"
+        },
+        ACCOUNT: {
+            WAITING: "Page en cours de création..."
         }
     }
 }

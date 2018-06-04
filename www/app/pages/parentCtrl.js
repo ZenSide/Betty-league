@@ -1,4 +1,4 @@
-betty2App.controller('ParentCtrl', function (BtLoading, $scope, $rootScope, BtNavigate, BettyLeagueApi, ShowdownApi, BtMessages, $state) {
+betty2App.controller('ParentCtrl', function (BtLoading, $scope, $rootScope, BtNavigate, BettyLeagueApi, ShowdownApi, BtMessages, $state, UserApi) {
     var parentCtrl = this;
 
     $rootScope.fbCredentials = {};
@@ -26,6 +26,12 @@ betty2App.controller('ParentCtrl', function (BtLoading, $scope, $rootScope, BtNa
 
     parentCtrl.goPrivateLeagues = function () {
         BtNavigate.stateChange('goTop' ,'privateleagues', {
+            'animDirection' : 'fade'
+        });
+    };
+
+    parentCtrl.goAccount = function () {
+        BtNavigate.stateChange('goTop' ,'account', {
             'animDirection' : 'fade'
         });
     };
@@ -71,5 +77,9 @@ betty2App.controller('ParentCtrl', function (BtLoading, $scope, $rootScope, BtNa
     parentCtrl.detailCotesModalOnClose = function () {
         parentCtrl.detailCotesModalData = {};
         parentCtrl.showDetailCotesModal = false;
+    }
+
+    parentCtrl.logout = function () {
+        UserApi.logout();
     }
 });

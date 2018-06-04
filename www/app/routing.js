@@ -236,11 +236,30 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
         })
 
         .state('bettyleague.showdown.step3', {
-            url: '/step3/:animDirection',
+            url: '/step3/',
             params: {animDirection: null},
             templateUrl: 'app/pages/bettyleague/showdown/step3/step3.html',
             controller: 'Step3Ctrl',
             controllerAs: 'step3Ctrl',
+            resolve: {
+                translations: function ($translate) {
+                    return $translate([
+                        ]
+                    ).then(function (translations) {
+                        return translations
+                    });
+                },
+                animation: function (BtNavigate, $stateParams) {
+                    return BtNavigate.anim($stateParams.animDirection);
+                },
+            }
+        })
+
+        .state('account', {
+            url: '/account/:animDirection',
+            templateUrl: 'app/pages/account/account.html',
+            controller: 'AccountCtrl',
+            controllerAs: 'accountCtrl',
             resolve: {
                 translations: function ($translate) {
                     return $translate([
