@@ -45,8 +45,8 @@ betty2App.controller('ShowdownCtrl', function (BetApi, ShowdownApi, UserApi, BtL
 
 		return stringed;
 	};
-
-	showdownCtrl.betResume = function (showdown, bet) {
+	
+	var getbetResume = function (showdown, bet) {
 		showdown = showdown ? showdown : showdownCtrl.showdown;
 		bet = bet ? bet : showdownCtrl.bet;
 
@@ -54,6 +54,7 @@ betty2App.controller('ShowdownCtrl', function (BetApi, ShowdownApi, UserApi, BtL
 		return resume;
 	};
 
+	showdownCtrl.betResume = getbetResume();
 
 	showdownCtrl.openOddDetail  = function () {
 		BtLoading.startLoad();
@@ -76,9 +77,17 @@ betty2App.controller('ShowdownCtrl', function (BetApi, ShowdownApi, UserApi, BtL
 	}
 
 	//LISTEN STREAMING
-	$scope.$on('fullSdStream', function (event, data) {
+	$scope.$on('sdStream', function (event, data) {
 		ShowdownApi.getShowdown($stateParams.bettyLeagueId, $stateParams.showdownId, function (showdown) {
 			showdownCtrl.showdown = showdown;
+		}, function (messages) {
+		});
+	});
+
+	$scope.$on('fullBetStream', function (event, data) {
+		BetApi.getBet($stateParams.bettyLeagueId, $stateParams.showdownId, function (bet) {
+			showdownCtrl.bet = bet;
+			showdownCtrl.betResume = getbetResume();
 		}, function (messages) {
 		});
 	});

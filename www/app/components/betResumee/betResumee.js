@@ -12,13 +12,23 @@ betty2App.component('betResumee',{
   },
   controller:function(BetApi, ShowdownApi){
     var ctrl = this;
-    ctrl.betResume = function (showdown, bet) {
+
+    var getbetResume = function (showdown, bet) {
       showdown = showdown ? showdown : ctrl.showdown;
       bet = bet ? bet : ctrl.bet;
 
       var resume = BetApi.getMyBetResume(showdown, bet, ShowdownApi.getShowdownStatus(showdown));
       console.log(resume);
+
       return resume;
+    };
+
+    ctrl.betResume = getbetResume();
+
+    this.$onChanges = function(changes) {
+      if (changes.showdown || changes.bet){
+        ctrl.betResume = getbetResume();
+      }
     };
   }
 });

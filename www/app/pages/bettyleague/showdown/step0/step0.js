@@ -33,6 +33,8 @@ betty2App.controller('Step0Ctrl', function (BtMessages, BetApi, $timeout, transl
 		return false;
 	};
 
+	$scope.bettyLeagueCtrl.activeStream = true;
+
 	//parent config
 	var withHeadLogo = false;
 	var footerStatus = {};

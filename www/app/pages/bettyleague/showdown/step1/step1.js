@@ -23,6 +23,8 @@ betty2App.controller('Step1Ctrl', function (BtMessages, translations, $scope, $s
 	var withHeadLogo = false;
 	var footerStatus = {};
 
+	$scope.bettyLeagueCtrl.activeStream = false;
+
 	footerStatus.leftBt = {
 		btShow : true,
 		btPosition: "left",

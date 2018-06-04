@@ -26,7 +26,7 @@ betty2App.controller('PrivateLeaguesCtrl', function (ShowdownApi, BtMessages, my
 			BtMessages.show(messages, null, function () {
 				BtLoading.endLoad();
 			})
-		});
+		}, true);
 	};
 
 	privateLeaguesCtrl.copysuccess = function () {

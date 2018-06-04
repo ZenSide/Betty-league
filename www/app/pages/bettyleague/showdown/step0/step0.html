@@ -20,7 +20,7 @@
     <div class="showdown-summary">
         <div class="showdown-summary__row">
             <div class="showdown-summary__homeTeam">
-            <span class="showdown-summary__teamName bt-text" ng-class="{'u-underline': showdownCtrl.betResume().winner === 'home'}">
+            <span class="showdown-summary__teamName bt-text" ng-class="{'u-underline': showdownCtrl.betResume.winner === 'home'}">
                 {{showdownCtrl.showdown.smFixture.homeTeam.sm__name}}
             </span>
             <span class="showdown-summary__logo">
@@ -51,7 +51,7 @@
             <span class="showdown-summary__logo">
                 <bt-logo-team bt-team="showdownCtrl.showdown.smFixture.awayTeam"></bt-logo-team>
             </span>
-            <span class="showdown-summary__teamName bt-text" ng-class="{'u-underline': showdownCtrl.betResume().winner === 'away'}">
+            <span class="showdown-summary__teamName bt-text" ng-class="{'u-underline': showdownCtrl.betResume.winner === 'away'}">
                 {{showdownCtrl.showdown.smFixture.awayTeam.sm__name}}
             </span>
             </div>
@@ -130,9 +130,9 @@
                     </span>
 
                     <i ng-if="showdownCtrl.bet.winner === 'home'" class="bet-mark" ng-class="{
-                        'u-text-green fas fa-check-circle': !showdownCtrl.betResume().potentiel && showdownCtrl.betResume().winnerGain,
-                        'u-text-gold fas fa-question-circle': showdownCtrl.betResume().potentiel,
-                        'u-text-red fas fa-times-circle': !showdownCtrl.betResume().potentiel && !showdownCtrl.betResume().winnerGain
+                        'u-text-green fas fa-check-circle': !showdownCtrl.betResume.potentiel && showdownCtrl.betResume.winnerGain,
+                        'u-text-gold fas fa-question-circle': showdownCtrl.betResume.potentiel,
+                        'u-text-red fas fa-times-circle': !showdownCtrl.betResume.potentiel && !showdownCtrl.betResume.winnerGain
                     }"></i>
                 </div>
                 <div class="showdown-summary__score">
@@ -150,15 +150,15 @@
                         <span ng-if="showdownCtrl.bet.scoreOdd.awayScore == null">_</span>
                     </div>
                     <i class="bet-mark bet-mark--score" ng-class="{
-                            'u-text-green fas fa-check-circle': !showdownCtrl.betResume().potentiel && showdownCtrl.betResume().scoreGain,
-                            'u-text-gold fas fa-question-circle': showdownCtrl.betResume().potentiel,
-                            'u-text-red fas fa-times-circle': !showdownCtrl.betResume().potentiel && !showdownCtrl.betResume().scoreGain
+                            'u-text-green fas fa-check-circle': !showdownCtrl.betResume.potentiel && showdownCtrl.betResume.scoreGain,
+                            'u-text-gold fas fa-question-circle': showdownCtrl.betResume.potentiel,
+                            'u-text-red fas fa-times-circle': !showdownCtrl.betResume.potentiel && !showdownCtrl.betResume.scoreGain
                         }"></i>
 
                     <i ng-if="showdownCtrl.bet.winner === 'draw'" class="bet-mark bet-mark--center" ng-class="{
-                        'u-text-green fas fa-check-circle': !showdownCtrl.betResume().potentiel && showdownCtrl.betResume().winnerGain,
-                        'u-text-gold fas fa-question-circle': showdownCtrl.betResume().potentiel,
-                        'u-text-red fas fa-times-circle': !showdownCtrl.betResume().potentiel && !showdownCtrl.betResume().winnerGain
+                        'u-text-green fas fa-check-circle': !showdownCtrl.betResume.potentiel && showdownCtrl.betResume.winnerGain,
+                        'u-text-gold fas fa-question-circle': showdownCtrl.betResume.potentiel,
+                        'u-text-red fas fa-times-circle': !showdownCtrl.betResume.potentiel && !showdownCtrl.betResume.winnerGain
                     }"></i>
                 </div>
                 <div class="showdown-summary__awayTeam">
@@ -174,9 +174,9 @@
                     <!--<i class="u-text-red bet-mark fas fa-times-circle"></i>-->
 
                     <i ng-if="showdownCtrl.bet.winner === 'away'" class="bet-mark bet-mark--right" ng-class="{
-                        'u-text-green fas fa-check-circle': !showdownCtrl.betResume().potentiel && showdownCtrl.betResume().winnerGain,
-                        'u-text-gold fas fa-question-circle': showdownCtrl.betResume().potentiel,
-                        'u-text-red fas fa-times-circle': !showdownCtrl.betResume().potentiel && !showdownCtrl.betResume().winnerGain
+                        'u-text-green fas fa-check-circle': !showdownCtrl.betResume.potentiel && showdownCtrl.betResume.winnerGain,
+                        'u-text-gold fas fa-question-circle': showdownCtrl.betResume.potentiel,
+                        'u-text-red fas fa-times-circle': !showdownCtrl.betResume.potentiel && !showdownCtrl.betResume.winnerGain
                     }"></i>
 
                 </div>

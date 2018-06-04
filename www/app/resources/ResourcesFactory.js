@@ -12,7 +12,7 @@ betty2App.factory('ResourcesFactory', function($q, $http, $rootScope, API_BASE_U
                         }
                     )
                 });
-            } else if (data['hydra:description'] !== undefined) {
+            } else if (data && data['hydra:description'] !== undefined) {
                 messages = [
                     {
                         context: 'alert',

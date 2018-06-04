@@ -3,7 +3,7 @@ betty2App.factory('ShowdownApi', function ($q, BetApi, $filter, BettyLeagueApi, 
 	var ShowdownApi = {
 
 		//User Sign In
-		getFullRange: function (bettyLeagueId, resolve, reject, noCache) {
+		getFullRange: function (bettyLeagueId, resolve, reject, noCache, live) {
 			var fullRange = BtLocalStorage.getObject('FullRange' + bettyLeagueId);
 
 
@@ -13,18 +13,76 @@ betty2App.factory('ShowdownApi', function ($q, BetApi, $filter, BettyLeagueApi, 
 				resolve(fullRange['hydra:member']);
 				return;
 			}
-			ResourcesFactory.get('/api/showdowns/fullrange', {
+
+			var params = {
 				'bettyLeagueId': bettyLeagueId
-			}).then(function (data) {
-				BtLocalStorage.setObject('FullRange' + bettyLeagueId, data);
-				resolve(data['hydra:member']);
-				return;
+			};
+
+			if (live) {
+				params.live = true;
+			}
+
+			ResourcesFactory.get('/api/showdowns/fullrange', params).then(function (data) {
+
+				if (!live) {
+					BtLocalStorage.setObject('FullRange' + bettyLeagueId, data);
+					resolve(data['hydra:member']);
+					return;
+				} else {
+					var liverange = data['hydra:member'];
+					angular.forEach(liverange, function(showdown) {
+						ShowdownApi.setShowdown(showdown, bettyLeagueId, function () {
+							resolve(data['hydra:member']);
+							return;
+						}, function (messages) {
+							reject(messages);
+							return;
+						})
+					});
+				}
 			}, function (messages) {
 				//error
 				reject(messages);
 				return;
 			});
 		},
+
+		setShowdown: function (showdown, bettyLeagueId, resolve, reject, noCache) {
+			ShowdownApi.getFullRange(bettyLeagueId, function (showdownFullrange) {
+
+				var arrayLength = showdownFullrange.length;
+				var fundShowdownIndex = null;
+				for (var i = 0; i < arrayLength; i++) {
+					if (showdownFullrange[i].id == showdown.id) {
+						fundShowdownIndex = i;
+					}
+				}
+
+				if (fundShowdownIndex !== null) {
+					showdownFullrange[fundShowdownIndex] = showdown;
+				} else {
+					//showdownFullrange.push(showdown);
+				}
+
+				ShowdownApi.setFullRange(bettyLeagueId, showdownFullrange);
+
+				resolve(true);
+				return;
+
+			}, function (messages) {
+				reject(messages);
+				return;
+			}, noCache)
+		},
+
+		setFullRange: function (bettyLeagueId, newFullRange) {
+			var fullRange = BtLocalStorage.getObject('FullRange' + bettyLeagueId);
+
+			fullRange['hydra:member'] = newFullRange;
+
+			BtLocalStorage.setObject('FullRange' + bettyLeagueId, fullRange);
+		},
+
 
 		//get next open showdown
 		getNextOpenShowDown: function (bettyLeagueId, resolve, reject, noCache) {

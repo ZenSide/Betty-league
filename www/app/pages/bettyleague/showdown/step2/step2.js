@@ -111,6 +111,8 @@ betty2App.controller('Step2Ctrl', function (BetApi, BtMessages, translations, $s
 		});
 	};
 
+	$scope.bettyLeagueCtrl.activeStream = false;
+
 	var withHeadLogo = false;
 	var footerStatus = {};
 
