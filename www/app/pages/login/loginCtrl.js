@@ -40,6 +40,7 @@ betty2App.controller('LoginCtrl', function (animation, $scope, UserApi,BtMessage
     animation.promise.then(function () {
         $scope.parentCtrl.withHeadLogo = withHeadLogo;
         $scope.parentCtrl.footerStatus = footerStatus;
+        $scope.parentCtrl.withBigLogo = withHeadLogo;
     });
 
     // Login
@@ -71,7 +72,8 @@ betty2App.controller('LoginCtrl', function (animation, $scope, UserApi,BtMessage
 
     //FB Connect
     loginCtrl.fbBtn = {
-        content:translations['LOGIN.FOOTER.FB']
+        content:translations['LOGIN.FOOTER.FB'],
+        disabled:  ionic.Platform.isWebView()
     };
 
     loginCtrl.fbConnect = function () {

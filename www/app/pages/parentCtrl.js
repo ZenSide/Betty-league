@@ -15,6 +15,8 @@ betty2App.controller('ParentCtrl', function (BtLoading, $scope, $rootScope, BtNa
         return $state.current.name.indexOf(partName)!==-1;
     }
 
+    $rootScope.isMobileApp = ionic.Platform.isWebView();
+
     parentCtrl.activeHeaderBtns = [
         false,
         false,
@@ -52,8 +54,6 @@ betty2App.controller('ParentCtrl', function (BtLoading, $scope, $rootScope, BtNa
             })
         });
     };
-
-    parentCtrl.withHeadLogo = false;
     parentCtrl.footerStatus = {
         leftBt : {
             btShow : false,
