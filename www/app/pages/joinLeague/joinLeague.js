@@ -2,9 +2,6 @@ betty2App.controller('JoinLeagueCtrl', function (BtNavigate, ShowdownApi, BettyL
 	var joinLeagueCtrl = this;
 	BtLoading.endLoad();
 
-	joinLeagueCtrl.submitNewLeague = function () {
-		console.log()
-	};
 	joinLeagueCtrl.newLeague = {
 		codeName: ''
 	};

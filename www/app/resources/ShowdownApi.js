@@ -8,8 +8,6 @@ betty2App.factory('ShowdownApi', function ($q, BetApi, $filter, BettyLeagueApi, 
 
 
 			if (fullRange && !noCache) {
-				console.log(fullRange);
-
 				resolve(fullRange['hydra:member']);
 				return;
 			}
@@ -86,7 +84,6 @@ betty2App.factory('ShowdownApi', function ($q, BetApi, $filter, BettyLeagueApi, 
 
 		//get next open showdown
 		getNextOpenShowDown: function (bettyLeagueId, resolve, reject, noCache) {
-			console.log(bettyLeagueId);
 			function sdFull() {
 				var sdDefer = $q.defer();
 				ShowdownApi.getFullRange(bettyLeagueId, function (fullRange) {
@@ -194,14 +191,12 @@ betty2App.factory('ShowdownApi', function ($q, BetApi, $filter, BettyLeagueApi, 
 						}
 					}
 				}
-				console.log(nextShowdownId);
 				resolve(nextShowdownId);
 
 				return;
 
 			}, function (messages) {
 
-				console.log('message'+messages);
 				reject(messages);
 				return;
 			}, noCache)
@@ -209,10 +204,7 @@ betty2App.factory('ShowdownApi', function ($q, BetApi, $filter, BettyLeagueApi, 
 		getPreviousShowdown: function (bettyLeagueId, showdownId, resolve, reject, noCache) {
 			ShowdownApi.getFullRange(bettyLeagueId, function (fullRange) {
 
-				console.log('pouetpouet');
-
 				var arrayLength = fullRange.length;
-				console.log(arrayLength);
 
 				var nextShowdownId = null;
 				for (var i = 0; i < arrayLength; i++) {
@@ -224,16 +216,11 @@ betty2App.factory('ShowdownApi', function ($q, BetApi, $filter, BettyLeagueApi, 
 						}
 					}
 				}
-				console.log('pouetpouet');
-
-				console.log(nextShowdownId);
 				resolve(nextShowdownId);
 
 				return;
 
 			}, function (messages) {
-
-				console.log('message'+messages);
 				reject(messages);
 				return;
 			}, noCache)

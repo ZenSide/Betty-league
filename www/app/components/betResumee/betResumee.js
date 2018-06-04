@@ -18,7 +18,6 @@ betty2App.component('betResumee',{
       bet = bet ? bet : ctrl.bet;
 
       var resume = BetApi.getMyBetResume(showdown, bet, ShowdownApi.getShowdownStatus(showdown));
-      console.log(resume);
 
       return resume;
     };

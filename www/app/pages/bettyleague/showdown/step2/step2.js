@@ -15,10 +15,8 @@ betty2App.controller('Step2Ctrl', function (BetApi, BtMessages, translations, $s
 		}
 		//matchs avec penalty
 		if (withPenalty) {
-			console.log('penalty');
 
 			//cas des matchs retour
-			console.log('match retour');
 			if ($scope.showdownCtrl.showdown.smFixture.matchRetour) {
 
 				//if score du cumul des deux matchs nuls GO STADE 3
@@ -26,17 +24,14 @@ betty2App.controller('Step2Ctrl', function (BetApi, BtMessages, translations, $s
 
 					//plus de buts à exterieur pour home Team
 					if ((aggregateVisitorScore - parseInt(betHomeScore)) > (parseInt(betAwayScore) - aggregateLocalScore)) {
-						console.log('home');
 						$scope.showdownCtrl.newBet.winner = "home";
 
 					//plus de buts à exterieur pour away Team
 					} else if ((aggregateVisitorScore - parseInt(betHomeScore)) < (parseInt(betAwayScore) - aggregateLocalScore)) {
-						console.log('away');
 						$scope.showdownCtrl.newBet.winner = "away";
 
 					// vrai egalité
 					} else {
-						console.log('draw');
 						BtNavigate.stateChange('goRight' ,'bettyleague.showdown.step3', {
 							'bettyLeagueId' : $stateParams.bettyLeagueId,
 							'showdownId' : $stateParams.showdownId,
@@ -47,11 +42,9 @@ betty2App.controller('Step2Ctrl', function (BetApi, BtMessages, translations, $s
 
 					//winner home
 				} else if ((aggregateVisitorScore + parseInt(betHomeScore)) > (aggregateLocalScore + parseInt(betAwayScore))) {
-					console.log('home');
 					$scope.showdownCtrl.newBet.winner = "home";
 					//winner away
 				} else if ((aggregateVisitorScore + parseInt(betHomeScore)) < (aggregateLocalScore + parseInt(betAwayScore))) {
-					console.log('away');
 					$scope.showdownCtrl.newBet.winner = "away";
 				}
 
@@ -59,7 +52,6 @@ betty2App.controller('Step2Ctrl', function (BetApi, BtMessages, translations, $s
 			} else {
 				//if score nul
 				if (parseInt(betHomeScore) == parseInt(betAwayScore)) {
-					console.log('draw');
 					BtNavigate.stateChange('goRight' ,'bettyleague.showdown.step3', {
 						'bettyLeagueId' : $stateParams.bettyLeagueId,
 						'showdownId' : $stateParams.showdownId,
@@ -68,32 +60,25 @@ betty2App.controller('Step2Ctrl', function (BetApi, BtMessages, translations, $s
 					return;
 					//winner home
 				} else if (parseInt(betHomeScore) > parseInt(betAwayScore)) {
-					console.log('home');
 					$scope.showdownCtrl.newBet.winner = "home";
 					//winner away
 				} else if (parseInt(betHomeScore) < parseInt(betAwayScore)) {
-					console.log('away');
 					$scope.showdownCtrl.newBet.winner = "away";
 				}
 			}
 
 		//matchs sans penalty
 		} else {
-			console.log('sans penalty');
-
 			//draw
 			if (parseInt(betHomeScore) == parseInt(betAwayScore)) {
-				console.log('draw');
 				$scope.showdownCtrl.newBet.winner = "draw";
 
 				//winner home
 			} else if (parseInt(betHomeScore) > parseInt(betAwayScore)) {
-				console.log('home');
 				$scope.showdownCtrl.newBet.winner = "home";
 
 				//winner away
 			} else if (parseInt(betHomeScore) < parseInt(betAwayScore)) {
-				console.log('away');
 				$scope.showdownCtrl.newBet.winner = "away";
 			}
 		}

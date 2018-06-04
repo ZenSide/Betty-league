@@ -18,6 +18,5 @@ betty2App.component('btLogoTeam',{
       ctrl.imgUrl = "/img/flags/" + ctrl.btTeam.sm__id + ".png"
     }
 
-    console.log(ctrl.imgUrl);
   }
 });

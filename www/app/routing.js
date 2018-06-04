@@ -56,10 +56,8 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
                     var deferred = $q.defer();
 
                     var localUser =  BtLocalStorage.getObject('User');
-                    console.log(localUser);
                     //User found
                     if (Object.keys(localUser).length > 0) {
-                        console.log('user ofund');
                         //Get my availables bettyleagues
                         BettyLeagueApi.getBettyWorld(function (bettyWorld) {
                             //find worldbettyLeague
@@ -84,7 +82,6 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
                         }, true);
                     } else {
                         //User not found
-                        console.log('user not ofund');
                         $timeout(function () {
                             BtNavigate.stateChange(null, 'login');
                         })
@@ -345,7 +342,6 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
                     BettyLeagueApi.getRanking($stateParams.bettyLeagueId, {
                         'period': 'full_season'
                     }, function (ranking) {
-                        console.log('hop');
                         deferred.resolve(ranking);
                     }, function (messages) {
                         BtMessages.show(messages, null, function () {

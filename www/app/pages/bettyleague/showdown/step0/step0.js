@@ -1,5 +1,4 @@
 betty2App.controller('Step0Ctrl', function (BtMessages, BetApi, $timeout, translations, ENV, $scope, $stateParams, BtNavigate, BtLoading, animation) {
-	console.log('step0');
 
 	var step0Ctrl = this;
 	BtLoading.endLoad();

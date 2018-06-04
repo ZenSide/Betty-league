@@ -18,13 +18,15 @@ betty2App.component('btFooterBtn',{
     var zeCtrl = this;
     this.icoResult = this.btIco;
     this.btActionTimed = function() {
-        zeCtrl.btDisabled = true;
-        $timeout(function(){
-          zeCtrl.btAction();
-        }, 300);
-        $timeout(function(){
-          zeCtrl.btDisabled = false;
-        }, 500);
+        //zeCtrl.btDisabled = true;
+        zeCtrl.btAction();
+
+      //$timeout(function(){
+      //    zeCtrl.btAction();
+      //  }, 300);
+      //  $timeout(function(){
+      //    zeCtrl.btDisabled = false;
+      //  }, 500);
         return
     };
     this.$onChanges = function(changes) {

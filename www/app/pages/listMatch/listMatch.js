@@ -11,7 +11,6 @@ betty2App.controller('ListMatchCtrl', function ($timeout, $location, $ionicScrol
 	});
 
 	BtLoading.endLoad();
-	console.log(showdowns);
 
 	var scrollHandle = $ionicScrollDelegate.$getByHandle('btContentHandle');
 
@@ -74,7 +73,6 @@ betty2App.controller('ListMatchCtrl', function ($timeout, $location, $ionicScrol
 		var bet = BetApi.getBetSync(bets, showdown.id);
 
 		var resume = BetApi.getMyBetResume(showdown, bet, ShowdownApi.getShowdownStatus(showdown));
-		console.log(resume);
 		return resume;
 	};
 
@@ -87,15 +85,12 @@ betty2App.controller('ListMatchCtrl', function ($timeout, $location, $ionicScrol
 			listMatchCtrl.openedTooltip = null;
 		}
 
-		console.log(listMatchCtrl.openedTooltip);
 	};
 
 	listMatchCtrl.openOddDetail = function (showdown) {
 		BtLoading.startLoad();
 		ScoreOddApi.getShowdownDetail(showdown.id, function (data) {
 			BetApi.getBet(listMatchCtrl.bettyLeague.id, showdown.id, function (bet) {
-				console.log(bet);
-
 				$scope.parentCtrl.detailCotesModalData = {
 					'homeTeam' : showdown.smFixture.homeTeam,
 					'awayTeam' : showdown.smFixture.awayTeam,

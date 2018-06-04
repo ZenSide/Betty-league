@@ -255,8 +255,6 @@ betty2App.controller('RankingCtrl', function (BettyLeagueApi, UserApi, ranking, 
 		});
 	};
 
-	console.log(rankingCtrl.user);
-
 	footerStatus.leftBt = {
 		btShow : true,
 		btPosition: "left",

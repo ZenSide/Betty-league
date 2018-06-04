@@ -1,15 +1,16 @@
-betty2App.factory('BtNavigate', function(ENV, $state, $cordovaNativePageTransitions, BtLoading, $q) {
+betty2App.factory('BtNavigate', function($timeout, $rootScope, ENV, $state, $cordovaNativePageTransitions, BtLoading, $q) {
   var service = {
     lockedAnim : false,
     stateChange : function(animClass, route, routeparams, reload){
-      console.log(routeparams);
-      console.log(route);
       var params = {};
       if (reload) {
         params = {reload: true};
       }
       if (!service.lockedAnim) {
-        $state.go(route, routeparams, params);
+        $rootScope.viewAnimClass = animClass;
+        $timeout(function() {
+          $state.go(route, routeparams, params);
+        });
       }
     },
     anim : function (direction) {

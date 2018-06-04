@@ -87,7 +87,6 @@ betty2App.factory('BettyLeagueApi', function ($filter, $rootScope, ResourcesFact
 				period: 'full_season'
 			}).then(function (data) {
 				BtLocalStorage.setObject('ScoreSeason' + bettyLeagueId, data);
-				console.log(data);
 				resolve(data['score']);
 				return;
 			}, function (messages) {
@@ -98,8 +97,6 @@ betty2App.factory('BettyLeagueApi', function ($filter, $rootScope, ResourcesFact
 		},
 
 		getRanking: function (bettyLeagueId, params, resolve, reject) {
-			console.log('pouet');
-
 			ResourcesFactory.get('/api/betty_league/' + bettyLeagueId + '/ranking', params).then(function (data) {
 				resolve(data);
 				return;

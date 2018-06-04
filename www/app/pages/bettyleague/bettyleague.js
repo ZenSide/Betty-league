@@ -1,8 +1,6 @@
 betty2App.controller('BettyLeagueCtrl', function (BetApi, ShowdownApi, seasonScore, $scope, $stateParams, bettyLeague, UserApi, BtNavigate, $interval) {
 	var bettyLeagueCtrl = this;
 
-	console.log('bettyleaguectrl');
-
 	bettyLeagueCtrl.bettyLeagueId = $stateParams.bettyLeagueId;
 	bettyLeagueCtrl.showdownId = null;
 
@@ -39,7 +37,6 @@ betty2App.controller('BettyLeagueCtrl', function (BetApi, ShowdownApi, seasonSco
 	var delay = 1000 * 60 * 10;
 	var fullSdStream = $interval(function () {
 		if (bettyLeagueCtrl.activeStream) {
-			console.log("streammm");
 			ShowdownApi.getFullRange(bettyLeagueCtrl.bettyLeagueId, function () {
 				$scope.$broadcast('sdStream')
 			}, function (fullrange) {
@@ -52,7 +49,6 @@ betty2App.controller('BettyLeagueCtrl', function (BetApi, ShowdownApi, seasonSco
 	var delayLive = 1000 * 28;
 	var liveSdStream = $interval(function () {
 		if (bettyLeagueCtrl.activeStream) {
-			console.log("streammm");
 			ShowdownApi.getFullRange(bettyLeagueCtrl.bettyLeagueId, function () {
 				$scope.$broadcast('sdStream')
 			}, function (fullrange) {
@@ -63,7 +59,6 @@ betty2App.controller('BettyLeagueCtrl', function (BetApi, ShowdownApi, seasonSco
 	var delayBetRange = 1000 * 5;
 	var fullBetStream = $interval(function () {
 		if (bettyLeagueCtrl.activeStream) {
-			console.log("streammmBet");
 			BetApi.getFullRange(bettyLeagueCtrl.bettyLeagueId, function () {
 				$scope.$broadcast('fullBetStream')
 			}, function (fullrange) {

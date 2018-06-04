@@ -96,9 +96,6 @@ betty2App.factory('BetApi', function ($filter, ResourcesFactory, BtLocalStorage)
 
 		setBet: function (bet, bettyLeagueId, showdownId, resolve, reject, noCache) {
 			BetApi.getFullRange(bettyLeagueId, function (betfullrange) {
-				console.log(betfullrange);
-				console.log(bet);
-
 				var arrayLength = betfullrange.length;
 				var fundBetIndex = null;
 				for (var i = 0; i < arrayLength; i++) {
@@ -112,8 +109,6 @@ betty2App.factory('BetApi', function ($filter, ResourcesFactory, BtLocalStorage)
 				} else {
 					betfullrange.push(bet);
 				}
-
-				console.log(betfullrange);
 
 				BetApi.setFullRange(bettyLeagueId, betfullrange);
 
@@ -233,10 +228,8 @@ betty2App.factory('BetApi', function ($filter, ResourcesFactory, BtLocalStorage)
 			var aggregateLocalScore = smFixture.aggregateLocalteamScore;
 
 			if (withPenalty) {
-				console.log('penalty');
 
 				//cas des matchs retour
-				console.log('match retour');
 				if (smFixture.matchRetour) {
 
 					//if score du cumul des deux matchs nuls
@@ -244,7 +237,6 @@ betty2App.factory('BetApi', function ($filter, ResourcesFactory, BtLocalStorage)
 
 						//plus de buts à exterieur pour home Team
 						if ((aggregateVisitorScore - parseInt(betHomeScore)) > (parseInt(betAwayScore) - aggregateLocalScore)) {
-							console.log('home');
 							if (returnPossibilities) {
 								return ['home'];
 							}
@@ -253,7 +245,6 @@ betty2App.factory('BetApi', function ($filter, ResourcesFactory, BtLocalStorage)
 
 							//plus de buts à exterieur pour away Team
 						} else if ((aggregateVisitorScore - parseInt(betHomeScore)) < (parseInt(betAwayScore) - aggregateLocalScore)) {
-							console.log('away');
 							if (returnPossibilities) {
 								return ['away'];
 							}
@@ -274,14 +265,12 @@ betty2App.factory('BetApi', function ($filter, ResourcesFactory, BtLocalStorage)
 
 						//winner home
 					} else if ((aggregateVisitorScore + parseInt(betHomeScore)) > (aggregateLocalScore + parseInt(betAwayScore))) {
-						console.log('home');
 						if (returnPossibilities) {
 							return ['home'];
 						}
 						return 'home';
 						//winner away
 					} else if ((aggregateVisitorScore + parseInt(betHomeScore)) < (aggregateLocalScore + parseInt(betAwayScore))) {
-						console.log('away');
 						if (returnPossibilities) {
 							return ['away'];
 						}
@@ -292,7 +281,6 @@ betty2App.factory('BetApi', function ($filter, ResourcesFactory, BtLocalStorage)
 				} else {
 					//if score nul
 					if (parseInt(betHomeScore) == parseInt(betAwayScore)) {
-						console.log('draw');
 						if (returnPossibilities) {
 							return ['home','away'];
 						}
@@ -304,13 +292,11 @@ betty2App.factory('BetApi', function ($filter, ResourcesFactory, BtLocalStorage)
 						}
 						//winner home
 					} else if (parseInt(betHomeScore) > parseInt(betAwayScore)) {
-						console.log('home');
 						if (returnPossibilities) {
 							return ['home'];
 						}
 						return 'home';
 					} else if (parseInt(betHomeScore) < parseInt(betAwayScore)) {
-						console.log('away');
 						if (returnPossibilities) {
 							return ['away'];
 						}
@@ -320,11 +306,8 @@ betty2App.factory('BetApi', function ($filter, ResourcesFactory, BtLocalStorage)
 
 				//matchs sans penalty
 			} else {
-				console.log('sans penalty');
-
 				//draw
 				if (parseInt(betHomeScore) == parseInt(betAwayScore)) {
-					console.log('draw');
 					if (returnPossibilities) {
 						return ['draw'];
 					}
@@ -332,7 +315,6 @@ betty2App.factory('BetApi', function ($filter, ResourcesFactory, BtLocalStorage)
 
 					//winner home
 				} else if (parseInt(betHomeScore) > parseInt(betAwayScore)) {
-					console.log('home');
 					if (returnPossibilities) {
 						return ['home'];
 					}
@@ -340,7 +322,6 @@ betty2App.factory('BetApi', function ($filter, ResourcesFactory, BtLocalStorage)
 
 					//winner away
 				} else if (parseInt(betHomeScore) < parseInt(betAwayScore)) {
-					console.log('away');
 					if (returnPossibilities) {
 						return ['away'];
 					}

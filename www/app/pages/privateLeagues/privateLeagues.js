@@ -41,8 +41,6 @@ betty2App.controller('PrivateLeaguesCtrl', function (ShowdownApi, BtMessages, my
 
 	privateLeaguesCtrl.myBettyLeagues = myBettyLeagues;
 
-	console.log(myBettyLeagues);
-
 	var footerStatus = {};
 	footerStatus.leftBt = {
 		btShow : false,

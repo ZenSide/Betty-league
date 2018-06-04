@@ -2,10 +2,6 @@ betty2App.controller('CreateLeagueCtrl', function (BtNavigate, ShowdownApi, Bett
 	var createLeagueCtrl = this;
 	BtLoading.endLoad();
 
-	createLeagueCtrl.submitNewLeague = function () {
-		console.log()
-	};
-
 	createLeagueCtrl.newLeague = {
 		special: 'WC2018',
 		name: ''
@@ -14,7 +10,6 @@ betty2App.controller('CreateLeagueCtrl', function (BtNavigate, ShowdownApi, Bett
 		'btNewLeagueName'
 	];
 	createLeagueCtrl.submitForm = function(form){
-		console.log('pouet');
 		if(form.$valid){
 			BtLoading.startLoad();
 			BettyLeagueApi.createPrivateBettyLeague(createLeagueCtrl.newLeague, function (newbettyleague) {

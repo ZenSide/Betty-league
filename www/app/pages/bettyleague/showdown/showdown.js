@@ -29,9 +29,6 @@ betty2App.controller('ShowdownCtrl', function (BetApi, ShowdownApi, UserApi, BtL
 		bet = bet ? bet : showdownCtrl.bet;
 
 		var resumee = BetApi.getMyBetResumee(bet, showdown);
-		console.log(resumee);
-		console.log(showdown);
-		console.log(bet);
 
 		if (!resumee) {
 			return null;
