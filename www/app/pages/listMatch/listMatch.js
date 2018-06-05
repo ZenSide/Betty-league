@@ -98,8 +98,9 @@ betty2App.controller('ListMatchCtrl', function ($timeout, $location, $ionicScrol
 					'showdown' : showdown,
 					'scoreOdds' : data,
 					'aggregateVisitorScore' : showdown.smFixture.aggregateVisitorteamScore,
-					'aggregateLocalScore' : showdown.smFixture.aggregateLocalteamScore
-			};
+					'aggregateLocalScore' : showdown.smFixture.aggregateLocalteamScore,
+					'betResume' : listMatchCtrl.betResume(showdown)
+				};
 				BtLoading.endLoad();
 				$scope.parentCtrl.showDetailCotesModal = true;
 			}, function (messages) {

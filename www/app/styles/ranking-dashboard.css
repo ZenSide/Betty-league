@@ -1,15 +1,15 @@
-.ranking-dashboard tr,
-.ranking-dashboard td {
-  border-bottom-color: #fdcf21;
+.ranking-dashboard tr {
+  border: none!important;
 }
 .ranking-dashboard__tab {
   padding: 0.5rem !important;
+  height: 5rem;
 }
 .ranking-dashboard__tab.active {
   background-color: #fdcf21;
-  border-bottom-color: #fdcf21;
 }
 .ranking-dashboard__description {
-  padding: 0.5rem;
+  padding: 1rem !important;
   background-color: #fdcf21;
+  height: 6rem;
 }

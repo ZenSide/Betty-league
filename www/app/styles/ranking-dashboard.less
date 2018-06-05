@@ -1,16 +1,16 @@
 @import "../../less/constant";
 
 .ranking-dashboard {
-  tr, td {
-    border-bottom-color: @light-gold;
+  tr {
+    border: none!important;
   }
 }
 
 .ranking-dashboard__tab {
   padding: @margin-micro!important;
+  height: 5rem;
   &.active {
     background-color: @light-gold;
-    border-bottom-color: @light-gold;
   }
 
   //display: inline-block;
@@ -20,6 +20,7 @@
 }
 
 .ranking-dashboard__description {
-  padding: @margin-micro;
+  padding: @margin-small!important;
   background-color: @light-gold;
+  height: 6rem;
 }

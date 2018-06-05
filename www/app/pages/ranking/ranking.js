@@ -40,7 +40,6 @@ betty2App.controller('RankingCtrl', function (BettyLeagueApi, UserApi, ranking, 
 	}
 
 	rankingCtrl.canIPrev = function (ranking, next) {
-		return true;
 		switch (ranking.period) {
 			case 'full_season':
 				if (!next) {

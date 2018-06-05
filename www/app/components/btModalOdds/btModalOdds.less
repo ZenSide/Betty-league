@@ -86,11 +86,17 @@
   background-color: @white;
 
   tr {
-    border: 2px solid @medium-grey;
+    border: none;
+    &:not(:first-child) {
+      border-top: 1px solid @medium-grey;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
 
     &.active {
       background-color: @light-grey;
-      border-bottom: none;
       &.bt-tooltip-row {
         border-top: none;
       }

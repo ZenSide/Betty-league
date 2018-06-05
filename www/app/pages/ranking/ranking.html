@@ -1,9 +1,9 @@
-<div class="bettyLeague-title">{{::rankingCtrl.bettyLeague.name}}</div>
+<div class="bettyLeague-title-lg">{{::rankingCtrl.bettyLeague.name}}</div>
 
 <div class="ranking-view">
     <div class="ranking-dashboard">
         <table class="ranking-dashboard bt-modal__table bt-modal__table--list">
-            <tr class="bt-text-md">
+            <tr class="bt-text-md u-pointer" ng-if="rankingCtrl.bettyLeague.endless">
                 <td ng-click="rankingCtrl.changePeriod('full_season')"
                     class="ranking-dashboard__tab" ng-class="{'active':'full_season' == rankingCtrl.ranking.period}">
                     <span translate="RANKING.full_season"></span>
@@ -21,6 +21,16 @@
                     <span translate="RANKING.round"></span>
                 </td>
             </tr>
+            <tr class="bt-text-md u-pointer" ng-if="!rankingCtrl.bettyLeague.endless">
+                <td colspan="2" ng-click="rankingCtrl.changePeriod('full_season')"
+                    class="ranking-dashboard__tab" ng-class="{'active':'full_season' == rankingCtrl.ranking.period}">
+                    <span translate="RANKING.full_season"></span>
+                </td>
+                <td colspan="2" ng-click="rankingCtrl.changePeriod('round')"
+                    class="ranking-dashboard__tab" ng-class="{'active':'round' == rankingCtrl.ranking.period}">
+                    <span translate="RANKING.round"></span>
+                </td>
+            </tr>
             <tr>
                 <td class="bt-text-md-medium ranking-dashboard__description active" colspan="4">
                     <span class="u-pull-left" ng-if="rankingCtrl.canIPrev(rankingCtrl.ranking)">
@@ -34,9 +44,13 @@
                          </bt-body-btn>
                     </span>
 
-                    <span ng-if="rankingCtrl.ranking.seasonNb">
+                    <span translate="RANKING.title"></span>
+                    <span ng-if="rankingCtrl.ranking.seasonNb && rankingCtrl.bettyLeague.endless">
                         <span translate="RANKING.full_season"></span>
                         {{rankingCtrl.ranking.seasonNb}}
+                    </span>
+                    <span ng-if="!rankingCtrl.bettyLeague.endless && 'full_season' == rankingCtrl.ranking.period">
+                        <span translate="RANKING.full_season_ponctuel"></span>
                     </span>
                     <span ng-if="rankingCtrl.ranking.halfSeasonNb">
                         <span translate="RANKING.half_season"></span>

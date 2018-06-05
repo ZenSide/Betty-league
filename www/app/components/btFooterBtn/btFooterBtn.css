@@ -144,7 +144,7 @@
   line-height: 4rem !important;
   z-index: 14;
   width: 100%;
-  border-radius: 0.5rem;
+  border-radius: 0rem;
   display: block;
   left: 0;
   height: 100%;
@@ -164,7 +164,7 @@
 }
 .bt-action__btn--body {
   width: 100%;
-  border-radius: 0.5rem;
+  border-radius: 0rem;
   margin: 0;
   max-width: 30rem;
   text-align: left;
@@ -173,7 +173,7 @@
   font-family: "poppinsmedium", sans-serif;
 }
 .bt-action__btn--body .bt-action__facade {
-  border-radius: 0.5rem;
+  border-radius: 0rem;
   padding-top: 1.6rem!important;
   padding-right: 4.5rem !important;
   padding-bottom: 1.6rem!important;

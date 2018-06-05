@@ -123,6 +123,8 @@ var translations = {
             }
         },
         RANKING : {
+            "title": "Classement",
+            "full_season_ponctuel": "Général",
             "full_season": "Saison",
             "half_season": "Mi Saison",
             "for_rounds": "Mois",
