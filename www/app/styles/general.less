@@ -7,15 +7,19 @@ html, body {
 }
 
 body {
-  background-color: @light-green;
   color: @black;
 
-  &.with-head-logo {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/45/Maracan%C3%A3_stadium.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .with-head-logo {
     ui-view {
       margin-top: 3.5rem;
     }
   }
-  &.with-big-logo {
+  .with-big-logo {
     .bt-logo {
       position: absolute;
       left: 50%;
@@ -73,4 +77,15 @@ body {
 .bt-coin--small {
   width: 2.5rem;
   height: 2.5rem;
+}
+
+.bt-app-container {
+  background-color: @light-green;
+  position: relative;
+  margin: auto;
+  height:736px;
+  width: 414px;
+  min-height: 480px;
+  overflow: hidden;
+  min-width: 320px;
 }

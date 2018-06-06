@@ -12,7 +12,6 @@ betty2App.controller('ParentCtrl', function (BtLoading, $scope, $rootScope, BtNa
     $rootScope.currentPart = '';
     $rootScope.$state = $state;
     $rootScope.isCurrent = function(index){
-        console.log(index);
         return parentCtrl.activeHeaderBtns[index];
     }
 

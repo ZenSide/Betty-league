@@ -61,7 +61,7 @@ betty2App.controller('Step3Ctrl', function (BetApi, BtMessages, translations, $s
 	footerStatus.rightBt = {
 		btShow : true,
 		btPosition: "right",
-		btClasses: "bt-action--medium",
+		btClasses: "animated infinite pulse bt-action--medium",
 		btButtonClasses: "bt-action__btn--gold",
 		btIco : "fas fa-check",
 		btLabel:translations['LOGIN.FOOTER.MDP'],

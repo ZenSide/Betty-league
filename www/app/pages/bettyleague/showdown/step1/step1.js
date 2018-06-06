@@ -46,10 +46,11 @@ betty2App.controller('Step1Ctrl', function (BtMessages, translations, $scope, $s
 	footerStatus.middleBt = {
 		btShow : false
 	};
+
 	footerStatus.rightBt = {
 		btShow : true,
 		btPosition: "right",
-		btClasses: "bt-action--medium",
+		btClasses: "animated infinite pulse bt-action--medium",
 		btButtonClasses: "bt-action__btn--gold",
 		btIco : "fas fa-check",
 		btLabel:translations['LOGIN.FOOTER.MDP'],
@@ -64,4 +65,5 @@ betty2App.controller('Step1Ctrl', function (BtMessages, translations, $scope, $s
 		$scope.parentCtrl.withHeadLogo = withHeadLogo;
 		$scope.parentCtrl.footerStatus = footerStatus;
 	});
+
 });

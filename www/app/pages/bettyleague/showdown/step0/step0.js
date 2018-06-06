@@ -59,7 +59,7 @@ betty2App.controller('Step0Ctrl', function (BtMessages, BetApi, $timeout, transl
 	footerStatus.middleBt = {
 		btShow : step0Ctrl.sdStatus() === 'OPEN',
 		btPosition: "middle",
-		btClasses: "bt-action--medium",
+		btClasses: !$scope.showdownCtrl.bet ? "animated infinite pulse bt-action--medium" : "bt-action--medium",
 		btButtonClasses: "bt-action__btn--gold",
 		btIco : "icon-bty-ico-coin",
 		btLabel: $scope.showdownCtrl.bet ? translations['SHOWDOWN.MODIFY'] : translations['SHOWDOWN.BET'],
@@ -76,7 +76,7 @@ betty2App.controller('Step0Ctrl', function (BtMessages, BetApi, $timeout, transl
 	footerStatus.rightBt = {
 		btShow : $scope.showdownCtrl.nextShowDownId ? true : false,
 		btPosition: "right",
-		btClasses: "bt-action--medium",
+		btClasses: $scope.showdownCtrl.bet ? "animated infinite pulse bt-action--medium" : "bt-action--medium",
 		btButtonClasses: "bt-action__btn--blue",
 		btIco : "fas fa-forward",
 		btLabel:translations['LOGIN.FOOTER.SIGN'],

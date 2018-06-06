@@ -1,11 +1,11 @@
 .bt-footer {
-  position: fixed;
   bottom: 0;
   height: auto;
   padding: 0;
   background: none;
   display: block;
   z-index: 100;
+  border-bottom: none;
 }
 .bt-footer-container {
   height: 5.5rem;

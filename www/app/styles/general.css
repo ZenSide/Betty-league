@@ -4,13 +4,16 @@ body {
   line-height: 1.4;
 }
 body {
-  background-color: #2BB289;
   color: #222222;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/45/Maracan%C3%A3_stadium.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-body.with-head-logo ui-view {
+body .with-head-logo ui-view {
   margin-top: 3.5rem;
 }
-body.with-big-logo .bt-logo {
+body .with-big-logo .bt-logo {
   position: absolute;
   left: 50%;
   margin-left: -4.7rem;
@@ -18,7 +21,7 @@ body.with-big-logo .bt-logo {
   width: 9.4rem;
   z-index: 10;
 }
-body.with-big-logo ui-view {
+body .with-big-logo ui-view {
   margin-top: 10em;
 }
 .scroll-bar-indicator {
@@ -52,4 +55,14 @@ body.with-big-logo ui-view {
 .bt-coin--small {
   width: 2.5rem;
   height: 2.5rem;
+}
+.bt-app-container {
+  background-color: #2BB289;
+  position: relative;
+  margin: auto;
+  height: 736px;
+  width: 414px;
+  min-height: 480px;
+  overflow: hidden;
+  min-width: 320px;
 }

@@ -87,48 +87,59 @@ betty2App.factory('ShowdownApi', function ($q, BetApi, $filter, BettyLeagueApi, 
 			function sdFull() {
 				var sdDefer = $q.defer();
 				ShowdownApi.getFullRange(bettyLeagueId, function (fullRange) {
-					var openShowdowns = $filter('filter')(fullRange, function (showdown) {
-						if (showdown.smFixture.showdownStatus !== "OPEN") {
+					//betfull
+					BetApi.getFullRange(bettyLeagueId, function (betfullRange) {
+						var openUnbetShowdowns = $filter('filter')(fullRange, function (showdown) {
+							if (showdown.smFixture.showdownStatus !== "OPEN") {
+								return false;
+							}
+							var bet = BetApi.getBetSync(betfullRange, showdown.id);
+							if (!bet) {
+								return true;
+							}
 							return false;
+						});
+
+						if (openUnbetShowdowns.length > 0) {
+							sdDefer.resolve(openUnbetShowdowns[0]);
+							return;
 						}
-						return true;
-					});
 
-					if (openShowdowns.length > 0) {
-						sdDefer.resolve(openShowdowns[0]);
-						return;
-					}
+						var openShowdowns = $filter('filter')(fullRange, function (showdown) {
+							if (showdown.smFixture.showdownStatus !== "OPEN") {
+								return false;
+							}
+							return true;
+						});
 
-
-					if (fullRange.length > 0) {
-						sdDefer.resolve(fullRange[fullRange.length - 1]);
-						return;
-					}
-
-					var messages = [
-						{
-							context:'alert',
-							content:"MESSAGES.NONEXTOPENSHOWDOWN"
+						if (openShowdowns.length > 0) {
+							sdDefer.resolve(openShowdowns[0]);
+							return;
 						}
-					];
-					sdDefer.reject(messages);
-					return;
+
+						if (fullRange.length > 0) {
+							sdDefer.resolve(fullRange[fullRange.length - 1]);
+							return;
+						}
+
+						var messages = [
+							{
+								context:'alert',
+								content:"MESSAGES.NONEXTOPENSHOWDOWN"
+							}
+						];
+						sdDefer.reject(messages);
+						return;
+					}, function (messages) {
+						sdDefer.reject(messages);
+						return;
+					}, noCache);
 
 				}, function (messages) {
 					sdDefer.reject(messages);
 					return;
 				}, noCache);
 				return sdDefer.promise;
-			}
-
-			function betFull() {
-				var d = $q.defer();
-				BetApi.getFullRange(bettyLeagueId, function (fullRange) {
-					d.resolve(fullRange);
-				}, function (messages) {
-					d.reject(messages)
-				}, noCache);
-				return d.promise;
 			}
 
 			function seasonScore() {
@@ -143,7 +154,6 @@ betty2App.factory('ShowdownApi', function ($q, BetApi, $filter, BettyLeagueApi, 
 
 			$q.all([
 				sdFull(),
-				betFull(),
 				seasonScore()
 			]).then(function(data) {
 				resolve(data[0]);

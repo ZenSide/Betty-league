@@ -53,155 +53,158 @@
 </head>
 
 <!--//HEADER BAR-->
-<body ng-app="betty2" ng-controller="ParentCtrl as parentCtrl"
-      ng-class="{'with-head-logo':parentCtrl.withHeadLogo}">
-    <img class="bt-logo" src="img/logo_216x240.png" ng-if="parentCtrl.withHeadLogo">
-    <div class="bar bt-header ng-cloak" ng-if="!parentCtrl.withHeadLogo">
-        <div class="row">
-            <div class="col">
-                <bt-footer-btn bt-show="!parentCtrl.withHeadLogo"
-                               bt-classes="'bt-action--medium bt-action--head'"
-                               bt-button-classes="isCurrent(0)?'bt-action__btn--gold bt-action__btn--active':'bt-action__btn--blue'"
-                               bt-ico="'fas fa-home'"
-                               bt-submit-form="btn.submitform"
-                               bt-position="left"
-                               bt-action="parentCtrl.goHome()"
-                >
-                </bt-footer-btn>
-            </div>
-            <div class="col">
-                <bt-footer-btn bt-show="!parentCtrl.withHeadLogo"
-                               bt-classes="'bt-action--medium bt-action--head'"
-                               bt-button-classes="isCurrent(1)?'bt-action__btn--gold bt-action__btn--active':'bt-action__btn--blue btn-disabled'"
-                               bt-ico="'fas fa-question'"
-                               bt-submit-form="btn.submitform"
-                               bt-position="middle"
-                               bt-action=""
-                >
-                </bt-footer-btn>
-            </div>
-            <div class="col">
-                <bt-footer-btn bt-show="!parentCtrl.withHeadLogo"
-                               bt-classes="'bt-action--medium bt-action--head'"
-                               bt-button-classes="isCurrent(2)?'bt-action__btn--gold bt-action__btn--active':'bt-action__btn--blue'"
-                               bt-ico="'icon-bty-ico-world'"
-                               bt-submit-form="btn.submitform"
-                               bt-position="middle"
-                               bt-action="parentCtrl.goBettyWorld()"
-                >
-                </bt-footer-btn>
-            </div>
-            <div class="col">
-                <bt-footer-btn bt-show="!parentCtrl.withHeadLogo"
-                               bt-classes="'bt-action--medium bt-action--head'"
-                               bt-button-classes="isCurrent(3)?'bt-action__btn--gold bt-action__btn--active':'bt-action__btn--blue'"
-                               bt-ico="'icon-bty-ico-join'"
-                               bt-submit-form="btn.submitform"
-                               bt-position="middle"
-                               bt-action="parentCtrl.goPrivateLeagues()"
-                >
-                </bt-footer-btn>
-            </div>
-            <div class="col">
-                <bt-footer-btn bt-show="!parentCtrl.withHeadLogo"
-                               bt-classes="'bt-action--medium bt-action--head'"
-                               bt-button-classes="isCurrent(4)?'bt-action__btn--gold bt-action__btn--active':'bt-action__btn--blue'"
-                               bt-ico="'icon-bty-ico-victory'"
-                               bt-submit-form="btn.submitform"
-                               bt-position="right"
-                               bt-action="parentCtrl.goAccount()"
-                >
-                </bt-footer-btn>
-            </div>
-        </div>
-    </div>
+<body ng-app="betty2" ng-controller="ParentCtrl as parentCtrl">
 
-    <!--///CONTENT-->
-    <div class="ng-cloak">
-        <ui-view ng-class="viewAnimClass" autoscroll="false" class="animated main-view" ng-animate-children="false"></ui-view>
-    </div>
-
-    <!--LOADING--->
-    <div class="bt-loading-container ng-cloak" ng-if="btLoading">
-        <div class="bt-loading-back"></div>
-        <div class="bt-loading">
-            <div>
-                <div class="bt-logoload">
-                    <img class="bt-logoload__img animated infinite bounce" src="img/logo_216x240.png">
-                    <div class="bt-logoload__label bt-text-lg animated infinite pulse">CHARGEMENT</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="bt-loading-container ng-cloak" ng-if="btLoadingPhantom">
-        <div class="bt-loading-back bt-loading-back--phantom"></div>
-    </div>
-
-    <!--modales-->
-
-    <!--Detail cotes-->
-    <bt-modal-odds bt-data="parentCtrl.detailCotesModalData"
-                   bt-show="parentCtrl.showDetailCotesModal"
-                   bt-on-close="parentCtrl.detailCotesModalOnClose()">
-    </bt-modal-odds>
-
-
-    <!--//FOOTER BAR-->
-    <div class="bar bt-footer ng-cloak">
-        <div class="bt-footer-container">
+    <div class="bt-app-container" ng-class="{'with-head-logo':parentCtrl.withHeadLogo}">
+        <img class="bt-logo" src="img/logo_216x240.png" ng-if="parentCtrl.withHeadLogo">
+        <div class="bar bt-header ng-cloak" ng-if="!parentCtrl.withHeadLogo">
             <div class="row">
                 <div class="col">
-                    <bt-footer-btn bt-show="parentCtrl.footerStatus.leftBt.btShow"
-                                   bt-position="{{parentCtrl.footerStatus.leftBt.btPosition}}"
-                                   bt-classes="parentCtrl.footerStatus.leftBt.btClasses"
-                                   bt-button-classes="parentCtrl.footerStatus.leftBt.btButtonClasses"
-                                   bt-ico="parentCtrl.footerStatus.leftBt.btIco"
-                                   bt-label="parentCtrl.footerStatus.leftBt.btLabel"
-                                   bt-disabled="parentCtrl.footerStatus.leftBt.btDisabled"
-                                   bt-submit-form="parentCtrl.footerStatus.leftBt.submitform"
-                                   bt-action="parentCtrl.footerStatus.leftBt.action()"
+                    <bt-footer-btn bt-show="!parentCtrl.withHeadLogo"
+                                   bt-classes="'bt-action--medium bt-action--head'"
+                                   bt-button-classes="isCurrent(0)?'bt-action__btn--gold bt-action__btn--active':'bt-action__btn--blue'"
+                                   bt-ico="'fas fa-home'"
+                                   bt-submit-form="btn.submitform"
+                                   bt-position="left"
+                                   bt-action="parentCtrl.goHome()"
                     >
                     </bt-footer-btn>
                 </div>
                 <div class="col">
-                    <bt-footer-btn bt-show="parentCtrl.footerStatus.middleBt.btShow"
-                                   bt-position="{{parentCtrl.footerStatus.middleBt.btPosition}}"
-                                   bt-classes="parentCtrl.footerStatus.middleBt.btClasses"
-                                   bt-button-classes="parentCtrl.footerStatus.middleBt.btButtonClasses"
-                                   bt-ico="parentCtrl.footerStatus.middleBt.btIco"
-                                   bt-label="parentCtrl.footerStatus.middleBt.btLabel"
-                                   bt-disabled="parentCtrl.footerStatus.middleBt.btDisabled"
-                                   bt-submit-form="parentCtrl.footerStatus.middleBt.submitform"
-                                   bt-action="parentCtrl.footerStatus.middleBt.action()"
+                    <bt-footer-btn bt-show="!parentCtrl.withHeadLogo"
+                                   bt-classes="'bt-action--medium bt-action--head'"
+                                   bt-button-classes="isCurrent(1)?'bt-action__btn--gold bt-action__btn--active':'bt-action__btn--blue btn-disabled'"
+                                   bt-ico="'fas fa-question'"
+                                   bt-submit-form="btn.submitform"
+                                   bt-position="middle"
+                                   bt-action=""
                     >
                     </bt-footer-btn>
                 </div>
                 <div class="col">
-                    <bt-footer-btn bt-show="parentCtrl.footerStatus.rightBt.btShow"
-                                   bt-position="{{parentCtrl.footerStatus.rightBt.btPosition}}"
-                                   bt-classes="parentCtrl.footerStatus.rightBt.btClasses"
-                                   bt-button-classes="parentCtrl.footerStatus.rightBt.btButtonClasses"
-                                   bt-ico="parentCtrl.footerStatus.rightBt.btIco"
-                                   bt-label="parentCtrl.footerStatus.rightBt.btLabel"
-                                   bt-disabled="parentCtrl.footerStatus.rightBt.btDisabled"
-                                   bt-submit-form="parentCtrl.footerStatus.rightBt.submitform"
-                                   bt-action="parentCtrl.footerStatus.rightBt.action()"
+                    <bt-footer-btn bt-show="!parentCtrl.withHeadLogo"
+                                   bt-classes="'bt-action--medium bt-action--head'"
+                                   bt-button-classes="isCurrent(2)?'bt-action__btn--gold bt-action__btn--active':'bt-action__btn--blue'"
+                                   bt-ico="'icon-bty-ico-world'"
+                                   bt-submit-form="btn.submitform"
+                                   bt-position="middle"
+                                   bt-action="parentCtrl.goBettyWorld()"
+                    >
+                    </bt-footer-btn>
+                </div>
+                <div class="col">
+                    <bt-footer-btn bt-show="!parentCtrl.withHeadLogo"
+                                   bt-classes="'bt-action--medium bt-action--head'"
+                                   bt-button-classes="isCurrent(3)?'bt-action__btn--gold bt-action__btn--active':'bt-action__btn--blue'"
+                                   bt-ico="'icon-bty-ico-join'"
+                                   bt-submit-form="btn.submitform"
+                                   bt-position="middle"
+                                   bt-action="parentCtrl.goPrivateLeagues()"
+                    >
+                    </bt-footer-btn>
+                </div>
+                <div class="col">
+                    <bt-footer-btn bt-show="!parentCtrl.withHeadLogo"
+                                   bt-classes="'bt-action--medium bt-action--head'"
+                                   bt-button-classes="isCurrent(4)?'bt-action__btn--gold bt-action__btn--active':'bt-action__btn--blue'"
+                                   bt-ico="'icon-bty-ico-victory'"
+                                   bt-submit-form="btn.submitform"
+                                   bt-position="right"
+                                   bt-action="parentCtrl.goAccount()"
                     >
                     </bt-footer-btn>
                 </div>
             </div>
         </div>
 
-        <div class="bt-alert-messages animated" ng-class="{expanded:showMessages == true}">
-            <div ng-repeat="message in messages track by $index"
-                 ng-class="message.context"
-                 class="bt-message">
-                <div>{{message.content | translate}}</div>
+        <!--///CONTENT-->
+        <div class="ng-cloak">
+            <ui-view ng-class="viewAnimClass" autoscroll="false" class="animated main-view" ng-animate-children="false"></ui-view>
+        </div>
+
+        <!--LOADING--->
+        <div class="bt-loading-container ng-cloak" ng-if="btLoading">
+            <div class="bt-loading-back"></div>
+            <div class="bt-loading">
+                <div>
+                    <div class="bt-logoload">
+                        <img class="bt-logoload__img animated infinite bounce" src="img/logo_216x240.png">
+                        <div class="bt-logoload__label bt-text-lg animated infinite pulse">CHARGEMENT</div>
+                    </div>
+                </div>
             </div>
         </div>
 
+        <div class="bt-loading-container ng-cloak" ng-if="btLoadingPhantom">
+            <div class="bt-loading-back bt-loading-back--phantom"></div>
+        </div>
+
+        <!--modales-->
+
+        <!--Detail cotes-->
+        <bt-modal-odds bt-data="parentCtrl.detailCotesModalData"
+                       bt-show="parentCtrl.showDetailCotesModal"
+                       bt-on-close="parentCtrl.detailCotesModalOnClose()">
+        </bt-modal-odds>
+
+
+        <!--//FOOTER BAR-->
+        <div class="bar bt-footer ng-cloak">
+            <div class="bt-footer-container">
+                <div class="row">
+                    <div class="col">
+                        <bt-footer-btn bt-show="parentCtrl.footerStatus.leftBt.btShow"
+                                       bt-position="{{parentCtrl.footerStatus.leftBt.btPosition}}"
+                                       bt-classes="parentCtrl.footerStatus.leftBt.btClasses"
+                                       bt-button-classes="parentCtrl.footerStatus.leftBt.btButtonClasses"
+                                       bt-ico="parentCtrl.footerStatus.leftBt.btIco"
+                                       bt-label="parentCtrl.footerStatus.leftBt.btLabel"
+                                       bt-disabled="parentCtrl.footerStatus.leftBt.btDisabled"
+                                       bt-submit-form="parentCtrl.footerStatus.leftBt.submitform"
+                                       bt-action="parentCtrl.footerStatus.leftBt.action()"
+                        >
+                        </bt-footer-btn>
+                    </div>
+                    <div class="col">
+                        <bt-footer-btn bt-show="parentCtrl.footerStatus.middleBt.btShow"
+                                       bt-position="{{parentCtrl.footerStatus.middleBt.btPosition}}"
+                                       bt-classes="parentCtrl.footerStatus.middleBt.btClasses"
+                                       bt-button-classes="parentCtrl.footerStatus.middleBt.btButtonClasses"
+                                       bt-ico="parentCtrl.footerStatus.middleBt.btIco"
+                                       bt-label="parentCtrl.footerStatus.middleBt.btLabel"
+                                       bt-disabled="parentCtrl.footerStatus.middleBt.btDisabled"
+                                       bt-submit-form="parentCtrl.footerStatus.middleBt.submitform"
+                                       bt-action="parentCtrl.footerStatus.middleBt.action()"
+                        >
+                        </bt-footer-btn>
+                    </div>
+                    <div class="col">
+                        <bt-footer-btn bt-show="parentCtrl.footerStatus.rightBt.btShow"
+                                       bt-position="{{parentCtrl.footerStatus.rightBt.btPosition}}"
+                                       bt-classes="parentCtrl.footerStatus.rightBt.btClasses"
+                                       bt-button-classes="parentCtrl.footerStatus.rightBt.btButtonClasses"
+                                       bt-ico="parentCtrl.footerStatus.rightBt.btIco"
+                                       bt-label="parentCtrl.footerStatus.rightBt.btLabel"
+                                       bt-disabled="parentCtrl.footerStatus.rightBt.btDisabled"
+                                       bt-submit-form="parentCtrl.footerStatus.rightBt.submitform"
+                                       bt-action="parentCtrl.footerStatus.rightBt.action()"
+                        >
+                        </bt-footer-btn>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bt-alert-messages animated" ng-class="{expanded:showMessages == true}">
+                <div ng-repeat="message in messages track by $index"
+                     ng-class="message.context"
+                     class="bt-message">
+                    <div>{{message.content | translate}}</div>
+                </div>
+            </div>
+
+        </div>
     </div>
+
 
     <script src="lib/fastclick/lib/fastclick.js"></script>
 

@@ -52,15 +52,14 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
             controller: 'LandingCtrl',
             controllerAs: 'landingCtrl',
             resolve: {
-                routeDispatcher: function ($timeout, $q, BtLocalStorage, $state, BtNavigate, ShowdownApi, BettyLeagueApi, BtMessages) {
+                routeDispatcher: function (UserApi, $timeout, $q, BtLocalStorage, $state, BtNavigate, ShowdownApi, BettyLeagueApi, BtMessages) {
                     var deferred = $q.defer();
-
-                    var localUser =  BtLocalStorage.getObject('User');
+                    var localUser =  UserApi.getUser();
                     //User found
-                    if (Object.keys(localUser).length > 0) {
+                    if (localUser) {
                         //Get my availables bettyleagues
-                        BtMessages.show(messages, null, function () {
-                            BtNavigate.stateChange(null, 'home');
+                        BtNavigate.stateChange('goTop', 'home', {
+                            'animDirection' : 'fade'
                         });
                         //BettyLeagueApi.getBettyWorld(function (bettyWorld) {
                         //    //find worldbettyLeague
