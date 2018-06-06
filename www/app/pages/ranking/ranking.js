@@ -17,6 +17,7 @@ betty2App.controller('RankingCtrl', function (BettyLeagueApi, UserApi, ranking, 
 
 	//rankingCtrl.scrollTo($stateParams.showdownId);
 
+
 	rankingCtrl.ranking = ranking;
 
 

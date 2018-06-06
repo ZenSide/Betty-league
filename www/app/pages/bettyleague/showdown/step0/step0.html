@@ -190,7 +190,8 @@
         <div class="row row-center u-gutter-bottom-small">
             <div class="col-70 u-text-left">
                 <span class="bt-text-lg-bold">
-                    <span translate="SHOWDOWN.TOTAL_GAIN"></span>
+                    <span ng-if="!showdownCtrl.betResume.potentiel" translate="SHOWDOWN.TOTAL_GAIN"></span>
+                    <span ng-if="showdownCtrl.betResume.potentiel" translate="SHOWDOWN.TOTAL_POT_GAIN"></span>
                 </span>
             </div>
             <div class="col u-text-right bt-text">

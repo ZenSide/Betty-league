@@ -91,3 +91,6 @@
   line-height: normal;
   padding: 0.5rem;
 }
+.bt-tooltip {
+  padding: 0 0.5rem 0 0.5rem;
+}

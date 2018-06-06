@@ -7,10 +7,9 @@ betty2App.controller('ListMatchCtrl', function ($timeout, $location, $ionicScrol
 
 
 	$timeout(function () {
+		BtLoading.endLoad();
 		listMatchCtrl.showdowns = showdowns;
-	});
-
-	BtLoading.endLoad();
+	}, 500);
 
 	var scrollHandle = $ionicScrollDelegate.$getByHandle('btContentHandle');
 

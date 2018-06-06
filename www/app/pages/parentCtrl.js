@@ -11,8 +11,9 @@ betty2App.controller('ParentCtrl', function (BtLoading, $scope, $rootScope, BtNa
 
     $rootScope.currentPart = '';
     $rootScope.$state = $state;
-    $rootScope.isCurrent = function(partName){
-        return $state.current.name.indexOf(partName)!==-1;
+    $rootScope.isCurrent = function(index){
+        console.log(index);
+        return parentCtrl.activeHeaderBtns[index];
     }
 
     $rootScope.isMobileApp = ionic.Platform.isWebView();

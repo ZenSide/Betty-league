@@ -1,4 +1,4 @@
-betty2App.controller('BettyLeagueCtrl', function (BetApi, ShowdownApi, seasonScore, $scope, $stateParams, bettyLeague, UserApi, BtNavigate, $interval) {
+betty2App.controller('BettyLeagueCtrl', function (BtLoading, BetApi, ShowdownApi, seasonScore, $scope, $stateParams, bettyLeague, UserApi, BtNavigate, $interval) {
 	var bettyLeagueCtrl = this;
 
 	bettyLeagueCtrl.bettyLeagueId = $stateParams.bettyLeagueId;
@@ -6,14 +6,17 @@ betty2App.controller('BettyLeagueCtrl', function (BetApi, ShowdownApi, seasonSco
 
 	bettyLeagueCtrl.bettyLeague = bettyLeague;
 
-	if (bettyLeagueCtrl.bettyLeague.endless && bettyLeagueCtrl.bettyLeague.public)
+	if (bettyLeagueCtrl.bettyLeague.public)
 	{
 		$scope.parentCtrl.activeHeaderBtns = [false, true, false, false];
+	} else {
+		$scope.parentCtrl.activeHeaderBtns = [false, false, true, false];
 	}
 
 	bettyLeagueCtrl.seasonScore = seasonScore;
 
 	bettyLeagueCtrl.goListMatch = function () {
+		BtLoading.startLoad();
 		BtNavigate.stateChange('goLeft' ,'listMatch', {
 			'bettyLeagueId' : $stateParams.bettyLeagueId,
 			'showdownId' : bettyLeagueCtrl.showdownId,
@@ -22,6 +25,7 @@ betty2App.controller('BettyLeagueCtrl', function (BetApi, ShowdownApi, seasonSco
 	}
 
 	bettyLeagueCtrl.goRanking = function () {
+		BtLoading.startLoad();
 		BtNavigate.stateChange('goLeft' ,'ranking', {
 			'bettyLeagueId' : $stateParams.bettyLeagueId,
 			'showdownId' : bettyLeagueCtrl.showdownId,

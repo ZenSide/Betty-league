@@ -89,11 +89,12 @@ var translations = {
             LIVE : "LIVE",
             POT_GAIN : 'Gain potentiel',
             GAIN : 'Gain :',
-            TOTAL_GAIN : 'Gain  total',
+            TOTAL_GAIN : 'Gain total',
+            TOTAL_POT_GAIN : 'Gain potentiel total',
             "WINNER_GAIN" : "Gain sur le vainqueur",
             "SCORE_GAIN" : "Gain sur le score",
             BET_FORM : {
-                "TITLE" : "Ton pari",
+                "TITLE" : "Mon nouveau pari",
                 "HOW_MANY_GOALS" : "Combien de buts pour",
                 "SHOOTOUT_WARNING" : "Sur ce score il va y avoir une séance de tirs au but.",
                 "WHO_WIN" : "Qui va l'emporter ?",
@@ -102,7 +103,7 @@ var translations = {
                 "EMPTY_WINNER" : "Tu dois choisir une équipe"
             },
             BET_SUMMARY : {
-                "MY_BETS" : "ton pari et ce que tu peux gagner",
+                "MY_BETS" : "Mon pari",
                 "ON_QUALIF" : "sur une <b>qualification</b> de",
                 "ON_WIN" : "sur une <b>victoire</b> de",
                 "ON_DRAW" : "sur un match nul",
@@ -110,6 +111,7 @@ var translations = {
                 "USER_PERCENT" : "des parieurs",
                 "ODD" : "Cote",
                 "DETAIL" : "Detail des cotes",
+                "CLOSE" : "Fermer",
             },
             MODAL_ODD_DETAIL : {
                 "TITLE" : "Détail des cotes",
@@ -137,8 +139,8 @@ var translations = {
             s:'s'
         },
         COMMUNITY : {
-            TITLE : "Ta communauté",
-            TITLE_LEAGUES : "Tes leagues privées",
+            TITLE : "Ma communauté",
+            TITLE_LEAGUES : "Mes leagues privées",
             WORLD_CUP_SPEECH : "A l'occasion de la coupe du monde 2018 tu peux créer une betty league privée pour te mesurer à tes amis et ou des gens que tu aimes pas trop",
             NEW_WORLD_CUP : "Créer une Coupe du monde privée",
             JOIN_LEAGUE : "Rejoindre une league privée",

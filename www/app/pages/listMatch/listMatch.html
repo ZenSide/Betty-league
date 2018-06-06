@@ -5,13 +5,13 @@
         <table class="bt-modal__table bt-modal__table--list bt-text u-gutter-bottom-small">
             <tr ng-repeat-start="showdown in listMatchCtrl.showdowns" ng-if="listMatchCtrl.showdowns[$index - 1].bettyRound.roundNb !== showdown.bettyRound.roundNb">
                 <td colspan="5" class="bettyLeague-title-lg bettyLeague-title--grey">
-                    <span ng-if="listMatchCtrl.showdowns[$index - 1].bettyRound.seasonNb !== showdown.bettyRound.seasonNb" colspan="5">
+                    <span ng-if="listMatchCtrl.bettyLeague.endless && listMatchCtrl.showdowns[$index - 1].bettyRound.seasonNb !== showdown.bettyRound.seasonNb">
                         <span translate="RANKING.full_season"></span> {{showdown.bettyRound.seasonNb}} -
                     </span>
-                    <span ng-if="listMatchCtrl.showdowns[$index - 1].bettyRound.halfSeasonNb !== showdown.bettyRound.halfSeasonNb" colspan="5">
+                    <span ng-if="listMatchCtrl.bettyLeague.endless && listMatchCtrl.showdowns[$index - 1].bettyRound.halfSeasonNb !== showdown.bettyRound.halfSeasonNb">
                         <span translate="RANKING.half_season"></span> {{showdown.bettyRound.halfSeasonNb}} -
                     </span>
-                    <span ng-if="listMatchCtrl.showdowns[$index - 1].bettyRound.fourRoundsNb !== showdown.bettyRound.fourRoundsNb" colspan="5">
+                    <span ng-if="listMatchCtrl.bettyLeague.endless && listMatchCtrl.showdowns[$index - 1].bettyRound.fourRoundsNb !== showdown.bettyRound.fourRoundsNb">
                         <span translate="RANKING.for_rounds"></span> {{showdown.bettyRound.fourRoundsNb}} -
                     </span>
                     <span>
@@ -19,7 +19,7 @@
                     </span>
                 </td>
             </tr>
-            <tr id="{{::showdown.id}}" ng-class="listMatchCtrl.classRow(showdown)" ng-click="listMatchCtrl.toggleTooltip(showdown, true)">
+            <tr class="u-pointer" id="{{::showdown.id}}" ng-class="listMatchCtrl.classRow(showdown)" ng-click="listMatchCtrl.toggleTooltip(showdown, true)">
                 <td>
                     {{::showdown.smFixture.sm__time__startingAt__dateTime| date : 'longDate'}}
 
@@ -68,16 +68,17 @@
                     </div>
                 </td>
             </tr>
-            <tr ng-repeat-end class="bt-tooltip-row" ng-class="listMatchCtrl.classRow(showdown)" ng-if="listMatchCtrl.openedTooltip == showdown.id">
+            <tr ng-repeat-end class="bt-tooltip-row u-pointer" ng-class="listMatchCtrl.classRow(showdown)" ng-show="listMatchCtrl.openedTooltip == showdown.id">
                 <td colspan="5" class="bt-tooltip-col">
                     <div class="bt-tooltip">
-                        <div class="u-pull-left">
-                            <bt-body-btn bt-ico="'fas fa-times'"
-                                         bt-btn-classes="'bt-action__btn--body-square bt-action__btn--body-small bt-action__btn--red'"
-                                         bt-action="listMatchCtrl.toggleTooltip(showdown, false)"
-                            >
-                            </bt-body-btn>
-                        </div>
+                        <!--<div class="u-pull-left">-->
+                            <!--<bt-body-btn bt-ico="'fas fa-times'"-->
+                                         <!--bt-btn-classes="'bt-action__btn&#45;&#45;body-small bt-action__btn&#45;&#45;red'"-->
+                                         <!--bt-action="listMatchCtrl.toggleTooltip(showdown, false)"-->
+                                         <!--bt-content="'SHOWDOWN.BET_SUMMARY.CLOSE'"-->
+                            <!--&gt;-->
+                            <!--</bt-body-btn>-->
+                        <!--</div>-->
 
 
                         <div ng-if="listMatchCtrl.initialRange" class="u-pull-right">
@@ -88,10 +89,11 @@
                             </bt-body-btn>
                         </div>
 
-                        <div class="u-pull-right u-gutter-right-small">
+                        <div ng-if="listMatchCtrl.betCol(showdown)" class="u-pull-left u-gutter-right-small">
                             <bt-body-btn bt-ico="'fas fa-info'"
-                                         bt-btn-classes="'bt-action__btn--body-square bt-action__btn--body-small bt-action__btn--blue'"
+                                         bt-btn-classes="'bt-action__btn--body-small bt-action__btn--blue'"
                                          bt-action="listMatchCtrl.openOddDetail(showdown)"
+                                         bt-content="'SHOWDOWN.BET_SUMMARY.DETAIL'"
                             >
                             </bt-body-btn>
                         </div>
