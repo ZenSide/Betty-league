@@ -5,6 +5,13 @@ betty2App.controller('RankingCtrl', function (BettyLeagueApi, UserApi, ranking, 
 
 	BtLoading.endLoad();
 
+	if (rankingCtrl.bettyLeague.public) {
+		$scope.parentCtrl.activeHeaderBtns = [false, false, true, false, false];
+	} else {
+		$scope.parentCtrl.activeHeaderBtns = [false, false, false, true, false];
+	}
+
+
 	//var scrollHandle = $ionicScrollDelegate.$getByHandle('btContentHandle');
 	//
 	//	rankingCtrl.scrollTo = function (anchor) {
@@ -16,6 +23,7 @@ betty2App.controller('RankingCtrl', function (BettyLeagueApi, UserApi, ranking, 
 	//	};
 
 	//rankingCtrl.scrollTo($stateParams.showdownId);
+
 
 
 	rankingCtrl.ranking = ranking;

@@ -222,6 +222,9 @@
 }
 .bt-bet-summary {
   background-color: #e6e6e6;
+  border-right: 0.5rem solid #fdcf21;
+  border-left: 0.5rem solid #fdcf21;
+  border-bottom: 0.5rem solid #fdcf21;
 }
 .bet-bet-summary__head {
   padding: 0.5rem 1rem 0.5rem 1rem;

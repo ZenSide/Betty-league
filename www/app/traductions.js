@@ -112,6 +112,9 @@ var translations = {
                 "ODD" : "Cote",
                 "DETAIL" : "Detail des cotes",
                 "CLOSE" : "Fermer",
+                "NO_ODD_PREFIX" : "Tu n'as pas encore parié sur ce match ! Tu n'a plus que",
+                "NO_ODD_SUFIX" : "pour cliquer sur parier !",
+                "NO_ODD" : "Oh non, c'est trop tard pour parier ! Tu ne gagnera rien cette fois-ci",
             },
             MODAL_ODD_DETAIL : {
                 "TITLE" : "Détail des cotes",
@@ -133,10 +136,10 @@ var translations = {
             "round": "Semaine"
         },
         COUNTDOWN : {
-            d:'j',
-            h:'h',
-            m:'m',
-            s:'s'
+            d:'jours',
+            h:'heures',
+            m:'minutes',
+            s:'secondes'
         },
         COMMUNITY : {
             TITLE : "Ma communauté",
@@ -158,6 +161,13 @@ var translations = {
         },
         ACCOUNT: {
             WAITING: "Page en cours de création..."
+        },
+        HOME : {
+            TITLE: "Bienvenue",
+            INTRO: "Tu peux rejoindre ou créer une <b>league privée pour te mesurer à tes amis</b> et leur montrer qui a la plus grosse connaissance du football.",
+            INTRO2: "Tu peux aussi affronter le <b>monde entier</b> dans la super league publique.",
+            PUBLIC: "Jouer sur la ligue publique",
+            PRIVATE: "Jouer avec ses amis"
         }
     }
 }

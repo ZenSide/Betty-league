@@ -113,6 +113,18 @@
     </div>
 </div>
 
+<!--boouuu pas de pari-->
+<div ng-if="!showdownCtrl.bet && step0Ctrl.sdStatus() === 'OPEN'" class="bettyLeague-title-lg bettyLeague-title--wrap bettyLeague-title--red">
+    <span translate="SHOWDOWN.BET_SUMMARY.NO_ODD_PREFIX"></span>
+    <bt-count-down bt-start-date="showdownCtrl.showdown.smFixture.sm__time__startingAt__dateTime"></bt-count-down>
+    <span translate="SHOWDOWN.BET_SUMMARY.NO_ODD_SUFIX"></span>
+</div>
+
+<div ng-if="!showdownCtrl.bet && step0Ctrl.sdStatus() !== 'OPEN'" class="bettyLeague-title-lg bettyLeague-title--wrap bettyLeague-title--red">
+    <span translate="SHOWDOWN.BET_SUMMARY.NO_ODD"></span>
+</div>
+
+
 <!--DEJA PARIE-->
 <div ng-if="showdownCtrl.bet" class="bt-bet-summary u-gutter-bottom-regular">
     <div class="bettyLeague-title bettyLeague-title--gold" translate="SHOWDOWN.BET_SUMMARY.MY_BETS">

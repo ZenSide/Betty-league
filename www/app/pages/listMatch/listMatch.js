@@ -5,6 +5,12 @@ betty2App.controller('ListMatchCtrl', function ($timeout, $location, $ionicScrol
 
 	listMatchCtrl.initialRange = true;
 
+	if (listMatchCtrl.bettyLeague.public) {
+		$scope.parentCtrl.activeHeaderBtns = [false, false, true, false, false];
+	} else {
+		$scope.parentCtrl.activeHeaderBtns = [false, false, false, true, false];
+	}
+
 
 	$timeout(function () {
 		BtLoading.endLoad();

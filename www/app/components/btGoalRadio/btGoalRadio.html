@@ -1,7 +1,7 @@
 <!--//FOOTER/HEADER-->
 <div class="bt-goal-radio row row-center">
     <div class="bt-goal-radio__col col u-text-center" ng-repeat="button in $ctrl.buttons">
-        <button ng-mouseup="$ctrl.minus()" class="bt-action__btn bt-goal-radio__button" type="button" ng-if="button == '-'">
+        <button ng-click="$ctrl.minus()" class="bt-action__btn bt-goal-radio__button" type="button" ng-if="button == '-'">
             <div class="bt-action__facade">
                 <i class="bt-action__ico fas fa-minus" ></i>
             </div>
@@ -14,7 +14,7 @@
                    ng-value="button"
                    name="radio"
             >
-            <button ng-mouseup="$ctrl.select(button)" class="bt-action__btn bt-action__btn--gold bt-goal-radio__button bt-goal-radio__button--radio" type="button">
+            <button ng-click="$ctrl.select(button)" class="bt-action__btn bt-action__btn--gold bt-goal-radio__button bt-goal-radio__button--radio" type="button">
                 <div class="bt-action__facade">
                     <i class="bt-action__ico">{{button}}</i>
                 </div>
@@ -23,7 +23,7 @@
 
 
 
-        <button ng-mouseup="$ctrl.plus()" class="bt-action__btn bt-goal-radio__button" type="button" ng-if="button == '+'">
+        <button ng-click="$ctrl.plus()" class="bt-action__btn bt-goal-radio__button" type="button" ng-if="button == '+'">
             <div class="bt-action__facade">
                 <i class="bt-action__ico fas fa-plus" ></i>
             </div>

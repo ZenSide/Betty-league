@@ -8,9 +8,9 @@ betty2App.controller('BettyLeagueCtrl', function (BtLoading, BetApi, ShowdownApi
 
 	if (bettyLeagueCtrl.bettyLeague.public)
 	{
-		$scope.parentCtrl.activeHeaderBtns = [false, true, false, false];
+		$scope.parentCtrl.activeHeaderBtns = [false, false, true, false, false];
 	} else {
-		$scope.parentCtrl.activeHeaderBtns = [false, false, true, false];
+		$scope.parentCtrl.activeHeaderBtns = [false, false, false, true, false];
 	}
 
 	bettyLeagueCtrl.seasonScore = seasonScore;

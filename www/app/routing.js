@@ -59,27 +59,30 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
                     //User found
                     if (Object.keys(localUser).length > 0) {
                         //Get my availables bettyleagues
-                        BettyLeagueApi.getBettyWorld(function (bettyWorld) {
-                            //find worldbettyLeague
-                            //go to world bettyleague
-                            //go to the next unbet showdown
-                            ShowdownApi.getNextOpenShowDown(bettyWorld.id, function (showdown) {
-                                BtNavigate.stateChange('goTop' ,'bettyleague.showdown.step0', {
-                                    'bettyLeagueId' : bettyWorld.id,
-                                    'showdownId' : showdown.id,
-                                    'animDirection' : 'fade'
-                                });
-                            }, function (messages) {
-                                BtMessages.show(messages, null, function () {
-                                    BtNavigate.stateChange(null, 'login');
-                                })
-                            }, true);
-
-                        }, function (messages) {
-                            BtMessages.show(messages, null, function () {
-                                BtNavigate.stateChange(null, 'login');
-                            })
-                        }, true);
+                        BtMessages.show(messages, null, function () {
+                            BtNavigate.stateChange(null, 'home');
+                        });
+                        //BettyLeagueApi.getBettyWorld(function (bettyWorld) {
+                        //    //find worldbettyLeague
+                        //    //go to world bettyleague
+                        //    //go to the next unbet showdown
+                        //    ShowdownApi.getNextOpenShowDown(bettyWorld.id, function (showdown) {
+                        //        BtNavigate.stateChange('goTop' ,'bettyleague.showdown.step0', {
+                        //            'bettyLeagueId' : bettyWorld.id,
+                        //            'showdownId' : showdown.id,
+                        //            'animDirection' : 'fade'
+                        //        });
+                        //    }, function (messages) {
+                        //        BtMessages.show(messages, null, function () {
+                        //            BtNavigate.stateChange(null, 'login');
+                        //        })
+                        //    }, true);
+                        //
+                        //}, function (messages) {
+                        //    BtMessages.show(messages, null, function () {
+                        //        BtNavigate.stateChange(null, 'login');
+                        //    })
+                        //}, true);
                     } else {
                         //User not found
                         $timeout(function () {
@@ -427,6 +430,26 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
             templateUrl: 'app/pages/joinLeague/joinLeague.html',
             controller: 'JoinLeagueCtrl',
             controllerAs: 'joinLeagueCtrl',
+            resolve: {
+                translations: function ($translate) {
+                    return $translate([
+                        ]
+                    ).then(function (translations) {
+                        return translations
+                    });
+                },
+                animation: function (BtNavigate, $stateParams) {
+                    return BtNavigate.anim($stateParams.animDirection);
+                }
+            }
+        })
+
+        .state('home', {
+            url: '/home/:animDirection',
+            params: {animDirection: null},
+            templateUrl: 'app/pages/home/home.html',
+            controller: 'HomeCtrl',
+            controllerAs: 'homeCtrl',
             resolve: {
                 translations: function ($translate) {
                     return $translate([

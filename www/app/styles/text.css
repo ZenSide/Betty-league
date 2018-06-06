@@ -4,6 +4,11 @@
   font-family: "quicksandbold", sans-serif;
   text-align: center;
 }
+.bt-text-alt {
+  font-family: "quicksandbold", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
 .bt-text-nano {
   font-size: 0.9rem;
   font-family: "poppinsregular", sans-serif;

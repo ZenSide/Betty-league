@@ -22,6 +22,7 @@ betty2App.controller('ParentCtrl', function (BtLoading, $scope, $rootScope, BtNa
         false,
         false,
         false,
+        false,
         false
     ];
 
@@ -33,6 +34,12 @@ betty2App.controller('ParentCtrl', function (BtLoading, $scope, $rootScope, BtNa
 
     parentCtrl.goAccount = function () {
         BtNavigate.stateChange('goTop' ,'account', {
+            'animDirection' : 'fade'
+        });
+    };
+
+    parentCtrl.goHome = function () {
+        BtNavigate.stateChange('goTop' ,'home', {
             'animDirection' : 'fade'
         });
     };

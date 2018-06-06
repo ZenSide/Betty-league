@@ -1,0 +1,26 @@
+<ion-content delegate-handle="btContentHandle" class="bt-content login">
+    <h1 class="txt-part-title u-gutter-bottom-regular">
+        <span translate="HOME.TITLE"></span>
+        <span> {{homeCtrl.user.pseudo}}</span>
+    </h1>
+
+    <div class="u-gutter-bottom-small bt-text-md" translate="HOME.INTRO"></div>
+
+    <div class="u-gutter-bottom-small bt-text-md" translate="HOME.INTRO2"></div>
+
+    <bt-body-btn bt-ico="'bt-ico-perso icon-bty-ico-join'"
+                 bt-content="'HOME.PRIVATE'"
+                 bt-action="homeCtrl.goPrivateLeagues()"
+                 bt-btn-classes="'u-gutter-bottom-regular bt-action__btn--gold'"
+    >
+    </bt-body-btn>
+
+    <bt-body-btn bt-ico="'bt-ico-perso icon-bty-ico-world'"
+                 bt-content="'HOME.PUBLIC'"
+                 bt-action="homeCtrl.goBettyWorld()"
+                 bt-btn-classes="'u-gutter-bottom-regular bt-action__btn--gold'"
+    >
+    </bt-body-btn>
+
+
+</ion-content>

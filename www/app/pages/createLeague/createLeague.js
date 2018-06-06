@@ -2,6 +2,8 @@ betty2App.controller('CreateLeagueCtrl', function (BtNavigate, ShowdownApi, Bett
 	var createLeagueCtrl = this;
 	BtLoading.endLoad();
 
+	$scope.parentCtrl.activeHeaderBtns = [false, false, false, true, false];
+
 	createLeagueCtrl.newLeague = {
 		special: 'WC2018',
 		name: ''

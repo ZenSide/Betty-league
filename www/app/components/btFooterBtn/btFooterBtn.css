@@ -190,6 +190,9 @@
   height: 100%;
   font-size: 1.8rem!important;
 }
+.bt-action__btn--body .bt-action__ico.bt-ico-perso {
+  font-size: 3.5rem!important;
+}
 .bt-action__btn--body-small {
   min-height: 4rem !important;
   font-size: 1.4rem!important;

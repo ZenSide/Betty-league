@@ -2,6 +2,8 @@ betty2App.controller('JoinLeagueCtrl', function (BtNavigate, ShowdownApi, BettyL
 	var joinLeagueCtrl = this;
 	BtLoading.endLoad();
 
+	$scope.parentCtrl.activeHeaderBtns = [false, false, false, true, false];
+
 	joinLeagueCtrl.newLeague = {
 		codeName: ''
 	};

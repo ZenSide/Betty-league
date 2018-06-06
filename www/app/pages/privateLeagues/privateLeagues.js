@@ -2,6 +2,8 @@ betty2App.controller('PrivateLeaguesCtrl', function (ShowdownApi, BtMessages, my
 	var privateLeaguesCtrl = this;
 	BtLoading.endLoad();
 
+	$scope.parentCtrl.activeHeaderBtns = [false, false, false, true, false];
+
 	privateLeaguesCtrl.newLeague = function () {
 		BtNavigate.stateChange('goRight' ,'createleague', {
 			'animDirection' : '3left'
@@ -51,8 +53,6 @@ betty2App.controller('PrivateLeaguesCtrl', function (ShowdownApi, BtMessages, my
 	footerStatus.rightBt = {
 		btShow : false
 	};
-
-	$scope.parentCtrl.activeHeaderBtns = [false, false, true, false];
 
 	animation.promise.then(function () {
 		$scope.parentCtrl.withHeadLogo = false;

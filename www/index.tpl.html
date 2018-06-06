@@ -14,26 +14,34 @@
 
     <script src="lib/ionic/js/ionic.bundle.js"></script>
 
-
     <!-- grunt included -->
     <!-- include: "type": "css", "files": "app/**/*.css" -->
-
-
 </head>
 
 <!--//HEADER BAR-->
 <body ng-app="betty2" ng-controller="ParentCtrl as parentCtrl"
-      ng-class="{'with-head-logo':parentCtrl.withHeadLogo, 'with-big-logo':isCurrent('login')}">
+      ng-class="{'with-head-logo':parentCtrl.withHeadLogo}">
     <img class="bt-logo" src="img/logo_216x240.png" ng-if="parentCtrl.withHeadLogo">
     <div class="bar bt-header ng-cloak" ng-if="!parentCtrl.withHeadLogo">
         <div class="row">
             <div class="col">
                 <bt-footer-btn bt-show="!parentCtrl.withHeadLogo"
                                bt-classes="'bt-action--medium bt-action--head'"
-                               bt-button-classes="'bt-action__btn--blue btn-disabled'"
-                               bt-ico="'fas fa-question'"
+                               bt-button-classes="isCurrent(0)?'bt-action__btn--gold bt-action__btn--active':'bt-action__btn--blue'"
+                               bt-ico="'fas fa-home'"
                                bt-submit-form="btn.submitform"
                                bt-position="left"
+                               bt-action="parentCtrl.goHome()"
+                >
+                </bt-footer-btn>
+            </div>
+            <div class="col">
+                <bt-footer-btn bt-show="!parentCtrl.withHeadLogo"
+                               bt-classes="'bt-action--medium bt-action--head'"
+                               bt-button-classes="isCurrent(1)?'bt-action__btn--gold bt-action__btn--active':'bt-action__btn--blue btn-disabled'"
+                               bt-ico="'fas fa-question'"
+                               bt-submit-form="btn.submitform"
+                               bt-position="middle"
                                bt-action=""
                 >
                 </bt-footer-btn>
@@ -41,7 +49,7 @@
             <div class="col">
                 <bt-footer-btn bt-show="!parentCtrl.withHeadLogo"
                                bt-classes="'bt-action--medium bt-action--head'"
-                               bt-button-classes="isCurrent(1)?'bt-action__btn--gold bt-action__btn--active':'bt-action__btn--blue'"
+                               bt-button-classes="isCurrent(2)?'bt-action__btn--gold bt-action__btn--active':'bt-action__btn--blue'"
                                bt-ico="'icon-bty-ico-world'"
                                bt-submit-form="btn.submitform"
                                bt-position="middle"
@@ -52,7 +60,7 @@
             <div class="col">
                 <bt-footer-btn bt-show="!parentCtrl.withHeadLogo"
                                bt-classes="'bt-action--medium bt-action--head'"
-                               bt-button-classes="isCurrent(2)?'bt-action__btn--gold bt-action__btn--active':'bt-action__btn--blue'"
+                               bt-button-classes="isCurrent(3)?'bt-action__btn--gold bt-action__btn--active':'bt-action__btn--blue'"
                                bt-ico="'icon-bty-ico-join'"
                                bt-submit-form="btn.submitform"
                                bt-position="middle"
@@ -63,7 +71,7 @@
             <div class="col">
                 <bt-footer-btn bt-show="!parentCtrl.withHeadLogo"
                                bt-classes="'bt-action--medium bt-action--head'"
-                               bt-button-classes="isCurrent(3)?'bt-action__btn--gold bt-action__btn--active':'bt-action__btn--blue'"
+                               bt-button-classes="isCurrent(4)?'bt-action__btn--gold bt-action__btn--active':'bt-action__btn--blue'"
                                bt-ico="'icon-bty-ico-victory'"
                                bt-submit-form="btn.submitform"
                                bt-position="right"
