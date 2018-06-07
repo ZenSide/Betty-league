@@ -70,7 +70,7 @@ body .with-big-logo ui-view {
   min-width: 320px;
 }
 .full-background-container {
-  background-image: url('/img/background.jpg');
+  background-image: url('../../img/background.jpg');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
