@@ -1,5 +1,5 @@
 'use strict';
-betty2App.factory('ScoreOddApi', function ($q, BetApi, $filter, ResourcesFactory, BtLocalStorage) {
+betty2App.factory('ScoreOddApi', ['$q', 'BetApi', '$filter', 'ResourcesFactory', 'BtLocalStorage', function ($q, BetApi, $filter, ResourcesFactory, BtLocalStorage) {
 	var ScoreOddApi = {
 
 		//User Sign In
@@ -23,4 +23,4 @@ betty2App.factory('ScoreOddApi', function ($q, BetApi, $filter, ResourcesFactory
 		}
 	};
 	return ScoreOddApi;
-});
+}]);

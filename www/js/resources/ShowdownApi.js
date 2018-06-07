@@ -1,5 +1,5 @@
 'use strict';
-betty2App.factory('ShowdownApi', function ($q, BetApi, $filter, BettyLeagueApi, ResourcesFactory, BtLocalStorage) {
+betty2App.factory('ShowdownApi', ['$q', 'BetApi', '$filter', 'BettyLeagueApi', 'ResourcesFactory', 'BtLocalStorage', function ($q, BetApi, $filter, BettyLeagueApi, ResourcesFactory, BtLocalStorage) {
 	var ShowdownApi = {
 
 		//User Sign In
@@ -286,4 +286,4 @@ betty2App.factory('ShowdownApi', function ($q, BetApi, $filter, BettyLeagueApi, 
 
 	};
 	return ShowdownApi;
-});
+}]);

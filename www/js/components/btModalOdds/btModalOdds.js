@@ -8,7 +8,7 @@ betty2App.component('btModalOdds',{
     btShow:"<",
     btOnClose:"&"
   },
-  controller:function($scope, BtLoading, BetApi){
+  controller:['$scope', 'BtLoading', 'BetApi', function($scope, BtLoading, BetApi){
     var ctrl = this;
 
     console.log(ctrl.btData);
@@ -56,5 +56,5 @@ betty2App.component('btModalOdds',{
       console.log(ctrl.awayWinBets);
     };
 
-  }
+  }]
 });

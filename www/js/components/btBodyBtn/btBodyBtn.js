@@ -12,7 +12,7 @@ betty2App.component('btBodyBtn',{
     btAction: '&',
     btType: '@'
   },
-  controller:function($timeout){
+  controller:['$timeout', function($timeout){
     var zeCtrl = this;
     if (!zeCtrl.btType) {
       zeCtrl.btType = 'button';
@@ -43,5 +43,5 @@ betty2App.component('btBodyBtn',{
         return
       }
     };
-  }
+  }]
 });

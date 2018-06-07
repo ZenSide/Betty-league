@@ -1,4 +1,4 @@
-betty2App.factory('BtLoading', function($rootScope) {
+betty2App.factory('BtLoading', ['$rootScope', function($rootScope) {
   var service = {
     startLoad : function(){
       $rootScope.btLoading = true;
@@ -8,4 +8,4 @@ betty2App.factory('BtLoading', function($rootScope) {
     }
   };
   return service;
-})
+}])

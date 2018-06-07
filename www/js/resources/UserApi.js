@@ -1,5 +1,5 @@
 'use strict';
-betty2App.factory('UserApi', function (BtLoading, $rootScope, $cordovaFacebook, BtMessages, BtNavigate, ResourcesFactory, BtLocalStorage, AVATAR_HEIGHT, AVATAR_WIDTH) {
+betty2App.factory('UserApi', ['BtLoading', '$rootScope', '$cordovaFacebook', 'BtMessages', 'BtNavigate', 'ResourcesFactory', 'BtLocalStorage', 'AVATAR_HEIGHT', 'AVATAR_WIDTH', function (BtLoading, $rootScope, $cordovaFacebook, BtMessages, BtNavigate, ResourcesFactory, BtLocalStorage, AVATAR_HEIGHT, AVATAR_WIDTH) {
 	var UserApi = {
 
 		//User Sign In
@@ -93,4 +93,4 @@ betty2App.factory('UserApi', function (BtLoading, $rootScope, $cordovaFacebook, 
 		}
 	};
 	return UserApi;
-});
+}]);

@@ -1,4 +1,4 @@
-betty2App.factory('BtMessages', function($rootScope, $timeout) {
+betty2App.factory('BtMessages', ['$rootScope', '$timeout', function($rootScope, $timeout) {
   var service = {
     show : function(messages,duration,callback){
       if (!duration) duration = messages.length * 900;
@@ -51,4 +51,4 @@ betty2App.factory('BtMessages', function($rootScope, $timeout) {
   };
 
   return service;
-});
+}]);

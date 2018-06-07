@@ -1,3 +1,3 @@
-betty2App.controller('LandingCtrl', function (routeDispatcher) {
+betty2App.controller('LandingCtrl', function () {
 
 });

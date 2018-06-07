@@ -1,5 +1,5 @@
 'use strict';
-betty2App.factory('BetApi', function ($filter, ResourcesFactory, BtLocalStorage) {
+betty2App.factory('BetApi', ['$filter', 'ResourcesFactory', 'BtLocalStorage', function ($filter, ResourcesFactory, BtLocalStorage) {
 	var BetApi = {
 
 		createBet: function (newBet, resolve, reject) {
@@ -331,4 +331,4 @@ betty2App.factory('BetApi', function ($filter, ResourcesFactory, BtLocalStorage)
 		}
 	};
 	return BetApi;
-});
+}]);

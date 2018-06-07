@@ -1,4 +1,4 @@
-betty2App.controller('HomeCtrl', function (animation, $scope, UserApi,BtMessages,BtNavigate,translations,BtLoading, BettyLeagueApi, ShowdownApi) {
+betty2App.controller('HomeCtrl', ['animation', '$scope', 'UserApi', 'BtMessages', 'BtNavigate', 'BtLoading', 'BettyLeagueApi', 'ShowdownApi', function (animation, $scope, UserApi, BtMessages, BtNavigate, BtLoading, BettyLeagueApi, ShowdownApi) {
     BtLoading.endLoad();
     var homeCtrl = this;
     $scope.parentCtrl.activeHeaderBtns = [true, false, false, false, false];
@@ -56,4 +56,4 @@ betty2App.controller('HomeCtrl', function (animation, $scope, UserApi,BtMessages
         }, true);
     };
 
-});
+}]);

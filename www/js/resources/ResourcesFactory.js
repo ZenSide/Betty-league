@@ -1,4 +1,4 @@
-betty2App.factory('ResourcesFactory', function($q, $http, $rootScope, API_BASE_URL, BtLocalStorage, BtNavigate) {
+betty2App.factory('ResourcesFactory', ['$q', '$http', '$rootScope', 'API_BASE_URL', 'BtLocalStorage', 'BtNavigate', function($q, $http, $rootScope, API_BASE_URL, BtLocalStorage, BtNavigate) {
 
     var ResourcesFactory = {
         errorHandling: function (data, status) {
@@ -120,4 +120,4 @@ betty2App.factory('ResourcesFactory', function($q, $http, $rootScope, API_BASE_U
         }
     };
     return ResourcesFactory;
-});
+}]);

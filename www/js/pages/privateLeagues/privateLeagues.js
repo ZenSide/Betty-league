@@ -1,4 +1,4 @@
-betty2App.controller('PrivateLeaguesCtrl', function (ShowdownApi, BtMessages, myBettyLeagues, BtNavigate, $scope, BtLoading, animation) {
+betty2App.controller('PrivateLeaguesCtrl', ['ShowdownApi', 'BtMessages', 'myBettyLeagues', 'BtNavigate', '$scope', 'BtLoading', 'animation', function (ShowdownApi, BtMessages, myBettyLeagues, BtNavigate, $scope, BtLoading, animation) {
 	var privateLeaguesCtrl = this;
 	BtLoading.endLoad();
 
@@ -58,4 +58,4 @@ betty2App.controller('PrivateLeaguesCtrl', function (ShowdownApi, BtMessages, my
 		$scope.parentCtrl.withHeadLogo = false;
 		$scope.parentCtrl.footerStatus = footerStatus;
 	});
-});
+}]);

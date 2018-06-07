@@ -1,4 +1,5 @@
-betty2App.controller('SigninCtrl', function (animation, BtLoading, BtMessages, UserApi, BtNavigate, $scope, translations) {
+betty2App.controller('SigninCtrl', ['animation', 'BtLoading', 'BtMessages', 'UserApi', 'BtNavigate', '$scope', 'translations',
+    function (animation, BtLoading, BtMessages, UserApi, BtNavigate, $scope, translations) {
     BtLoading.endLoad();
     var signinCtrl = this;
 
@@ -75,4 +76,4 @@ betty2App.controller('SigninCtrl', function (animation, BtLoading, BtMessages, U
             BtMessages.showFormMessages(form, fieldsNames);
         }
     };
-});
+}]);

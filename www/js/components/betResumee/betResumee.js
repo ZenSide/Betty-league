@@ -10,7 +10,7 @@ betty2App.component('betResumee',{
     type: '@',
     modifierCoin: '@'
   },
-  controller:function(BetApi, ShowdownApi){
+  controller:['BetApi', 'ShowdownApi', function(BetApi, ShowdownApi){
     var ctrl = this;
 
     var getbetResume = function (showdown, bet) {
@@ -29,5 +29,5 @@ betty2App.component('betResumee',{
         ctrl.betResume = getbetResume();
       }
     };
-  }
+  }]
 });

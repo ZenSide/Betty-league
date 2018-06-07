@@ -1,4 +1,4 @@
-betty2App.controller('CreateLeagueCtrl', function (BtNavigate, ShowdownApi, BettyLeagueApi, BtMessages, $scope, BtLoading, animation) {
+betty2App.controller('CreateLeagueCtrl', ['BtNavigate', 'BettyLeagueApi', 'BtMessages', '$scope', 'BtLoading', 'animation', function (BtNavigate, BettyLeagueApi, BtMessages, $scope, BtLoading, animation) {
 	var createLeagueCtrl = this;
 	BtLoading.endLoad();
 
@@ -60,4 +60,4 @@ betty2App.controller('CreateLeagueCtrl', function (BtNavigate, ShowdownApi, Bett
 		$scope.parentCtrl.withHeadLogo = false;
 		$scope.parentCtrl.footerStatus = footerStatus;
 	});
-});
+}]);

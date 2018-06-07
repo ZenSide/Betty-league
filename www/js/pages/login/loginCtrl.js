@@ -1,4 +1,4 @@
-betty2App.controller('LoginCtrl', function (animation, $scope, UserApi,BtMessages,BtNavigate,translations,BtLoading) {
+betty2App.controller('LoginCtrl', ['animation', '$scope', 'UserApi', 'BtMessages', 'BtNavigate', 'translations', 'BtLoading', function (animation, $scope, UserApi, BtMessages, BtNavigate, translations, BtLoading) {
     BtLoading.endLoad();
     var loginCtrl = this;
 
@@ -84,4 +84,4 @@ betty2App.controller('LoginCtrl', function (animation, $scope, UserApi,BtMessage
             BtMessages.show(messages, null);
         })
     };
-});
+}]);

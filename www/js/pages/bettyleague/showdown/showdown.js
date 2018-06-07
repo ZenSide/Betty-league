@@ -1,4 +1,5 @@
-betty2App.controller('ShowdownCtrl', function (BetApi, ShowdownApi, BtLoading, ScoreOddApi, BtMessages, $scope, $stateParams, showdown, bet, previousShowDownId, nextShowDownId) {
+betty2App.controller('ShowdownCtrl', ['BetApi', 'ShowdownApi', 'BtLoading', 'ScoreOddApi', 'BtMessages', '$scope', '$stateParams', 'showdown', 'bet', 'previousShowDownId', 'nextShowDownId', 
+	function (BetApi, ShowdownApi, BtLoading, ScoreOddApi, BtMessages, $scope, $stateParams, showdown, bet, previousShowDownId, nextShowDownId) {
 	var showdownCtrl = this;
 	showdownCtrl.showdownId = $stateParams.showdownId;
 	$scope.bettyLeagueCtrl.showdownId = showdownCtrl.showdownId;
@@ -84,4 +85,4 @@ betty2App.controller('ShowdownCtrl', function (BetApi, ShowdownApi, BtLoading, S
 		}, function (messages) {
 		});
 	});
-});
+}]);

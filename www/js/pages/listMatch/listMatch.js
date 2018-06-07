@@ -1,4 +1,5 @@
-betty2App.controller('ListMatchCtrl', function ($timeout, $location, $ionicScrollDelegate, bets, BetApi, ScoreOddApi, bettyLeague, showdowns, ShowdownApi, BtMessages, translations, $scope, $stateParams, BtNavigate, BtLoading, animation) {
+betty2App.controller('ListMatchCtrl', ['$timeout', '$location', '$ionicScrollDelegate', 'bets', 'BetApi', 'ScoreOddApi', 'bettyLeague', 'showdowns', 'ShowdownApi', 'BtMessages', 'translations', '$scope', '$stateParams', 'BtNavigate', 'BtLoading', 'animation',
+	function ($timeout, $location, $ionicScrollDelegate, bets, BetApi, ScoreOddApi, bettyLeague, showdowns, ShowdownApi, BtMessages, translations, $scope, $stateParams, BtNavigate, BtLoading, animation) {
 	var listMatchCtrl = this;
 
 	listMatchCtrl.bettyLeague = bettyLeague;
@@ -150,4 +151,4 @@ betty2App.controller('ListMatchCtrl', function ($timeout, $location, $ionicScrol
 		$scope.parentCtrl.withHeadLogo = withHeadLogo;
 		$scope.parentCtrl.footerStatus = footerStatus;
 	});
-});
+}]);

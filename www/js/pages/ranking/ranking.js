@@ -1,4 +1,5 @@
-betty2App.controller('RankingCtrl', function (BettyLeagueApi, UserApi, ranking, $timeout, $location, $ionicScrollDelegate, BetApi, ScoreOddApi, bettyLeague, ShowdownApi, BtMessages, translations, $scope, $stateParams, BtNavigate, BtLoading, animation) {
+betty2App.controller('RankingCtrl', ['BettyLeagueApi', 'UserApi', 'ranking', '$timeout', '$location', '$ionicScrollDelegate', 'BetApi', 'ScoreOddApi', 'bettyLeague', 'BtMessages', 'translations', '$scope', '$stateParams', 'BtNavigate', 'BtLoading', 'animation',
+	function (BettyLeagueApi, UserApi, ranking, $timeout, $location, $ionicScrollDelegate, BetApi, ScoreOddApi, bettyLeague, BtMessages, translations, $scope, $stateParams, BtNavigate, BtLoading, animation) {
 	var rankingCtrl = this;
 
 	rankingCtrl.bettyLeague = bettyLeague;
@@ -291,4 +292,4 @@ betty2App.controller('RankingCtrl', function (BettyLeagueApi, UserApi, ranking, 
 		$scope.parentCtrl.withHeadLogo = withHeadLogo;
 		$scope.parentCtrl.footerStatus = footerStatus;
 	});
-});
+}]);

@@ -1,4 +1,5 @@
-betty2App.controller('Step1Ctrl', function (BtMessages, translations, $scope, $stateParams, BtNavigate, BtLoading, animation) {
+betty2App.controller('Step1Ctrl', ['BtMessages' ,'translations' ,'$scope' ,'$stateParams' ,'BtNavigate' ,'BtLoading' ,'animation',
+	function (BtMessages, translations, $scope, $stateParams, BtNavigate, BtLoading, animation) {
 	var step1Ctrl = this;
 	BtLoading.endLoad();
 
@@ -66,4 +67,4 @@ betty2App.controller('Step1Ctrl', function (BtMessages, translations, $scope, $s
 		$scope.parentCtrl.footerStatus = footerStatus;
 	});
 
-});
+}]);

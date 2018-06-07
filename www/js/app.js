@@ -14,7 +14,7 @@ var betty2App = angular.module(
   ]
 );
 
-betty2App.run(function($ionicPlatform, $rootScope, $timeout, $state, $translate, $cordovaKeyboard, BtLoading) {
+betty2App.run(['$ionicPlatform', '$rootScope', '$translate', '$cordovaKeyboard', 'BtLoading', function($ionicPlatform, $rootScope, $translate, $cordovaKeyboard, BtLoading) {
 
   FastClick.attach(document.body);
 
@@ -46,7 +46,7 @@ betty2App.run(function($ionicPlatform, $rootScope, $timeout, $state, $translate,
       StatusBar.styleDefault();
     }
   });
-}).config(function ($ionicConfigProvider) {
+}]).config(['$ionicConfigProvider', function ($ionicConfigProvider) {
   $ionicConfigProvider.scrolling.jsScrolling(false);
-})
+}])
 ;

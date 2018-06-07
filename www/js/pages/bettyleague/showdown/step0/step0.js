@@ -1,4 +1,4 @@
-betty2App.controller('Step0Ctrl', function (BtMessages, BetApi, $timeout, translations, ENV, $scope, $stateParams, BtNavigate, BtLoading, animation) {
+betty2App.controller('Step0Ctrl', ['translations', '$scope', '$stateParams', 'BtNavigate', 'BtLoading', 'animation', function (translations, $scope, $stateParams, BtNavigate, BtLoading, animation) {
 
 	var step0Ctrl = this;
 	BtLoading.endLoad();
@@ -96,4 +96,4 @@ betty2App.controller('Step0Ctrl', function (BtMessages, BetApi, $timeout, transl
 		$scope.parentCtrl.withHeadLogo = withHeadLogo;
 		$scope.parentCtrl.footerStatus = footerStatus;
 	});
-});
+}]);

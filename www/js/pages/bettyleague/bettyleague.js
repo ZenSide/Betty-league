@@ -1,4 +1,5 @@
-betty2App.controller('BettyLeagueCtrl', function (BtLoading, BetApi, ShowdownApi, seasonScore, $scope, $stateParams, bettyLeague, UserApi, BtNavigate, $interval) {
+betty2App.controller('BettyLeagueCtrl', ['BtLoading', 'BetApi', 'ShowdownApi', 'seasonScore', '$scope', '$stateParams', 'bettyLeague', 'BtNavigate', '$interval',
+	function (BtLoading, BetApi, ShowdownApi, seasonScore, $scope, $stateParams, bettyLeague, BtNavigate, $interval) {
 	var bettyLeagueCtrl = this;
 
 	bettyLeagueCtrl.bettyLeagueId = $stateParams.bettyLeagueId;
@@ -94,4 +95,4 @@ betty2App.controller('BettyLeagueCtrl', function (BtLoading, BetApi, ShowdownApi
 
 	//stream bet fullrange (ttes les 30 secondes)
 
-});
+}]);

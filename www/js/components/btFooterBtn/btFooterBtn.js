@@ -14,7 +14,7 @@ betty2App.component('btFooterBtn',{
     btSubmitForm: '<',
     btAction: '&'
   },
-  controller:function($timeout){
+  controller:['$timeout', function($timeout){
     var zeCtrl = this;
     this.icoResult = this.btIco;
     this.btActionTimed = function() {
@@ -40,5 +40,5 @@ betty2App.component('btFooterBtn',{
         return
       }
     };
-  }
+  }]
 });

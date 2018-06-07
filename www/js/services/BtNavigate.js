@@ -1,4 +1,4 @@
-betty2App.factory('BtNavigate', function($timeout, $rootScope, ENV, $state, $cordovaNativePageTransitions, BtLoading, $q) {
+betty2App.factory('BtNavigate', ['$timeout', '$rootScope', 'ENV', '$state', '$cordovaNativePageTransitions', 'BtLoading', '$q' ,function($timeout, $rootScope, ENV, $state, $cordovaNativePageTransitions, BtLoading, $q) {
   var service = {
     lockedAnim : false,
     stateChange : function(animClass, route, routeparams, reload){
@@ -81,4 +81,4 @@ betty2App.factory('BtNavigate', function($timeout, $rootScope, ENV, $state, $cor
     }
   };
   return service;
-})
+}]);

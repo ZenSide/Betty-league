@@ -8,7 +8,7 @@ betty2App.component('btTeamRadio',{
     btHomeTeam: "<",
     btAwayTeam: "<"
   },
-  controller:function($timeout){
+  controller:function(){
     var $ctrl = this;
 
     $ctrl.select = function (val) {

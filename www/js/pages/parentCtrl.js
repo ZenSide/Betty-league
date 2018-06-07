@@ -1,4 +1,5 @@
-betty2App.controller('ParentCtrl', function (BtLoading, $scope, $rootScope, BtNavigate, BettyLeagueApi, ShowdownApi, BtMessages, $state, UserApi) {
+betty2App.controller('ParentCtrl', ['BtLoading', '$rootScope', 'BtNavigate', 'BettyLeagueApi', 'ShowdownApi', 'BtMessages', '$state', 'UserApi',
+    function (BtLoading, $rootScope, BtNavigate, BettyLeagueApi, ShowdownApi, BtMessages, $state, UserApi) {
     var parentCtrl = this;
 
     $rootScope.fbCredentials = {};
@@ -89,4 +90,4 @@ betty2App.controller('ParentCtrl', function (BtLoading, $scope, $rootScope, BtNa
     parentCtrl.logout = function () {
         UserApi.logout();
     }
-});
+}]);

@@ -7,7 +7,7 @@ betty2App.component('btCountDown',{
     btStartDate:"<",
     btEndAction:"&"
   },
-  controller:function($scope){
+  controller:['$scope', function($scope){
     var ctrl = this;
     var btStartDate = new Date(ctrl.btStartDate);
     var now = new Date().getTime();
@@ -39,5 +39,5 @@ betty2App.component('btCountDown',{
     $scope.$on('$destroy', function () {
       clearInterval(x);
     })
-  }
+  }]
 });

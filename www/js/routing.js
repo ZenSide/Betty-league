@@ -1,4 +1,4 @@
-betty2App.config(function($stateProvider, $urlRouterProvider) {
+betty2App.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
     $stateProvider
     //USER
         .state('login', {
@@ -466,4 +466,4 @@ betty2App.config(function($stateProvider, $urlRouterProvider) {
     ;
 
     $urlRouterProvider.otherwise('/landing');
-});
+}]);

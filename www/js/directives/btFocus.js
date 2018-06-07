@@ -1,5 +1,5 @@
 'use strict';
-betty2App.directive('btFocus', function($ionicScrollDelegate) {
+betty2App.directive('btFocus', function() {
   return {
     restrict: 'A',
     link: function($scope,elem,attrs) {
