@@ -26,19 +26,19 @@ betty2App.controller('ParentCtrl', function (BtLoading, $scope, $rootScope, BtNa
     ];
 
     parentCtrl.goPrivateLeagues = function () {
-        BtNavigate.stateChange('goTop' ,'privateleagues', {
+        BtNavigate.stateChange('goBottom' ,'privateleagues', {
             'animDirection' : 'fade'
         });
     };
 
     parentCtrl.goAccount = function () {
-        BtNavigate.stateChange('goTop' ,'account', {
+        BtNavigate.stateChange('goBottom' ,'account', {
             'animDirection' : 'fade'
         });
     };
 
     parentCtrl.goHome = function () {
-        BtNavigate.stateChange('goTop' ,'home', {
+        BtNavigate.stateChange('goBottom' ,'home', {
             'animDirection' : 'fade'
         });
     };

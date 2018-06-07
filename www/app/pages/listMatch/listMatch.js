@@ -132,7 +132,7 @@ betty2App.controller('ListMatchCtrl', function ($timeout, $location, $ionicScrol
 		btDisabled: false,
 		btSubmitForm: null,
 		action:function(){
-			BtNavigate.stateChange('goLeft' ,'bettyleague.showdown.step0', {
+			BtNavigate.stateChange('goBottom' ,'bettyleague.showdown.step0', {
 				'bettyLeagueId' : $stateParams.bettyLeagueId,
 				'showdownId' : $stateParams.showdownId,
 				'animDirection' : '3right'

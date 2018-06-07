@@ -21,7 +21,7 @@
 }
 
 .list-match-view {
-  top: 2.4rem;
+  top: 3rem;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -67,6 +67,15 @@ ui-view{
     }
     &.ng-leave{
       animation: slideOutUp @swipe-time;
+    }
+  }
+
+  &.fade {
+    &.ng-enter{
+      animation: fadeIn @swipe-time;
+    }
+    &.ng-leave{
+      animation: fadeOut @swipe-time;
     }
   }
 }

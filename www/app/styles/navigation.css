@@ -3,7 +3,7 @@
   bottom: 5.5rem;
 }
 .showdown-view {
-  top: 7.1rem;
+  top: 7.8rem;
   bottom: 0;
 }
 .ranking-view {
@@ -13,7 +13,7 @@
   padding-right: 1rem;
 }
 .list-match-view {
-  top: 2.4rem;
+  top: 3rem;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -48,4 +48,10 @@ ui-view.goBottom.ng-enter {
 }
 ui-view.goBottom.ng-leave {
   animation: slideOutUp 600ms;
+}
+ui-view.fade.ng-enter {
+  animation: fadeIn 600ms;
+}
+ui-view.fade.ng-leave {
+  animation: fadeOut 600ms;
 }

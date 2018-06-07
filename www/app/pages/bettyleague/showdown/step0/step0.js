@@ -66,7 +66,7 @@ betty2App.controller('Step0Ctrl', function (BtMessages, BetApi, $timeout, transl
 		btDisabled: false,
 		btSubmitForm: null,
 		action:function(){
-			BtNavigate.stateChange('goRight' ,'bettyleague.showdown.step1', {
+			BtNavigate.stateChange('fade' ,'bettyleague.showdown.step1', {
 				'bettyLeagueId' : $stateParams.bettyLeagueId,
 				'showdownId' : $stateParams.showdownId,
 				'animDirection' : '2left'

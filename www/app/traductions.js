@@ -5,6 +5,7 @@ var translations = {
     en : {
     },
     fr : {
+        "Betty World Championship": "Ligue publique",
         MESSAGES : {
             GENERALERROR : 'Un problême est survenu, réessaye plus tard',
             NOCON : 'Connecte toi à internet',

@@ -85,7 +85,7 @@ betty2App.controller('Step2Ctrl', function (BetApi, BtMessages, translations, $s
 
 		BtLoading.startLoad();
 		BetApi.createBet($scope.showdownCtrl.newBet, function () {
-			BtNavigate.stateChange('goRight' ,'bettyleague.showdown.step0', {
+			BtNavigate.stateChange('fade' ,'bettyleague.showdown.step0', {
 				'bettyLeagueId' : $stateParams.bettyLeagueId,
 				'showdownId' : $stateParams.showdownId,
 				'animDirection' : '3left'

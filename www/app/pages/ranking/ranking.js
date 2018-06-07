@@ -273,7 +273,7 @@ betty2App.controller('RankingCtrl', function (BettyLeagueApi, UserApi, ranking, 
 		btDisabled: false,
 		btSubmitForm: null,
 		action:function(){
-			BtNavigate.stateChange('goLeft' ,'bettyleague.showdown.step0', {
+			BtNavigate.stateChange('goBottom' ,'bettyleague.showdown.step0', {
 				'bettyLeagueId' : $stateParams.bettyLeagueId,
 				'showdownId' : $stateParams.showdownId,
 				'animDirection' : '3right'

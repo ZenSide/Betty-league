@@ -1,4 +1,4 @@
-<div class="bettyLeague-title-lg">{{::rankingCtrl.bettyLeague.name}}</div>
+<div class="bettyLeague-title-lg" translate="{{::rankingCtrl.bettyLeague.name}}"></div>
 
 <div class="ranking-view">
     <div class="ranking-dashboard">
@@ -92,6 +92,7 @@
                 </td>
                 <td>
                     {{rank.score | number : 2}}
+                    <img class="bt-coin bt-coin--small" src="img/betty-coin_75x75.png">
                 </td>
             </tr>
         </table>

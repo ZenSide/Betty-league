@@ -5,10 +5,6 @@ body {
 }
 body {
   color: #222222;
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/45/Maracan%C3%A3_stadium.jpg');
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 body .with-head-logo ui-view {
   margin-top: 3.5rem;
@@ -35,10 +31,12 @@ body .with-big-logo ui-view {
   overflow-y: auto;
 }
 .bt-content.ranking {
-  top: 13.6rem;
+  top: 14.5rem;
+  padding-top: 0;
 }
 .bt-content.privateleagues {
-  top: 7.5rem;
+  top: 8.5rem;
+  padding-top: 0;
 }
 .col-magic {
   flex: 0 0 20px;
@@ -65,4 +63,15 @@ body .with-big-logo ui-view {
   min-height: 480px;
   overflow: hidden;
   min-width: 320px;
+}
+.full-background-container {
+  background-image: url('/img/background.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }

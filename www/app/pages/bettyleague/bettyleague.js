@@ -17,7 +17,7 @@ betty2App.controller('BettyLeagueCtrl', function (BtLoading, BetApi, ShowdownApi
 
 	bettyLeagueCtrl.goListMatch = function () {
 		BtLoading.startLoad();
-		BtNavigate.stateChange('goLeft' ,'listMatch', {
+		BtNavigate.stateChange('goTop' ,'listMatch', {
 			'bettyLeagueId' : $stateParams.bettyLeagueId,
 			'showdownId' : bettyLeagueCtrl.showdownId,
 			'animDirection' : 'fade'
@@ -26,7 +26,7 @@ betty2App.controller('BettyLeagueCtrl', function (BtLoading, BetApi, ShowdownApi
 
 	bettyLeagueCtrl.goRanking = function () {
 		BtLoading.startLoad();
-		BtNavigate.stateChange('goLeft' ,'ranking', {
+		BtNavigate.stateChange('goTop' ,'ranking', {
 			'bettyLeagueId' : $stateParams.bettyLeagueId,
 			'showdownId' : bettyLeagueCtrl.showdownId,
 			'animDirection' : 'fade'
