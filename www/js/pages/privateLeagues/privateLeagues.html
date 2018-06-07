@@ -1,0 +1,72 @@
+<div class="bettyLeague-title-lg" translate="COMMUNITY.TITLE"></div>
+
+<div class="ranking-view">
+    <div class="ranking-dashboard">
+        <table class="ranking-dashboard bt-modal__table bt-modal__table--list">
+            <tr class="bt-text-md">
+                <td ng-click="" class="ranking-dashboard__tab"
+                    ng-class="{'active': true}">
+                    <span translate="COMMUNITY.TITLE_LEAGUES"></span>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+    <ion-content delegate-handle="btContentHandle" class="bt-content privateleagues">
+        <table class="bt-modal__table bt-modal__table--list bt-text u-gutter-bottom-small">
+            <tr ng-repeat="mybettyleague in privateLeaguesCtrl.myBettyLeagues track by mybettyleague.id" ng-if="!mybettyleague.public">
+                <td class="u-text-left">
+                    <div class="bettyLeague-title bettyLeague-title--wrap">{{mybettyleague.name}}</div>
+                    <div class="u-padding-micro">
+                        <div ng-if="mybettyleague.master"  class="u-text-left bt-text-tiny u-gutter-bottom-micro">
+                            <span translate="COMMUNITY.CREATED_BY"></span> : <b>{{mybettyleague.master.pseudo}}</b>
+                        </div>
+                        <div class="u-text-left u-gutter-bottom-micro">
+                            <div class="bt-text-nano" translate="COMMUNITY.SHAREWITHFRIENDS"></div>
+                        </div>
+                        <div class="u-pointer bt-text-lg u-gutter-bottom-small bettyLeague-title-lg bettyLeague-title--grey"
+                             ngclipboard data-clipboard-text="{{mybettyleague.codeName}}"
+                             ngclipboard-success="privateLeaguesCtrl.copysuccess();"
+                        >
+                            {{mybettyleague.codeName}}
+                        </div>
+                        <bt-body-btn bt-ico="'fas fa-sign-in-alt'"
+                                     bt-content="'COMMUNITY.PLAY'"
+                                     bt-btn-classes="'bt-action__btn--green'"
+                                     bt-type="button"
+                                     bt-action="privateLeaguesCtrl.joinBettyLeague(mybettyleague.id)"
+                        >
+                        </bt-body-btn>
+                    </div>
+                </td>
+            </tr>
+            <tr id="" ng-class="">
+                <td>
+                    <div class="u-padding-micro">
+                        <div class="u-gutter-bottom-regular bt-text" translate="COMMUNITY.WORLD_CUP_SPEECH">
+
+                        </div>
+                        <div class="u-gutter-bottom-regular">
+                            <bt-body-btn bt-ico="'fas fa-plus-circle'"
+                                         bt-content="'COMMUNITY.NEW_WORLD_CUP'"
+                                         bt-btn-classes="'bt-action__btn--gold'"
+                                         bt-action="privateLeaguesCtrl.newLeague()"
+                            >
+                            </bt-body-btn>
+                        </div>
+                        <div class="u-gutter-bottom-regular">
+                            <bt-body-btn bt-ico="'fas fa-sign-in-alt'"
+                                         bt-content="'COMMUNITY.JOIN_LEAGUE'"
+                                         bt-btn-classes="'bt-action__btn--green'"
+                                         bt-action="privateLeaguesCtrl.joinNewLeague()"
+                            >
+                            </bt-body-btn>
+                        </div>
+
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </ion-content>
+</div>

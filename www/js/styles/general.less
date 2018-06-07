@@ -1,0 +1,102 @@
+@import "../../less/constant";
+
+//RESET
+html, body {
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+body {
+  color: @black;
+
+  .with-head-logo {
+    ui-view {
+      margin-top: 3.5rem;
+    }
+  }
+  .with-big-logo {
+    .bt-logo {
+      position: absolute;
+      left: 50%;
+      margin-left: -4.7rem;
+      top: 2.5rem;
+      width: 9.4rem;
+      z-index: 10;
+    }
+    ui-view {
+      margin-top: 10em;
+    }
+  }
+}
+
+//SCROLL INDICATOR
+.scroll-bar-indicator {
+  background-color: @white;
+}
+
+//CONTENT
+.bt-content {
+  padding-top: @margin-micro;
+  padding-bottom: @margin-micro;
+  padding-left: @margin-small;
+  padding-right: @margin-small;
+  overflow-y: auto;
+  &.signin, &.login {
+    padding-left: @margin-medium;
+    padding-right: @margin-medium;
+  }
+  &.step {
+    //padding-top: 0;
+  }
+  &.ranking {
+    top: 14.5rem;
+    padding-top: 0;
+  }
+  &.privateleagues {
+    top: 8.5rem;
+    padding-top: 0;
+  }
+}
+
+.col-magic {
+  flex: 0 0 20px;
+  max-width: 50%;
+}
+
+.col-nopadding {
+  padding: 0;
+}
+
+.bt-coin {
+  width: 3.5rem;
+  vertical-align: middle;
+  height: 3.5rem;
+}
+
+.bt-coin--small {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.bt-app-container {
+  background-color: @light-green;
+  position: relative;
+  margin: auto;
+  height:736px;
+  width: 414px;
+  min-height: 480px;
+  overflow: hidden;
+  min-width: 320px;
+}
+
+.full-background-container {
+  background-image: url('/img/background.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
