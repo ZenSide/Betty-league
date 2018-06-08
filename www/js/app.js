@@ -9,7 +9,8 @@ var betty2App = angular.module(
     'ionic',
     'ionic.native',
     'pascalprecht.translate',
-    'ngclipboard'
+    'ngclipboard',
+    'hmTouchEvents'
   ]
 );
 
@@ -50,15 +51,4 @@ betty2App.run(['BtLocalStorage', '$ionicPlatform', '$rootScope', '$translate', '
   });
 }]).config(['$ionicConfigProvider', function ($ionicConfigProvider) {
   $ionicConfigProvider.scrolling.jsScrolling(false);
-}]).module('btClick', ['$location', function( $location ) {
-    return {
-        link: function(scope, elem, attrs) {
-            if(attrs.href) { elem.on('click,touchend', function() {
-                $location.path(attrs.href);
-            });
-            }
-        },
-        priority: 1
-    };
 }]);
-;
