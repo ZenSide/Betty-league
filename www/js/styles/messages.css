@@ -13,7 +13,7 @@
   max-height: 0px;
 }
 .bt-alert-messages.expanded {
-  max-height: 500px;
+  max-height: 50rem;
 }
 .bt-alert-messages .bt-message {
   color: #222222;
@@ -34,7 +34,7 @@
   background-color: #892225;
   color: #e6e6e6;
   height: 100%;
-  line-height: 45px;
+  line-height: 4.5rem;
   text-align: center;
 }
 .bt-ng-message:not(:first-child) {

@@ -51,7 +51,7 @@ betty2App.controller('BettyLeagueCtrl', ['BtLoading', 'BetApi', 'ShowdownApi', '
 	}, delay);
 
 	//live range
-	var delayLive = 1000 * 28;
+	var delayLive = 1000 * 90;
 	var liveSdStream = $interval(function () {
 		if (bettyLeagueCtrl.activeStream) {
 			ShowdownApi.getFullRange(bettyLeagueCtrl.bettyLeagueId, function () {
@@ -61,7 +61,7 @@ betty2App.controller('BettyLeagueCtrl', ['BtLoading', 'BetApi', 'ShowdownApi', '
 		}
 	}, delayLive);
 
-	var delayBetRange = 1000 * 5;
+	var delayBetRange = 1000 * 15;
 	var fullBetStream = $interval(function () {
 		if (bettyLeagueCtrl.activeStream) {
 			BetApi.getFullRange(bettyLeagueCtrl.bettyLeagueId, function () {

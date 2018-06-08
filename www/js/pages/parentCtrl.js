@@ -27,9 +27,10 @@ betty2App.controller('ParentCtrl', ['BtLoading', '$rootScope', 'BtNavigate', 'Be
     ];
 
     parentCtrl.goPrivateLeagues = function () {
+        BtLoading.startLoad();
         BtNavigate.stateChange('goBottom' ,'privateleagues', {
             'animDirection' : 'fade'
-        });
+        }, true);
     };
 
     parentCtrl.goAccount = function () {

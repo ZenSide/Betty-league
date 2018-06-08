@@ -17,13 +17,13 @@
         <table class="bt-modal__table bt-modal__table--list bt-text u-gutter-bottom-small">
             <tr ng-repeat="mybettyleague in privateLeaguesCtrl.myBettyLeagues track by mybettyleague.id" ng-if="!mybettyleague.public">
                 <td class="u-text-left">
-                    <div class="bettyLeague-title bettyLeague-title--wrap">{{mybettyleague.name}}</div>
+                    <div class="bettyLeague-title-lg bettyLeague-title--wrap">{{mybettyleague.name}}</div>
                     <div class="u-padding-micro">
-                        <div ng-if="mybettyleague.master"  class="u-text-left bt-text-tiny u-gutter-bottom-micro">
+                        <div ng-if="mybettyleague.master"  class="u-text-left bt-text-md u-gutter-bottom-micro">
                             <span translate="COMMUNITY.CREATED_BY"></span> : <b>{{mybettyleague.master.pseudo}}</b>
                         </div>
                         <div class="u-text-left u-gutter-bottom-micro">
-                            <div class="bt-text-nano" translate="COMMUNITY.SHAREWITHFRIENDS"></div>
+                            <div class="bt-text-tiny" translate="COMMUNITY.SHAREWITHFRIENDS"></div>
                         </div>
                         <div class="u-pointer bt-text-lg u-gutter-bottom-small bettyLeague-title-lg bettyLeague-title--grey"
                              ngclipboard data-clipboard-text="{{mybettyleague.codeName}}"

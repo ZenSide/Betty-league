@@ -13,13 +13,14 @@
     <link rel="stylesheet" href="lib/animate.css/animate.min.css">
 
     <script src="lib/ionic/js/ionic.bundle.js"></script>
-
+    <link rel="icon" href="img/betty-coin_75x75.png">
     <!-- grunt included -->
     <!-- include: "type": "css", "files": "js/**/*.css" -->
 </head>
 
 <!--//HEADER BAR-->
 <body ng-app="betty2" ng-controller="ParentCtrl as parentCtrl">
+    <div translate="BETA" class="beta-text bettyLeague-title bettyLeague-title--grey bettyLeague-title--wrap"></div>
     <div class="full-background-container">
         <div class="bt-app-container" ng-class="{'with-head-logo':parentCtrl.withHeadLogo}">
             <img class="bt-logo" src="img/logo_216x240.png" ng-if="parentCtrl.withHeadLogo">
@@ -181,7 +182,7 @@
 
 
     <!-- cordova script (this will be a 404 during development) -->
-    <script src="cordova.js"></script>
+    <!--<script src="cordova.js"></script>-->
 
     <!-- libs -->
     <script src="lib/angular-translate/angular-translate.min.js"></script>

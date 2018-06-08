@@ -26,6 +26,7 @@ betty2App.controller('HomeCtrl', ['animation', '$scope', 'UserApi', 'BtMessages'
 
 
     homeCtrl.goPrivateLeagues = function () {
+        BtLoading.startLoad();
         BtNavigate.stateChange('goTop' ,'privateleagues', {
             'animDirection' : 'fade'
         });
@@ -42,18 +43,18 @@ betty2App.controller('HomeCtrl', ['animation', '$scope', 'UserApi', 'BtMessages'
                     'bettyLeagueId' : bettyWorld.id,
                     'showdownId' : showdown.id,
                     'animDirection' : 'fade'
-                }, true);
+                });
             }, function (messages) {
                 BtMessages.show(messages, null, function () {
                     BtLoading.endLoad();
                 })
-            }, true);
+            });
 
         }, function (messages) {
             BtMessages.show(messages, null, function () {
                 BtLoading.endLoad();
             })
-        }, true);
+        });
     };
 
 }]);

@@ -29,6 +29,46 @@ body {
   }
 }
 
+.beta-text {
+  height: 5rem;
+  line-height: 2.5rem;
+  display: none;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.full-background-container {
+  background-image: url('../../img/background.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+@media screen and (min-width: 767px) {
+  html, body {
+    font-size: 12px;
+  }
+  .beta-text {
+    display: block;
+  }
+  .full-background-container {
+    top: 5rem;
+  }
+}
+
+@media screen and (min-height: 1023px) and (min-width: 767px) {
+  html, body {
+    font-size: 14px;
+  }
+}
+
+
+
 //SCROLL INDICATOR
 .scroll-bar-indicator {
   background-color: @white;
@@ -59,7 +99,7 @@ body {
 }
 
 .col-magic {
-  flex: 0 0 20px;
+  flex: 0 0 2rem;
   max-width: 50%;
 }
 
@@ -82,21 +122,10 @@ body {
   background-color: @light-green;
   position: relative;
   margin: auto;
-  height:736px;
-  width: 414px;
-  min-height: 480px;
+  max-height: 1024px;
+  max-width: 768px;
+  height: 100%;
   overflow: hidden;
-  min-width: 320px;
+  width: 100%;
 }
 
-.full-background-container {
-  background-image: url('../../img/background.jpg');
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}

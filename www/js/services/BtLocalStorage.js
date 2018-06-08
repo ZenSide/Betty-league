@@ -1,4 +1,4 @@
-betty2App.factory('BtLocalStorage', ['$window', function($window) {
+betty2App.factory('BtLocalStorage', ['$window', 'BtNavigate', function($window, BtNavigate) {
   return {
     getUser: function () {
       return this.getObject('User');
@@ -43,5 +43,13 @@ betty2App.factory('BtLocalStorage', ['$window', function($window) {
       }
       $window.localStorage.removeItem(userPrefix + key);
     },
+    purge: function() {
+      var user = this.getUser();
+      $window.localStorage.clear();
+      if (!user) {
+        BtNavigate.stateChange(null, 'login');
+      }
+      this.setObject('User', user);
+    }
   }
 }]);

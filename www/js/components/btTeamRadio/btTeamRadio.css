@@ -11,7 +11,7 @@
   left: 0;
 }
 .bt-team-radio__button--radio {
-  font-family: "poppinsbold", sans-serif;
+  font-family: "poppinssemibold", sans-serif;
 }
 .bt-team-radio__button--radio .bt-action__facade {
   padding-right: 1.5rem !important;

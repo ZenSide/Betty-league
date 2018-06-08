@@ -1,11 +1,11 @@
 .txt-part-title {
   font-size: 1.8rem;
   text-transform: uppercase;
-  font-family: "quicksandbold", sans-serif;
+  font-family: "poppinsbold", sans-serif;
   text-align: center;
 }
 .bt-text-alt {
-  font-family: "quicksandbold", sans-serif;
+  font-family: "poppinsbold", sans-serif;
   text-transform: uppercase;
   font-size: 1.2rem;
 }
@@ -15,7 +15,7 @@
 }
 .bt-text-tiny-medium {
   font-size: 1rem;
-  font-family: "poppinsmedium", sans-serif;
+  font-family: "poppinsregular", sans-serif;
 }
 .bt-text-tiny {
   font-size: 1rem;
@@ -27,7 +27,7 @@
 }
 .bt-text-medium {
   font-size: 1.2rem;
-  font-family: "poppinsmedium", sans-serif;
+  font-family: "poppinsregular", sans-serif;
 }
 .bt-text-md {
   font-size: 1.4rem;
@@ -35,17 +35,17 @@
 }
 .bt-text-md-medium {
   font-size: 1.4rem;
-  font-family: "poppinsmedium", sans-serif;
+  font-family: "poppinsregular", sans-serif;
 }
 .bt-text-md-bold {
   font-size: 1.4rem;
-  font-family: "poppinsbold", sans-serif;
+  font-family: "poppinssemibold", sans-serif;
 }
 .bt-text-lg {
   font-size: 1.6rem;
-  font-family: "poppinsmedium", sans-serif;
+  font-family: "poppinsregular", sans-serif;
 }
 .bt-text-lg-bold {
   font-size: 1.6rem;
-  font-family: "poppinsbold", sans-serif;
+  font-family: "poppinssemibold", sans-serif;
 }

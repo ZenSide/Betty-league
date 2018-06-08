@@ -394,7 +394,7 @@ betty2App.config(['$stateProvider', '$urlRouterProvider', function($stateProvide
                         deferred.resolve(bettyleagues);
                     }, function (messages) {
                         BtMessages.show(messages)
-                    })
+                    });
                     return deferred.promise;
                 },
                 animation: function (BtNavigate, $stateParams) {

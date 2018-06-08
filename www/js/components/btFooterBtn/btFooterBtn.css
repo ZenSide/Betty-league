@@ -47,7 +47,7 @@
 }
 .bt-action__btn {
   z-index: 15!important;
-  color: #123a5c;
+  color: #222222;
   border: none;
   background-color: #1c5b8f;
   cursor: pointer;
@@ -108,21 +108,18 @@
 }
 .bt-action__btn--gold {
   background-color: #b6850f;
-  color: #83600b;
 }
 .bt-action__btn--gold .bt-action__facade {
   background-color: #fdcf21;
 }
 .bt-action__btn--red {
   background-color: #bc2e33;
-  color: #892225;
 }
 .bt-action__btn--red .bt-action__facade {
   background-color: #fa393c;
 }
 .bt-action__btn--green {
   background-color: #289172;
-  color: #267450;
 }
 .bt-action__btn--green .bt-action__facade {
   background-color: #2BB289;
@@ -170,7 +167,7 @@
   text-align: left;
   font-size: 1.3rem!important;
   height: auto;
-  font-family: "poppinsmedium", sans-serif;
+  font-family: "poppinsregular", sans-serif;
 }
 .bt-action__btn--body .bt-action__facade {
   border-radius: 0rem;

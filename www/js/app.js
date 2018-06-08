@@ -8,13 +8,13 @@ var betty2App = angular.module(
   [
     'ionic',
     'ionic.native',
-    'ngTouch',
     'pascalprecht.translate',
     'ngclipboard'
   ]
 );
 
-betty2App.run(['$ionicPlatform', '$rootScope', '$translate', '$cordovaKeyboard', 'BtLoading', function($ionicPlatform, $rootScope, $translate, $cordovaKeyboard, BtLoading) {
+betty2App.run(['BtLocalStorage', '$ionicPlatform', '$rootScope', '$translate', '$cordovaKeyboard', 'BtLoading',
+    function(BtLocalStorage, $ionicPlatform, $rootScope, $translate, $cordovaKeyboard, BtLoading) {
 
   FastClick.attach(document.body);
 
@@ -38,6 +38,8 @@ betty2App.run(['$ionicPlatform', '$rootScope', '$translate', '$cordovaKeyboard',
     // for form inputs)
     $cordovaKeyboard.hideKeyboardAccessoryBar(true);
 
+      BtLocalStorage.purge();
+
     // Don't remove this line unless you know what you are doing. It stops the viewport
     // from snapping when text inputs are focused. Ionic handles this internally for
     // a much nicer keyboard experience.
@@ -48,5 +50,15 @@ betty2App.run(['$ionicPlatform', '$rootScope', '$translate', '$cordovaKeyboard',
   });
 }]).config(['$ionicConfigProvider', function ($ionicConfigProvider) {
   $ionicConfigProvider.scrolling.jsScrolling(false);
-}])
+}]).module('btClick', ['$location', function( $location ) {
+    return {
+        link: function(scope, elem, attrs) {
+            if(attrs.href) { elem.on('click,touchend', function() {
+                $location.path(attrs.href);
+            });
+            }
+        },
+        priority: 1
+    };
+}]);
 ;
