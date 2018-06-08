@@ -19,7 +19,7 @@
                     </span>
                 </td>
             </tr>
-            <tr class="u-pointer" id="{{::showdown.id}}" ng-class="listMatchCtrl.classRow(showdown)" ng-click="listMatchCtrl.toggleTooltip(showdown, true)">
+            <tr class="u-pointer" id="{{::showdown.id}}" ng-class="listMatchCtrl.classRow(showdown)" hm-tap="listMatchCtrl.toggleTooltip(showdown, true)">
                 <td>
                     {{::showdown.smFixture.sm__time__startingAt__dateTime| date : 'longDate'}}
 

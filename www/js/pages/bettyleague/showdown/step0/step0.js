@@ -20,6 +20,26 @@ betty2App.controller('Step0Ctrl', ['translations', '$scope', '$stateParams', 'Bt
 		return $scope.showdownCtrl.showdown.smFixture.showdownStatus;
 	};
 
+	step0Ctrl.swipeLeft = function () {
+		if ($scope.showdownCtrl.nextShowDownId) {
+			BtNavigate.stateChange('goRight' ,'bettyleague.showdown.step0', {
+				'bettyLeagueId' : $stateParams.bettyLeagueId,
+				'showdownId' : $scope.showdownCtrl.nextShowDownId,
+				'animDirection' : '3left'
+			});
+		}
+	};
+
+	step0Ctrl.swipeRight = function () {
+		if ($scope.showdownCtrl.previousShowDownId) {
+			BtNavigate.stateChange('goLeft' ,'bettyleague.showdown.step0', {
+				'bettyLeagueId' : $stateParams.bettyLeagueId,
+				'showdownId' : $scope.showdownCtrl.previousShowDownId,
+				'animDirection' : '2right'
+			});
+		}
+	};
+
 	step0Ctrl.isShownEvent = function (eventType) {
 		var okEventTypes = [
 			'goal', 'penalty', 'own-goal', 'yellowred', 'redcard'

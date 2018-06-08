@@ -4,29 +4,29 @@
     <div class="ranking-dashboard">
         <table class="ranking-dashboard bt-modal__table bt-modal__table--list">
             <tr class="bt-text-md u-pointer" ng-if="rankingCtrl.bettyLeague.endless">
-                <td ng-click="rankingCtrl.changePeriod('full_season')"
+                <td hm-tap="rankingCtrl.changePeriod('full_season')"
                     class="ranking-dashboard__tab" ng-class="{'active':'full_season' == rankingCtrl.ranking.period}">
                     <span translate="RANKING.full_season"></span>
                 </td>
-                <td ng-click="rankingCtrl.changePeriod('half_season')"
+                <td hm-tap="rankingCtrl.changePeriod('half_season')"
                     class="ranking-dashboard__tab" ng-class="{'active':'half_season' == rankingCtrl.ranking.period}">
                     <span translate="RANKING.half_season"></span>
                 </td>
-                <td ng-click="rankingCtrl.changePeriod('for_rounds')"
+                <td hm-tap="rankingCtrl.changePeriod('for_rounds')"
                     class="ranking-dashboard__tab" ng-class="{'active':'for_rounds' == rankingCtrl.ranking.period}">
                     <span translate="RANKING.for_rounds"></span>
                 </td>
-                <td ng-click="rankingCtrl.changePeriod('round')"
+                <td hm-tap="rankingCtrl.changePeriod('round')"
                     class="ranking-dashboard__tab" ng-class="{'active':'round' == rankingCtrl.ranking.period}">
                     <span translate="RANKING.round"></span>
                 </td>
             </tr>
             <tr class="bt-text-md u-pointer" ng-if="!rankingCtrl.bettyLeague.endless">
-                <td colspan="2" ng-click="rankingCtrl.changePeriod('full_season')"
+                <td colspan="2" hm-tap="rankingCtrl.changePeriod('full_season')"
                     class="ranking-dashboard__tab" ng-class="{'active':'full_season' == rankingCtrl.ranking.period}">
                     <span translate="RANKING.full_season"></span>
                 </td>
-                <td colspan="2" ng-click="rankingCtrl.changePeriod('round')"
+                <td colspan="2" hm-tap="rankingCtrl.changePeriod('round')"
                     class="ranking-dashboard__tab" ng-class="{'active':'round' == rankingCtrl.ranking.period}">
                     <span translate="RANKING.round"></span>
                 </td>
