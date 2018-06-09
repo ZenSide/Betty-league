@@ -53,7 +53,9 @@ betty2App.factory('ResourcesFactory', ['$q', '$http', '$rootScope', 'API_BASE_UR
 
         post: function (url, data, anonimous) {
             return $q(function (resolve, reject) {
-                var config = {};
+                var config = {
+                    'timeout' : 30000
+                };
                 if (!anonimous) {
                     var User = BtLocalStorage.getObject('User');
                     config.headers = {
@@ -104,7 +106,8 @@ betty2App.factory('ResourcesFactory', ['$q', '$http', '$rootScope', 'API_BASE_UR
         get: function (url, params, anonimous) {
             return $q(function (resolve, reject) {
                 var config = {
-                    'params' : params
+                    'params' : params,
+                    'timeout' : 30000
                 };
                 if (!anonimous) {
                     var User = BtLocalStorage.getObject('User');

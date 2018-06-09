@@ -130,7 +130,7 @@ betty2App.config(['$stateProvider', '$urlRouterProvider', function($stateProvide
             controller: 'ShowdownCtrl',
             controllerAs: 'showdownCtrl',
             resolve: {
-                showdown: function (ShowdownApi, BtNavigate, $stateParams, $q) {
+                showdown: function (ShowdownApi, BtNavigate, $stateParams, $q, BtMessages) {
                     var deferred = $q.defer();
                     ShowdownApi.getShowdown($stateParams.bettyLeagueId, $stateParams.showdownId, function (showdown) {
                         deferred.resolve(showdown);
@@ -141,7 +141,7 @@ betty2App.config(['$stateProvider', '$urlRouterProvider', function($stateProvide
                     });
                     return deferred.promise;
                 },
-                bet: function (BetApi, BtNavigate, $stateParams, $q) {
+                bet: function (BetApi, BtNavigate, $stateParams, $q, BtMessages) {
                     var deferred = $q.defer();
                     BetApi.getBet($stateParams.bettyLeagueId, $stateParams.showdownId, function (bet) {
                         deferred.resolve(bet);

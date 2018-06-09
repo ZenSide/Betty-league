@@ -4,14 +4,11 @@ betty2App.controller('Step1Ctrl', ['BtMessages' ,'translations' ,'$scope' ,'$sta
 	BtLoading.endLoad();
 
 	var checkForm = function () {
-		var withPenalty = $scope.showdownCtrl.showdown.smFixture.withPenalty;
 		var betHomeScore = $scope.showdownCtrl.newBet.homeScore;
-		var betAwayScore = $scope.showdownCtrl.newBet.awayScore;
-		var aggregateVisitorScore = $scope.showdownCtrl.showdown.smFixture.aggregateVisitorteamScore;
-		var aggregateLocalScore = $scope.showdownCtrl.showdown.smFixture.aggregateLocalteamScore;
 
 		if (betHomeScore === null) {
 			BtMessages.show([{content:"SHOWDOWN.BET_FORM.EMPTY_SCORE",context:"alert"}])
+			BtLoading.endLoad();
 			return;
 		}
 		BtNavigate.stateChange('goRight' ,'bettyleague.showdown.step2', {
@@ -23,6 +20,19 @@ betty2App.controller('Step1Ctrl', ['BtMessages' ,'translations' ,'$scope' ,'$sta
 
 	var withHeadLogo = false;
 	var footerStatus = {};
+
+	$scope.showdownCtrl.swipeLeft = function () {
+	};
+
+	$scope.showdownCtrl.swipeRight = function () {
+		BtLoading.startLoad();
+		$scope.showdownCtrl.newBet.homeScore = null;
+		BtNavigate.stateChange('fade' ,'bettyleague.showdown.step0', {
+			'bettyLeagueId' : $stateParams.bettyLeagueId,
+			'showdownId' : $stateParams.showdownId,
+			'animDirection' : '3right'
+		});
+	};
 
 	$scope.bettyLeagueCtrl.activeStream = false;
 
@@ -36,6 +46,7 @@ betty2App.controller('Step1Ctrl', ['BtMessages' ,'translations' ,'$scope' ,'$sta
 		btDisabled: false,
 		btSubmitForm: null,
 		action:function(){
+			BtLoading.startLoad();
 			$scope.showdownCtrl.newBet.homeScore = null;
 			BtNavigate.stateChange('fade' ,'bettyleague.showdown.step0', {
 				'bettyLeagueId' : $stateParams.bettyLeagueId,
@@ -58,6 +69,7 @@ betty2App.controller('Step1Ctrl', ['BtMessages' ,'translations' ,'$scope' ,'$sta
 		btDisabled: false,
 		btSubmitForm: null,
 		action:function(){
+			BtLoading.startLoad();
 			checkForm();
 		}
 	};

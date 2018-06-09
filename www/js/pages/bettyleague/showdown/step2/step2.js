@@ -3,6 +3,19 @@ betty2App.controller('Step2Ctrl', ['BetApi' ,'BtMessages' ,'translations' ,'$sco
 	var step2Ctrl = this;
 	BtLoading.endLoad();
 
+	$scope.showdownCtrl.swipeLeft = function () {
+	};
+
+	$scope.showdownCtrl.swipeRight = function () {
+		BtLoading.startLoad();
+		$scope.showdownCtrl.newBet.awayScore = null;
+		BtNavigate.stateChange('goLeft' ,'bettyleague.showdown.step1', {
+			'bettyLeagueId' : $stateParams.bettyLeagueId,
+			'showdownId' : $stateParams.showdownId,
+			'animDirection' : '3right'
+		});
+	};
+
 	var checkForm = function () {
 		var withPenalty = $scope.showdownCtrl.showdown.smFixture.withPenalty;
 		var betHomeScore = $scope.showdownCtrl.newBet.homeScore;
@@ -11,9 +24,11 @@ betty2App.controller('Step2Ctrl', ['BetApi' ,'BtMessages' ,'translations' ,'$sco
 		var aggregateLocalScore = $scope.showdownCtrl.showdown.smFixture.aggregateLocalteamScore;
 
 		if (betAwayScore === null) {
+			BtLoading.endLoad();
 			BtMessages.show([{content:"SHOWDOWN.BET_FORM.EMPTY_SCORE",context:"alert"}])
 			return;
 		}
+
 		//matchs avec penalty
 		if (withPenalty) {
 
@@ -84,7 +99,6 @@ betty2App.controller('Step2Ctrl', ['BetApi' ,'BtMessages' ,'translations' ,'$sco
 			}
 		}
 
-		BtLoading.startLoad();
 		BetApi.createBet($scope.showdownCtrl.newBet, function () {
 			BtNavigate.stateChange('fade' ,'bettyleague.showdown.step0', {
 				'bettyLeagueId' : $stateParams.bettyLeagueId,
@@ -112,6 +126,7 @@ betty2App.controller('Step2Ctrl', ['BetApi' ,'BtMessages' ,'translations' ,'$sco
 		btDisabled: false,
 		btSubmitForm: null,
 		action:function(){
+			BtLoading.startLoad();
 			$scope.showdownCtrl.newBet.awayScore = null;
 			BtNavigate.stateChange('goLeft' ,'bettyleague.showdown.step1', {
 				'bettyLeagueId' : $stateParams.bettyLeagueId,
@@ -133,6 +148,7 @@ betty2App.controller('Step2Ctrl', ['BetApi' ,'BtMessages' ,'translations' ,'$sco
 		btDisabled: false,
 		btSubmitForm: null,
 		action:function(){
+			BtLoading.startLoad();
 			checkForm();
 		}
 	};

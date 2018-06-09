@@ -14,6 +14,10 @@ betty2App.controller('ShowdownCtrl', ['BetApi', 'ShowdownApi', 'BtLoading', 'Sco
 		awayScore: null
 	};
 
+	showdownCtrl.swipeLeft = function () {};
+
+	showdownCtrl.swipeRight = function () {};
+
 	showdownCtrl.previousShowDownId = previousShowDownId;
 	showdownCtrl.nextShowDownId = nextShowDownId;
 

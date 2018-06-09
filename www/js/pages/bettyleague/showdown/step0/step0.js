@@ -20,8 +20,9 @@ betty2App.controller('Step0Ctrl', ['translations', '$scope', '$stateParams', 'Bt
 		return $scope.showdownCtrl.showdown.smFixture.showdownStatus;
 	};
 
-	step0Ctrl.swipeLeft = function () {
+	$scope.showdownCtrl.swipeLeft = function () {
 		if ($scope.showdownCtrl.nextShowDownId) {
+			BtLoading.startLoad();
 			BtNavigate.stateChange('goRight' ,'bettyleague.showdown.step0', {
 				'bettyLeagueId' : $stateParams.bettyLeagueId,
 				'showdownId' : $scope.showdownCtrl.nextShowDownId,
@@ -30,8 +31,9 @@ betty2App.controller('Step0Ctrl', ['translations', '$scope', '$stateParams', 'Bt
 		}
 	};
 
-	step0Ctrl.swipeRight = function () {
+	$scope.showdownCtrl.swipeRight = function () {
 		if ($scope.showdownCtrl.previousShowDownId) {
+			BtLoading.startLoad();
 			BtNavigate.stateChange('goLeft' ,'bettyleague.showdown.step0', {
 				'bettyLeagueId' : $stateParams.bettyLeagueId,
 				'showdownId' : $scope.showdownCtrl.previousShowDownId,
@@ -69,6 +71,7 @@ betty2App.controller('Step0Ctrl', ['translations', '$scope', '$stateParams', 'Bt
 		btDisabled: false,
 		btSubmitForm: null,
 		action:function(){
+			BtLoading.startLoad();
 			BtNavigate.stateChange('goLeft' ,'bettyleague.showdown.step0', {
 				'bettyLeagueId' : $stateParams.bettyLeagueId,
 				'showdownId' : $scope.showdownCtrl.previousShowDownId,
@@ -103,6 +106,7 @@ betty2App.controller('Step0Ctrl', ['translations', '$scope', '$stateParams', 'Bt
 		btDisabled: false,
 		btSubmitForm: null,
 		action:function(){
+			BtLoading.startLoad();
 			BtNavigate.stateChange('goRight' ,'bettyleague.showdown.step0', {
 				'bettyLeagueId' : $stateParams.bettyLeagueId,
 				'showdownId' : $scope.showdownCtrl.nextShowDownId,

@@ -3,25 +3,36 @@ betty2App.controller('Step3Ctrl', ['BetApi', 'BtMessages', 'translations', '$sco
 	var step3Ctrl = this;
 	BtLoading.endLoad();
 
+	$scope.showdownCtrl.swipeLeft = function () {
+	};
+
+	$scope.showdownCtrl.swipeRight = function () {
+		BtLoading.startLoad();
+		$scope.showdownCtrl.newBet.awayScore = null;
+		BtNavigate.stateChange('goLeft' ,'bettyleague.showdown.step2', {
+			'bettyLeagueId' : $stateParams.bettyLeagueId,
+			'showdownId' : $stateParams.showdownId,
+			'animDirection' : '3right'
+		});
+	};
+
+
 	var checkForm = function () {
-		var withPenalty = $scope.showdownCtrl.showdown.smFixture.withPenalty;
-		var betHomeScore = $scope.showdownCtrl.newBet.homeScore;
 		var betAwayScore = $scope.showdownCtrl.newBet.awayScore;
 		var betWinner = $scope.showdownCtrl.newBet.winner;
-		var aggregateVisitorScore = $scope.showdownCtrl.showdown.smFixture.aggregateVisitorteamScore;
-		var aggregateLocalScore = $scope.showdownCtrl.showdown.smFixture.aggregateLocalteamScore;
 
 		if (betAwayScore === null) {
 			BtMessages.show([{content:"SHOWDOWN.BET_FORM.EMPTY_SCORE",context:"alert"}]);
+			BtLoading.endLoad();
 			return;
 		}
 
 		if (betWinner === null) {
 			BtMessages.show([{content:"SHOWDOWN.BET_FORM.EMPTY_WINNER",context:"alert"}]);
+			BtLoading.endLoad();
 			return;
 		}
 
-		BtLoading.startLoad();
 		BetApi.createBet($scope.showdownCtrl.newBet, function () {
 			BtNavigate.stateChange('fade' ,'bettyleague.showdown.step0', {
 				'bettyLeagueId' : $stateParams.bettyLeagueId,
@@ -48,6 +59,7 @@ betty2App.controller('Step3Ctrl', ['BetApi', 'BtMessages', 'translations', '$sco
 		btDisabled: false,
 		btSubmitForm: null,
 		action:function(){
+			BtLoading.startLoad();
 			$scope.showdownCtrl.newBet.awayScore = null;
 			BtNavigate.stateChange('goLeft' ,'bettyleague.showdown.step2', {
 				'bettyLeagueId' : $stateParams.bettyLeagueId,
@@ -69,6 +81,7 @@ betty2App.controller('Step3Ctrl', ['BetApi', 'BtMessages', 'translations', '$sco
 		btDisabled: false,
 		btSubmitForm: null,
 		action:function(){
+			BtLoading.startLoad();
 			checkForm();
 		}
 	};

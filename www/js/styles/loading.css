@@ -18,7 +18,7 @@
   opacity: 0.2;
 }
 .bt-loading-back--phantom {
-  opacity: 0.5;
+  opacity: 0;
 }
 .bt-loading {
   position: absolute;
