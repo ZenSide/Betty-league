@@ -81,6 +81,9 @@
 .u-text-uppercase {
   text-transform: uppercase;
 }
+.u-text-capitalize {
+  text-transform: capitalize;
+}
 .u-underline {
   text-decoration: underline;
 }

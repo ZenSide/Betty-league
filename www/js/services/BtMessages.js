@@ -6,8 +6,9 @@ betty2App.factory('BtMessages', ['$rootScope', '$timeout', function($rootScope, 
       $rootScope.showMessages = true;
       if (callback) callback();
       $timeout(function(){
+        $rootScope.messages = [];
         $rootScope.showMessages = false;
-      },duration)
+      },duration);
       return
     },
     showFormMessages : function(form,fieldsNames,duration,callback,justShow){

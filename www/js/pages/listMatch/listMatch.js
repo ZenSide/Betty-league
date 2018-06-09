@@ -136,6 +136,7 @@ betty2App.controller('ListMatchCtrl', ['$timeout', '$location', '$ionicScrollDel
 		btDisabled: false,
 		btSubmitForm: null,
 		action:function(){
+			BtLoading.startLoad();
 			BtNavigate.stateChange('goBottom' ,'bettyleague.showdown.step0', {
 				'bettyLeagueId' : $stateParams.bettyLeagueId,
 				'showdownId' : $stateParams.showdownId,

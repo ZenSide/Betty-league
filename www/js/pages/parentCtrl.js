@@ -5,6 +5,8 @@ betty2App.controller('ParentCtrl', ['BtLoading', '$rootScope', 'BtNavigate', 'Be
     $rootScope.fbCredentials = {};
 
     $rootScope.viewAnimClass = 'goTop';
+    $rootScope.animLevel = 0;
+
     $rootScope.showMessages = false;
     $rootScope.messages = [];
     $rootScope.showFormMessages = false;

@@ -7,7 +7,6 @@ betty2App.factory('BtNavigate', ['$timeout', '$rootScope', 'ENV', '$state', '$co
         params = {reload: true};
       }
       if (!service.lockedAnim) {
-        BtLoading.startLoad();
         $rootScope.viewAnimClass = animClass;
         $timeout(function() {
           $state.go(route, routeparams, params);

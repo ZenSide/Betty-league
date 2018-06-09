@@ -1,7 +1,7 @@
 <ion-content delegate-handle="btContentHandle" class="bt-content signin">
     <h1 class="txt-part-title u-gutter-bottom-regular" translate="TITLES.SIGNIN"></h1>
 
-    <form novalidate name="signInForm" id="signFormId">
+    <form ng-submit="signinCtrl.submitForm(signInForm)" novalidate name="signInForm" id="signFormId">
         <!--EMAIL-->
         <bt-input-text bt-select-order="1"
                        bt-focus

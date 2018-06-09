@@ -1,6 +1,3 @@
-//////////////////////////////////////////////////////
-///////////////SALUT LA FOULE/////////////////////////
-//////////////////////////////////////////////////////
 var translations = {
         en : {
         },
@@ -125,7 +122,7 @@ var translations = {
                     "DRAW" : "Match nul",
                     "ODD" : 'Cote',
                     "PERCENT" : "des paris",
-                    "SCORE" : "Score exacte",
+                    "SCORE" : "Score exact",
                     "BETBY" : "Parié par :"
                 }
             },

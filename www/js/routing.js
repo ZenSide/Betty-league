@@ -1,10 +1,10 @@
-betty2App.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+betty2App.config(['$stateProvider', '$urlRouterProvider', 'VERSION', function($stateProvider, $urlRouterProvider, VERSION) {
     $stateProvider
     //USER
         .state('login', {
             url: '/login/:animDirection',
             params: {animDirection: null},
-            templateUrl: 'js/pages/login/login.html',
+            templateUrl: 'js/pages/login/login.html' + VERSION,
             controller: 'LoginCtrl',
             controllerAs: 'loginCtrl',
             resolve: {
@@ -28,7 +28,7 @@ betty2App.config(['$stateProvider', '$urlRouterProvider', function($stateProvide
         .state('signin', {
             url: '/signin/:animDirection',
             params: {animDirection: null},
-            templateUrl: 'js/pages/signin/signin.html',
+            templateUrl: 'js/pages/signin/signin.html' + VERSION,
             controller: 'SigninCtrl as signinCtrl',
             controllerAs: 'signinCtrl',
             resolve: {
@@ -48,7 +48,7 @@ betty2App.config(['$stateProvider', '$urlRouterProvider', function($stateProvide
 
         .state('landing', {
             url: '/landing',
-            templateUrl: 'js/pages/landing/landing.html',
+            templateUrl: 'js/pages/landing/landing.html' + VERSION,
             controller: 'LandingCtrl',
             controllerAs: 'landingCtrl',
             resolve: {
@@ -61,27 +61,6 @@ betty2App.config(['$stateProvider', '$urlRouterProvider', function($stateProvide
                         BtNavigate.stateChange('goTop', 'home', {
                             'animDirection' : 'fade'
                         });
-                        //BettyLeagueApi.getBettyWorld(function (bettyWorld) {
-                        //    //find worldbettyLeague
-                        //    //go to world bettyleague
-                        //    //go to the next unbet showdown
-                        //    ShowdownApi.getNextOpenShowDown(bettyWorld.id, function (showdown) {
-                        //        BtNavigate.stateChange('goTop' ,'bettyleague.showdown.step0', {
-                        //            'bettyLeagueId' : bettyWorld.id,
-                        //            'showdownId' : showdown.id,
-                        //            'animDirection' : 'fade'
-                        //        });
-                        //    }, function (messages) {
-                        //        BtMessages.show(messages, null, function () {
-                        //            BtNavigate.stateChange(null, 'login');
-                        //        })
-                        //    }, true);
-                        //
-                        //}, function (messages) {
-                        //    BtMessages.show(messages, null, function () {
-                        //        BtNavigate.stateChange(null, 'login');
-                        //    })
-                        //}, true);
                     } else {
                         //User not found
                         $timeout(function () {
@@ -96,7 +75,7 @@ betty2App.config(['$stateProvider', '$urlRouterProvider', function($stateProvide
         .state('bettyleague', {
             abstract: true,
             url: '/bettyleague/:bettyLeagueId',
-            templateUrl: 'js/pages/bettyleague/bettyleague.html',
+            templateUrl: 'js/pages/bettyleague/bettyleague.html' + VERSION,
             controller: 'BettyLeagueCtrl',
             controllerAs: 'bettyLeagueCtrl',
             resolve: {
@@ -126,7 +105,7 @@ betty2App.config(['$stateProvider', '$urlRouterProvider', function($stateProvide
         .state('bettyleague.showdown', {
             abstract: true,
             url: '/showdown/:showdownId',
-            templateUrl: 'js/pages/bettyleague/showdown/showdown.html',
+            templateUrl: 'js/pages/bettyleague/showdown/showdown.html' + VERSION,
             controller: 'ShowdownCtrl',
             controllerAs: 'showdownCtrl',
             resolve: {
@@ -178,7 +157,7 @@ betty2App.config(['$stateProvider', '$urlRouterProvider', function($stateProvide
         .state('bettyleague.showdown.step0', {
             url: '/step0/:animDirection',
             params: {animDirection: null},
-            templateUrl: 'js/pages/bettyleague/showdown/step0/step0.html',
+            templateUrl: 'js/pages/bettyleague/showdown/step0/step0.html' + VERSION,
             controller: 'Step0Ctrl',
             controllerAs: 'step0Ctrl',
             resolve: {
@@ -200,7 +179,7 @@ betty2App.config(['$stateProvider', '$urlRouterProvider', function($stateProvide
         .state('bettyleague.showdown.step1', {
                 url: '/step1/:animDirection',
             params: {animDirection: null},
-            templateUrl: 'js/pages/bettyleague/showdown/step1/step1.html',
+            templateUrl: 'js/pages/bettyleague/showdown/step1/step1.html' + VERSION,
             controller: 'Step1Ctrl',
             controllerAs: 'step1Ctrl',
             resolve: {
@@ -220,7 +199,7 @@ betty2App.config(['$stateProvider', '$urlRouterProvider', function($stateProvide
         .state('bettyleague.showdown.step2'    , {
             url: '/step2/:animDirection',
             params: {animDirection: null},
-            templateUrl: 'js/pages/bettyleague/showdown/step2/step2.html',
+            templateUrl: 'js/pages/bettyleague/showdown/step2/step2.html' + VERSION,
             controller: 'Step2Ctrl',
             controllerAs: 'step2Ctrl',
             resolve: {
@@ -240,7 +219,7 @@ betty2App.config(['$stateProvider', '$urlRouterProvider', function($stateProvide
         .state('bettyleague.showdown.step3', {
             url: '/step3/:animDirection',
             params: {animDirection: null},
-            templateUrl: 'js/pages/bettyleague/showdown/step3/step3.html',
+            templateUrl: 'js/pages/bettyleague/showdown/step3/step3.html' + VERSION,
             controller: 'Step3Ctrl',
             controllerAs: 'step3Ctrl',
             resolve: {
@@ -259,7 +238,7 @@ betty2App.config(['$stateProvider', '$urlRouterProvider', function($stateProvide
 
         .state('account', {
             url: '/account/:animDirection',
-            templateUrl: 'js/pages/account/account.html',
+            templateUrl: 'js/pages/account/account.html' + VERSION,
             controller: 'AccountCtrl',
             controllerAs: 'accountCtrl',
             resolve: {
@@ -279,7 +258,7 @@ betty2App.config(['$stateProvider', '$urlRouterProvider', function($stateProvide
         .state('listMatch', {
             url: '/bettyleague/:bettyLeagueId/showdown/:showdownId/listmatch/:animDirection',
             params: {animDirection: null},
-            templateUrl: 'js/pages/listMatch/listMatch.html',
+            templateUrl: 'js/pages/listMatch/listMatch.html' + VERSION,
             controller: 'ListMatchCtrl',
             controllerAs: 'listMatchCtrl',
             resolve: {
@@ -333,7 +312,7 @@ betty2App.config(['$stateProvider', '$urlRouterProvider', function($stateProvide
         .state('ranking', {
             url: '/bettyleague/:bettyLeagueId/showdown/:showdownId/ranking/:animDirection',
             params: {animDirection: null},
-            templateUrl: 'js/pages/ranking/ranking.html',
+            templateUrl: 'js/pages/ranking/ranking.html' + VERSION,
             controller: 'RankingCtrl',
             controllerAs: 'rankingCtrl',
             resolve: {
@@ -377,7 +356,7 @@ betty2App.config(['$stateProvider', '$urlRouterProvider', function($stateProvide
         .state('privateleagues', {
             url: '/privateleagues/:animDirection',
             params: {animDirection: null},
-            templateUrl: 'js/pages/privateLeagues/privateLeagues.html',
+            templateUrl: 'js/pages/privateLeagues/privateLeagues.html' + VERSION,
             controller: 'PrivateLeaguesCtrl',
             controllerAs: 'privateLeaguesCtrl',
             resolve: {
@@ -406,7 +385,7 @@ betty2App.config(['$stateProvider', '$urlRouterProvider', function($stateProvide
         .state('createleague', {
             url: '/createLeague/:animDirection',
             params: {animDirection: null},
-            templateUrl: 'js/pages/createLeague/createLeague.html',
+            templateUrl: 'js/pages/createLeague/createLeague.html' + VERSION,
             controller: 'CreateLeagueCtrl',
             controllerAs: 'createLeagueCtrl',
             resolve: {
@@ -426,7 +405,7 @@ betty2App.config(['$stateProvider', '$urlRouterProvider', function($stateProvide
         .state('joinleague', {
             url: '/joinLeague/:animDirection',
             params: {animDirection: null},
-            templateUrl: 'js/pages/joinLeague/joinLeague.html',
+            templateUrl: 'js/pages/joinLeague/joinLeague.html' + VERSION,
             controller: 'JoinLeagueCtrl',
             controllerAs: 'joinLeagueCtrl',
             resolve: {
@@ -446,7 +425,7 @@ betty2App.config(['$stateProvider', '$urlRouterProvider', function($stateProvide
         .state('home', {
             url: '/home/:animDirection',
             params: {animDirection: null},
-            templateUrl: 'js/pages/home/home.html',
+            templateUrl: 'js/pages/home/home.html' + VERSION,
             controller: 'HomeCtrl',
             controllerAs: 'homeCtrl',
             resolve: {

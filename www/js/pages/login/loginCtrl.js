@@ -55,7 +55,13 @@ betty2App.controller('LoginCtrl', ['animation', '$scope', 'UserApi', 'BtMessages
         'btEmail',
         'btPassword'
     ];
+    var preventTwice = false;
     loginCtrl.submitForm = function(form){
+        if (preventTwice) {
+            preventTwice = false;
+            return;
+        }
+        preventTwice = true;
         if(form.$valid){
             BtLoading.startLoad();
             UserApi.login(loginCtrl.user, function (messages) {
@@ -66,6 +72,7 @@ betty2App.controller('LoginCtrl', ['animation', '$scope', 'UserApi', 'BtMessages
             })
         }
         else{
+            preventTwice = false;
             BtMessages.showFormMessages(form, fieldsNames);
         }
     };

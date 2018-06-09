@@ -274,6 +274,7 @@ betty2App.controller('RankingCtrl', ['BettyLeagueApi', 'UserApi', 'ranking', '$t
 		btDisabled: false,
 		btSubmitForm: null,
 		action:function(){
+			BtLoading.startLoad();
 			BtNavigate.stateChange('goBottom' ,'bettyleague.showdown.step0', {
 				'bettyLeagueId' : $stateParams.bettyLeagueId,
 				'showdownId' : $stateParams.showdownId,

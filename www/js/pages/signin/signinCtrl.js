@@ -53,7 +53,15 @@ betty2App.controller('SigninCtrl', ['animation', 'BtLoading', 'BtMessages', 'Use
         'content' : translations['SIGNIN.PLACEHOLDERS.NEXT']
     };
 
+    var preventTwice = false;
+
+
     signinCtrl.submitForm = function(form){
+        if (preventTwice) {
+            preventTwice = false;
+            return;
+        }
+        preventTwice = true;
         if(form.$valid){
             //form message handling
             if(signinCtrl.newUser.plainPassword != signinCtrl.newUser.confirmPassword){
@@ -73,6 +81,7 @@ betty2App.controller('SigninCtrl', ['animation', 'BtLoading', 'BtMessages', 'Use
             }
         }
         else{
+            preventTwice = false;
             BtMessages.showFormMessages(form, fieldsNames);
         }
     };
