@@ -12,23 +12,26 @@ betty2App.controller('ListMatchCtrl', ['$timeout', '$location', '$ionicScrollDel
 		$scope.parentCtrl.activeHeaderBtns = [false, false, false, true, false];
 	}
 
+	var scrollHandle = $ionicScrollDelegate.$getByHandle('btContentHandle');
+
+	listMatchCtrl.scrollTo = function (anchor) {
+		$location.hash(anchor);
+		scrollHandle.anchorScroll();
+		$timeout(function () {
+			scrollHandle.resize();
+		})
+	};
 
 	$timeout(function () {
 		BtLoading.endLoad();
 		listMatchCtrl.showdowns = showdowns;
-	}, 500);
 
-	var scrollHandle = $ionicScrollDelegate.$getByHandle('btContentHandle');
+		listMatchCtrl.scrollTo($stateParams.showdownId);
 
-		listMatchCtrl.scrollTo = function (anchor) {
-			$location.hash(anchor);
-			scrollHandle.anchorScroll();
-			$timeout(function () {
-				scrollHandle.resize();
-			})
-		};
+	}, 650);
 
-	listMatchCtrl.scrollTo($stateParams.showdownId);
+
+
 
 	listMatchCtrl.goShowdown = function (showdown) {
 		BtNavigate.stateChange('goRight' ,'bettyleague.showdown.step0', {

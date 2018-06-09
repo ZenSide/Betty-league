@@ -8,7 +8,7 @@ module.exports = function(grunt) {
         templates: {
           html: {
             js: '<script src="{filePath}?ver=0.1"></script>',
-            css: '<link rel="stylesheet" type="text/css" href="{filePath}?ver=0.1" />',
+            css: '<link rel="stylesheet" type="text/css" href="{filePath}?ver=0.2" />',
           }
           //haml: {
           //  js: '%script{src: "{filePath}"}/',

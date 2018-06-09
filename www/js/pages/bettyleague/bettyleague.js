@@ -46,7 +46,7 @@ betty2App.controller('BettyLeagueCtrl', ['BtLoading', 'BetApi', 'ShowdownApi', '
 				$scope.$broadcast('sdStream')
 			}, function (fullrange) {
 
-			}, true);
+			});
 		}
 	}, delay);
 
@@ -57,7 +57,7 @@ betty2App.controller('BettyLeagueCtrl', ['BtLoading', 'BetApi', 'ShowdownApi', '
 			ShowdownApi.getFullRange(bettyLeagueCtrl.bettyLeagueId, function () {
 				$scope.$broadcast('sdStream')
 			}, function (fullrange) {
-			}, true, true);
+			}, true);
 		}
 	}, delayLive);
 
@@ -68,7 +68,7 @@ betty2App.controller('BettyLeagueCtrl', ['BtLoading', 'BetApi', 'ShowdownApi', '
 				$scope.$broadcast('fullBetStream')
 			}, function (fullrange) {
 
-			}, true, true);
+			}, true);
 		}
 
 	}, delayBetRange);

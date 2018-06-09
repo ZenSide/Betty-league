@@ -2,8 +2,7 @@
     <h1 class="txt-part-title u-gutter-bottom-regular" translate="TITLES.LOGIN"></h1>
 
     <form autocomplete="off" class="u-gutter-bottom-big"
-          novalidate name="loginForm" id="loginformId"
-          ng-submit="loginCtrl.submitForm(loginForm)">
+          novalidate name="loginForm" id="loginformId">
         <!--//USERNAME-->
         <bt-input-text bt-select-order="1"
                        bt-focus
@@ -31,6 +30,7 @@
                      bt-disabled="loginCtrl.loginBtn.disabled"
                      bt-submit-form="loginformId"
                      bt-type="submit"
+                     hm-tap="loginCtrl.submitForm(loginForm)"
         >
         </bt-body-btn>
         <!--TODO conditions generales-->
