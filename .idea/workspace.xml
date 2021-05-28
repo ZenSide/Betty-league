@@ -5,27 +5,11 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/Gruntfile.js" afterPath="$PROJECT_DIR$/www/Gruntfile.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.tpl.html" afterPath="$PROJECT_DIR$/www/index.tpl.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/app.js" afterPath="$PROJECT_DIR$/www/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/components/betResumee/betResumee.html" afterPath="$PROJECT_DIR$/www/js/components/betResumee/betResumee.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/components/btModalOdds/btModalOdds.js" afterPath="$PROJECT_DIR$/www/js/components/btModalOdds/btModalOdds.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/config/parameters.js" afterPath="$PROJECT_DIR$/www/js/config/parameters.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/pages/bettyleague/bettyleague.js" afterPath="$PROJECT_DIR$/www/js/pages/bettyleague/bettyleague.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/pages/bettyleague/showdown/showdown.html" afterPath="$PROJECT_DIR$/www/js/pages/bettyleague/showdown/showdown.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/pages/bettyleague/showdown/step0/step0.html" afterPath="$PROJECT_DIR$/www/js/pages/bettyleague/showdown/step0/step0.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/pages/listMatch/listMatch.js" afterPath="$PROJECT_DIR$/www/js/pages/listMatch/listMatch.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/pages/login/login.html" afterPath="$PROJECT_DIR$/www/js/pages/login/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/pages/login/loginCtrl.js" afterPath="$PROJECT_DIR$/www/js/pages/login/loginCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/pages/parentCtrl.js" afterPath="$PROJECT_DIR$/www/js/pages/parentCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/pages/ranking/ranking.js" afterPath="$PROJECT_DIR$/www/js/pages/ranking/ranking.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/pages/signin/signin.html" afterPath="$PROJECT_DIR$/www/js/pages/signin/signin.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/pages/signin/signinCtrl.js" afterPath="$PROJECT_DIR$/www/js/pages/signin/signinCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/resources/ShowdownApi.js" afterPath="$PROJECT_DIR$/www/js/resources/ShowdownApi.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/routing.js" afterPath="$PROJECT_DIR$/www/js/routing.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/services/BtMessages.js" afterPath="$PROJECT_DIR$/www/js/services/BtMessages.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/services/BtNavigate.js" afterPath="$PROJECT_DIR$/www/js/services/BtNavigate.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/styles/02-utils.css" afterPath="$PROJECT_DIR$/www/js/styles/02-utils.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/styles/02-utils.less" afterPath="$PROJECT_DIR$/www/js/styles/02-utils.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/styles/general.css" afterPath="$PROJECT_DIR$/www/js/styles/general.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/styles/general.less" afterPath="$PROJECT_DIR$/www/js/styles/general.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/traductions.js" afterPath="$PROJECT_DIR$/www/js/traductions.js" />
     </list>
     <list id="3a1f8fe8-031b-47e4-a389-fcc25573a7b5" name="New changelist" comment="" />
     <ignored path="ionicBetty.iws" />
@@ -48,21 +32,61 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Gruntfile.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/Gruntfile.js">
+      <file leaf-file-name="parameters.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/js/config/parameters.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="traductions.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platforms/browser/www/js/traductions.js">
+      <file leaf-file-name="routing.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/js/routing.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="28" selection-start-line="0" selection-start-column="28" selection-end-line="0" selection-end-column="28" />
+              <caret line="277" column="47" selection-start-line="277" selection-start-column="0" selection-end-line="278" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShowdownApi.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/www/js/resources/ShowdownApi.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.34615386">
+              <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="scratch" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="140281" selection-start-line="0" selection-start-column="140281" selection-end-line="0" selection-end-column="140281" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/js/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="43" column="3" selection-start-line="43" selection-start-column="3" selection-end-line="43" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BtNavigate.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/js/services/BtNavigate.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -71,28 +95,38 @@
       <file leaf-file-name="BtMessages.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/services/BtMessages.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.551724">
-              <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="49" selection-start-line="0" selection-start-column="49" selection-end-line="0" selection-end-column="62" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bettyleague.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/www/js/pages/bettyleague/bettyleague.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.22781065">
-              <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShowdownApi.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/js/resources/ShowdownApi.js">
+      <file leaf-file-name="BettyLeagueApi.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/js/resources/BettyLeagueApi.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+              <caret line="1" column="79" selection-start-line="1" selection-start-column="63" selection-end-line="1" selection-end-column="79" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ResourcesFactory.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/js/resources/ResourcesFactory.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="81" selection-start-line="0" selection-start-column="81" selection-end-line="0" selection-end-column="81" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserApi.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/js/resources/UserApi.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -130,17 +164,23 @@
         <option value="$PROJECT_DIR$/www/js/pages/listMatch/listMatch.js" />
         <option value="$PROJECT_DIR$/www/js/pages/ranking/ranking.js" />
         <option value="$PROJECT_DIR$/www/js/styles/general.less" />
-        <option value="$PROJECT_DIR$/www/js/routing.js" />
         <option value="$PROJECT_DIR$/www/js/pages/bettyleague/showdown/showdown.html" />
         <option value="$PROJECT_DIR$/www/js/pages/bettyleague/showdown/step0/step0.html" />
-        <option value="$PROJECT_DIR$/www/js/config/parameters.js" />
         <option value="$PROJECT_DIR$/www/js/traductions.js" />
         <option value="$PROJECT_DIR$/www/js/pages/parentCtrl.js" />
         <option value="$PROJECT_DIR$/www/index.tpl.html" />
-        <option value="$PROJECT_DIR$/www/Gruntfile.js" />
         <option value="$PROJECT_DIR$/platforms/browser/www/js/traductions.js" />
         <option value="$PROJECT_DIR$/www/js/services/BtMessages.js" />
         <option value="$PROJECT_DIR$/www/js/pages/bettyleague/bettyleague.js" />
+        <option value="$PROJECT_DIR$/www/js/components/btModalOdds/btModalOdds.js" />
+        <option value="$PROJECT_DIR$/www/js/components/betResumee/betResumee.html" />
+        <option value="$PROJECT_DIR$/platforms/browser/www/Gruntfile.js" />
+        <option value="$PROJECT_DIR$/www/Gruntfile.js" />
+        <option value="$PROJECT_DIR$/platforms/browser/www/index.html" />
+        <option value="$PROJECT_DIR$/www/js/config/parameters.js" />
+        <option value="$PROJECT_DIR$/www/js/routing.js" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch" />
+        <option value="$PROJECT_DIR$/www/js/resources/ShowdownApi.js" />
       </list>
     </option>
   </component>
@@ -186,8 +226,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -230,7 +268,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="platforms" />
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -244,27 +286,56 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="platforms" />
+              <option name="myItemId" value="www" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="browser" />
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ionicBetty" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ionicBetty" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
-    <property name="SearchEverywhereHistoryKey" value="betty&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/bettyleague.js&#10;btme&#9;null&#9;null&#10;grunt&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/Gruntfile.js&#10;parent&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/parentCtrl.js&#10;show&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/showdown/showdown.html&#10;bett&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/bettyleague.html&#10;index&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/index.tpl.html&#10;btn&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/services/BtNavigate.js&#10;traduct&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/traductions.js&#10;inde&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/index.html&#10;grun&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/Gruntfile.js&#10;gulpfil&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/gulpfile.js&#10;index.t&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/index.tpl.html&#10;step&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/showdown/step0/step0.html&#10;gru&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/Gruntfile.js&#10;btnav&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/services/BtNavigate.js&#10;param&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/config/parameters.js&#10;r&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/routing.js&#10;gene&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/styles/general.less&#10;routin&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/routing.js&#10;bettyleague.&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/bettyleague.html&#10;para&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/config/parameters.js&#10;ranking.js&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/ranking/ranking.js&#10;list&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/listMatch/listMatch.js&#10;app&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/app.js&#10;btload&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/services/BtLoading.js&#10;logi&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/login/login.html&#10;sig&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/signin/signin.html&#10;signin.js&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/signin/signinCtrl.js&#10;loginc&#9;null&#9;null&#10;login.ht&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/login/login.html&#10;utils.les&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/styles/02-utils.less&#10;step0.html&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/showdown/step0/step0.html&#10;btna&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/services/BtNavigate.js&#10;step3&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/showdown/step3/step3.js&#10;step2&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/showdown/step2/step2.js&#10;step1&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/showdown/step1/step1.js&#10;loading&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/styles/loading.less&#10;gener&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/styles/general.less&#10;btloading.js&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/services/BtLoading.js&#10;step0.js&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/showdown/step0/step0.js&#10;showdown&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/showdown/showdown.js&#10;resou&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/resources/ResourcesFactory.js&#10;step3.js&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/showdown/step3/step3.js&#10;step2.js&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/showdown/step2/step2.js&#10;step1.js&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/showdown/step1/step1.js&#10;routing&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/routing.js&#10;showdownapi&#9;null&#9;null&#10;btfo&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/components/btFooterBtn/btFooterBtn.less&#10;home.&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/home/home.js" />
+    <property name="SearchEverywhereHistoryKey" value="para&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/config/parameters.js&#10;grunt&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/Gruntfile.js&#10;parameter&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/config/parameters.js&#10;betres&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/components/betResumee/betResumee.js&#10;showdownCtr&#9;null&#9;null&#10;step0&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/platforms/android/app/src/main/assets/www/js/pages/bettyleague/showdown/step0/step0.html&#10;step&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/showdown/step0/step0.js&#10;betre&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/components/betResumee/betResumee.html&#10;grun&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/Gruntfile.js&#10;betty&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/bettyleague.js&#10;btme&#9;null&#9;null&#10;parent&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/parentCtrl.js&#10;show&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/showdown/showdown.html&#10;bett&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/bettyleague.html&#10;index&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/index.tpl.html&#10;btn&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/services/BtNavigate.js&#10;traduct&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/traductions.js&#10;inde&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/index.html&#10;gulpfil&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/gulpfile.js&#10;index.t&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/index.tpl.html&#10;gru&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/Gruntfile.js&#10;btnav&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/services/BtNavigate.js&#10;param&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/config/parameters.js&#10;r&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/routing.js&#10;gene&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/styles/general.less&#10;routin&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/routing.js&#10;bettyleague.&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/bettyleague.html&#10;ranking.js&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/ranking/ranking.js&#10;list&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/listMatch/listMatch.js&#10;app&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/app.js&#10;btload&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/services/BtLoading.js&#10;logi&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/login/login.html&#10;sig&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/signin/signin.html&#10;signin.js&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/signin/signinCtrl.js&#10;loginc&#9;null&#9;null&#10;login.ht&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/login/login.html&#10;utils.les&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/styles/02-utils.less&#10;step0.html&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/showdown/step0/step0.html&#10;btna&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/services/BtNavigate.js&#10;step3&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/showdown/step3/step3.js&#10;step2&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/showdown/step2/step2.js&#10;step1&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/showdown/step1/step1.js&#10;loading&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/styles/loading.less&#10;gener&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/styles/general.less&#10;btloading.js&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/services/BtLoading.js&#10;step0.js&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/showdown/step0/step0.js&#10;showdown&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/showdown/showdown.js&#10;resou&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/resources/ResourcesFactory.js&#10;step3.js&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/showdown/step3/step3.js&#10;step2.js&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/showdown/step2/step2.js" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="JSON" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -336,7 +407,13 @@
       <option name="project" value="LOCAL" />
       <updated>1528562118964</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="laoding everywere">
+      <created>1528584897974</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1528584897974</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView">
@@ -352,27 +429,27 @@
     <frame x="55" y="24" width="1865" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.066520065" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.157779" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.059800666" sideWeight="0.5175141" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24248926" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37768242" sideWeight="0.49786553" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2360515" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1416309" sideWeight="0.4824859" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15448049" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14238593" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34656653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37768242" sideWeight="0.49786553" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24919957" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0751073" sideWeight="0.4824859" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16094421" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24248926" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2360515" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34656653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -385,10 +462,10 @@
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24248926" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37768242" sideWeight="0.49786553" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2360515" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1416309" sideWeight="0.4824859" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18936877" sideWeight="0.4824859" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15448049" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985157" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15141243" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14238593" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34656653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -415,88 +492,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/www/js/components/btFooterBtn/btFooterBtn.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.3333333">
-          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/components/btGoalRadio/btGoalRadio.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.111111">
-          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/components/btTeamRadio/btTeamRadio.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.7777777">
-          <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/pages/listMatch/listMatch.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.148148">
-          <caret line="21" column="101" selection-start-line="21" selection-start-column="101" selection-end-line="21" selection-end-column="101" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/pages/privateLeagues/privateLeagues.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.0">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/pages/ranking/ranking.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-28.666666">
-          <caret line="43" column="39" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/resources/BetApi.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platforms/browser/www/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="680" selection-start-line="0" selection-start-column="680" selection-end-line="0" selection-end-column="680" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/components/btBodyBtn/btBodyBtn.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.045627378">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platforms/android/app/src/main/assets/www/js/pages/home/home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61764705">
-          <caret line="31" column="11" selection-start-line="28" selection-start-column="8" selection-end-line="31" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/pages/home/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/pages/home/home.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -511,7 +510,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.7727273">
           <caret line="121" column="5" selection-start-line="121" selection-start-column="5" selection-end-line="121" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -519,7 +517,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.35714287">
           <caret line="93" column="59" selection-start-line="93" selection-start-column="59" selection-end-line="93" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -537,26 +534,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/resources/ResourcesFactory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5192308">
-          <caret line="63" column="82" selection-start-line="63" selection-start-column="82" selection-end-line="63" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/pages/bettyleague/showdown/step0/step0.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/pages/bettyleague/showdown/step1/step1.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -564,7 +545,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -572,7 +552,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -615,15 +594,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.586207">
           <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="3" selection-start-line="43" selection-start-column="3" selection-end-line="43" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -631,7 +601,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="137" column="26" selection-start-line="137" selection-start-column="26" selection-end-line="137" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -639,7 +608,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-40.96552">
           <caret line="66" column="48" selection-start-line="66" selection-start-column="48" selection-end-line="66" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -654,7 +622,48 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="123" column="32" selection-start-line="123" selection-start-column="32" selection-end-line="123" selection-end-column="32" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/traductions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.94217205">
+          <caret line="124" column="42" selection-start-line="124" selection-start-column="42" selection-end-line="124" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/pages/parentCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.3448277">
+          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/pages/bettyleague/showdown/showdown.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.333333">
+          <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/pages/bettyleague/bettyleague.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.666666">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platforms/browser/www/js/traductions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="28" selection-start-line="0" selection-start-column="28" selection-end-line="0" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/pages/bettyleague/bettyleague.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="70" column="42" selection-start-line="70" selection-start-column="42" selection-end-line="70" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -662,6 +671,158 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/components/btModalOdds/btModalOdds.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3601896">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/components/btModalOdds/btModalOdds.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/pages/bettyleague/showdown/step0/step0.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="19" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/pages/bettyleague/showdown/showdown.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="50" column="33" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/resources/BetApi.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="151" column="8" selection-start-line="151" selection-start-column="8" selection-end-line="151" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platforms/android/app/src/main/assets/www/js/pages/bettyleague/showdown/step0/step0.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.296296">
+          <caret line="158" column="131" selection-start-line="158" selection-start-column="124" selection-end-line="158" selection-end-column="131" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/components/betResumee/betResumee.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44859812">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/components/betResumee/betResumee.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.86098653">
+          <caret line="32" column="3" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platforms/browser/www/Gruntfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platforms/browser/www/index.tpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="115.55556">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.tpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="90" column="35" selection-start-line="90" selection-start-column="35" selection-end-line="90" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.940594">
+          <caret line="132" column="25" selection-start-line="132" selection-start-column="25" selection-end-line="132" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platforms/browser/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.0055633">
+          <caret line="160" column="61" selection-start-line="160" selection-start-column="61" selection-end-line="160" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/Gruntfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="66" selection-start-line="14" selection-start-column="66" selection-end-line="14" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30041724">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/services/BtNavigate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/services/BtMessages.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="49" selection-start-line="0" selection-start-column="49" selection-end-line="0" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/resources/UserApi.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/resources/BettyLeagueApi.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="79" selection-start-line="1" selection-start-column="63" selection-end-line="1" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/resources/ResourcesFactory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="81" selection-start-line="0" selection-start-column="81" selection-end-line="0" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="3" selection-start-line="43" selection-start-column="3" selection-end-line="43" selection-end-column="3" />
           <folding />
         </state>
       </provider>
@@ -674,130 +835,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2805195">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platforms/browser/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.218035">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/routing.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+          <caret line="277" column="47" selection-start-line="277" selection-start-column="0" selection-end-line="278" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/traductions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.94217205">
-          <caret line="124" column="42" selection-start-line="124" selection-start-column="42" selection-end-line="124" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/pages/bettyleague/showdown/showdown.js">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/services/BtNavigate.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="32" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/pages/parentCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.3448277">
-          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/index.tpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-23.518518">
-          <caret line="90" column="35" selection-start-line="90" selection-start-column="35" selection-end-line="90" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/pages/bettyleague/showdown/showdown.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.333333">
-          <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.814815">
-          <caret line="132" column="25" selection-start-line="132" selection-start-column="25" selection-end-line="132" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/pages/bettyleague/bettyleague.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.666666">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/Gruntfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platforms/browser/www/js/traductions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="28" selection-start-line="0" selection-start-column="28" selection-end-line="0" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/services/BtMessages.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.551724">
-          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+          <caret line="0" column="140281" selection-start-line="0" selection-start-column="140281" selection-end-line="0" selection-end-column="140281" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/resources/ShowdownApi.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/pages/bettyleague/bettyleague.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22781065">
-          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.34615386">
+          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
           <folding />
         </state>
       </provider>

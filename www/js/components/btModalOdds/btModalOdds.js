@@ -20,8 +20,6 @@ betty2App.component('btModalOdds',{
       ctrl.btOnClose();
     };
 
-
-
     this.$onChanges = function() {
       if (!ctrl.btData.betResume || ctrl.btData.betResume.potentiel) {
         ctrl.realWinner = null;
@@ -33,25 +31,25 @@ betty2App.component('btModalOdds',{
         );
       }
 
-
-
       ctrl.homeWinBets = [];
       ctrl.awayWinBets = [];
       ctrl.drawBets = [];
       angular.forEach(ctrl.btData.scoreOdds, function (scoreOdd) {
         var winner = BetApi.getSmFixtureWinner(ctrl.btData.showdown.smFixture, scoreOdd.homeScore, scoreOdd.awayScore);
         console.log(winner);
-        switch (winner) {
-          case 'home':
-            ctrl.homeWinBets = ctrl.homeWinBets.concat(scoreOdd.bets);
-            break;
-          case 'away':
-            ctrl.awayWinBets = ctrl.awayWinBets.concat(scoreOdd.bets);
-            break;
-          case 'draw':
-            ctrl.drawBets = ctrl.drawBets.concat(scoreOdd.bets);
-            break;
-        }
+        angular.forEach(scoreOdd.bets, function (bet) {
+          switch (bet.winner) {
+            case 'home':
+              ctrl.homeWinBets.push(bet);
+              break;
+            case 'away':
+              ctrl.awayWinBets.push(bet);
+              break;
+            case 'draw':
+              ctrl.drawBets.push(bet);
+              break;
+          }
+        })
       });
       console.log(ctrl.awayWinBets);
     };

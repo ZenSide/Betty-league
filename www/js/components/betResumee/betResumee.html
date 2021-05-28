@@ -1,11 +1,11 @@
 <!--//FOOTER/HEADER-->
 <div ng-class="$ctrl.modifierClasses" class="u-text-gold" ng-if="$ctrl.betResume.potentiel && $ctrl.betResume[$ctrl.type]">
-    + {{$ctrl.betResume[$ctrl.type]}}
+    + {{$ctrl.betResume[$ctrl.type]|number}}
     <img ng-class="$ctrl.modifierCoin" class="bt-coin" src="img/betty-coin_75x75.png">
     ?
 </div>
 <div ng-class="$ctrl.modifierClasses" class="u-text-green" ng-if="!$ctrl.betResume.potentiel && $ctrl.betResume[$ctrl.type]">
-    + {{$ctrl.betResume[$ctrl.type]}}
+    + {{$ctrl.betResume[$ctrl.type]|number}}
     <img ng-class="$ctrl.modifierCoin" class="bt-coin" src="img/betty-coin_75x75.png">
 </div>
 <div ng-class="$ctrl.modifierClasses" class="u-text-red" ng-if="!$ctrl.betResume.potentiel && $ctrl.betResume[$ctrl.type] === 0">
