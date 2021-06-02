@@ -5,7 +5,7 @@ betty2App.controller('CreateLeagueCtrl', ['BtNavigate', 'BettyLeagueApi', 'BtMes
 	$scope.parentCtrl.activeHeaderBtns = [false, false, false, true, false];
 
 	createLeagueCtrl.newLeague = {
-		special: 'WC2018',
+		special: 'EURO2020',
 		name: ''
 	};
 	var fieldsNames = [

@@ -2,7 +2,7 @@ var translations = {
         en : {
         },
         fr : {
-            BETA : "Betty-League est en phase Alpha, beaucoup d'améliorations et de fonctionnalités sont à venir. Si vous constatez des soucis de fonctionnement vous pouvez envoyer un mail à <i>simon@zenside.fr</i> Amusez vous bien !",
+            BETA : "Coucou",
             "Betty World Championship": "Ligue-Publique",
             MESSAGES : {
                 GENERALERROR : 'Un problème est survenu, réessaye plus tard',
@@ -143,8 +143,8 @@ var translations = {
             COMMUNITY : {
                 TITLE : "Ma communauté",
                 TITLE_LEAGUES : "Mes ligues privées",
-                WORLD_CUP_SPEECH : "<b>A l'occasion de la coupe du monde 2018 tu peux créer une Ligue privée pour te mesurer à tes amis</b>",
-                NEW_WORLD_CUP : "Créer une Coupe du monde privée",
+                WORLD_CUP_SPEECH : "<b>A l'occasion de l'EURO 2020 tu peux créer une Ligue privée pour te mesurer à tes amis</b>",
+                NEW_WORLD_CUP : "Créer un Euro du monde privée",
                 JOIN_LEAGUE : "Rejoindre une Ligue privée",
                 NEW_LEAGUE : "Nouvelle Ligue privée",
                 NEW_VALIDATE : "Valider",

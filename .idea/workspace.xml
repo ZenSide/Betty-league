@@ -3,13 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b1f29d8e-71cb-4a38-a451-f6342f828e6e" name="Default" comment="laoding everywere">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/Gruntfile.js" afterPath="$PROJECT_DIR$/www/Gruntfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/components/betResumee/betResumee.html" afterPath="$PROJECT_DIR$/www/js/components/betResumee/betResumee.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/components/btModalOdds/btModalOdds.js" afterPath="$PROJECT_DIR$/www/js/components/btModalOdds/btModalOdds.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/config/parameters.js" afterPath="$PROJECT_DIR$/www/js/config/parameters.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/pages/createLeague/createLeague.js" afterPath="$PROJECT_DIR$/www/js/pages/createLeague/createLeague.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/resources/ShowdownApi.js" afterPath="$PROJECT_DIR$/www/js/resources/ShowdownApi.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/routing.js" afterPath="$PROJECT_DIR$/www/js/routing.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/traductions.js" afterPath="$PROJECT_DIR$/www/js/traductions.js" />
     </list>
     <list id="3a1f8fe8-031b-47e4-a389-fcc25573a7b5" name="New changelist" comment="" />
     <ignored path="ionicBetty.iws" />
@@ -32,21 +28,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="parameters.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/js/config/parameters.js">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <caret line="26" column="39" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routing.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/js/routing.js">
+      <file leaf-file-name="BetApi.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/platforms/android/app/build/intermediates/assets/debug/www/js/resources/BetApi.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="277" column="47" selection-start-line="277" selection-start-column="0" selection-end-line="278" selection-end-column="0" />
+              <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -55,78 +51,8 @@
       <file leaf-file-name="ShowdownApi.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/resources/ShowdownApi.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.34615386">
-              <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="scratch" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="140281" selection-start-line="0" selection-start-column="140281" selection-end-line="0" selection-end-column="140281" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/js/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="43" column="3" selection-start-line="43" selection-start-column="3" selection-end-line="43" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BtNavigate.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/js/services/BtNavigate.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BtMessages.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/js/services/BtMessages.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="49" selection-start-line="0" selection-start-column="49" selection-end-line="0" selection-end-column="62" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BettyLeagueApi.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/js/resources/BettyLeagueApi.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="1" column="79" selection-start-line="1" selection-start-column="63" selection-end-line="1" selection-end-column="79" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ResourcesFactory.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/js/resources/ResourcesFactory.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="81" selection-start-line="0" selection-start-column="81" selection-end-line="0" selection-end-column="81" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserApi.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/js/resources/UserApi.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.33333334">
+              <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -160,13 +86,11 @@
         <option value="$PROJECT_DIR$/www/js/pages/signin/signin.html" />
         <option value="$PROJECT_DIR$/www/js/services/BtNavigate.js" />
         <option value="$PROJECT_DIR$/www/index.html" />
-        <option value="$PROJECT_DIR$/www/js/app.js" />
         <option value="$PROJECT_DIR$/www/js/pages/listMatch/listMatch.js" />
         <option value="$PROJECT_DIR$/www/js/pages/ranking/ranking.js" />
         <option value="$PROJECT_DIR$/www/js/styles/general.less" />
         <option value="$PROJECT_DIR$/www/js/pages/bettyleague/showdown/showdown.html" />
         <option value="$PROJECT_DIR$/www/js/pages/bettyleague/showdown/step0/step0.html" />
-        <option value="$PROJECT_DIR$/www/js/traductions.js" />
         <option value="$PROJECT_DIR$/www/js/pages/parentCtrl.js" />
         <option value="$PROJECT_DIR$/www/index.tpl.html" />
         <option value="$PROJECT_DIR$/platforms/browser/www/js/traductions.js" />
@@ -180,6 +104,10 @@
         <option value="$PROJECT_DIR$/www/js/config/parameters.js" />
         <option value="$PROJECT_DIR$/www/js/routing.js" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch" />
+        <option value="$PROJECT_DIR$/www/js/pages/createLeague/createLeague.html" />
+        <option value="$PROJECT_DIR$/www/js/pages/createLeague/createLeague.js" />
+        <option value="$PROJECT_DIR$/www/js/traductions.js" />
+        <option value="$PROJECT_DIR$/www/js/app.js" />
         <option value="$PROJECT_DIR$/www/js/resources/ShowdownApi.js" />
       </list>
     </option>
@@ -226,6 +154,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -276,59 +206,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ionicBetty" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ionicBetty" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ionicBetty" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ionicBetty" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
-    <property name="SearchEverywhereHistoryKey" value="para&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/config/parameters.js&#10;grunt&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/Gruntfile.js&#10;parameter&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/config/parameters.js&#10;betres&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/components/betResumee/betResumee.js&#10;showdownCtr&#9;null&#9;null&#10;step0&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/platforms/android/app/src/main/assets/www/js/pages/bettyleague/showdown/step0/step0.html&#10;step&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/showdown/step0/step0.js&#10;betre&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/components/betResumee/betResumee.html&#10;grun&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/Gruntfile.js&#10;betty&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/bettyleague.js&#10;btme&#9;null&#9;null&#10;parent&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/parentCtrl.js&#10;show&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/showdown/showdown.html&#10;bett&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/bettyleague.html&#10;index&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/index.tpl.html&#10;btn&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/services/BtNavigate.js&#10;traduct&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/traductions.js&#10;inde&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/index.html&#10;gulpfil&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/gulpfile.js&#10;index.t&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/index.tpl.html&#10;gru&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/Gruntfile.js&#10;btnav&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/services/BtNavigate.js&#10;param&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/config/parameters.js&#10;r&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/routing.js&#10;gene&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/styles/general.less&#10;routin&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/routing.js&#10;bettyleague.&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/bettyleague.html&#10;ranking.js&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/ranking/ranking.js&#10;list&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/listMatch/listMatch.js&#10;app&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/app.js&#10;btload&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/services/BtLoading.js&#10;logi&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/login/login.html&#10;sig&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/signin/signin.html&#10;signin.js&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/signin/signinCtrl.js&#10;loginc&#9;null&#9;null&#10;login.ht&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/login/login.html&#10;utils.les&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/styles/02-utils.less&#10;step0.html&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/showdown/step0/step0.html&#10;btna&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/services/BtNavigate.js&#10;step3&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/showdown/step3/step3.js&#10;step2&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/showdown/step2/step2.js&#10;step1&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/showdown/step1/step1.js&#10;loading&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/styles/loading.less&#10;gener&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/styles/general.less&#10;btloading.js&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/services/BtLoading.js&#10;step0.js&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/showdown/step0/step0.js&#10;showdown&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/showdown/showdown.js&#10;resou&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/resources/ResourcesFactory.js&#10;step3.js&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/showdown/step3/step3.js&#10;step2.js&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/showdown/step2/step2.js" />
+    <property name="SearchEverywhereHistoryKey" value="app.php&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/app.js&#10;para&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/config/parameters.js&#10;grunt&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/Gruntfile.js&#10;parameter&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/config/parameters.js&#10;betres&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/components/betResumee/betResumee.js&#10;showdownCtr&#9;null&#9;null&#10;step0&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/platforms/android/app/src/main/assets/www/js/pages/bettyleague/showdown/step0/step0.html&#10;step&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/showdown/step0/step0.js&#10;betre&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/components/betResumee/betResumee.html&#10;grun&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/Gruntfile.js&#10;betty&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/bettyleague.js&#10;btme&#9;null&#9;null&#10;parent&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/parentCtrl.js&#10;show&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/showdown/showdown.html&#10;bett&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/bettyleague.html&#10;index&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/index.tpl.html&#10;btn&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/services/BtNavigate.js&#10;traduct&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/traductions.js&#10;inde&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/index.html&#10;gulpfil&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/gulpfile.js&#10;index.t&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/index.tpl.html&#10;gru&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/Gruntfile.js&#10;btnav&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/services/BtNavigate.js&#10;param&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/config/parameters.js&#10;r&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/routing.js&#10;gene&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/styles/general.less&#10;routin&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/routing.js&#10;bettyleague.&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/bettyleague.html&#10;ranking.js&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/ranking/ranking.js&#10;list&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/listMatch/listMatch.js&#10;app&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/app.js&#10;btload&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/services/BtLoading.js&#10;logi&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/login/login.html&#10;sig&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/signin/signin.html&#10;signin.js&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/signin/signinCtrl.js&#10;loginc&#9;null&#9;null&#10;login.ht&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/login/login.html&#10;utils.les&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/styles/02-utils.less&#10;step0.html&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/showdown/step0/step0.html&#10;btna&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/services/BtNavigate.js&#10;step3&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/showdown/step3/step3.js&#10;step2&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/showdown/step2/step2.js&#10;step1&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/showdown/step1/step1.js&#10;loading&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/styles/loading.less&#10;gener&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/styles/general.less&#10;btloading.js&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/services/BtLoading.js&#10;step0.js&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/showdown/step0/step0.js&#10;showdown&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/showdown/showdown.js&#10;resou&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/resources/ResourcesFactory.js&#10;step3.js&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/showdown/step3/step3.js" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
@@ -413,7 +297,13 @@
       <option name="project" value="LOCAL" />
       <updated>1528584897974</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="update version - fix float">
+      <created>1622204260287</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1622204260287</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView">
@@ -431,13 +321,13 @@
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.066520065" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.157779" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14513469" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.059800666" sideWeight="0.5175141" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14238593" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37768242" sideWeight="0.49786553" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37768242" sideWeight="0.49786553" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24919957" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0751073" sideWeight="0.4824859" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0751073" sideWeight="0.4824859" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16094421" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -447,7 +337,7 @@
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24248926" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2360515" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34656653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4613734" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -483,7 +373,8 @@
     <MESSAGE value="cache control" />
     <MESSAGE value="btn behaviour" />
     <MESSAGE value="laoding everywere" />
-    <option name="LAST_COMMIT_MESSAGE" value="laoding everywere" />
+    <MESSAGE value="update version - fix float" />
+    <option name="LAST_COMMIT_MESSAGE" value="update version - fix float" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -492,48 +383,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/www/js/pages/home/home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/components/btCountDown/btCountDown.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/components/btFooterBtn/btFooterBtn.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.7727273">
-          <caret line="121" column="5" selection-start-line="121" selection-start-column="5" selection-end-line="121" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/components/btFooterBtn/btFooterBtn.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35714287">
-          <caret line="93" column="59" selection-start-line="93" selection-start-column="59" selection-end-line="93" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platforms/browser/www/lib/animate.css/animate.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.6666665">
-          <caret line="553" column="0" selection-start-line="553" selection-start-column="0" selection-end-line="553" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/styles/animate.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.0">
-          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/pages/bettyleague/showdown/step1/step1.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -625,13 +474,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/traductions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.94217205">
-          <caret line="124" column="42" selection-start-line="124" selection-start-column="42" selection-end-line="124" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/pages/parentCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.3448277">
@@ -646,24 +488,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/pages/bettyleague/bettyleague.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.666666">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/platforms/browser/www/js/traductions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="28" selection-start-line="0" selection-start-column="28" selection-end-line="0" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/pages/bettyleague/bettyleague.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="70" column="42" selection-start-line="70" selection-start-column="42" selection-end-line="70" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -699,13 +527,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="50" column="33" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/resources/BetApi.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="151" column="8" selection-start-line="151" selection-start-column="8" selection-end-line="151" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -783,7 +604,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -791,7 +611,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="49" selection-start-line="0" selection-start-column="49" selection-end-line="0" selection-end-column="62" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -799,15 +618,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/resources/BettyLeagueApi.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="79" selection-start-line="1" selection-start-column="63" selection-end-line="1" selection-end-column="79" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -815,15 +625,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="81" selection-start-line="0" selection-start-column="81" selection-end-line="0" selection-end-column="81" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="3" selection-start-line="43" selection-start-column="3" selection-end-line="43" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -831,15 +632,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/routing.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="277" column="47" selection-start-line="277" selection-start-column="0" selection-end-line="278" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -847,14 +639,106 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="140281" selection-start-line="0" selection-start-column="140281" selection-end-line="0" selection-end-column="140281" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/routing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="387" column="52" selection-start-line="387" selection-start-column="48" selection-end-line="387" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/resources/BetApi.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.6875">
+          <caret line="78" column="8" selection-start-line="78" selection-start-column="8" selection-end-line="78" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/pages/createLeague/createLeague.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="76" selection-start-line="1" selection-start-column="76" selection-end-line="1" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/pages/bettyleague/bettyleague.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/pages/privateLeagues/privateLeagues.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="53" column="75" selection-start-line="53" selection-start-column="75" selection-end-line="53" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/pages/privateLeagues/privateLeagues.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/resources/BettyLeagueApi.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.3581731">
+          <caret line="109" column="67" selection-start-line="109" selection-start-column="67" selection-end-line="109" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/pages/createLeague/createLeague.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/pages/bettyleague/bettyleague.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="70" column="42" selection-start-line="70" selection-start-column="42" selection-end-line="70" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/traductions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28125">
+          <caret line="142" column="25" selection-start-line="142" selection-start-column="25" selection-end-line="142" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="39" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platforms/browser/www/js/resources/BetApi.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="2984" selection-start-line="0" selection-start-column="2984" selection-end-line="0" selection-end-column="2984" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platforms/android/app/build/intermediates/assets/debug/www/js/resources/BetApi.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/resources/ShowdownApi.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34615386">
-          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
           <folding />
         </state>
       </provider>
