@@ -1,35 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b1f29d8e-71cb-4a38-a451-f6342f828e6e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/flags/18570.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/flags/18624.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/flags/18643.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/flags/18648.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/flags/18658.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/flags/18689.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/flags/18694.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/flags/18706 (1).png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/flags/18706.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/flags/18716.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/flags/18718.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/flags/18721.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/flags/18732.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/flags/18564.png" afterPath="$PROJECT_DIR$/www/img/flags/18564.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/flags/18583.png" afterPath="$PROJECT_DIR$/www/img/flags/18583.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/flags/18588.png" afterPath="$PROJECT_DIR$/www/img/flags/18588.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/flags/18645.png" afterPath="$PROJECT_DIR$/www/img/flags/18645.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/flags/18647.png" afterPath="$PROJECT_DIR$/www/img/flags/18647.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/flags/18660.png" afterPath="$PROJECT_DIR$/www/img/flags/18660.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/flags/18699.png" afterPath="$PROJECT_DIR$/www/img/flags/18699.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/flags/18701.png" afterPath="$PROJECT_DIR$/www/img/flags/18701.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/flags/18702.png" afterPath="$PROJECT_DIR$/www/img/flags/18702.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/flags/18708.png" afterPath="$PROJECT_DIR$/www/img/flags/18708.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/flags/18710.png" afterPath="$PROJECT_DIR$/www/img/flags/18710.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/flags/18743.png" afterPath="$PROJECT_DIR$/www/img/flags/18743.png" />
+    <list default="true" id="b1f29d8e-71cb-4a38-a451-f6342f828e6e" name="Default" comment="maj flags">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/components/btLogoTeam/btLogoTeam.css" afterPath="$PROJECT_DIR$/www/js/components/btLogoTeam/btLogoTeam.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/components/btLogoTeam/btLogoTeam.less" afterPath="$PROJECT_DIR$/www/js/components/btLogoTeam/btLogoTeam.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/routing.js" afterPath="$PROJECT_DIR$/www/js/routing.js" />
     </list>
     <list id="3a1f8fe8-031b-47e4-a389-fcc25573a7b5" name="New changelist" comment="" />
     <ignored path="ionicBetty.iws" />
@@ -52,76 +26,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="18564.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/img/flags/18564.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="18570.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/img/flags/18570.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="18567.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/img/flags/18567.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="18562.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/img/flags/18562.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="18576.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/img/flags/18576.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="18588.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/img/flags/18588.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="18624.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/img/flags/18624.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="btLogoTeam.less" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/www/js/components/btLogoTeam/btLogoTeam.less">
+      <file leaf-file-name="BettyLeagueApi.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/js/resources/BettyLeagueApi.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.67093235">
-              <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="18558.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/img/flags/18558.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="BetApi.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/js/resources/BetApi.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="26" column="20" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="20" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="18554.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/img/flags/18554.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="routing.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/www/js/routing.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.92561984">
+              <caret line="103" column="39" selection-start-line="103" selection-start-column="39" selection-end-line="103" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShowdownApi.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/js/resources/ShowdownApi.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -163,7 +104,6 @@
         <option value="$PROJECT_DIR$/www/js/components/betResumee/betResumee.html" />
         <option value="$PROJECT_DIR$/platforms/browser/www/Gruntfile.js" />
         <option value="$PROJECT_DIR$/www/Gruntfile.js" />
-        <option value="$PROJECT_DIR$/www/js/routing.js" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch" />
         <option value="$PROJECT_DIR$/www/js/pages/createLeague/createLeague.html" />
         <option value="$PROJECT_DIR$/www/js/pages/createLeague/createLeague.js" />
@@ -181,6 +121,7 @@
         <option value="$PROJECT_DIR$/www/js/traductions.js" />
         <option value="$PROJECT_DIR$/www/js/pages/privateLeagues/privateLeagues.html" />
         <option value="$PROJECT_DIR$/www/js/components/btLogoTeam/btLogoTeam.less" />
+        <option value="$PROJECT_DIR$/www/js/routing.js" />
       </list>
     </option>
   </component>
@@ -275,7 +216,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="less" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -296,22 +237,8 @@
               <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ionicBetty" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ionicBetty" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -329,11 +256,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="flags" />
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -467,7 +394,13 @@
       <option name="project" value="LOCAL" />
       <updated>1622758496303</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="maj flags">
+      <created>1622759815996</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1622759815996</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView">
@@ -491,7 +424,7 @@
       <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35193133" sideWeight="0.4824859" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.06706982" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13249038" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19296317" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14238593" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47619048" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24919957" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -550,7 +483,8 @@
     <MESSAGE value="disallow betty world" />
     <MESSAGE value="better colors" />
     <MESSAGE value="wording" />
-    <option name="LAST_COMMIT_MESSAGE" value="wording" />
+    <MESSAGE value="maj flags" />
+    <option name="LAST_COMMIT_MESSAGE" value="maj flags" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -577,13 +511,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="140281" selection-start-line="0" selection-start-column="140281" selection-end-line="0" selection-end-column="140281" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/resources/BetApi.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.6875">
-          <caret line="78" column="8" selection-start-line="78" selection-start-column="8" selection-end-line="78" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -654,13 +581,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/routing.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="399" column="44" selection-start-line="399" selection-start-column="44" selection-end-line="399" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -753,22 +673,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="81" selection-start-line="0" selection-start-column="81" selection-end-line="0" selection-end-column="81" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/resources/BettyLeagueApi.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="109" column="67" selection-start-line="109" selection-start-column="67" selection-end-line="109" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/resources/ShowdownApi.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="38" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
           <folding />
         </state>
       </provider>
@@ -911,6 +815,38 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.67093235">
           <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/resources/BettyLeagueApi.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/resources/BetApi.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="20" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/resources/ShowdownApi.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/routing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.92561984">
+          <caret line="103" column="39" selection-start-line="103" selection-start-column="39" selection-end-line="103" selection-end-column="39" />
           <folding />
         </state>
       </provider>

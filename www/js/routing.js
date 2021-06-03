@@ -98,7 +98,17 @@ betty2App.config(['$stateProvider', '$urlRouterProvider', 'VERSION', function($s
                         d.reject(messages)
                     });
                     return d.promise;
-                }
+                },
+                hotShowdowns: function (ShowdownApi, $stateParams, $q) {
+                    var deferred = $q.defer();
+                    ShowdownApi.getFullRange($stateParams.bettyLeagueId, function (fullrange) {
+                        deferred.resolve('dumy');
+                    }, function (messages) {
+                        deferred.resolve('dumy');
+                    }, true);
+                    return deferred.promise;
+
+                },
             }
         })
 
