@@ -70,8 +70,8 @@ var translations = {
                 PRIVATES : "Ligues privées"
             },
             TITLES : {
-                LOGIN : "Connecte toi pour jouer",
-                SIGNIN : "Inscription",
+                LOGIN : "On se connecte pour jouer !<br>Ou alors on s'inscrit vite.",
+                SIGNIN : "Inscription : c'est avec l'email qu'on va pouvoir se connecter",
                 SIGNIN2 : "Finalisez l'inscription",
                 CHOOSELEAGUE : "Bienvenue"
             },
@@ -86,14 +86,14 @@ var translations = {
                 CLOSED : "Match terminé",
                 CALENDAR : "Calendrier",
                 LIVE : "LIVE",
-                POT_GAIN : 'Gain potentiel',
+                POT_GAIN : 'Gain espéré',
                 GAIN : 'Gain :',
                 TOTAL_GAIN : 'Gain total',
-                TOTAL_POT_GAIN : 'Gain potentiel total',
-                "WINNER_GAIN" : "Gain sur le vainqueur",
-                "SCORE_GAIN" : "Gain sur le score",
+                TOTAL_POT_GAIN : 'Gain espéré total',
+                "WINNER_GAIN" : "Gain vainqueur",
+                "SCORE_GAIN" : "Gain score exact",
                 BET_FORM : {
-                    "TITLE" : "Mon nouveau pari",
+                    "TITLE" : "On parie !",
                     "HOW_MANY_GOALS" : "Combien de buts pour",
                     "SHOOTOUT_WARNING" : "Sur ce score il va y avoir une séance de tirs au but.",
                     "WHO_WIN" : "Qui va l'emporter ?",
@@ -141,29 +141,30 @@ var translations = {
                 s:'secondes'
             },
             COMMUNITY : {
-                TITLE : "Ma communauté",
-                TITLE_LEAGUES : "Mes ligues privées",
+                TITLE : "Jouer à Betty League",
+                TITLE_LEAGUES : "Mes ligues",
+                TITLE_LEAGUES_CREATE : "Rejoindre ou créer une ligue",
                 WORLD_CUP_SPEECH : "<b>A l'occasion de l'EURO 2020 tu peux créer une Ligue privée pour te mesurer à tes amis</b>",
-                NEW_WORLD_CUP : "Créer un Euro du monde privée",
-                JOIN_LEAGUE : "Rejoindre une Ligue privée",
-                NEW_LEAGUE : "Nouvelle Ligue privée",
+                NEW_WORLD_CUP : "Créer une ligue EURO2020",
+                JOIN_LEAGUE : "Rejoindre une ligue",
+                NEW_LEAGUE : "Choisis un nom de ligue super marant",
                 NEW_VALIDATE : "Valider",
                 PLACEHOLDERS : {
-                    NAME : "Nom de ta Ligue",
+                    NAME : "Nom de ta ligue",
                     CODE_NAME : "Code"
                 },
-                JOINLEAGUE_SPEECH: "Saisi le code que t'a donné le créateur de la Ligue que tu veux rejoindre",
-                NEW_LEAGUE_CREATED : "Ta Ligue a bien été créée !",
+                JOINLEAGUE_SPEECH: "Saisi le code que t'a donné le créateur de la ligue que tu veux rejoindre",
+                NEW_LEAGUE_CREATED : "Ta ligue a bien été créée !",
                 CREATED_BY: "Créée par",
-                PLAY: "Jouer dans cette Ligue",
-                SHAREWITHFRIENDS: "Partage ce code avec les gens que tu veux voir rejoindre cette Ligue privée"
+                PLAY: "Jouer dans cette ligue",
+                SHAREWITHFRIENDS: "Partage ce code avec les gens que tu veux voir rejoindre cette ligue"
             },
             ACCOUNT: {
                 WAITING: "Page en cours de création..."
             },
             HOME : {
                 TITLE: "Bienvenue",
-                INTRO: "Tu peux rejoindre ou créer une <b>Ligue privée pour te mesurer à tes amis</b>",
+                INTRO: "Tu peux rejoindre ou créer une <b>Ligue pour te mesurer à tes amis</b>. C'est vraiment super génial",
                 INTRO2: "Tu peux aussi affronter le <b>monde entier</b> dans la Ligue-Publique.",
                 PUBLIC: "Jouer sur la Ligue-Publique",
                 PRIVATE: "Jouer avec mes amis"
