@@ -1,9 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b1f29d8e-71cb-4a38-a451-f6342f828e6e" name="Default" comment="better colors">
+    <list default="true" id="b1f29d8e-71cb-4a38-a451-f6342f828e6e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/flags/18570.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/flags/18624.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/flags/18643.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/flags/18648.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/flags/18658.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/flags/18689.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/flags/18694.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/flags/18706 (1).png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/flags/18706.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/flags/18716.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/flags/18718.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/flags/18721.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/flags/18732.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/flags/18564.png" afterPath="$PROJECT_DIR$/www/img/flags/18564.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/flags/18583.png" afterPath="$PROJECT_DIR$/www/img/flags/18583.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/flags/18588.png" afterPath="$PROJECT_DIR$/www/img/flags/18588.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/flags/18645.png" afterPath="$PROJECT_DIR$/www/img/flags/18645.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/flags/18647.png" afterPath="$PROJECT_DIR$/www/img/flags/18647.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/flags/18660.png" afterPath="$PROJECT_DIR$/www/img/flags/18660.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/flags/18699.png" afterPath="$PROJECT_DIR$/www/img/flags/18699.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/flags/18701.png" afterPath="$PROJECT_DIR$/www/img/flags/18701.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/flags/18702.png" afterPath="$PROJECT_DIR$/www/img/flags/18702.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/flags/18708.png" afterPath="$PROJECT_DIR$/www/img/flags/18708.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/flags/18710.png" afterPath="$PROJECT_DIR$/www/img/flags/18710.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/flags/18743.png" afterPath="$PROJECT_DIR$/www/img/flags/18743.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/traductions.js" afterPath="$PROJECT_DIR$/www/js/traductions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/components/btLogoTeam/btLogoTeam.css" afterPath="$PROJECT_DIR$/www/js/components/btLogoTeam/btLogoTeam.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/components/btLogoTeam/btLogoTeam.less" afterPath="$PROJECT_DIR$/www/js/components/btLogoTeam/btLogoTeam.less" />
     </list>
     <list id="3a1f8fe8-031b-47e4-a389-fcc25573a7b5" name="New changelist" comment="" />
     <ignored path="ionicBetty.iws" />
@@ -26,23 +52,76 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="traductions.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/js/traductions.js">
+      <file leaf-file-name="18564.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/img/flags/18564.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="18570.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/img/flags/18570.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="18567.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/img/flags/18567.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="18562.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/img/flags/18562.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="18576.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/img/flags/18576.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="18588.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/img/flags/18588.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="18624.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/img/flags/18624.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="btLogoTeam.less" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/www/js/components/btLogoTeam/btLogoTeam.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="145" column="36" selection-start-line="145" selection-start-column="16" selection-end-line="145" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.67093235">
+              <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="privateLeagues.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/www/js/pages/privateLeagues/privateLeagues.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.704918">
-              <caret line="42" column="17" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
-              <folding />
-            </state>
+      <file leaf-file-name="18558.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/img/flags/18558.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="18554.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/img/flags/18554.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -101,6 +180,7 @@
         <option value="$PROJECT_DIR$/www/less/constant.less" />
         <option value="$PROJECT_DIR$/www/js/traductions.js" />
         <option value="$PROJECT_DIR$/www/js/pages/privateLeagues/privateLeagues.html" />
+        <option value="$PROJECT_DIR$/www/js/components/btLogoTeam/btLogoTeam.less" />
       </list>
     </option>
   </component>
@@ -120,9 +200,9 @@
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="55" />
-    <option name="y" value="66" />
-    <option name="width" value="1853" />
-    <option name="height" value="997" />
+    <option name="y" value="24" />
+    <option name="width" value="1865" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -231,11 +311,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="styles" />
+              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -253,33 +329,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ionicBetty" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ionicBetty" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
+              <option name="myItemId" value="flags" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -302,6 +356,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/www/img/flags" />
       <recent name="$PROJECT_DIR$/www/js/styles" />
     </key>
   </component>
@@ -406,7 +461,13 @@
       <option name="project" value="LOCAL" />
       <updated>1622756696548</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="wording">
+      <created>1622758496303</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1622758496303</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView">
@@ -419,18 +480,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="55" y="66" width="1853" height="997" extended-state="0" />
-    <editor active="true" />
+    <frame x="55" y="24" width="1865" height="1056" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16094421" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.059800666" sideWeight="0.5175141" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37768242" sideWeight="0.49786553" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2358804" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3757159" sideWeight="0.4824859" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35193133" sideWeight="0.4824859" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.06751522" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13337022" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.06706982" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13249038" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14238593" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47619048" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24919957" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -485,11 +546,11 @@
     <MESSAGE value="btn behaviour" />
     <MESSAGE value="laoding everywere" />
     <MESSAGE value="update version - fix float" />
-    <MESSAGE value="wording" />
     <MESSAGE value="remove beta bando" />
     <MESSAGE value="disallow betty world" />
     <MESSAGE value="better colors" />
-    <option name="LAST_COMMIT_MESSAGE" value="better colors" />
+    <MESSAGE value="wording" />
+    <option name="LAST_COMMIT_MESSAGE" value="wording" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -498,97 +559,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/www/js/pages/bettyleague/showdown/step0/step0.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/components/btModalOdds/btModalOdds.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3601896">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/components/btModalOdds/btModalOdds.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/pages/bettyleague/showdown/step0/step0.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="58" column="19" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/pages/bettyleague/showdown/showdown.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="50" column="33" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platforms/android/app/src/main/assets/www/js/pages/bettyleague/showdown/step0/step0.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.296296">
-          <caret line="158" column="131" selection-start-line="158" selection-start-column="124" selection-end-line="158" selection-end-column="131" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/components/betResumee/betResumee.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44859812">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/components/betResumee/betResumee.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.86098653">
-          <caret line="32" column="3" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platforms/browser/www/Gruntfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platforms/browser/www/index.tpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="115.55556">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/Gruntfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="66" selection-start-line="14" selection-start-column="66" selection-end-line="14" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30041724">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/services/BtNavigate.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/services/BtMessages.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -871,8 +841,76 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/pages/privateLeagues/privateLeagues.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.704918">
+        <state vertical-scroll-proportion="-12.740741">
           <caret line="42" column="17" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/img/flags/18708.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/img/flags/18706.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/img/flags/18706 (1).png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/img/flags/18570.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/img/flags/18567.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/img/flags/18558.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/img/flags/18554.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/img/flags/18564.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/img/flags/18562.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/img/flags/18576.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/img/flags/18588.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/img/flags/18624.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/components/btLogoTeam/btLogoTeam.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.67093235">
+          <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
           <folding />
         </state>
       </provider>
