@@ -104,20 +104,20 @@
   line-height: 4rem;
   padding: 0 0.5rem 0 0.5rem;
   color: #e6e6e6;
-  background-color: #0583d0;
+  background-color: #0791e0;
   margin: 0 0.5rem 0 0.5rem;
 }
 .showdown-score.open-parie {
-  background: repeating-linear-gradient(125deg, #2BB289, #2BB289 80%, #fdcf21 80%, #fdcf21 100%);
+  background: repeating-linear-gradient(125deg, #32c795, #32c795 80%, #fdcf21 80%, #fdcf21 100%);
 }
 .showdown-score.open {
-  background-color: #2BB289;
+  background-color: #32c795;
 }
 .showdown-score.closed-parie {
-  background: repeating-linear-gradient(125deg, #0583d0, #0583d0 80%, #fdcf21 80%, #fdcf21 100%);
+  background: repeating-linear-gradient(125deg, #0791e0, #0791e0 80%, #fdcf21 80%, #fdcf21 100%);
 }
 .showdown-score.closed {
-  background-color: #0583d0;
+  background-color: #0791e0;
 }
 .showdown-score.locked-parie {
   background: repeating-linear-gradient(125deg, #fa393c, #fa393c 80%, #fdcf21 80%, #fdcf21 100%);
@@ -197,7 +197,7 @@
 }
 .bet-form__title {
   text-align: center;
-  background-color: #0583d0;
+  background-color: #0791e0;
   color: #e6e6e6;
   text-transform: uppercase;
   font-family: "poppinsbold", sans-serif;
@@ -206,7 +206,7 @@
 }
 .bet-form__summary {
   text-align: center;
-  border-bottom: 1px solid #0583d0;
+  border-bottom: 1px solid #0791e0;
   padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
 .bet-form__content {

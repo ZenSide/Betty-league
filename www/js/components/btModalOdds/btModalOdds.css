@@ -50,11 +50,11 @@
   width: 100%;
 }
 .bt-modal__table tr {
-  border: 1px solid #0583d0;
+  border: 1px solid #0791e0;
   border-bottom: none;
 }
 .bt-modal__table tr:last-child {
-  border-bottom: 1px solid #0583d0;
+  border-bottom: 1px solid #0791e0;
 }
 .bt-modal__table tr.spanUp {
   border-top: none;
@@ -66,7 +66,7 @@
   vertical-align: middle;
 }
 .bt-modal__table th {
-  background-color: #0583d0;
+  background-color: #0791e0;
   color: #e6e6e6;
 }
 .bt-modal__table--list {

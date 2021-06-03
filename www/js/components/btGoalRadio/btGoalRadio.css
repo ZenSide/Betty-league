@@ -20,6 +20,6 @@
   background-color: #289172;
 }
 .bt-goal-radio__radio:checked + .bt-goal-radio__button--radio .bt-action__facade {
-  background-color: #2BB289;
+  background-color: #32c795;
   transform: translate3d(0, 0.4rem, 0);
 }

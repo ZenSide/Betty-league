@@ -77,7 +77,7 @@
   background-color: @medium-blue;
   cursor: pointer;
   display: inline-block;
-  border-radius: @button-radius;
+  border-radius: @button-radius @button-radius @button-radius-b @button-radius-b;
   font-size: 1.6rem!important;
   width: 100%;
   height: @medium-size;
@@ -100,7 +100,7 @@
     height: 100%;
     right: 0;
     bottom: @press-distance;
-    border-radius: @button-radius;
+    border-radius: @button-radius @button-radius @button-radius-b @button-radius-b;
     position: absolute;
     background-color: @light-blue;
     will-change: transform;
@@ -210,7 +210,7 @@
 //content
 .bt-action__btn--body {
   width: 100%;
-  border-radius: @button-radius;
+  border-radius: @button-radius @button-radius @button-radius-b @button-radius-b;
   margin: 0;
   max-width:30rem;
   text-align: left;
@@ -220,7 +220,7 @@
   font-family: @normal-font-medium;
 
   .bt-action__facade {
-    border-radius: @button-radius;
+    border-radius: @button-radius @button-radius @button-radius-b @button-radius-b;
     padding-top: 1.6rem!important;
     padding-right: 3*@margin-medium!important;
     padding-bottom: 1.6rem!important;

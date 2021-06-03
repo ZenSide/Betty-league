@@ -52,7 +52,7 @@
   background-color: #1c5b8f;
   cursor: pointer;
   display: inline-block;
-  border-radius: 0;
+  border-radius: 0.3rem 0.3rem 0.3rem 0.3rem;
   font-size: 1.6rem!important;
   width: 100%;
   height: 4rem;
@@ -74,9 +74,9 @@
   height: 100%;
   right: 0;
   bottom: 0.4rem;
-  border-radius: 0;
+  border-radius: 0.3rem 0.3rem 0.3rem 0.3rem;
   position: absolute;
-  background-color: #0583d0;
+  background-color: #0791e0;
   will-change: transform;
   transition: transform 75ms;
 }
@@ -122,7 +122,7 @@
   background-color: #289172;
 }
 .bt-action__btn--green .bt-action__facade {
-  background-color: #2BB289;
+  background-color: #32c795;
 }
 .bt-action__label {
   position: relative;
@@ -161,7 +161,7 @@
 }
 .bt-action__btn--body {
   width: 100%;
-  border-radius: 0;
+  border-radius: 0.3rem 0.3rem 0.3rem 0.3rem;
   margin: 0;
   max-width: 30rem;
   text-align: left;
@@ -170,7 +170,7 @@
   font-family: "poppinsregular", sans-serif;
 }
 .bt-action__btn--body .bt-action__facade {
-  border-radius: 0;
+  border-radius: 0.3rem 0.3rem 0.3rem 0.3rem;
   padding-top: 1.6rem!important;
   padding-right: 4.5rem !important;
   padding-bottom: 1.6rem!important;
