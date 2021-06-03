@@ -46,9 +46,6 @@ body .with-big-logo ui-view {
   .beta-text {
     display: block;
   }
-  .full-background-container {
-    top: 5rem;
-  }
 }
 @media screen and (min-height: 1023px) and (min-width: 767px) {
   html,

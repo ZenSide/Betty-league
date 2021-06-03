@@ -2,7 +2,7 @@ var translations = {
         en : {
         },
         fr : {
-            BETA : "Coucou",
+            BETA : "",
             "Betty World Championship": "Ligue-Publique",
             MESSAGES : {
                 GENERALERROR : 'Un problème est survenu, réessaye plus tard',
