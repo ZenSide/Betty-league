@@ -88,11 +88,13 @@
                     <div class="col">
                         <bt-footer-btn bt-show="!parentCtrl.withHeadLogo"
                                        bt-classes="'bt-action--medium bt-action--head'"
-                                       bt-button-classes="isCurrent(2)?'bt-action__btn--gold bt-action__btn--active':'bt-action__btn--blue'"
-                                       bt-ico="'icon-bty-ico-world'"
+                                       bt-button-classes="isCurrent(2)?'bt-action__btn--gold bt-action__btn--active':'bt-action__btn--blue btn-disabled'"
+                                       comment-bt-ico="'icon-bty-ico-world'"
+                                       bt-ico="'fas fa-question'"
                                        bt-submit-form="btn.submitform"
                                        bt-position="middle"
-                                       bt-action="parentCtrl.goBettyWorld()"
+                                       bt-action=""
+                                       comment-bt-action="parentCtrl.goBettyWorld()"
                         >
                         </bt-footer-btn>
                     </div>
