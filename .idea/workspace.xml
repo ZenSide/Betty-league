@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b1f29d8e-71cb-4a38-a451-f6342f828e6e" name="Default" comment="maj flags">
-      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+    <list default="true" id="b1f29d8e-71cb-4a38-a451-f6342f828e6e" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/js/config/parameters.dist.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/config/parameters.dist.js" afterDir="false" />
     </list>
     <list id="3a1f8fe8-031b-47e4-a389-fcc25573a7b5" name="New changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -514,7 +512,7 @@
       <option name="presentableId" value="Default" />
       <updated>1528459162704</updated>
       <workItem from="1651961617902" duration="455000" />
-      <workItem from="1651962228875" duration="769000" />
+      <workItem from="1651962228875" duration="1292000" />
     </task>
     <task id="LOCAL-00002" summary="cache control">
       <created>1528476329479</created>
@@ -593,7 +591,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622759815996</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="remove not existing cordova plugin - readme">
+      <created>1651963330265</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1651963330265</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TodoView">
@@ -677,7 +682,8 @@
     <MESSAGE value="better colors" />
     <MESSAGE value="wording" />
     <MESSAGE value="maj flags" />
-    <option name="LAST_COMMIT_MESSAGE" value="maj flags" />
+    <MESSAGE value="remove not existing cordova plugin - readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove not existing cordova plugin - readme" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/www/js/pages/createLeague/createLeague.js">

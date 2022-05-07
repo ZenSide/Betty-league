@@ -8,3 +8,4 @@ plugins/
 /www/lib/
 
 /www/app/config/parameters.js
+/www/js/config/parameters.js
