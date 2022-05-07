@@ -2,132 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1f29d8e-71cb-4a38-a451-f6342f828e6e" name="Default" comment="maj flags">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/config/parameters.js" afterPath="$PROJECT_DIR$/www/js/config/parameters.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/traductions.js" afterPath="$PROJECT_DIR$/www/js/traductions.js" />
+      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <list id="3a1f8fe8-031b-47e4-a389-fcc25573a7b5" name="New changelist" comment="" />
-    <ignored path="ionicBetty.iws" />
-    <ignored path=".idea/workspace.xml" />
-    <ignored path=".idea/dataSources.local.xml" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="ComposerSettings">
+    <execution />
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
-  <component name="FavoritesManager">
-    <favorites_list name="ionicBetty" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BtLoading.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/js/services/BtLoading.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="91" column="47" selection-start-line="91" selection-start-column="47" selection-end-line="91" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="betty.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/betty.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gulpfile.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="parameters.dist.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platforms/browser/www/js/config/parameters.dist.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="parameters.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platforms/browser/www/js/config/parameters.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bettyleague.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platforms/browser/www/js/pages/bettyleague/bettyleague.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="landing.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platforms/browser/www/js/pages/landing/landing.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="privateLeagues.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platforms/browser/www/js/pages/privateLeagues/privateLeagues.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="minify-conf.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/hooks/minify-conf.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.83937824">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -199,26 +90,19 @@
       </GulpfileState>
     </gulpfiles>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="55" />
     <option name="y" value="24" />
     <option name="width" value="1865" />
     <option name="height" value="1056" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
-    <OptionsSetting value="true" id="Add" />
-    <OptionsSetting value="true" id="Remove" />
-    <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
-    <OptionsSetting value="true" id="Status" />
-    <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
-    <ConfirmationsSetting value="0" id="Remove" />
-  </component>
+  <component name="ProjectId" id="28r4xQFDtBLxQaTcLB1ragOdAdx" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -580,33 +464,20 @@
       </pane>
     </panes>
   </component>
-  <component name="PropertiesComponent">
-    <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
-    <property name="SearchEverywhereHistoryKey" value="tradu&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/traductions.js&#10;tra&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/traductions.js&#10;full-background&#9;null&#9;null&#10;traduc&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/traductions.js&#10;footbt&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/components/btFooterBtn/btFooterBtn.less&#10;step3.js&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/platforms/browser/www/js/pages/bettyleague/showdown/step3/step3.js&#10;step3&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/showdown/step3/step3.js&#10;app.php&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/app.js&#10;para&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/config/parameters.js&#10;grunt&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/Gruntfile.js&#10;parameter&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/config/parameters.js&#10;betres&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/components/betResumee/betResumee.js&#10;showdownCtr&#9;null&#9;null&#10;step0&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/platforms/android/app/src/main/assets/www/js/pages/bettyleague/showdown/step0/step0.html&#10;step&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/showdown/step0/step0.js&#10;betre&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/components/betResumee/betResumee.html&#10;grun&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/Gruntfile.js&#10;betty&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/bettyleague.js&#10;btme&#9;null&#9;null&#10;parent&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/parentCtrl.js&#10;show&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/showdown/showdown.html&#10;bett&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/bettyleague.html&#10;index&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/index.tpl.html&#10;btn&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/services/BtNavigate.js&#10;traduct&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/traductions.js&#10;inde&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/index.html&#10;gulpfil&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/gulpfile.js&#10;index.t&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/index.tpl.html&#10;gru&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/Gruntfile.js&#10;btnav&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/services/BtNavigate.js&#10;param&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/config/parameters.js&#10;r&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/routing.js&#10;gene&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/styles/general.less&#10;routin&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/routing.js&#10;bettyleague.&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/bettyleague.html&#10;ranking.js&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/ranking/ranking.js&#10;list&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/listMatch/listMatch.js&#10;app&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/app.js&#10;btload&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/services/BtLoading.js&#10;logi&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/login/login.html&#10;sig&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/signin/signin.html&#10;signin.js&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/signin/signinCtrl.js&#10;loginc&#9;null&#9;null&#10;login.ht&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/login/login.html&#10;utils.les&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/styles/02-utils.less&#10;step0.html&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/showdown/step0/step0.html&#10;btna&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/services/BtNavigate.js&#10;step2&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/showdown/step2/step2.js&#10;step1&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/pages/bettyleague/showdown/step1/step1.js&#10;loading&#9;FILE&#9;file:///home/simon/public_html/ionicBetty/www/js/styles/loading.less" />
-    <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
-    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
-    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
-    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
-    <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="JSON" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="190" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="225" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="231" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1130" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="201" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="221" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="228" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1126" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/sjanel/git/perso/Betty-league&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/www/img/flags" />
@@ -614,36 +485,17 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
-    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
-      <BehatRunner />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+    <configuration default="true" type="js.build_tools.gulp">
+      <node-interpreter>project</node-interpreter>
       <node-options />
       <gulpfile />
       <tasks />
       <arguments />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
-      <command value="run-script" />
-      <scripts />
-      <envs />
-      <method />
+      <method v="2" />
     </configuration>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -651,6 +503,7 @@
     <task id="LOCAL-00001" summary="hammerinstall">
       <created>1528457875619</created>
       <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
       <updated>1528457875619</updated>
     </task>
@@ -658,71 +511,85 @@
       <changelist id="b1f29d8e-71cb-4a38-a451-f6342f828e6e" name="Default" comment="" />
       <created>1528459162704</created>
       <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
       <updated>1528459162704</updated>
+      <workItem from="1651961617902" duration="455000" />
+      <workItem from="1651962228875" duration="769000" />
     </task>
     <task id="LOCAL-00002" summary="cache control">
       <created>1528476329479</created>
       <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
       <updated>1528476329479</updated>
     </task>
     <task id="LOCAL-00003" summary="btn behaviour">
       <created>1528549394822</created>
       <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
       <updated>1528549394822</updated>
     </task>
     <task id="LOCAL-00004" summary="laoding everywere">
       <created>1528562118964</created>
       <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
       <updated>1528562118964</updated>
     </task>
     <task id="LOCAL-00005" summary="laoding everywere">
       <created>1528584897974</created>
       <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
       <updated>1528584897974</updated>
     </task>
     <task id="LOCAL-00006" summary="update version - fix float">
       <created>1622204260287</created>
       <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
       <updated>1622204260287</updated>
     </task>
     <task id="LOCAL-00007" summary="wording">
       <created>1622620987095</created>
       <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
       <updated>1622620987095</updated>
     </task>
     <task id="LOCAL-00008" summary="remove beta bando">
       <created>1622753894055</created>
       <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
       <updated>1622753894055</updated>
     </task>
     <task id="LOCAL-00009" summary="disallow betty world">
       <created>1622754545667</created>
       <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
       <updated>1622754545667</updated>
     </task>
     <task id="LOCAL-00010" summary="better colors">
       <created>1622756696548</created>
       <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
       <updated>1622756696548</updated>
     </task>
     <task id="LOCAL-00011" summary="wording">
       <created>1622758496303</created>
       <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
       <updated>1622758496303</updated>
     </task>
     <task id="LOCAL-00012" summary="maj flags">
       <created>1622759815996</created>
       <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
       <option name="project" value="LOCAL" />
       <updated>1622759815996</updated>
     </task>
@@ -788,6 +655,9 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
       <collection />
@@ -795,9 +665,6 @@
     <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
       <collection />
     </option>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="hammerinstall" />
@@ -811,12 +678,6 @@
     <MESSAGE value="wording" />
     <MESSAGE value="maj flags" />
     <option name="LAST_COMMIT_MESSAGE" value="maj flags" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="2" />
-    </breakpoint-manager>
-    <watches-manager />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/www/js/pages/createLeague/createLeague.js">

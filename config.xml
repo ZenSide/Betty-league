@@ -86,14 +86,6 @@
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
     <plugin name="cordova-sqlite-storage" spec="^2.2.0" />
     <allow-navigation href="http://192.168.0.15:8100" />
-    <plugin name="cordova-plugin-ionic" spec="^3.1.3">
-        <variable name="APP_ID" value="35c9fb85" />
-        <variable name="CHANNEL_NAME" value="Production" />
-        <variable name="UPDATE_METHOD" value="background|auto|none" />
-        <variable name="WARN_DEBUG" value="true" />
-        <variable name="UPDATE_API" value="https://api.ionicjs.com" />
-        <variable name="MAX_STORE" value="2" />
-    </plugin>
     <plugin name="cordova-plugin-facebook4" spec="^1.9.1">
         <variable name="APP_ID" value="759551657582809" />
         <variable name="APP_NAME" value="betty2" />
