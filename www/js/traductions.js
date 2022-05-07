@@ -70,7 +70,7 @@ var translations = {
                 PRIVATES : "Ligues privées"
             },
             TITLES : {
-                LOGIN : "On se connecte pour jouer !<br>Ou alors on s'inscrit vite.",
+                LOGIN : "Salut les beaufs !<br>On se connecte pour jouer !<br>Ou alors on s'inscrit vite.",
                 SIGNIN : "Inscription : c'est avec l'email qu'on va pouvoir se connecter",
                 SIGNIN2 : "Finalisez l'inscription",
                 CHOOSELEAGUE : "Bienvenue"
@@ -147,7 +147,7 @@ var translations = {
                 WORLD_CUP_SPEECH : "<b>A l'occasion de l'EURO 2020 tu peux créer une Ligue privée pour te mesurer à tes amis</b>",
                 NEW_WORLD_CUP : "Créer une ligue EURO2020",
                 JOIN_LEAGUE : "Rejoindre une ligue",
-                NEW_LEAGUE : "Choisis un nom de ligue super marant",
+                NEW_LEAGUE : "Choisis un nom de ligue super marrant",
                 NEW_VALIDATE : "Valider",
                 PLACEHOLDERS : {
                     NAME : "Nom de ta ligue",
