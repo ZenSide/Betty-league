@@ -37,3 +37,5 @@ install libpng12 for minify
     "alwaysRun": true,
 
     ionic build
+
+## conf apache

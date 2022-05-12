@@ -1,3 +1,4 @@
+/*
 'use strict';
 betty2App
   .constant('API_BASE_URL', "http://api.pouetpouet.tk")
@@ -6,3 +7,4 @@ betty2App
   .constant('ENV', 'DEV') //DEV - VIEW - PROD
   .constant('VERSION', '?ver=0.215')
 ;
+*/
