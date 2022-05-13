@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1f29d8e-71cb-4a38-a451-f6342f828e6e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/js/config/parameters.dist.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/config/parameters.dist.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/js/pages/home/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/pages/home/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/js/resources/BettyLeagueApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/resources/BettyLeagueApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/js/traductions.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/traductions.js" afterDir="false" />
     </list>
     <list id="3a1f8fe8-031b-47e4-a389-fcc25573a7b5" name="New changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -470,14 +472,25 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/sjanel/git/perso/Betty-league&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.highlight.mappings&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.highlight.symlinks&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.date&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.permissions&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.size&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/sjanel/git/perso/Betty-league/www/js&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;JSON&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/www/js" />
       <recent name="$PROJECT_DIR$/www/img/flags" />
       <recent name="$PROJECT_DIR$/www/js/styles" />
     </key>
@@ -512,7 +525,18 @@
       <option name="presentableId" value="Default" />
       <updated>1528459162704</updated>
       <workItem from="1651961617902" duration="455000" />
-      <workItem from="1651962228875" duration="1292000" />
+      <workItem from="1651962228875" duration="3442000" />
+      <workItem from="1651998581842" duration="1550000" />
+      <workItem from="1652169480520" duration="602000" />
+      <workItem from="1652171084448" duration="2992000" />
+      <workItem from="1652254516691" duration="597000" />
+      <workItem from="1652268301498" duration="1559000" />
+      <workItem from="1652296992917" duration="892000" />
+      <workItem from="1652300750060" duration="299000" />
+      <workItem from="1652301074629" duration="14000" />
+      <workItem from="1652301598739" duration="5721000" />
+      <workItem from="1652355765122" duration="2755000" />
+      <workItem from="1652474158983" duration="1087000" />
     </task>
     <task id="LOCAL-00002" summary="cache control">
       <created>1528476329479</created>
@@ -598,7 +622,28 @@
       <option name="project" value="LOCAL" />
       <updated>1651963330265</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="gitignore">
+      <created>1651963558707</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1651963558707</updated>
+    </task>
+    <task id="LOCAL-00015" summary="remove param.js">
+      <created>1651963616589</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1651963616589</updated>
+    </task>
+    <task id="LOCAL-00016" summary="DEMOFORZA integration - en language -">
+      <created>1652356463789</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1652356463789</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TodoView">
@@ -683,7 +728,10 @@
     <MESSAGE value="wording" />
     <MESSAGE value="maj flags" />
     <MESSAGE value="remove not existing cordova plugin - readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove not existing cordova plugin - readme" />
+    <MESSAGE value="gitignore" />
+    <MESSAGE value="remove param.js" />
+    <MESSAGE value="DEMOFORZA integration - en language -" />
+    <option name="LAST_COMMIT_MESSAGE" value="DEMOFORZA integration - en language -" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/www/js/pages/createLeague/createLeague.js">

@@ -98,31 +98,31 @@ var translations = {
           'WHO_QUALIF': 'Who will qualified?',
           'EMPTY_SCORE': 'You must enter a score',
           'EMPTY_WINNER': 'You must choose a winner'
+        },
+        BET_SUMMARY: {
+          'MY_BETS': 'My predictions',
+          'ON_QUALIF': 'On a <b>qualification</b> of',
+          'ON_WIN': 'On a <b>victory</b> of',
+          'ON_DRAW': 'On a draw',
+          'ON_SCORE': 'On a <b>score</b> of',
+          'USER_PERCENT': 'players',
+          'ODD': 'Game Odds',
+          'DETAIL': 'Game Odds details',
+          'CLOSE': 'Close',
+          'NO_ODD_PREFIX': 'You\didn´t predict this game yet. You only have',
+          'NO_ODD_SUFIX': 'to predict this game',
+          'NO_ODD': 'Sorry buddy, it\'s now too late to predict. Make sure to predict the next game!'
+        },
+        MODAL_ODD_DETAIL: {
+          'TITLE': 'Game odds details',
+          'WINNER': 'Winner',
+          'QUALIF': 'Qualified',
+          'DRAW': 'Draw',
+          'ODD': 'Game odds',
+          'PERCENT': 'of the prediction',
+          'SCORE': 'Exact Score',
+          'BETBY': 'Predict by :'
         }
-      },
-      BET_SUMMARY: {
-        'MY_BETS': 'My predictions',
-        'ON_QUALIF': 'On a <b>qualification</b> of',
-        'ON_WIN': 'On a <b>victory</b> of',
-        'ON_DRAW': 'On a draw',
-        'ON_SCORE': 'On a <b>score</b> of',
-        'USER_PERCENT': 'players',
-        'ODD': 'Game Odds',
-        'DETAIL': 'Game Odds details',
-        'CLOSE': 'Close',
-        'NO_ODD_PREFIX': 'You\didn´t predict this game yet. You only have',
-        'NO_ODD_SUFIX': 'to predict this game',
-        'NO_ODD': 'Sorry buddy, it\'s now too late to predict. Make sure to predict the next game!'
-      },
-      MODAL_ODD_DETAIL: {
-        'TITLE': 'Game odds details',
-        'WINNER': 'Winner',
-        'QUALIF': 'Qualified',
-        'DRAW': 'Draw',
-        'ODD': 'Game odds',
-        'PERCENT': 'of the prediction',
-        'SCORE': 'Exact Score',
-        'BETBY': 'Predict by :'
       },
       RANKING: {
         'title': 'Ranking Table',

@@ -29,7 +29,7 @@ betty2App.factory('BettyLeagueApi', ['$filter', '$rootScope', 'ResourcesFactory'
 
 		getBettyWorld: function (resolve, reject, noCache) {
 			BettyLeagueApi.getMyBettyLeagues(function (bettyLeagues) {
-				var result = $filter('filter')(bettyLeagues, {'endless':true, 'public': true});
+				var result = $filter('filter')(bettyLeagues, {'public': true});
 				if (result.length > 0)
 				{
 					resolve(result[0]);
