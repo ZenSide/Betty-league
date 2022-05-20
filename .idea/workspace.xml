@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b1f29d8e-71cb-4a38-a451-f6342f828e6e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/js/pages/home/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/pages/home/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/js/resources/BettyLeagueApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/resources/BettyLeagueApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/js/traductions.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/traductions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/js/components/btLogoTeam/btLogoTeam.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/components/btLogoTeam/btLogoTeam.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/js/routing.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/routing.js" afterDir="false" />
     </list>
     <list id="3a1f8fe8-031b-47e4-a389-fcc25573a7b5" name="New changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -536,7 +534,10 @@
       <workItem from="1652301074629" duration="14000" />
       <workItem from="1652301598739" duration="5721000" />
       <workItem from="1652355765122" duration="2755000" />
-      <workItem from="1652474158983" duration="1087000" />
+      <workItem from="1652474158983" duration="2933000" />
+      <workItem from="1652646946239" duration="3235000" />
+      <workItem from="1652772899427" duration="23000" />
+      <workItem from="1653046352323" duration="1801000" />
     </task>
     <task id="LOCAL-00002" summary="cache control">
       <created>1528476329479</created>
@@ -643,7 +644,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652356463789</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="réactive bettyworld - traduction en">
+      <created>1652477425335</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1652477425335</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TodoView">
@@ -731,7 +739,8 @@
     <MESSAGE value="gitignore" />
     <MESSAGE value="remove param.js" />
     <MESSAGE value="DEMOFORZA integration - en language -" />
-    <option name="LAST_COMMIT_MESSAGE" value="DEMOFORZA integration - en language -" />
+    <MESSAGE value="réactive bettyworld - traduction en" />
+    <option name="LAST_COMMIT_MESSAGE" value="réactive bettyworld - traduction en" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/www/js/pages/createLeague/createLeague.js">

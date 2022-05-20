@@ -7,16 +7,21 @@ betty2App.component('btLogoTeam',{
     btTeam: '<',
     btSize: '@'
   },
-  controller:function(){
+  controller:['USE_REAL_LOGOS', function(USE_REAL_LOGOS){
     var ctrl = this;
     if (!ctrl.btSize) {
       ctrl.btSize = 40;
     }
 
     ctrl.imgUrl = null;
+
+    if (USE_REAL_LOGOS && ctrl.btTeam.sm__logoPath) {
+      ctrl.imgUrl = ctrl.btTeam.sm__logoPath;
+    }
+
     if (ctrl.btTeam.sm__nationalTeam) {
       ctrl.imgUrl = "./img/flags/" + ctrl.btTeam.sm__id + ".png"
     }
 
-  }
+  }]
 });
