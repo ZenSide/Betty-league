@@ -28,6 +28,17 @@
   padding: 0.5rem 1.5rem 0.5rem 1.5rem;
   text-transform: uppercase;
 }
+.bettyLeague-title-lg .bt-ico-perso {
+  vertical-align: bottom;
+  font-size: 3rem;
+  color: #e6e6e6;
+}
+.bettyLeague-title--world {
+  color: #e6e6e6;
+}
+.bettyLeague-title--world .bt-ico-perso {
+  color: #fdcf21;
+}
 .bettyLeague-title--wrap {
   white-space: normal;
 }

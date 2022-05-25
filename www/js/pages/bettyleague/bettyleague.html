@@ -1,7 +1,12 @@
 <div class="bettyLeague-header">
-    <div class="bettyLeague-title-lg u-gutter-bottom-micro" translate="{{::bettyLeagueCtrl.bettyLeague.name}}">
-    </div>
-    <div class="row">
+  <div class="bettyLeague-title-lg u-gutter-bottom-micro" ng-class="{'bettyLeague-title--world': bettyLeagueCtrl.bettyLeague.public}">
+    <i ng-if="bettyLeagueCtrl.bettyLeague.public" class="bt-ico-perso icon-bty-ico-world"></i>&nbsp;
+    <i ng-if="bettyLeagueCtrl.bettyLeague.public" class="bt-ico-perso icon-bty-ico-world"></i>&nbsp;
+    <span translate="{{::bettyLeagueCtrl.bettyLeague.name}}"></span>&nbsp;
+    <i ng-if="bettyLeagueCtrl.bettyLeague.public" class="bt-ico-perso icon-bty-ico-world"></i>&nbsp;
+    <i ng-if="bettyLeagueCtrl.bettyLeague.public" class="bt-ico-perso icon-bty-ico-world"></i>
+  </div>
+  <div class="row">
         <div class="col">
             <bt-body-btn bt-ico="'fas fa-list-ul'"
                          bt-content="'SHOWDOWN.CALENDAR'"

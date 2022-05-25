@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b1f29d8e-71cb-4a38-a451-f6342f828e6e" name="Default" comment="USE_REAL_LOGOS">
-      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+    <list default="true" id="b1f29d8e-71cb-4a38-a451-f6342f828e6e" name="Default" comment="proper profile page - fix not endless score page -">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/js/components/btFooterBtn/btFooterBtn.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/components/btFooterBtn/btFooterBtn.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/js/components/btModalOdds/btModalOdds.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/components/btModalOdds/btModalOdds.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/js/pages/account/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/pages/account/account.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/js/pages/bettyleague/showdown/step1/step1.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/pages/bettyleague/showdown/step1/step1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/js/pages/ranking/ranking.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/pages/ranking/ranking.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/js/pages/ranking/ranking.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/pages/ranking/ranking.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/js/pages/bettyleague/bettyleague.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/pages/bettyleague/bettyleague.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/js/styles/bettyLeague.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/styles/bettyLeague.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/js/styles/bettyLeague.less" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/styles/bettyLeague.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/js/styles/general.less" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/styles/general.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/js/styles/messages.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/styles/messages.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/js/traductions.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/traductions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/less/constant.less" beforeDir="false" afterPath="$PROJECT_DIR$/www/less/constant.less" afterDir="false" />
     </list>
     <list id="3a1f8fe8-031b-47e4-a389-fcc25573a7b5" name="New changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -477,27 +468,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "true",
-    "WebServerToolWindowPanel.toolwindow.highlight.mappings": "true",
-    "WebServerToolWindowPanel.toolwindow.highlight.symlinks": "true",
-    "WebServerToolWindowPanel.toolwindow.show.date": "false",
-    "WebServerToolWindowPanel.toolwindow.show.permissions": "false",
-    "WebServerToolWindowPanel.toolwindow.show.size": "false",
-    "last_opened_file_path": "/home/sjanel/git/perso/Betty-league/www/js",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "watcher.settings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.highlight.mappings&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.highlight.symlinks&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.date&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.permissions&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.size&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/sjanel/git/perso/Betty-league/www/js&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;watcher.settings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "JSON"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;JSON&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/www/js" />
@@ -554,6 +545,7 @@
       <workItem from="1653251735184" duration="451000" />
       <workItem from="1653256163569" duration="4375000" />
       <workItem from="1653476960911" duration="4201000" />
+      <workItem from="1653492990305" duration="1216000" />
     </task>
     <task id="LOCAL-00002" summary="cache control">
       <created>1528476329479</created>
@@ -674,7 +666,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653048613466</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="proper profile page - fix not endless score page -">
+      <created>1653493155965</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1653493155965</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView">
@@ -764,7 +763,8 @@
     <MESSAGE value="DEMOFORZA integration - en language -" />
     <MESSAGE value="réactive bettyworld - traduction en" />
     <MESSAGE value="USE_REAL_LOGOS" />
-    <option name="LAST_COMMIT_MESSAGE" value="USE_REAL_LOGOS" />
+    <MESSAGE value="proper profile page - fix not endless score page -" />
+    <option name="LAST_COMMIT_MESSAGE" value="proper profile page - fix not endless score page -" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/www/js/pages/createLeague/createLeague.js">

@@ -1,7 +1,7 @@
 var translations = {
     en: {
       BETA: '',
-      'Forza Prediction Championship': 'Public League',
+      'Betty World Championship': 'Public League by Rich Sponsor',
       MESSAGES: {
         GENERALERROR: 'There is an issue, please try later',
         NOCON: 'Connect your phone to the Internet',
@@ -164,10 +164,9 @@ var translations = {
       },
       HOME: {
         TITLE: 'Welcome Forza fans',
-        INTRO: 'You can create or join an existing League and play with your colleagues and friend</b>.' +
-          ' Have fun and if you are good you will win a SUPER NICE Forza gift',
-        INTRO2: 'You can also play against <b>the entire Forza community</b> in the Public league sponsored by RICH SPONSOR ALPHA.',
-        PUBLIC: 'Play in the Public League sponsored by RICH SPONSOR ALPHA',
+        INTRO: 'You can create or join an existing League and play with your colleagues and friend</b>.',
+        INTRO2: 'You can also play against <b>the entire Forza community</b> in the Public league sponsored by RICH SPONSOR ALPHA.<br>Have fun and if you are good you will win a SUPER NICE Forza gift.',
+        PUBLIC: 'Play in the Public League by RICH SPONSOR',
         PRIVATE: 'Play in a Private League'
       }
     },
