@@ -58,8 +58,8 @@
 <!--//HEADER BAR-->
 <body ng-app="betty2" ng-controller="ParentCtrl as parentCtrl">
     <!--<div translate="BETA" class="beta-text bettyLeague-title bettyLeague-title&#45;&#45;grey bettyLeague-title&#45;&#45;wrap"></div>-->
-    <div class="full-background-container">
-        <div class="bt-app-container" ng-class="{'with-head-logo':parentCtrl.withHeadLogo}">
+    <div  class="full-background-container">
+        <div class="bt-app-container" ng-class="{'with-head-logo':parentCtrl.withHeadLogo, 'betty-world-theme':isCurrent(2)}">
             <img class="bt-logo" src="img/logo_216x240.png" ng-if="parentCtrl.withHeadLogo">
             <div class="bar bt-header ng-cloak" ng-if="!parentCtrl.withHeadLogo">
                 <div class="row">
@@ -74,17 +74,17 @@
                         >
                         </bt-footer-btn>
                     </div>
-                    <div class="col">
-                        <bt-footer-btn bt-show="!parentCtrl.withHeadLogo"
-                                       bt-classes="'bt-action--medium bt-action--head'"
-                                       bt-button-classes="isCurrent(1)?'bt-action__btn--gold bt-action__btn--active':'bt-action__btn--blue btn-disabled'"
-                                       bt-ico="'fas fa-question'"
-                                       bt-submit-form="btn.submitform"
-                                       bt-position="middle"
-                                       bt-action=""
-                        >
-                        </bt-footer-btn>
-                    </div>
+<!--                    <div class="col">-->
+<!--                        <bt-footer-btn bt-show="!parentCtrl.withHeadLogo"-->
+<!--                                       bt-classes="'bt-action&#45;&#45;medium bt-action&#45;&#45;head'"-->
+<!--                                       bt-button-classes="isCurrent(1)?'bt-action__btn&#45;&#45;gold bt-action__btn&#45;&#45;active':'bt-action__btn&#45;&#45;blue btn-disabled'"-->
+<!--                                       bt-ico="'fas fa-question'"-->
+<!--                                       bt-submit-form="btn.submitform"-->
+<!--                                       bt-position="middle"-->
+<!--                                       bt-action=""-->
+<!--                        >-->
+<!--                        </bt-footer-btn>-->
+<!--                    </div>-->
                     <div class="col">
                         <bt-footer-btn bt-show="!parentCtrl.withHeadLogo"
                                        bt-classes="'bt-action--medium bt-action--head'"

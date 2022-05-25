@@ -84,12 +84,12 @@ var translations = {
         CLOSED: 'The match is over',
         CALENDAR: 'Calendar',
         LIVE: 'LIVE',
-        POT_GAIN: 'Potential points to win',
-        GAIN: 'Points to win :',
-        TOTAL_GAIN: 'Total points',
-        TOTAL_POT_GAIN: 'Total potential points to win',
-        WINNER_GAIN: 'Points for correct outcome',
-        SCORE_GAIN: 'Points for correct score',
+        POT_GAIN: 'Potential coins to win',
+        GAIN: 'Coins to win :',
+        TOTAL_GAIN: 'Total coins',
+        TOTAL_POT_GAIN: 'Total potential coins to win',
+        WINNER_GAIN: 'Gain for correct outcome',
+        SCORE_GAIN: 'Gain for correct score',
         BET_FORM: {
           'TITLE': 'Let\'s predict!',
           'HOW_MANY_GOALS': 'How many goals for',
@@ -97,7 +97,8 @@ var translations = {
           'WHO_WIN': 'Who will win?',
           'WHO_QUALIF': 'Who will qualified?',
           'EMPTY_SCORE': 'You must enter a score',
-          'EMPTY_WINNER': 'You must choose a winner'
+          'EMPTY_WINNER': 'You must choose a winner',
+          'EXPLAIN': 'By predicting the final score (before penalties) you put a free coin on the final score and another one on the winning team'
         },
         BET_SUMMARY: {
           'MY_BETS': 'My predictions',
@@ -106,19 +107,19 @@ var translations = {
           'ON_DRAW': 'On a draw',
           'ON_SCORE': 'On a <b>score</b> of',
           'USER_PERCENT': 'players',
-          'ODD': 'Game Odds',
-          'DETAIL': 'Game Odds details',
+          'ODD': 'Earnings',
+          'DETAIL': 'Earnings details',
           'CLOSE': 'Close',
           'NO_ODD_PREFIX': 'You\didn´t predict this game yet. You only have',
           'NO_ODD_SUFIX': 'to predict this game',
           'NO_ODD': 'Sorry buddy, it\'s now too late to predict. Make sure to predict the next game!'
         },
         MODAL_ODD_DETAIL: {
-          'TITLE': 'Game odds details',
+          'TITLE': 'Earnings details',
           'WINNER': 'Winner',
           'QUALIF': 'Qualified',
           'DRAW': 'Draw',
-          'ODD': 'Game odds',
+          'ODD': 'Gain',
           'PERCENT': 'of the prediction',
           'SCORE': 'Exact Score',
           'BETBY': 'Predict by :'
@@ -158,7 +159,8 @@ var translations = {
         SHAREWITHFRIENDS: 'Share this code to invite other players in the league'
       },
       ACCOUNT: {
-        WAITING: 'Ooops this page îs not finalised yet '
+        TITLE: 'My profile',
+        LOGOUT: 'LOGOUT'
       },
       HOME: {
         TITLE: 'Welcome Forza fans',
@@ -267,7 +269,8 @@ var translations = {
           'WHO_WIN': 'Qui va l\'emporter ?',
           'WHO_QUALIF': 'Qui va se qualifier ?',
           'EMPTY_SCORE': 'Tu dois saisir un score',
-          'EMPTY_WINNER': 'Tu dois choisir une équipe'
+          'EMPTY_WINNER': 'Tu dois choisir une équipe',
+          'EXPLAIN': 'By predicting the final score (before penalties) you put a free coin on the final score and another one on the winning team'
         },
         BET_SUMMARY: {
           'MY_BETS': 'Mon pari',
@@ -328,7 +331,8 @@ var translations = {
         SHAREWITHFRIENDS: 'Partage ce code avec les gens que tu veux voir rejoindre cette ligue'
       },
       ACCOUNT: {
-        WAITING: 'Page en cours de création...'
+        TITLE: 'Mon profile',
+        LOGOUT: 'Logout'
       },
       HOME: {
         TITLE: 'Bienvenue',

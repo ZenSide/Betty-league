@@ -1,10 +1,13 @@
-<div class="fixture-block">
-    <div class="bt-text-md-medium">
-        Page en cours de création
-    </div>
-</div>
-<bt-footer-btn bt-show="true"
-               bt-label="'Se déconnecter'"
+<ion-content delegate-handle="btContentHandle" class="bt-content account">
+  <h1 class="txt-part-title u-gutter-bottom-regular" translate="ACCOUNT.TITLE"></h1>
+
+
+
+  <bt-body-btn bt-ico="'fa fa-sign-out-alt'"
+               bt-content="'ACCOUNT.LOGOUT'"
                bt-action="parentCtrl.logout()"
->
-</bt-footer-btn>
+               bt-btn-classes="'u-gutter-bottom-big bt-action__btn--gold'"
+  >
+  </bt-body-btn>
+
+</ion-content>

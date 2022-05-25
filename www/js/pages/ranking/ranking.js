@@ -25,7 +25,7 @@ betty2App.controller('RankingCtrl', ['BettyLeagueApi', 'UserApi', 'ranking', '$t
 
 	//rankingCtrl.scrollTo($stateParams.showdownId);
 
-
+  console.log(rankingCtrl.bettyLeague.endless);
 
 	rankingCtrl.ranking = ranking;
 
@@ -247,10 +247,14 @@ betty2App.controller('RankingCtrl', ['BettyLeagueApi', 'UserApi', 'ranking', '$t
 				var params = {
 					'period': ranking.period,
 					'seasonNb': seasonNb,
-					'halfSeasonNb': halfSeasonNb,
-					'fourRoundsNb': fourRoundsNb,
 					'roundNb': roundNb
 				};
+
+        if (rankingCtrl.bettyLeague.endless) {
+          params.halfSeasonNb = halfSeasonNb;
+          params.fourRoundsNb = fourRoundsNb;
+        }
+
 				break;
 		}
 
