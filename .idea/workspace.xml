@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b1f29d8e-71cb-4a38-a451-f6342f828e6e" name="Default" comment="proper profile page - fix not endless score page -">
+    <list default="true" id="b1f29d8e-71cb-4a38-a451-f6342f828e6e" name="Default" comment="wording - bettyworld style">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/js/pages/bettyleague/bettyleague.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/pages/bettyleague/bettyleague.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/js/styles/bettyLeague.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/styles/bettyLeague.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/js/styles/bettyLeague.less" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/styles/bettyLeague.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/js/pages/account/account.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/pages/account/account.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/js/pages/bettyleague/showdown/step0/step0.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/pages/bettyleague/showdown/step0/step0.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/js/pages/bettyleague/showdown/step1/step1.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/pages/bettyleague/showdown/step1/step1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/js/pages/bettyleague/showdown/step2/step2.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/pages/bettyleague/showdown/step2/step2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/js/pages/bettyleague/showdown/step3/step3.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/pages/bettyleague/showdown/step3/step3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/js/pages/signin/signinCtrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/pages/signin/signinCtrl.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/js/traductions.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/traductions.js" afterDir="false" />
     </list>
     <list id="3a1f8fe8-031b-47e4-a389-fcc25573a7b5" name="New changelist" comment="" />
@@ -545,7 +549,10 @@
       <workItem from="1653251735184" duration="451000" />
       <workItem from="1653256163569" duration="4375000" />
       <workItem from="1653476960911" duration="4201000" />
-      <workItem from="1653492990305" duration="1216000" />
+      <workItem from="1653492990305" duration="3983000" />
+      <workItem from="1654000510424" duration="10000" />
+      <workItem from="1654552505578" duration="2519000" />
+      <workItem from="1654555084594" duration="914000" />
     </task>
     <task id="LOCAL-00002" summary="cache control">
       <created>1528476329479</created>
@@ -673,7 +680,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653493155965</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="wording - bettyworld style">
+      <created>1653494285833</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1653494285833</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TodoView">
@@ -738,6 +752,17 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
       <collection />
@@ -764,7 +789,8 @@
     <MESSAGE value="réactive bettyworld - traduction en" />
     <MESSAGE value="USE_REAL_LOGOS" />
     <MESSAGE value="proper profile page - fix not endless score page -" />
-    <option name="LAST_COMMIT_MESSAGE" value="proper profile page - fix not endless score page -" />
+    <MESSAGE value="wording - bettyworld style" />
+    <option name="LAST_COMMIT_MESSAGE" value="wording - bettyworld style" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/www/js/pages/createLeague/createLeague.js">

@@ -1,5 +1,6 @@
 var translations = {
     en: {
+      LOADING: 'LOADING',
       BETA: '',
       'Betty World Championship': 'Public League by Rich Sponsor',
       MESSAGES: {
@@ -171,6 +172,7 @@ var translations = {
       }
     },
     fr: {
+      LOADING: 'CHARGEMENT',
       BETA: '',
       'Betty World Championship': 'Ligue-Publique',
       MESSAGES: {

@@ -141,7 +141,7 @@ betty2App.controller('Step2Ctrl', ['BetApi' ,'BtMessages' ,'translations' ,'$sco
 	footerStatus.rightBt = {
 		btShow : true,
 		btPosition: "right",
-		btClasses: "animated infinite pulse bt-action--medium",
+		btClasses: "bt-action--medium",
 		btButtonClasses: "bt-action__btn--gold",
 		btIco : "fas fa-check",
 		btLabel:translations['LOGIN.FOOTER.MDP'],
