@@ -70,7 +70,7 @@
   }
 
   th, td {
-    padding: @margin-micro @margin-micro/2 @margin-micro @margin-micro/2;
+    padding: @margin-micro @margin-micro @margin-micro @margin-micro;
     text-align: center;
     vertical-align: middle;
   }
@@ -117,6 +117,16 @@
   .showdown-score {
     line-height: normal;
     padding: @margin-micro;
+  }
+
+  td {
+    padding: 0.3rem 0.1rem 0.3rem 0.1rem;
+  }
+
+  td.nowrap {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 }
 

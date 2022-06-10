@@ -139,8 +139,8 @@
   display: inline-block;
 }
 .event-goal {
-  width: 8px;
-  height: 6px;
+  width: 0.8rem;
+  height: 0.6rem;
   background-image: url("../../img/goal.png");
   background-position: center center;
   background-size: cover;

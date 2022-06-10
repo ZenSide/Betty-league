@@ -19,9 +19,8 @@ betty2App.component('btLogoTeam',{
       ctrl.imgUrl = ctrl.btTeam.sm__logoPath;
     }
 
-    if (ctrl.btTeam.sm__nationalTeam) {
+    if (!USE_REAL_LOGOS && ctrl.btTeam.sm__nationalTeam) {
       ctrl.imgUrl = "./img/flags/" + ctrl.btTeam.sm__id + ".png"
     }
-
   }]
 });
