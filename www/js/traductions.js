@@ -2,7 +2,7 @@ var translations = {
     en: {
       LOADING: 'LOADING',
       BETA: '',
-      'Betty World Championship': 'Public League by Rich Sponsor',
+      'Betty World Championship': 'Public League',
       MESSAGES: {
         GENERALERROR: 'There is an issue, please try later',
         NOCON: 'Connect your phone to the Internet',
@@ -166,8 +166,8 @@ var translations = {
       HOME: {
         TITLE: 'Welcome Forza fans',
         INTRO: 'You can create or join an existing League and play with your colleagues and friend</b>.',
-        INTRO2: 'You can also play against <b>the entire Forza community</b> in the Public league sponsored by RICH SPONSOR ALPHA.<br>Have fun and if you are good you will win a SUPER NICE Forza gift.',
-        PUBLIC: 'Play in the Public League by RICH SPONSOR',
+        INTRO2: 'You can also play against <b>the entire Forza community</b> in the Public league.<br>Have fun and if you are good you will win a SUPER NICE Forza gift.',
+        PUBLIC: 'Play in the Public League',
         PRIVATE: 'Play in a Private League'
       }
     },
@@ -345,10 +345,25 @@ var translations = {
     }
   }
 ;
-betty2App.config(['$translateProvider', function ($translateProvider) {
+betty2App.config(['$translateProvider', 'tmhDynamicLocaleProvider', function ($translateProvider, tmhDynamicLocaleProvider) {
   // add translation table
   $translateProvider
+    .registerAvailableLanguageKeys(['en', 'fr'], {
+      'en_US': 'en',
+      'en_UK': 'en',
+      'en_CA': 'en',
+      'fr_FR': 'fr',
+      'fr_CA': 'fr',
+      'fr_BE': 'fr',
+      '*': 'en'
+    })
     .translations('en', translations.en)
     .translations('fr', translations.fr)
-    .preferredLanguage('en');
+    .fallbackLanguage('en')
+    .determinePreferredLanguage();
+
+    tmhDynamicLocaleProvider.localeLocationPattern('lib/angular-i18n/angular-locale_{{locale}}.js');
+    tmhDynamicLocaleProvider.defaultLocale($translateProvider.preferredLanguage());
+
+    // tmhDynamicLocaleProvider.set($translateProvider.preferredLanguage());
 }]);

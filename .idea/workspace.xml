@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b1f29d8e-71cb-4a38-a451-f6342f828e6e" name="Default" comment="">
+    <list default="true" id="b1f29d8e-71cb-4a38-a451-f6342f828e6e" name="Default" comment="dynamic i18n -">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bower.json" beforeDir="false" afterPath="$PROJECT_DIR$/bower.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/js/traductions.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/traductions.js" afterDir="false" />
     </list>
     <list id="3a1f8fe8-031b-47e4-a389-fcc25573a7b5" name="New changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -547,7 +550,10 @@
       <workItem from="1654552505578" duration="2519000" />
       <workItem from="1654555084594" duration="914000" />
       <workItem from="1654590100085" duration="28000" />
-      <workItem from="1654860074034" duration="2744000" />
+      <workItem from="1654860074034" duration="4224000" />
+      <workItem from="1656333480437" duration="241000" />
+      <workItem from="1656588881355" duration="1685000" />
+      <workItem from="1656672475862" duration="4320000" />
     </task>
     <task id="LOCAL-00002" summary="cache control">
       <created>1528476329479</created>
@@ -689,7 +695,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654862328337</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="up version">
+      <created>1654862835654</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1654862835654</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TodoView">

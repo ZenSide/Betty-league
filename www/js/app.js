@@ -10,7 +10,8 @@ var betty2App = angular.module(
     'ionic.native',
     'pascalprecht.translate',
     'ngclipboard',
-    'hmTouchEvents'
+    'hmTouchEvents',
+    'tmh.dynamicLocale',
   ]
 );
 
