@@ -12,7 +12,8 @@ var translations = {
         ALREADYSUBSCRIBED: 'You are already registered to this league',
         SHOWDOWNNOTFOUND: 'Match not found',
         NOMOREPRIVATELEAGUE: 'You can\'t create more league of this type',
-        COPYSUCCESS: 'Secret has been copied'
+        COPYSUCCESS: 'Secret has been copied',
+        UNKNOWNUSER: 'Unknown user'
       },
       USER: {
         ASSERT: {
@@ -28,13 +29,14 @@ var translations = {
         AUTHSUCCESS: 'Connexion succesful',
         SIGNSUCCESS: 'Registration succesful',
         AUTHFAIL: 'Connexion issue, please check your login details',
+        PASSWORDLOSTSUCCESS: 'Request taken into account',
         PLACEHOLDERS: {
           EMAIL: 'E-mail',
           USERNAME: 'E-mail',
           PSW: 'Password'
         },
         FOOTER: {
-          MDP: 'Forgot password',
+          MDP: 'Forgotten password',
           SIGN: 'Sign-up',
           LOG: 'Login',
           FB: 'Login with Facebook'
@@ -46,7 +48,8 @@ var translations = {
           PSW: 'Password',
           CONFIRMPSW: 'Confirm your password',
           PSEUDO: 'Player name',
-          NEXT: 'Next'
+          NEXT: 'Next',
+          PASSWORDLOST: 'Send new password'
         },
         MESSAGES: {
           PASSWORDDIFF: 'Different passwords',
@@ -72,7 +75,8 @@ var translations = {
         LOGIN: 'Hello Forza fans! Connect here to play this awesome prediction game with your colleagues and friends',
         SIGNIN: 'Sign-in : \start with your\email address',
         SIGNIN2: 'Confirm the \'sign-in',
-        CHOOSELEAGUE: 'Welcome'
+        CHOOSELEAGUE: 'Welcome',
+        PASSWORDLOST: 'Forgotten password'
       },
       SHOWDOWN: {
         ROUNDSUFFIX: 'Match rounds',
@@ -184,7 +188,8 @@ var translations = {
         ALREADYSUBSCRIBED: 'Tu es déjà inscrit à cette Ligue',
         SHOWDOWNNOTFOUND: 'Match non trouvé',
         NOMOREPRIVATELEAGUE: 'Vous ne pouvez pas créer plus de Ligues de ce type',
-        COPYSUCCESS: 'Le code secret a été copié'
+        COPYSUCCESS: 'Le code secret a été copié',
+        UNKNOWNUSER: 'Utilisateur inconnu'
       },
       USER: {
         ASSERT: {
@@ -200,6 +205,7 @@ var translations = {
         AUTHSUCCESS: 'Connexion réussie',
         SIGNSUCCESS: 'Inscription réussie',
         AUTHFAIL: 'Échec de la connexion, vérifie tes identifiants',
+        PASSWORDLOSTSUCCESS: 'Demande prise en compte',
         PLACEHOLDERS: {
           EMAIL: 'E-mail',
           USERNAME: 'E-mail',
@@ -218,7 +224,8 @@ var translations = {
           PSW: 'Mot de passe',
           CONFIRMPSW: 'Confirme ton mot de passe',
           PSEUDO: 'Pseudo',
-          NEXT: 'Continuer'
+          NEXT: 'Continuer',
+          PASSWORDLOST: 'Envoyer nouveau MDP'
         },
         MESSAGES: {
           PASSWORDDIFF: 'Les mots de passe diffèrent',
@@ -244,7 +251,8 @@ var translations = {
         LOGIN: 'Salut les beaufs !<br>On se connecte pour jouer !<br>Ou alors on s\'inscrit vite.',
         SIGNIN: 'Inscription : c\'est avec l\'email qu\'on va pouvoir se connecter',
         SIGNIN2: 'Finalisez l\'inscription',
-        CHOOSELEAGUE: 'Bienvenue'
+        CHOOSELEAGUE: 'Bienvenue',
+        PASSWORDLOST: 'Mot de passe oublié'
       },
       SHOWDOWN: {
         ROUNDSUFFIX: 'ème journée',

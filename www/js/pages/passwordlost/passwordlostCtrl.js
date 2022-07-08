@@ -1,7 +1,7 @@
-betty2App.controller('SigninCtrl', ['animation', 'BtLoading', 'BtMessages', 'UserApi', 'BtNavigate', '$scope', 'translations',
+betty2App.controller('PasswordLostCtrl', ['animation', 'BtLoading', 'BtMessages', 'UserApi', 'BtNavigate', '$scope', 'translations',
     function (animation, BtLoading, BtMessages, UserApi, BtNavigate, $scope, translations) {
     BtLoading.endLoad();
-    var signinCtrl = this;
+    var passwordLostCtrl = this;
 
     //parent config
     var withHeadLogo = true;
@@ -33,12 +33,8 @@ betty2App.controller('SigninCtrl', ['animation', 'BtLoading', 'BtMessages', 'Use
         $scope.parentCtrl.footerStatus = footerStatus;
     });
 
-    // fosuser
-    signinCtrl.newUser = {
+    passwordLostCtrl.passwordLost = {
         email:'',
-        plainPassword:'',
-        confirmPassword:'',
-        pseudo:''
     };
 
     var fieldsNames = [
@@ -49,14 +45,14 @@ betty2App.controller('SigninCtrl', ['animation', 'BtLoading', 'BtMessages', 'Use
         'btPseudo'
     ];
 
-    signinCtrl.submitBtn = {
-        'content' : translations['SIGNIN.PLACEHOLDERS.NEXT']
+    passwordLostCtrl.submitBtn = {
+        'content' : translations['SIGNIN.PLACEHOLDERS.PASSWORDLOST']
     };
 
     var preventTwice = false;
 
 
-    signinCtrl.submitForm = function(form){
+    passwordLostCtrl.submitForm = function(form){
         if (preventTwice) {
             preventTwice = false;
             return;
@@ -64,23 +60,16 @@ betty2App.controller('SigninCtrl', ['animation', 'BtLoading', 'BtMessages', 'Use
         preventTwice = true;
         if(form.$valid){
             //form message handling
-            if(signinCtrl.newUser.plainPassword != signinCtrl.newUser.confirmPassword){
-                BtMessages.showFormMessages(form,['btPlainPassword','btConfirmPassword'],null,null,true);
-                BtMessages.show([{content:"SIGNIN.MESSAGES.PASSWORDDIFF",context:"alert"}])
-            }
-            else{
-                BtLoading.startLoad();
-                UserApi.sign(signinCtrl.newUser, function (messages) {
-                  preventTwice = false;
-                  BtMessages.show(messages, null, function () {
-                        BtNavigate.stateChange('', 'landing');
-                    });
-                }, function (messages) {
-                  preventTwice = false;
-                  BtLoading.endLoad();
-                    BtMessages.show(messages, null);
-                })
-            }
+              BtLoading.startLoad();
+              UserApi.passwordLost(passwordLostCtrl.passwordLost, function (messages) {
+                preventTwice = false;
+                BtLoading.endLoad();
+                  BtMessages.show(messages, null);
+              }, function (messages) {
+                preventTwice = false;
+                BtLoading.endLoad();
+                  BtMessages.show(messages, null);
+              })
         }
         else{
             preventTwice = false;

@@ -23,6 +23,26 @@ betty2App.factory('UserApi', ['BtLoading', '$rootScope', '$cordovaFacebook', 'Bt
 			});
 		},
 
+    passwordLost: function (passwordLost, resolve, reject) {
+      ResourcesFactory.post('/api/users/passwordlost', passwordLost, true).then(function (data) {
+        //Success Sign In
+
+        BtLocalStorage.setObject('User', data);
+
+        var messages = [
+          {
+            context: 'success',
+            content: 'LOGIN.PASSWORDLOSTSUCCESS'
+          }
+        ];
+        resolve (messages);
+        return;
+      }, function (messages) {
+        reject(messages);
+        return;
+      });
+    },
+
 		login: function (credentials, resolve, reject) {
 			credentials.logfromfb = false;
 			ResourcesFactory.post('/login_api', credentials, true).then(function (data) {
@@ -45,6 +65,7 @@ betty2App.factory('UserApi', ['BtLoading', '$rootScope', '$cordovaFacebook', 'Bt
 		getUser: function () {
 			return BtLocalStorage.getObject('User');
 		},
+
 
 		fbLogin: function (resolve, reject) {
 			$cordovaFacebook.login(['public_profile']).then(function (response) {

@@ -26,14 +26,21 @@
         <!--SUBMIT-->
         <bt-body-btn bt-ico="'fa fa-check'"
                      bt-content="loginCtrl.loginBtn.content"
-                     bt-btn-classes="'bt-action__btn--gold'"
+                     bt-btn-classes="'bt-action__btn--gold u-gutter-bottom-big'"
                      bt-disabled="loginCtrl.loginBtn.disabled"
                      bt-submit-form="loginformId"
                      bt-type="submit"
                      hm-tap="loginCtrl.submitForm(loginForm)"
         >
         </bt-body-btn>
-        <!--TODO conditions generales-->
+
+       <!--      PSWD LOST-->
+        <bt-body-btn bt-ico="'fas fa-unlock'"
+                     bt-content="'LOGIN.FOOTER.MDP'"
+                     bt-action="loginCtrl.lostPswd()"
+                     bt-btn-classes="'u-gutter-bottom-regular'"
+        >
+        </bt-body-btn>
     </form>
 
     <!--FB Connect-->
