@@ -1,7 +1,7 @@
 betty2App.factory('BtMessages', ['$rootScope', '$timeout', function($rootScope, $timeout) {
   var service = {
     show : function(messages,duration,callback){
-      if (!duration) duration = messages.length * 900;
+      if (!duration) duration = messages.length * 2000;
       $rootScope.messages = messages;
       $rootScope.showMessages = true;
       if (callback) callback();
@@ -12,7 +12,7 @@ betty2App.factory('BtMessages', ['$rootScope', '$timeout', function($rootScope, 
       return
     },
     showFormMessages : function(form,fieldsNames,duration,callback,justShow){
-      if (!duration) duration =2000;
+      if (!duration) duration = 2000;
       var messages = [];
       var activeinputs = "";
       angular.forEach(fieldsNames,function(fieldName,key){

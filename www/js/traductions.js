@@ -29,6 +29,7 @@ var translations = {
         AUTHSUCCESS: 'Connexion succesful',
         SIGNSUCCESS: 'Registration succesful',
         AUTHFAIL: 'Connexion issue, please check your login details',
+        AUTHLOST: 'Session expired, please log in again',
         PASSWORDLOSTSUCCESS: 'Request taken into account',
         PLACEHOLDERS: {
           EMAIL: 'E-mail',
@@ -49,7 +50,8 @@ var translations = {
           CONFIRMPSW: 'Confirm your password',
           PSEUDO: 'Player name',
           NEXT: 'Next',
-          PASSWORDLOST: 'Send new password'
+          PASSWORDLOST: 'Send new password',
+          CHANGEPASSWORD: 'Confirm new password',
         },
         MESSAGES: {
           PASSWORDDIFF: 'Different passwords',
@@ -165,7 +167,8 @@ var translations = {
       },
       ACCOUNT: {
         TITLE: 'My profile',
-        LOGOUT: 'LOGOUT'
+        LOGOUT: 'LOGOUT',
+        CHANGEPASSWORD: 'Change my password'
       },
       HOME: {
         TITLE: 'Welcome Forza fans',
@@ -205,6 +208,7 @@ var translations = {
         AUTHSUCCESS: 'Connexion réussie',
         SIGNSUCCESS: 'Inscription réussie',
         AUTHFAIL: 'Échec de la connexion, vérifie tes identifiants',
+        AUTHLOST: 'Session expirée, veuillez vous reconnecter',
         PASSWORDLOSTSUCCESS: 'Demande prise en compte',
         PLACEHOLDERS: {
           EMAIL: 'E-mail',
@@ -225,7 +229,8 @@ var translations = {
           CONFIRMPSW: 'Confirme ton mot de passe',
           PSEUDO: 'Pseudo',
           NEXT: 'Continuer',
-          PASSWORDLOST: 'Envoyer nouveau MDP'
+          PASSWORDLOST: 'Envoyer nouveau MDP',
+          CHANGEPASSWORD: 'Confirmer nouveau MDP',
         },
         MESSAGES: {
           PASSWORDDIFF: 'Les mots de passe diffèrent',
@@ -341,7 +346,8 @@ var translations = {
       },
       ACCOUNT: {
         TITLE: 'Mon profile',
-        LOGOUT: 'Logout'
+        LOGOUT: 'Logout',
+        CHANGEPASSWORD: 'Change password',
       },
       HOME: {
         TITLE: 'Bienvenue',

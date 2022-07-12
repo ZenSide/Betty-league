@@ -20,7 +20,7 @@ betty2App.controller('HomeCtrl', ['animation', '$scope', 'UserApi', 'BtMessages'
         }
     };
     animation.promise.then(function () {
-        $scope.parentCtrl.withHeadLogo = true;
+        $scope.parentCtrl.withHeadLogo = false;
         $scope.parentCtrl.footerStatus = footerStatus;
     });
 

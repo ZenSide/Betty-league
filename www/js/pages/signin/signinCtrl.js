@@ -64,7 +64,7 @@ betty2App.controller('SigninCtrl', ['animation', 'BtLoading', 'BtMessages', 'Use
         preventTwice = true;
         if(form.$valid){
             //form message handling
-            if(signinCtrl.newUser.plainPassword != signinCtrl.newUser.confirmPassword){
+            if(signinCtrl.newUser.plainPassword !== signinCtrl.newUser.confirmPassword){
                 BtMessages.showFormMessages(form,['btPlainPassword','btConfirmPassword'],null,null,true);
                 BtMessages.show([{content:"SIGNIN.MESSAGES.PASSWORDDIFF",context:"alert"}])
             }

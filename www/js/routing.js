@@ -282,6 +282,26 @@ betty2App.config(['$stateProvider', '$urlRouterProvider', 'VERSION', function ($
       }
     })
 
+    .state('changepassword', {
+      url: '/changepassword/:animDirection',
+      templateUrl: 'js/pages/changepassword/changepassword.html' + VERSION,
+      controller: 'ChangePasswordCtrl',
+      controllerAs: 'changePasswordCtrl',
+      resolve: {
+        translations: function ($translate) {
+          return $translate([
+            'SIGNIN.PLACEHOLDERS.CHANGEPASSWORD',
+          ]
+          ).then(function (translations) {
+            return translations
+          });
+        },
+        animation: function (BtNavigate, $stateParams) {
+          return BtNavigate.anim($stateParams.animDirection);
+        },
+      }
+    })
+
     .state('listMatch', {
       url: '/bettyleague/:bettyLeagueId/showdown/:showdownId/listmatch/:animDirection',
       params: {animDirection: null},

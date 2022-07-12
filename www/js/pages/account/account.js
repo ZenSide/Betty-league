@@ -1,6 +1,13 @@
-betty2App.controller('AccountCtrl', ['$scope', 'animation', 'BtLoading', function ($scope, animation, BtLoading) {
+betty2App.controller('AccountCtrl', ['$scope', 'animation', 'BtLoading', 'BtNavigate', function ($scope, animation, BtLoading, BtNavigate) {
 	BtLoading.endLoad();
-	$scope.parentCtrl.activeHeaderBtns = [false, false, false, false, true];
+
+
+  var accountCtrl = this;
+
+
+
+
+  $scope.parentCtrl.activeHeaderBtns = [false, false, false, false, true];
 
   var footerStatus = {};
   footerStatus.leftBt = {
@@ -12,6 +19,14 @@ betty2App.controller('AccountCtrl', ['$scope', 'animation', 'BtLoading', functio
   footerStatus.rightBt = {
     btShow : false
   };
+
+
+  accountCtrl.changePswd = function () {
+    BtNavigate.stateChange('goLeft', 'changepassword', {
+      'animDirection': 'right'
+    });
+  }
+
 
   animation.promise.then(function () {
     $scope.parentCtrl.withHeadLogo = false;

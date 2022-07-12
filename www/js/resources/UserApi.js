@@ -25,10 +25,22 @@ betty2App.factory('UserApi', ['BtLoading', '$rootScope', '$cordovaFacebook', 'Bt
 
     passwordLost: function (passwordLost, resolve, reject) {
       ResourcesFactory.post('/api/users/passwordlost', passwordLost, true).then(function (data) {
-        //Success Sign In
+        var messages = [
+          {
+            context: 'success',
+            content: 'LOGIN.PASSWORDLOSTSUCCESS'
+          }
+        ];
+        resolve (messages);
+        return;
+      }, function (messages) {
+        reject(messages);
+        return;
+      });
+    },
 
-        BtLocalStorage.setObject('User', data);
-
+    changePassword: function (newUser, resolve, reject) {
+      ResourcesFactory.post('/api/users/changepassword', newUser).then(function (data) {
         var messages = [
           {
             context: 'success',
@@ -108,7 +120,7 @@ betty2App.factory('UserApi', ['BtLoading', '$rootScope', '$cordovaFacebook', 'Bt
 
 		logout: function () {
 			BtLocalStorage.remove('User');
-			BtNavigate.stateChange('goBottom', 'login', {
+			BtNavigate.stateChange('goTop', 'login', {
 				'animDirection': 'fade'
 			});
 		}

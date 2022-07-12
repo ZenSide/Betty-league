@@ -1,4 +1,5 @@
 .txt-part-title {
+  margin-top: 1rem !important;
   font-size: 1.8rem;
   text-transform: uppercase;
   font-family: "poppinsbold", sans-serif;

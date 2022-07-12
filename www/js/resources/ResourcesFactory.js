@@ -22,7 +22,8 @@ betty2App.factory('ResourcesFactory', ['$q', '$http', '$rootScope', 'API_BASE_UR
             } else {
                 switch (status) {
                     case 401:
-                        BtNavigate.stateChange(null, 'login');
+                        BtLocalStorage.remove('User');
+                        BtNavigate.stateChange('goTop', 'login');
                         messages = [
                             {
                                 context:'alert',

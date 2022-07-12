@@ -64,7 +64,10 @@ betty2App.controller('PasswordLostCtrl', ['animation', 'BtLoading', 'BtMessages'
               UserApi.passwordLost(passwordLostCtrl.passwordLost, function (messages) {
                 preventTwice = false;
                 BtLoading.endLoad();
-                  BtMessages.show(messages, null);
+                BtMessages.show(messages, null);
+                passwordLostCtrl.passwordLost = {
+                  email:'',
+                };
               }, function (messages) {
                 preventTwice = false;
                 BtLoading.endLoad();
