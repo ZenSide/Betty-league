@@ -58,10 +58,10 @@
                     </div>
 
                     <div class="bt-text-md-bold u-text-gold" ng-if="listMatchCtrl.betResume(showdown).potentiel && listMatchCtrl.betResume(showdown).gain">
-                        + {{listMatchCtrl.betResume(showdown).gain}} ?
+                        + {{listMatchCtrl.betResume(showdown).gain|number}} ?
                     </div>
                     <div class="bt-text-md-bold u-text-green" ng-if="!listMatchCtrl.betResume(showdown).potentiel && listMatchCtrl.betResume(showdown).gain">
-                        + {{listMatchCtrl.betResume(showdown).gain}}
+                        + {{listMatchCtrl.betResume(showdown).gain|number}}
                     </div>
                     <div class="bt-text-md-bold u-text-red" ng-if="!listMatchCtrl.betResume(showdown).potentiel && listMatchCtrl.betResume(showdown).gain === 0">
                         + 0
