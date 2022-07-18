@@ -272,6 +272,7 @@ betty2App.controller('RankingCtrl', ['BettyLeagueApi', 'UserApi', 'ranking', '$t
 	};
 
   rankingCtrl.changePage = function (page) {
+    BtLoading.startLoad();
 
     var params = rankingCtrl.currentBaseParams;
     params.page = page;

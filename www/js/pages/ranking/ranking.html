@@ -83,6 +83,40 @@
 
   <ion-content delegate-handle="btContentHandle" class="bt-content ranking">
     <table class="bt-modal__table bt-modal__table--list bt-text u-gutter-bottom-small">
+      <tr ng-if="rankingCtrl.ranking.totalPages > 1" class="bt-modal__table-pagination">
+        <td>
+            <span class="bt-modal__table-pagination-btn bt-text-md" ng-if="rankingCtrl.ranking.page > 1"
+                  hm-tap="rankingCtrl.changePage(1)">
+              <<
+            </span>
+        </td>
+        <td>
+            <span class="bt-modal__table-pagination-btn bt-text-md" ng-if="rankingCtrl.ranking.page > 1"
+                  hm-tap="rankingCtrl.changePage((rankingCtrl.ranking.page)*1 - 1)">
+              <
+            </span>
+        </td>
+        <td></td>
+        <td><span class="bt-modal__table-pagination-btn bt-text-md" hm-tap="rankingCtrl.changePage((rankingCtrl.ranking.page) * 1 - 1)"
+                  ng-if="rankingCtrl.ranking.page > 1">{{(rankingCtrl.ranking.page) * 1 - 1}}</span></td>
+        <td> <span class="bt-modal__table-pagination-current bt-text-md">{{rankingCtrl.ranking.page}}</span> </td>
+        <td><span class="bt-modal__table-pagination-btn bt-text-md" hm-tap="rankingCtrl.changePage((rankingCtrl.ranking.page) * 1 + 1)"
+                  ng-if="rankingCtrl.ranking.page < rankingCtrl.ranking.totalPages">{{(rankingCtrl.ranking.page) * 1 + 1}}</span>
+        </td>
+        <td></td>
+        <td>
+            <span class="bt-modal__table-pagination-btn bt-text-md" ng-if="rankingCtrl.ranking.page < rankingCtrl.ranking.totalPages"
+                  hm-tap="rankingCtrl.changePage((rankingCtrl.ranking.page)*1 + 1)">
+              >
+            </span>
+        </td>
+        <td>
+            <span class="bt-modal__table-pagination-btn bt-text-md" ng-if="rankingCtrl.ranking.page < rankingCtrl.ranking.totalPages"
+                  hm-tap="rankingCtrl.changePage(rankingCtrl.ranking.totalPages)">
+              >>
+            </span>
+        </td>
+      </tr>
       <tr id="{{::rank.id}}" ng-class="{'active': rankingCtrl.user.id == rank.id}"
           ng-repeat="rank in rankingCtrl.ranking.ranking">
         <td colspan="2">
@@ -96,38 +130,38 @@
           <img class="bt-coin bt-coin--small" src="img/betty-coin_75x75.png">
         </td>
       </tr>
-      <tr class="bt-modal__table-pagination">
+      <tr ng-if="rankingCtrl.ranking.totalPages > 1" class="bt-modal__table-pagination">
         <td>
-            <button ng-if="rankingCtrl.ranking.page > 1"
+            <span class="bt-modal__table-pagination-btn bt-text-md" ng-if="rankingCtrl.ranking.page > 1"
                   hm-tap="rankingCtrl.changePage(1)">
               <<
-            </button>
+            </span>
         </td>
         <td>
-            <button ng-if="rankingCtrl.ranking.page > 1"
+            <span class="bt-modal__table-pagination-btn bt-text-md" ng-if="rankingCtrl.ranking.page > 1"
                   hm-tap="rankingCtrl.changePage((rankingCtrl.ranking.page)*1 - 1)">
               <
-            </button>
+            </span>
         </td>
         <td></td>
-        <td><button hm-tap="rankingCtrl.changePage((rankingCtrl.ranking.page) * 1 - 1)"
-                  ng-if="rankingCtrl.ranking.page > 1">{{(rankingCtrl.ranking.page) * 1 - 1}}</button></td>
-        <td>{{rankingCtrl.ranking.page}}</td>
-        <td><button hm-tap="rankingCtrl.changePage((rankingCtrl.ranking.page) * 1 + 1)"
-          ng-if="rankingCtrl.ranking.page < rankingCtrl.ranking.totalPages">{{(rankingCtrl.ranking.page) * 1 + 1}}</button>
+        <td><span class="bt-modal__table-pagination-btn bt-text-md" hm-tap="rankingCtrl.changePage((rankingCtrl.ranking.page) * 1 - 1)"
+                  ng-if="rankingCtrl.ranking.page > 1">{{(rankingCtrl.ranking.page) * 1 - 1}}</span></td>
+        <td> <span class="bt-modal__table-pagination-current bt-text-md">{{rankingCtrl.ranking.page}}</span> </td>
+        <td><span class="bt-modal__table-pagination-btn bt-text-md" hm-tap="rankingCtrl.changePage((rankingCtrl.ranking.page) * 1 + 1)"
+                  ng-if="rankingCtrl.ranking.page < rankingCtrl.ranking.totalPages">{{(rankingCtrl.ranking.page) * 1 + 1}}</span>
         </td>
         <td></td>
         <td>
-            <button ng-if="rankingCtrl.ranking.page < rankingCtrl.ranking.totalPages"
+            <span class="bt-modal__table-pagination-btn bt-text-md" ng-if="rankingCtrl.ranking.page < rankingCtrl.ranking.totalPages"
                   hm-tap="rankingCtrl.changePage((rankingCtrl.ranking.page)*1 + 1)">
               >
-            </button>
+            </span>
         </td>
         <td>
-            <button ng-if="rankingCtrl.ranking.page < rankingCtrl.ranking.totalPages"
+            <span class="bt-modal__table-pagination-btn bt-text-md" ng-if="rankingCtrl.ranking.page < rankingCtrl.ranking.totalPages"
                   hm-tap="rankingCtrl.changePage(rankingCtrl.ranking.totalPages)">
               >>
-            </button>
+            </span>
         </td>
       </tr>
     </table>

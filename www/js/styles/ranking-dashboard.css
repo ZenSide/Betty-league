@@ -13,3 +13,11 @@
   background-color: #fdcf21;
   height: 6rem;
 }
+.bt-modal__table-pagination-btn {
+  cursor: pointer;
+  color: #0791e0;
+  font-weight: 400;
+}
+.bt-modal__table-pagination-current {
+  font-weight: 700;
+}
