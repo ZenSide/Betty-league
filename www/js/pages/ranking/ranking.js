@@ -29,7 +29,6 @@ betty2App.controller('RankingCtrl', ['BettyLeagueApi', 'UserApi', 'ranking', '$t
 
 	rankingCtrl.ranking = ranking;
 
-
 	var withHeadLogo = false;
 	var footerStatus = {};
 
@@ -128,6 +127,10 @@ betty2App.controller('RankingCtrl', ['BettyLeagueApi', 'UserApi', 'ranking', '$t
 		}
 	};
 
+  rankingCtrl.currentBaseParams = {
+    'period': 'full_season'
+  };
+
 	rankingCtrl.previousPeriod = function (ranking, next) {
 		BtLoading.startLoad();
 
@@ -135,7 +138,7 @@ betty2App.controller('RankingCtrl', ['BettyLeagueApi', 'UserApi', 'ranking', '$t
 
 		switch (ranking.period) {
 			case 'full_season':
-				var params = {
+        rankingCtrl.currentBaseParams = {
 					'period': ranking.period,
 					'seasonNb': parseInt(ranking.seasonNb) + iteration
 				};
@@ -166,7 +169,7 @@ betty2App.controller('RankingCtrl', ['BettyLeagueApi', 'UserApi', 'ranking', '$t
 					halfSeasonNb =  halfSeasonNbTmp;
 				}
 
-				var params = {
+        rankingCtrl.currentBaseParams = {
 					'period': ranking.period,
 					'seasonNb': seasonNb,
 					'halfSeasonNb': halfSeasonNb
@@ -198,7 +201,7 @@ betty2App.controller('RankingCtrl', ['BettyLeagueApi', 'UserApi', 'ranking', '$t
 					fourRoundsNb =  fourRoundsNbTmp;
 				}
 
-				var params = {
+        rankingCtrl.currentBaseParams = {
 					'period': ranking.period,
 					'seasonNb': seasonNb,
 					'fourRoundsNb': fourRoundsNb
@@ -244,21 +247,21 @@ betty2App.controller('RankingCtrl', ['BettyLeagueApi', 'UserApi', 'ranking', '$t
 					roundNb =  roundNbTmp;
 				}
 
-				var params = {
+        rankingCtrl.currentBaseParams = {
 					'period': ranking.period,
 					'seasonNb': seasonNb,
 					'roundNb': roundNb
 				};
 
         if (rankingCtrl.bettyLeague.endless) {
-          params.halfSeasonNb = halfSeasonNb;
-          params.fourRoundsNb = fourRoundsNb;
+          rankingCtrl.currentBaseParams.halfSeasonNb = halfSeasonNb;
+          rankingCtrl.currentBaseParams.fourRoundsNb = fourRoundsNb;
         }
 
 				break;
 		}
 
-		BettyLeagueApi.getRanking($stateParams.bettyLeagueId, params, function (ranking) {
+		BettyLeagueApi.getRanking($stateParams.bettyLeagueId, rankingCtrl.currentBaseParams, function (ranking) {
 			rankingCtrl.ranking = ranking;
 			BtLoading.endLoad();
 		}, function (messages) {
@@ -267,6 +270,21 @@ betty2App.controller('RankingCtrl', ['BettyLeagueApi', 'UserApi', 'ranking', '$t
 			})
 		});
 	};
+
+  rankingCtrl.changePage = function (page) {
+
+    var params = rankingCtrl.currentBaseParams;
+    params.page = page;
+
+    BettyLeagueApi.getRanking($stateParams.bettyLeagueId, params, function (ranking) {
+      rankingCtrl.ranking = ranking;
+      BtLoading.endLoad();
+    }, function (messages) {
+      BtMessages.show(messages, null, function () {
+        BtLoading.endLoad();
+      })
+    });
+  };
 
 	footerStatus.leftBt = {
 		btShow : true,

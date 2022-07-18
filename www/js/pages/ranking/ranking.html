@@ -1,38 +1,38 @@
 <div class="bettyLeague-title-lg" translate="{{::rankingCtrl.bettyLeague.name}}"></div>
 
 <div class="ranking-view">
-    <div class="ranking-dashboard">
-        <table class="ranking-dashboard bt-modal__table bt-modal__table--list">
-            <tr class="bt-text-md u-pointer" ng-if="rankingCtrl.bettyLeague.endless">
-                <td hm-tap="rankingCtrl.changePeriod('full_season')"
-                    class="ranking-dashboard__tab" ng-class="{'active':'full_season' == rankingCtrl.ranking.period}">
-                    <span translate="RANKING.full_season"></span>
-                </td>
-                <td hm-tap="rankingCtrl.changePeriod('half_season')"
-                    class="ranking-dashboard__tab" ng-class="{'active':'half_season' == rankingCtrl.ranking.period}">
-                    <span translate="RANKING.half_season"></span>
-                </td>
-                <td hm-tap="rankingCtrl.changePeriod('for_rounds')"
-                    class="ranking-dashboard__tab" ng-class="{'active':'for_rounds' == rankingCtrl.ranking.period}">
-                    <span translate="RANKING.for_rounds"></span>
-                </td>
-                <td hm-tap="rankingCtrl.changePeriod('round')"
-                    class="ranking-dashboard__tab" ng-class="{'active':'round' == rankingCtrl.ranking.period}">
-                    <span translate="RANKING.round"></span>
-                </td>
-            </tr>
-            <tr class="bt-text-md u-pointer" ng-if="!rankingCtrl.bettyLeague.endless">
-                <td colspan="2" hm-tap="rankingCtrl.changePeriod('full_season')"
-                    class="ranking-dashboard__tab" ng-class="{'active':'full_season' == rankingCtrl.ranking.period}">
-                    <span translate="RANKING.full_season"></span>
-                </td>
-                <td colspan="2" hm-tap="rankingCtrl.changePeriod('round')"
-                    class="ranking-dashboard__tab" ng-class="{'active':'round' == rankingCtrl.ranking.period}">
-                    <span translate="RANKING.round"></span>
-                </td>
-            </tr>
-            <tr>
-                <td class="bt-text-md-medium ranking-dashboard__description active" colspan="4">
+  <div class="ranking-dashboard">
+    <table class="ranking-dashboard bt-modal__table bt-modal__table--list">
+      <tr class="bt-text-md u-pointer" ng-if="rankingCtrl.bettyLeague.endless">
+        <td hm-tap="rankingCtrl.changePeriod('full_season')"
+            class="ranking-dashboard__tab" ng-class="{'active':'full_season' == rankingCtrl.ranking.period}">
+          <span translate="RANKING.full_season"></span>
+        </td>
+        <td hm-tap="rankingCtrl.changePeriod('half_season')"
+            class="ranking-dashboard__tab" ng-class="{'active':'half_season' == rankingCtrl.ranking.period}">
+          <span translate="RANKING.half_season"></span>
+        </td>
+        <td hm-tap="rankingCtrl.changePeriod('for_rounds')"
+            class="ranking-dashboard__tab" ng-class="{'active':'for_rounds' == rankingCtrl.ranking.period}">
+          <span translate="RANKING.for_rounds"></span>
+        </td>
+        <td hm-tap="rankingCtrl.changePeriod('round')"
+            class="ranking-dashboard__tab" ng-class="{'active':'round' == rankingCtrl.ranking.period}">
+          <span translate="RANKING.round"></span>
+        </td>
+      </tr>
+      <tr class="bt-text-md u-pointer" ng-if="!rankingCtrl.bettyLeague.endless">
+        <td colspan="2" hm-tap="rankingCtrl.changePeriod('full_season')"
+            class="ranking-dashboard__tab" ng-class="{'active':'full_season' == rankingCtrl.ranking.period}">
+          <span translate="RANKING.full_season"></span>
+        </td>
+        <td colspan="2" hm-tap="rankingCtrl.changePeriod('round')"
+            class="ranking-dashboard__tab" ng-class="{'active':'round' == rankingCtrl.ranking.period}">
+          <span translate="RANKING.round"></span>
+        </td>
+      </tr>
+      <tr>
+        <td class="bt-text-md-medium ranking-dashboard__description active" colspan="4">
                     <span class="u-pull-left" ng-if="rankingCtrl.canIPrev(rankingCtrl.ranking)">
                          <bt-body-btn bt-ico="'fas fa-caret-left'"
                                       bt-content=" "
@@ -44,28 +44,28 @@
                          </bt-body-btn>
                     </span>
 
-                    <span translate="RANKING.title"></span>
-                    <span ng-if="rankingCtrl.ranking.seasonNb && rankingCtrl.bettyLeague.endless">
+          <span translate="RANKING.title"></span>
+          <span ng-if="rankingCtrl.ranking.seasonNb && rankingCtrl.bettyLeague.endless">
                         <span translate="RANKING.full_season"></span>
                         {{rankingCtrl.ranking.seasonNb}}
                     </span>
-                    <span ng-if="!rankingCtrl.bettyLeague.endless && 'full_season' == rankingCtrl.ranking.period">
+          <span ng-if="!rankingCtrl.bettyLeague.endless && 'full_season' == rankingCtrl.ranking.period">
                         <span translate="RANKING.full_season_ponctuel"></span>
                     </span>
-                    <span ng-if="rankingCtrl.ranking.halfSeasonNb">
+          <span ng-if="rankingCtrl.ranking.halfSeasonNb">
                         <span translate="RANKING.half_season"></span>
                         {{rankingCtrl.ranking.halfSeasonNb}}
                     </span>
-                    <span ng-if="rankingCtrl.ranking.fourRoundsNb">
+          <span ng-if="rankingCtrl.ranking.fourRoundsNb">
                         <span translate="RANKING.for_rounds"></span>
                         {{rankingCtrl.ranking.fourRoundsNb}}
                     </span>
-                    <span ng-if="rankingCtrl.ranking.roundNb">
+          <span ng-if="rankingCtrl.ranking.roundNb">
                         <span translate="RANKING.round"></span>
                         {{rankingCtrl.ranking.roundNb}}
                     </span>
 
-                     <span class="u-pull-right" ng-if="rankingCtrl.canIPrev(rankingCtrl.ranking, true)">
+          <span class="u-pull-right" ng-if="rankingCtrl.canIPrev(rankingCtrl.ranking, true)">
                          <bt-body-btn bt-ico="'fas fa-caret-right'"
                                       bt-content=" "
                                       bt-btn-classes="'bt-action__btn--body-square bt-action__btn--body-small u-pull-left bt-action__btn--blue'"
@@ -75,26 +75,61 @@
                          >
                          </bt-body-btn>
                     </span>
-                </td>
-            </tr>
-        </table>
+        </td>
+      </tr>
+    </table>
 
-    </div>
+  </div>
 
-    <ion-content delegate-handle="btContentHandle" class="bt-content ranking">
-        <table class="bt-modal__table bt-modal__table--list bt-text u-gutter-bottom-small">
-            <tr id="{{::rank.id}}" ng-class="{'active': rankingCtrl.user.id == rank.id}" ng-repeat="rank in rankingCtrl.ranking.ranking">
-                <td>
-                    {{rank.rank}}
-                </td>
-                <td>
-                    {{rank.pseudo}}
-                </td>
-                <td>
-                    {{rank.score | number : 2}}
-                    <img class="bt-coin bt-coin--small" src="img/betty-coin_75x75.png">
-                </td>
-            </tr>
-        </table>
-    </ion-content>
+  <ion-content delegate-handle="btContentHandle" class="bt-content ranking">
+    <table class="bt-modal__table bt-modal__table--list bt-text u-gutter-bottom-small">
+      <tr id="{{::rank.id}}" ng-class="{'active': rankingCtrl.user.id == rank.id}"
+          ng-repeat="rank in rankingCtrl.ranking.ranking">
+        <td colspan="2">
+          {{rank.rank}}
+        </td>
+        <td colspan="5">
+          {{rank.pseudo}}
+        </td>
+        <td colspan="2">
+          {{rank.score | number: 2}}
+          <img class="bt-coin bt-coin--small" src="img/betty-coin_75x75.png">
+        </td>
+      </tr>
+      <tr class="bt-modal__table-pagination">
+        <td>
+            <button ng-if="rankingCtrl.ranking.page > 1"
+                  hm-tap="rankingCtrl.changePage(1)">
+              <<
+            </button>
+        </td>
+        <td>
+            <button ng-if="rankingCtrl.ranking.page > 1"
+                  hm-tap="rankingCtrl.changePage((rankingCtrl.ranking.page)*1 - 1)">
+              <
+            </button>
+        </td>
+        <td></td>
+        <td><button hm-tap="rankingCtrl.changePage((rankingCtrl.ranking.page) * 1 - 1)"
+                  ng-if="rankingCtrl.ranking.page > 1">{{(rankingCtrl.ranking.page) * 1 - 1}}</button></td>
+        <td>{{rankingCtrl.ranking.page}}</td>
+        <td><button hm-tap="rankingCtrl.changePage((rankingCtrl.ranking.page) * 1 + 1)"
+          ng-if="rankingCtrl.ranking.page < rankingCtrl.ranking.totalPages">{{(rankingCtrl.ranking.page) * 1 + 1}}</button>
+        </td>
+        <td></td>
+        <td>
+            <button ng-if="rankingCtrl.ranking.page < rankingCtrl.ranking.totalPages"
+                  hm-tap="rankingCtrl.changePage((rankingCtrl.ranking.page)*1 + 1)">
+              >
+            </button>
+        </td>
+        <td>
+            <button ng-if="rankingCtrl.ranking.page < rankingCtrl.ranking.totalPages"
+                  hm-tap="rankingCtrl.changePage(rankingCtrl.ranking.totalPages)">
+              >>
+            </button>
+        </td>
+      </tr>
+    </table>
+  </ion-content>
 </div>
