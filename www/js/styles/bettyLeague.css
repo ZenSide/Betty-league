@@ -11,10 +11,6 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.bettyLeague-title--gold {
-  background-color: #fdcf21;
-  color: #83600b;
-}
 .bettyLeague-title-lg {
   background-color: #0791e0;
   color: #e6e6e6;
@@ -47,6 +43,10 @@
 }
 .bettyLeague-title--red {
   background-color: #fa393c;
+}
+.bettyLeague-title--gold {
+  background-color: #fdcf21;
+  color: #83600b;
 }
 .bettyLeague-header {
   background-color: #0791e0;

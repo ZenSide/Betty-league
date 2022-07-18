@@ -105,7 +105,9 @@ var translations = {
           'WHO_QUALIF': 'Who will qualified?',
           'EMPTY_SCORE': 'You must enter a score',
           'EMPTY_WINNER': 'You must choose a winner',
-          'EXPLAIN': 'By predicting the final score (before penalties) you put a free coin on the final score and another one on the winning team'
+          'EXPLAIN': 'By predicting the final score (before penalties) you put a free coin on the final score and another one on the winning team',
+          'EXPLAIN_DOUBLE_GAIN': 'By predicting the final score (before penalties) you put two free coins on the final score and two more on the winning team',
+          'EXPLAIN_TRIPLE_GAIN': 'By predicting the final score (before penalties) you put three free coins on the final score and three more on the winning team'
         },
         BET_SUMMARY: {
           'MY_BETS': 'My predictions',
@@ -119,7 +121,8 @@ var translations = {
           'CLOSE': 'Close',
           'NO_ODD_PREFIX': 'You\didn´t predict this game yet. You only have',
           'NO_ODD_SUFIX': 'to predict this game',
-          'NO_ODD': 'Sorry buddy, it\'s now too late to predict. Make sure to predict the next game!'
+          'DOUBLE_GAIN': 'It\'s playoff time! Earn double points for correct predictions!',
+          'TRIPLE_GAIN': 'It\'s the finale! Earn triple points for correct predictions!',
         },
         MODAL_ODD_DETAIL: {
           'TITLE': 'Earnings details',
@@ -284,7 +287,9 @@ var translations = {
           'WHO_QUALIF': 'Qui va se qualifier ?',
           'EMPTY_SCORE': 'Tu dois saisir un score',
           'EMPTY_WINNER': 'Tu dois choisir une équipe',
-          'EXPLAIN': 'By predicting the final score (before penalties) you put a free coin on the final score and another one on the winning team'
+          'EXPLAIN': 'By predicting the final score (before penalties) you put a free coin on the final score and another one on the winning team',
+          'EXPLAIN_DOUBLE_GAIN': 'By predicting the final score (before penalties) you put two free coins on the final score and two more on the winning team',
+          'EXPLAIN_TRIPLE_GAIN': 'By predicting the final score (before penalties) you put three free coins on the final score and three more on the winning team'
         },
         BET_SUMMARY: {
           'MY_BETS': 'Mon pari',
@@ -299,6 +304,8 @@ var translations = {
           'NO_ODD_PREFIX': 'Tu n\'as pas encore parié sur ce match. Tu n\'a plus que',
           'NO_ODD_SUFIX': 'pour cliquer sur parier !',
           'NO_ODD': 'Dommage, c\'est trop tard pour parier. Tu ne gagnera rien cette fois-ci',
+          'DOUBLE_GAIN': 'C\'est la phase finale ! Double tes gains !',
+          'TRIPLE_GAIN': 'C\'est la finale ! Triple tes gains !',
         },
         MODAL_ODD_DETAIL: {
           'TITLE': 'Détail des cotes',
@@ -376,8 +383,8 @@ betty2App.config(['$translateProvider', 'tmhDynamicLocaleProvider', function ($t
     .fallbackLanguage('en')
     .determinePreferredLanguage();
 
-    tmhDynamicLocaleProvider.localeLocationPattern('lib/angular-i18n/angular-locale_{{locale}}.js');
-    tmhDynamicLocaleProvider.defaultLocale($translateProvider.preferredLanguage());
+  tmhDynamicLocaleProvider.localeLocationPattern('lib/angular-i18n/angular-locale_{{locale}}.js');
+  tmhDynamicLocaleProvider.defaultLocale($translateProvider.preferredLanguage());
 
-    // tmhDynamicLocaleProvider.set($translateProvider.preferredLanguage());
+  // tmhDynamicLocaleProvider.set($translateProvider.preferredLanguage());
 }]);

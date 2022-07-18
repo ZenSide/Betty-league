@@ -151,15 +151,21 @@ betty2App.factory('BetApi', ['$filter', 'ResourcesFactory', 'BtLocalStorage', fu
 
 		getMyBetResume: function (showdown, bet, status) {
 			var gain = 0;
-			var winnerGain = 0;
-			var scoreGain = 0;
+      var basewinnerGain = 0;
+      var winnerGain = 0;
+      var basescoreGain = 0;
+      var scoreGain = 0;
+      var gainMultiplier = 1;
 
 			var response = {
 				'potentiel': false,
 				'gain': gain,
-				'winnerGain': winnerGain,
-				'scoreGain': scoreGain,
-				'winner': null,
+        'basewinnerGain': basewinnerGain,
+        'winnerGain': winnerGain,
+        'basescoreGain': basescoreGain,
+        'scoreGain': scoreGain,
+        'winner': null,
+        'gainMultiplier': gainMultiplier,
 			};
 
 			//gain potentiel
@@ -215,9 +221,15 @@ betty2App.factory('BetApi', ['$filter', 'ResourcesFactory', 'BtLocalStorage', fu
 				response.potentiel = true;
 			}
 
-			response.gain = gain;
-			response.winnerGain = winnerGain;
-			response.scoreGain = scoreGain;
+			response.gain = gain * showdown.smFixture.gainMultiplier;
+      response.basewinnerGain = winnerGain;
+      response.winnerGain = winnerGain * showdown.smFixture.gainMultiplier;
+      response.basescoreGain = scoreGain;
+      response.scoreGain = scoreGain * showdown.smFixture.gainMultiplier;
+
+      response.gainMultiplier = showdown.smFixture.gainMultiplier;
+
+      console.log(response);
 
 			return response;
 		},

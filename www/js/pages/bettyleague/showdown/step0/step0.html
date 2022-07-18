@@ -113,6 +113,14 @@
     </div>
 </div>
 
+<div ng-if="showdownCtrl.showdown.smFixture.gainMultiplier === 2" class="bettyLeague-title-lg bettyLeague-title--wrap bettyLeague-title--gold">
+  <span translate="SHOWDOWN.BET_SUMMARY.DOUBLE_GAIN"></span>
+</div>
+
+<div ng-if="showdownCtrl.showdown.smFixture.gainMultiplier === 3" class="bettyLeague-title-lg bettyLeague-title--wrap bettyLeague-title--gold">
+  <span translate="SHOWDOWN.BET_SUMMARY.TRIPLE_GAIN"></span>
+</div>
+
 <!--boouuu pas de pari-->
 <div ng-if="!showdownCtrl.bet && step0Ctrl.sdStatus() === 'OPEN'" class="bettyLeague-title-lg bettyLeague-title--wrap bettyLeague-title--red">
     <span translate="SHOWDOWN.BET_SUMMARY.NO_ODD_PREFIX"></span>

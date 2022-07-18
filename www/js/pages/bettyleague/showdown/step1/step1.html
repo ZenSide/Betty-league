@@ -3,8 +3,10 @@
         <span class="u-pull-left">I</span>
         <span translate="SHOWDOWN.BET_FORM.TITLE"></span>
     </div>
-  <div class="bet-form__summary bt-text-md-medium" translate="SHOWDOWN.BET_FORM.EXPLAIN">
-  </div>
+  <div ng-if="showdownCtrl.showdown.smFixture.gainMultiplier === 1" class="bet-form__summary bt-text-md-medium" translate="SHOWDOWN.BET_FORM.EXPLAIN"></div>
+  <div ng-if="showdownCtrl.showdown.smFixture.gainMultiplier === 2" class="bet-form__summary bt-text-md-medium" translate="SHOWDOWN.BET_FORM.EXPLAIN_DOUBLE_GAIN"></div>
+  <div ng-if="showdownCtrl.showdown.smFixture.gainMultiplier === 3" class="bet-form__summary bt-text-md-medium" translate="SHOWDOWN.BET_FORM.EXPLAIN_TRIPLE_GAIN"></div>
+
     <div class="bet-form__summary">
         <div class="showdown-summary showdown-summary--tiny">
             <div class="showdown-summary__row">

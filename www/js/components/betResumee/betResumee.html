@@ -1,14 +1,22 @@
 <!--//FOOTER/HEADER-->
 <div ng-class="$ctrl.modifierClasses" class="u-text-gold" ng-if="$ctrl.betResume.potentiel && $ctrl.betResume[$ctrl.type]">
+  <span class="bt-text" ng-if="($ctrl.type !== 'gain') && ($ctrl.betResume.gainMultiplier > 1)">
+     {{$ctrl.betResume['base' + $ctrl.type]}} <span class="u-text-red">x {{$ctrl.betResume.gainMultiplier}}</span> =
+  </span>
+
     + {{$ctrl.betResume[$ctrl.type]|number}}
     <img ng-class="$ctrl.modifierCoin" class="bt-coin" src="img/betty-coin_75x75.png">
     ?
 </div>
 <div ng-class="$ctrl.modifierClasses" class="u-text-green" ng-if="!$ctrl.betResume.potentiel && $ctrl.betResume[$ctrl.type]">
+    <span class="bt-text" ng-if="($ctrl.type !== 'gain') && ($ctrl.betResume.gainMultiplier > 1)">
+     {{$ctrl.betResume['base' + $ctrl.type]}} <span class="u-text-red">x {{$ctrl.betResume.gainMultiplier}}</span> =
+    </span>
+
     + {{$ctrl.betResume[$ctrl.type]|number}}
     <img ng-class="$ctrl.modifierCoin" class="bt-coin" src="img/betty-coin_75x75.png">
 </div>
-<div ng-class="$ctrl.modifierClasses" class="u-text-red" ng-if="!$ctrl.betResume.potentiel && $ctrl.betResume[$ctrl.type] === 0">
+<div ng-class="$ctrl.modifierClasses" class="" ng-if="!$ctrl.betResume.potentiel && $ctrl.betResume[$ctrl.type] === 0">
     + 0
     <img ng-class="$ctrl.modifierCoin" class="bt-coin" src="img/betty-coin_75x75.png">
 </div>
