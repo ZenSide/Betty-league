@@ -2,7 +2,7 @@
  * Created by simon on 24/03/18.
  */
 betty2App.component('btFooterBtn',{
-  templateUrl:'js/components/btFooterBtn/btFooterBtn.html',
+  templateUrl:'js/components/btFooterBtn/btFooterBtn.html?v=%CACHE_BUSTING_VERSION%',
   bindings:{
     btShow:"<",
     btPosition: '@',

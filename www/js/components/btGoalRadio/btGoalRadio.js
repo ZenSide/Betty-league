@@ -2,7 +2,7 @@
  * Created by simon on 24/03/18.
  */
 betty2App.component('btGoalRadio',{
-  templateUrl:'js/components/btGoalRadio/btGoalRadio.html',
+  templateUrl:'js/components/btGoalRadio/btGoalRadio.html?v=%CACHE_BUSTING_VERSION%',
   bindings:{
     btModel: "="
   },

@@ -5,6 +5,5 @@ betty2App
   .constant('AVATAR_HEIGHT', 100)
   .constant('AVATAR_WIDTH', 100)
   .constant('ENV', 'DEV') //DEV - VIEW - PROD
-  .constant('VERSION', '?ver=0.215')
 ;
 */

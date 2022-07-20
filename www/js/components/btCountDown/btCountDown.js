@@ -2,7 +2,7 @@
  * Created by simon on 24/03/18.
  */
 betty2App.component('btCountDown',{
-  templateUrl:'js/components/btCountDown/btCountDown.html',
+  templateUrl:'js/components/btCountDown/btCountDown.html?v=%CACHE_BUSTING_VERSION%',
   bindings:{
     btStartDate:"<",
     btEndAction:"&"

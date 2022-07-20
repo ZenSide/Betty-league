@@ -2,7 +2,7 @@
  * Created by simon on 24/03/18.
  */
 betty2App.component('btLogoTeam',{
-  templateUrl:'js/components/btLogoTeam/btLogoTeam.html',
+  templateUrl:'js/components/btLogoTeam/btLogoTeam.html?v=%CACHE_BUSTING_VERSION%',
   bindings:{
     btTeam: '<',
     btSize: '@'

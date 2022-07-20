@@ -4,7 +4,7 @@ betty2App.config(['$stateProvider', '$urlRouterProvider', 'VERSION', function ($
     .state('login', {
       url: '/login/:animDirection',
       params: {animDirection: null},
-      templateUrl: 'js/pages/login/login.html' + VERSION,
+      templateUrl: 'js/pages/login/login.html?v=%CACHE_BUSTING_VERSION%',
       controller: 'LoginCtrl',
       controllerAs: 'loginCtrl',
       resolve: {
@@ -28,7 +28,7 @@ betty2App.config(['$stateProvider', '$urlRouterProvider', 'VERSION', function ($
     .state('signin', {
       url: '/signin/:animDirection',
       params: {animDirection: null},
-      templateUrl: 'js/pages/signin/signin.html' + VERSION,
+      templateUrl: 'js/pages/signin/signin.html?v=%CACHE_BUSTING_VERSION%',
       controller: 'SigninCtrl as signinCtrl',
       controllerAs: 'signinCtrl',
       resolve: {
@@ -49,7 +49,7 @@ betty2App.config(['$stateProvider', '$urlRouterProvider', 'VERSION', function ($
     .state('passwordlost', {
       url: '/passwordlost/:animDirection',
       params: {animDirection: null},
-      templateUrl: 'js/pages/passwordlost/passwordlost.html' + VERSION,
+      templateUrl: 'js/pages/passwordlost/passwordlost.html?v=%CACHE_BUSTING_VERSION%',
       controller: 'PasswordLostCtrl as passwordLostCtrl',
       controllerAs: 'passwordLostCtrl',
       resolve: {
@@ -69,7 +69,7 @@ betty2App.config(['$stateProvider', '$urlRouterProvider', 'VERSION', function ($
 
     .state('landing', {
       url: '/landing',
-      templateUrl: 'js/pages/landing/landing.html' + VERSION,
+      templateUrl: 'js/pages/landing/landing.html?v=%CACHE_BUSTING_VERSION%',
       controller: 'LandingCtrl',
       controllerAs: 'landingCtrl',
       resolve: {
@@ -96,7 +96,7 @@ betty2App.config(['$stateProvider', '$urlRouterProvider', 'VERSION', function ($
     .state('bettyleague', {
       abstract: true,
       url: '/bettyleague/:bettyLeagueId',
-      templateUrl: 'js/pages/bettyleague/bettyleague.html' + VERSION,
+      templateUrl: 'js/pages/bettyleague/bettyleague.html?v=%CACHE_BUSTING_VERSION%',
       controller: 'BettyLeagueCtrl',
       controllerAs: 'bettyLeagueCtrl',
       resolve: {
@@ -136,7 +136,7 @@ betty2App.config(['$stateProvider', '$urlRouterProvider', 'VERSION', function ($
     .state('bettyleague.showdown', {
       abstract: true,
       url: '/showdown/:showdownId',
-      templateUrl: 'js/pages/bettyleague/showdown/showdown.html' + VERSION,
+      templateUrl: 'js/pages/bettyleague/showdown/showdown.html?v=%CACHE_BUSTING_VERSION%',
       controller: 'ShowdownCtrl',
       controllerAs: 'showdownCtrl',
       resolve: {
@@ -188,7 +188,7 @@ betty2App.config(['$stateProvider', '$urlRouterProvider', 'VERSION', function ($
     .state('bettyleague.showdown.step0', {
       url: '/step0/:animDirection',
       params: {animDirection: null},
-      templateUrl: 'js/pages/bettyleague/showdown/step0/step0.html' + VERSION,
+      templateUrl: 'js/pages/bettyleague/showdown/step0/step0.html?v=%CACHE_BUSTING_VERSION%',
       controller: 'Step0Ctrl',
       controllerAs: 'step0Ctrl',
       resolve: {
@@ -210,7 +210,7 @@ betty2App.config(['$stateProvider', '$urlRouterProvider', 'VERSION', function ($
     .state('bettyleague.showdown.step1', {
       url: '/step1/:animDirection',
       params: {animDirection: null},
-      templateUrl: 'js/pages/bettyleague/showdown/step1/step1.html' + VERSION,
+      templateUrl: 'js/pages/bettyleague/showdown/step1/step1.html?v=%CACHE_BUSTING_VERSION%',
       controller: 'Step1Ctrl',
       controllerAs: 'step1Ctrl',
       resolve: {
@@ -229,7 +229,7 @@ betty2App.config(['$stateProvider', '$urlRouterProvider', 'VERSION', function ($
     .state('bettyleague.showdown.step2', {
       url: '/step2/:animDirection',
       params: {animDirection: null},
-      templateUrl: 'js/pages/bettyleague/showdown/step2/step2.html' + VERSION,
+      templateUrl: 'js/pages/bettyleague/showdown/step2/step2.html?v=%CACHE_BUSTING_VERSION%',
       controller: 'Step2Ctrl',
       controllerAs: 'step2Ctrl',
       resolve: {
@@ -248,7 +248,7 @@ betty2App.config(['$stateProvider', '$urlRouterProvider', 'VERSION', function ($
     .state('bettyleague.showdown.step3', {
       url: '/step3/:animDirection',
       params: {animDirection: null},
-      templateUrl: 'js/pages/bettyleague/showdown/step3/step3.html' + VERSION,
+      templateUrl: 'js/pages/bettyleague/showdown/step3/step3.html?v=%CACHE_BUSTING_VERSION%',
       controller: 'Step3Ctrl',
       controllerAs: 'step3Ctrl',
       resolve: {
@@ -266,7 +266,7 @@ betty2App.config(['$stateProvider', '$urlRouterProvider', 'VERSION', function ($
 
     .state('account', {
       url: '/account/:animDirection',
-      templateUrl: 'js/pages/account/account.html' + VERSION,
+      templateUrl: 'js/pages/account/account.html?v=%CACHE_BUSTING_VERSION%',
       controller: 'AccountCtrl',
       controllerAs: 'accountCtrl',
       resolve: {
@@ -284,7 +284,7 @@ betty2App.config(['$stateProvider', '$urlRouterProvider', 'VERSION', function ($
 
     .state('changepassword', {
       url: '/changepassword/:animDirection',
-      templateUrl: 'js/pages/changepassword/changepassword.html' + VERSION,
+      templateUrl: 'js/pages/changepassword/changepassword.html?v=%CACHE_BUSTING_VERSION%',
       controller: 'ChangePasswordCtrl',
       controllerAs: 'changePasswordCtrl',
       resolve: {
@@ -305,7 +305,7 @@ betty2App.config(['$stateProvider', '$urlRouterProvider', 'VERSION', function ($
     .state('listMatch', {
       url: '/bettyleague/:bettyLeagueId/showdown/:showdownId/listmatch/:animDirection',
       params: {animDirection: null},
-      templateUrl: 'js/pages/listMatch/listMatch.html' + VERSION,
+      templateUrl: 'js/pages/listMatch/listMatch.html?v=%CACHE_BUSTING_VERSION%',
       controller: 'ListMatchCtrl',
       controllerAs: 'listMatchCtrl',
       resolve: {
@@ -358,7 +358,7 @@ betty2App.config(['$stateProvider', '$urlRouterProvider', 'VERSION', function ($
     .state('ranking', {
       url: '/bettyleague/:bettyLeagueId/showdown/:showdownId/ranking/:animDirection',
       params: {animDirection: null},
-      templateUrl: 'js/pages/ranking/ranking.html' + VERSION,
+      templateUrl: 'js/pages/ranking/ranking.html?v=%CACHE_BUSTING_VERSION%',
       controller: 'RankingCtrl',
       controllerAs: 'rankingCtrl',
       resolve: {
@@ -401,7 +401,7 @@ betty2App.config(['$stateProvider', '$urlRouterProvider', 'VERSION', function ($
     .state('privateleagues', {
       url: '/privateleagues/:animDirection',
       params: {animDirection: null},
-      templateUrl: 'js/pages/privateLeagues/privateLeagues.html' + VERSION,
+      templateUrl: 'js/pages/privateLeagues/privateLeagues.html?v=%CACHE_BUSTING_VERSION%',
       controller: 'PrivateLeaguesCtrl',
       controllerAs: 'privateLeaguesCtrl',
       resolve: {
@@ -429,7 +429,7 @@ betty2App.config(['$stateProvider', '$urlRouterProvider', 'VERSION', function ($
     .state('createleague', {
       url: '/createLeague/:animDirection',
       params: {animDirection: null},
-      templateUrl: 'js/pages/createLeague/createLeague.html' + VERSION,
+      templateUrl: 'js/pages/createLeague/createLeague.html?v=%CACHE_BUSTING_VERSION%',
       controller: 'CreateLeagueCtrl',
       controllerAs: 'createLeagueCtrl',
       resolve: {
@@ -448,7 +448,7 @@ betty2App.config(['$stateProvider', '$urlRouterProvider', 'VERSION', function ($
     .state('joinleague', {
       url: '/joinLeague/:animDirection',
       params: {animDirection: null},
-      templateUrl: 'js/pages/joinLeague/joinLeague.html' + VERSION,
+      templateUrl: 'js/pages/joinLeague/joinLeague.html?v=%CACHE_BUSTING_VERSION%',
       controller: 'JoinLeagueCtrl',
       controllerAs: 'joinLeagueCtrl',
       resolve: {
@@ -467,7 +467,7 @@ betty2App.config(['$stateProvider', '$urlRouterProvider', 'VERSION', function ($
     .state('home', {
       url: '/home/:animDirection',
       params: {animDirection: null},
-      templateUrl: 'js/pages/home/home.html' + VERSION,
+      templateUrl: 'js/pages/home/home.html?v=%CACHE_BUSTING_VERSION%',
       controller: 'HomeCtrl',
       controllerAs: 'homeCtrl',
       resolve: {

@@ -2,7 +2,7 @@
  * Created by simon on 24/03/18.
  */
 betty2App.component('betResumee',{
-  templateUrl:'js/components/betResumee/betResumee.html?ver=0.226',
+  templateUrl:'js/components/betResumee/betResumee.html?v=%CACHE_BUSTING_VERSION%',
   bindings:{
     modifierClasses: '@',
     showdown: '<',

@@ -1,17 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b1f29d8e-71cb-4a38-a451-f6342f828e6e" name="Default" comment="ranking pagination style">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/js/components/betResumee/betResumee.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/components/betResumee/betResumee.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/js/pages/bettyleague/showdown/step0/step0.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/pages/bettyleague/showdown/step0/step0.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/js/pages/bettyleague/showdown/step1/step1.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/pages/bettyleague/showdown/step1/step1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/js/resources/BetApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/resources/BetApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/js/styles/bettyLeague.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/styles/bettyLeague.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/js/styles/bettyLeague.less" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/styles/bettyLeague.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/js/traductions.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/traductions.js" afterDir="false" />
+    <list default="true" id="b1f29d8e-71cb-4a38-a451-f6342f828e6e" name="Default" comment="better messages for shootout">
+      <change afterPath="$PROJECT_DIR$/hooks/after_prepare/011_cache_busting.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hooks/cache-busting-conf.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/Gruntfile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/js/components/betResumee/betResumee.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/components/betResumee/betResumee.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/js/components/btBodyBtn/btBodyBtn.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/components/btBodyBtn/btBodyBtn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/js/components/btCountDown/btCountDown.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/components/btCountDown/btCountDown.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/js/components/btFooterBtn/btFooterBtn.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/components/btFooterBtn/btFooterBtn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/js/components/btGoalRadio/btGoalRadio.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/components/btGoalRadio/btGoalRadio.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/js/components/btInputText/btInputText.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/components/btInputText/btInputText.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/js/components/btLogoTeam/btLogoTeam.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/components/btLogoTeam/btLogoTeam.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/js/components/btModalOdds/btModalOdds.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/components/btModalOdds/btModalOdds.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/js/components/btTeamRadio/btTeamRadio.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/components/btTeamRadio/btTeamRadio.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/js/config/parameters.dist.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/config/parameters.dist.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/js/routing.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/routing.js" afterDir="false" />
     </list>
-    <list id="3a1f8fe8-031b-47e4-a389-fcc25573a7b5" name="New changelist" comment="" />
+    <list id="3a1f8fe8-031b-47e4-a389-fcc25573a7b5" name="New changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -569,7 +578,10 @@
       <workItem from="1657630174809" duration="8000" />
       <workItem from="1657710942258" duration="7116000" />
       <workItem from="1658124226445" duration="7186000" />
-      <workItem from="1658138112521" duration="2414000" />
+      <workItem from="1658138112521" duration="3735000" />
+      <workItem from="1658166311324" duration="7000" />
+      <workItem from="1658303006277" duration="5022000" />
+      <workItem from="1658325963583" duration="3585000" />
     </task>
     <task id="LOCAL-00002" summary="cache control">
       <created>1528476329479</created>

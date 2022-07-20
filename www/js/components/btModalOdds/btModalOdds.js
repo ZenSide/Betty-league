@@ -2,7 +2,7 @@
  * Created by simon on 24/03/18.
  */
 betty2App.component('btModalOdds',{
-  templateUrl:'js/components/btModalOdds/btModalOdds.html',
+  templateUrl:'js/components/btModalOdds/btModalOdds.html?v=%CACHE_BUSTING_VERSION%',
   bindings:{
     btData:"<",
     btShow:"<",

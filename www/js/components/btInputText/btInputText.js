@@ -3,7 +3,7 @@
  */
 betty2App.component('btInputText',{
   transclude: true,
-  templateUrl:'js/components/btInputText/btInputText.html',
+  templateUrl:'js/components/btInputText/btInputText.html?v=%CACHE_BUSTING_VERSION%',
   bindings:{
     btPlaceholder: '<',
     btNgModel: '=',

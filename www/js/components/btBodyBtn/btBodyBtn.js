@@ -2,7 +2,7 @@
  * Created by simon on 24/03/18.
  */
 betty2App.component('btBodyBtn',{
-  templateUrl:'js/components/btBodyBtn/btBodyBtn.html',
+  templateUrl:'js/components/btBodyBtn/btBodyBtn.html?v=%CACHE_BUSTING_VERSION%',
   bindings:{
     btIco: '<',
     btBtnClasses: '<',
