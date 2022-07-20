@@ -1,4 +1,4 @@
-betty2App.config(['$stateProvider', '$urlRouterProvider', 'VERSION', function ($stateProvider, $urlRouterProvider, VERSION) {
+betty2App.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
   $stateProvider
     //USER
     .state('login', {
