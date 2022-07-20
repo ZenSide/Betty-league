@@ -100,14 +100,13 @@ var translations = {
         BET_FORM: {
           'TITLE': 'Let\'s predict!',
           'HOW_MANY_GOALS': 'How many goals for',
-          'SHOOTOUT_WARNING': 'With this score, will we get penalty shoot-out?',
+          'SHOOTOUT_WARNING': 'With this score at the end of extra time, who will win the penalty shootout?',
           'WHO_WIN': 'Who will win?',
           'WHO_QUALIF': 'Who will qualified?',
           'EMPTY_SCORE': 'You must enter a score',
           'EMPTY_WINNER': 'You must choose a winner',
-          'EXPLAIN': 'By predicting the final score (before penalties) you put a free coin on the final score and another one on the winning team',
-          'EXPLAIN_DOUBLE_GAIN': 'By predicting the final score (before penalties) you put two free coins on the final score and two more on the winning team',
-          'EXPLAIN_TRIPLE_GAIN': 'By predicting the final score (before penalties) you put three free coins on the final score and three more on the winning team'
+          'EXPLAIN': 'Predict the final score',
+          'EXPLAIN_EXTRA_TIME': 'after eventual extra time and before eventual penalty shootout',
         },
         BET_SUMMARY: {
           'MY_BETS': 'My predictions',
@@ -282,14 +281,13 @@ var translations = {
         BET_FORM: {
           'TITLE': 'On parie !',
           'HOW_MANY_GOALS': 'Combien de buts pour',
-          'SHOOTOUT_WARNING': 'Sur ce score il va y avoir une séance de tirs au but.',
+          'SHOOTOUT_WARNING': 'Sur ce score après les prolongations, qui va remporter la séance de tirs au but ?',
           'WHO_WIN': 'Qui va l\'emporter ?',
           'WHO_QUALIF': 'Qui va se qualifier ?',
           'EMPTY_SCORE': 'Tu dois saisir un score',
           'EMPTY_WINNER': 'Tu dois choisir une équipe',
-          'EXPLAIN': 'By predicting the final score (before penalties) you put a free coin on the final score and another one on the winning team',
-          'EXPLAIN_DOUBLE_GAIN': 'By predicting the final score (before penalties) you put two free coins on the final score and two more on the winning team',
-          'EXPLAIN_TRIPLE_GAIN': 'By predicting the final score (before penalties) you put three free coins on the final score and three more on the winning team'
+          'EXPLAIN': 'Trouve le score final',
+          'EXPLAIN_EXTRA_TIME': 'après des éventuelles prolongations et un éventuelle séance de tirs au but',
         },
         BET_SUMMARY: {
           'MY_BETS': 'Mon pari',
