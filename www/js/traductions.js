@@ -120,6 +120,7 @@ var translations = {
           'CLOSE': 'Close',
           'NO_ODD_PREFIX': 'You\didn´t predict this game yet. You only have',
           'NO_ODD_SUFIX': 'to predict this game',
+          'NO_ODD': 'Sorry buddy, it\'s now too late to predict. Make sure to predict the next game!',
           'DOUBLE_GAIN': 'It\'s playoff time! Earn double points for correct predictions!',
           'TRIPLE_GAIN': 'It\'s the finale! Earn triple points for correct predictions!',
         },

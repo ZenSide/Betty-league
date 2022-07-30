@@ -17,6 +17,8 @@
   cursor: pointer;
   color: #0791e0;
   font-weight: 400;
+  width: 100%;
+  display: block;
 }
 .bt-modal__table-pagination-current {
   font-weight: 700;

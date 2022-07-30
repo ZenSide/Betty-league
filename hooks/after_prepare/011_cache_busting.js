@@ -71,7 +71,9 @@ if (rootdir) {
       if(fs.existsSync(indexPath)) {
 
         applyCacheBustingVersion(indexPath + '/index.html');
-        processFiles(indexPath + '/js');
+        applyCacheBustingVersion(indexPath + '/js/routing.js');
+        processFiles(indexPath + '/js/components');
+
 
       }
 

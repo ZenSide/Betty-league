@@ -5,5 +5,6 @@ betty2App
   .constant('AVATAR_HEIGHT', 100)
   .constant('AVATAR_WIDTH', 100)
   .constant('ENV', 'DEV') //DEV - VIEW - PROD
+  .constant('USE_REAL_LOGOS', true)
 ;
 */
