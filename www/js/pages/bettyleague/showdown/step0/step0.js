@@ -1,4 +1,4 @@
-betty2App.controller('Step0Ctrl', ['translations', '$scope', '$stateParams', 'BtNavigate', 'BtLoading', 'animation', function (translations, $scope, $stateParams, BtNavigate, BtLoading, animation) {
+betty2App.controller('Step0Ctrl', ['BettyLeagueApi', 'translations', '$scope', '$stateParams', 'BtNavigate', 'BtLoading', 'animation', function (BettyLeagueApi, translations, $scope, $stateParams, BtNavigate, BtLoading, animation) {
 
 	var step0Ctrl = this;
 	BtLoading.endLoad();
@@ -96,8 +96,31 @@ betty2App.controller('Step0Ctrl', ['translations', '$scope', '$stateParams', 'Bt
 			});
 		}
 	};
+
+  var nextAction;
+  if ($scope.showdownCtrl.nextShowDownId) {
+    nextAction = function(){
+      BtLoading.startLoad();
+      BtNavigate.stateChange('goRight' ,'bettyleague.showdown.step0', {
+        'bettyLeagueId' : $stateParams.bettyLeagueId,
+        'showdownId' : $scope.showdownCtrl.nextShowDownId,
+        'animDirection' : '3left'
+      });
+    };
+  } else if (BettyLeagueApi.isBettyLeagueFinished($scope.bettyLeagueCtrl.bettyLeague)) {
+    nextAction = function(){
+      BtLoading.startLoad();
+      BtNavigate.stateChange('goRight' ,'bettyleague.podium', {
+        'bettyLeagueId' : $stateParams.bettyLeagueId,
+        'animDirection' : '3left'
+      });
+    };
+  } else {
+    nextAction = null;
+  }
+
 	footerStatus.rightBt = {
-		btShow : $scope.showdownCtrl.nextShowDownId ? true : false,
+		btShow : !!nextAction,
 		btPosition: "right",
 		btClasses: $scope.showdownCtrl.bet ? "bt-action--medium" : "bt-action--medium",
 		btButtonClasses: "bt-action__btn--blue",
@@ -105,14 +128,7 @@ betty2App.controller('Step0Ctrl', ['translations', '$scope', '$stateParams', 'Bt
 		btLabel:translations['LOGIN.FOOTER.SIGN'],
 		btDisabled: false,
 		btSubmitForm: null,
-		action:function(){
-			BtLoading.startLoad();
-			BtNavigate.stateChange('goRight' ,'bettyleague.showdown.step0', {
-				'bettyLeagueId' : $stateParams.bettyLeagueId,
-				'showdownId' : $scope.showdownCtrl.nextShowDownId,
-				'animDirection' : '3left'
-			});
-		}
+		action: nextAction
 	};
 	//AUTRES STATUS
 

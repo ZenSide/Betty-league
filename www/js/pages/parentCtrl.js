@@ -49,21 +49,32 @@ betty2App.controller('ParentCtrl', ['BtLoading', '$rootScope', 'BtNavigate', 'Be
 
     parentCtrl.goBettyWorld = function () {
         BtLoading.startLoad();
+
+
         BettyLeagueApi.getBettyWorld(function (bettyWorld) {
             //find worldbettyLeague
             //go to world bettyleague
-            //go to the next unbet showdown
-            ShowdownApi.getNextOpenShowDown(bettyWorld.id, function (showdown) {
+
+            if (BettyLeagueApi.isBettyLeagueFinished(bettyWorld)) {
+              BtNavigate.stateChange('goTop' ,'bettyleague.podium', {
+                'bettyLeagueId' : bettyWorld.id,
+                'animDirection' : 'fade'
+              }, true);
+            } else {
+              //go to the next unbet showdown
+              ShowdownApi.getNextOpenShowDown(bettyWorld.id, function (showdown) {
                 BtNavigate.stateChange('goTop' ,'bettyleague.showdown.step0', {
-                    'bettyLeagueId' : bettyWorld.id,
-                    'showdownId' : showdown.id,
-                    'animDirection' : 'fade'
+                  'bettyLeagueId' : bettyWorld.id,
+                  'showdownId' : showdown.id,
+                  'animDirection' : 'fade'
                 }, true);
-            }, function (messages) {
+              }, function (messages) {
                 BtMessages.show(messages, null, function () {
-                    BtLoading.endLoad();
+                  BtLoading.endLoad();
                 })
-            });
+              });
+            }
+
 
         }, function (messages) {
             BtMessages.show(messages, null, function () {

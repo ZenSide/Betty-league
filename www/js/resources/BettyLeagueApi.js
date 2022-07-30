@@ -165,6 +165,16 @@ betty2App.factory('BettyLeagueApi', ['$filter', '$rootScope', 'ResourcesFactory'
 				return;
 			}, noCache)
 		},
+
+
+    isBettyLeagueFinished: function (bettyLeague) {
+      var endDate = new Date(bettyLeague.endDate);
+      var now = new Date().getTime();
+      var end = endDate.getTime();
+      var distance = end - now;
+      return distance <= 0;
+    },
+
 	};
 	return BettyLeagueApi;
 }]);

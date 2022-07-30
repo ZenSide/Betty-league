@@ -229,8 +229,6 @@ betty2App.factory('BetApi', ['$filter', 'ResourcesFactory', 'BtLocalStorage', fu
 
       response.gainMultiplier = showdown.smFixture.gainMultiplier;
 
-      console.log(response);
-
 			return response;
 		},
 

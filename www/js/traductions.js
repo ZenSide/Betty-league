@@ -166,7 +166,11 @@ var translations = {
         NEW_LEAGUE_CREATED: 'Your League has been created, well done buddy',
         CREATED_BY: 'Created by',
         PLAY: 'Play in this league',
-        SHAREWITHFRIENDS: 'Share this code to invite other players in the league'
+        SHAREWITHFRIENDS: 'Share this code to invite other players in the league',
+        END_OF_GAME: 'The competition is over, thank you all for playing!',
+        END_FIRST_1: 'wins the competition, what a champion!',
+        END_FIRST_2: 'really thought he was going to win, but no.',
+        END_FIRST_3: 'complete the podium.'
       },
       ACCOUNT: {
         TITLE: 'My profile',
@@ -348,7 +352,11 @@ var translations = {
         NEW_LEAGUE_CREATED: 'Ta ligue a bien été créée !',
         CREATED_BY: 'Créée par',
         PLAY: 'Jouer dans cette ligue',
-        SHAREWITHFRIENDS: 'Partage ce code avec les gens que tu veux voir rejoindre cette ligue'
+        SHAREWITHFRIENDS: 'Partage ce code avec les gens que tu veux voir rejoindre cette ligue',
+        END_OF_GAME: 'La compétition est terminée, merci à tous d\'avoir joué !',
+        END_FIRST_1: 'termine à la première place, mais quel champion !',
+        END_FIRST_2: 'a bien cru qu\'il allait gagner, mais en fait non....',
+        END_FIRST_3: 'complète le podium'
       },
       ACCOUNT: {
         TITLE: 'Mon profile',
